@@ -1,4 +1,4 @@
 limits, 2.1559, 2.1668, 41.3994, 41.4086
 base, plane, 0.0, 1.0, 0.0, -0.5, ://resources/mapZoom.png
-prop, 1, 1900, 85000, sphere
+prop, 1, 1900, 85000,sphere
 data, 2.1621234, 41.4056165,  6100

@@ -66,7 +66,7 @@ void DataReader::baseFound(QStringList fields) {
 
 void DataReader::limitsFound(QStringList fields) {
     // limits xmin xmax zmin zmax
-    if (fields.size() != 4 ) {
+    if (fields.size() != 5) {
         std::cerr << "Wrong limits format" << std::endl;
         return;
     }
@@ -82,7 +82,8 @@ void DataReader::propFound(QStringList fields) {
     numProp++;
     // TODO Fase 1: Cal guardar els valors per a poder escalar els objectes i el tipus de
     //  gizmo de totes les propietats (SPHERE, BR_OBJ, CILINDRE...)
-    if (QString::compare("sphere", fields[1], Qt::CaseInsensitive) == 0) {
+    cout<<fields[4].toStdString()<<endl;
+    if (QString::compare("sphere", fields[4], Qt::CaseInsensitive) == 0) {
         props.push_back(ObjectFactory::OBJECT_TYPES::SPHERE);
     }
 
