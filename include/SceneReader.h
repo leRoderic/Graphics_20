@@ -17,9 +17,7 @@
  *  Posicion 03:    Sphere Centro Z
  *  Posicion 04:    Sphere Radio
  *  TODO FASE 2: Añadir componentes del material
- *  Posicion 05:    Planeta Color
- *  Posicion 06:    Planeta Color
- *  Posicion 07:    Planeta Color
+ *
  *
  *  Formate para la base
  *  Posicion 01:    tipo de base: plane o sphere
