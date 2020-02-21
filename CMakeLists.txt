@@ -18,7 +18,13 @@ if(WIN32)
 endif()
 
 # Tell cmake where Qt is located
-set(Qt5_DIR "/Users/anna/qt/5.10.0/clang_64/lib/cmake/Qt5")
+
+# aules
+#set (Qt5_DIR /opt/Qt/5.9.1/gcc_64/lib/cmake/Qt5/)
+# mac:
+#set(QT5_DIR "/Users/anna/qt/5.10.0/clang_64/lib/cmake/Qt5")
+# ubuntu:
+set(Qt5_DIR "/opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5/")
 
 # Find the QtWidgets library
 find_package(Qt5 REQUIRED COMPONENTS Widgets)
@@ -33,10 +39,21 @@ include_directories(glm/gtx)
 include_directories(glm/virtrev)
 include_directories(include)
 
-set (OPENGL_INCLUDE_DIRS /opt/X11/include)
-set (GLUT_INCLUDE_DIRS /opt/X11/include)
+# Find gl and glut library: only if GLConfig.cmake or gl-config.cmake is present in the system
+# find_package(GL REQUIRED)
+# find_package(GLUT REQUIRED)
+
+# Find gl and glut library: ubuntu
+set (OPENGL_INCLUDE_DIRS /usr/include)
+set (GLUT_INCLUDE_DIRS /usr/include)
+
+# settings de GL en el MAC
+#set (OPENGL_INCLUDE_DIRS /opt/X11/include)
+#set (GLUT_INCLUDE_DIRS /opt/X11/include)
 
 include_directories(${OPENGL_INCLUDE_DIRS} ${GLUT_INCLUDE_DIRS})
+
+
 
 add_executable(RayData
         glm/core/_detail.hpp
@@ -325,9 +342,16 @@ add_executable(RayData
         src/Translate.cpp
         ${Res_SRC} )
 
-# Add the Qt5 Widgets for linking
-set (OPENGL_LIBRARIES /opt/X11/lib/libGL.dylib)
-set (GLUT_LIBRARY /opt/X11/lib/libGLUT.dylib)
 
+# Set the GL and GLUT libraries
+#mac
+#set (OPENGL_LIBRARIES /opt/X11/lib/libGL.dylib)
+#set (GLUT_LIBRARY /opt/X11/lib/libGLUT.dylib)
+
+
+set (OPENGL_LIBRARIES /usr/lib/x86_64-linux-gnu/libGL.so)
+set (GLUT_LIBRARY /usr/lib/x86_64-linux-gnu/libglut.so)
+
+# Add the Qt5 Widgets, GL and GLUT  for linking
 target_link_libraries(RayData Qt5::Widgets ${OPENGL_LIBRARIES} ${GLUT_LIBRARY})
 

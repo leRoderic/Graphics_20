@@ -1,0 +1,1151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="RayData"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\opt\;CMake Files\..\..\..\..\opt\Qt\;CMake Files\..\..\..\..\opt\Qt\5.12.3\;CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\;CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\;CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\;CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5\;CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Widgets\;CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\;CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Core\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/anna/CLionProjects/RayData/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j3 -f &quot;/home/anna/CLionProjects/RayData/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j3 -f &quot;/home/anna/CLionProjects/RayData/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j3 -f &quot;/home/anna/CLionProjects/RayData/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j3 -f &quot;/home/anna/CLionProjects/RayData/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/anna/CLionProjects/RayData/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j3 -f &quot;/home/anna/CLionProjects/RayData/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j3 -f &quot;/home/anna/CLionProjects/RayData/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j3 -f &quot;/home/anna/CLionProjects/RayData/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j3 -f &quot;/home/anna/CLionProjects/RayData/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RayData">
+				<Option output="/home/anna/CLionProjects/RayData/cmake-build-debug/RayData" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anna/CLionProjects/RayData/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add directory="/home/anna/CLionProjects/RayData/cmake-build-debug"/>
+					<Add directory="/home/anna/CLionProjects/RayData"/>
+					<Add directory="/home/anna/CLionProjects/RayData/cmake-build-debug/RayData_autogen/include"/>
+					<Add directory="/home/anna/CLionProjects/RayData/."/>
+					<Add directory="/home/anna/CLionProjects/RayData/glm"/>
+					<Add directory="/home/anna/CLionProjects/RayData/glm/core"/>
+					<Add directory="/home/anna/CLionProjects/RayData/glm/gtc"/>
+					<Add directory="/home/anna/CLionProjects/RayData/glm/gtx"/>
+					<Add directory="/home/anna/CLionProjects/RayData/glm/virtrev"/>
+					<Add directory="/home/anna/CLionProjects/RayData/include"/>
+					<Add directory="/opt/Qt/5.12.3/gcc_64/include"/>
+					<Add directory="/opt/Qt/5.12.3/gcc_64/include/QtWidgets"/>
+					<Add directory="/opt/Qt/5.12.3/gcc_64/include/QtGui"/>
+					<Add directory="/opt/Qt/5.12.3/gcc_64/include/QtCore"/>
+					<Add directory="/opt/Qt/5.12.3/gcc_64/./mkspecs/linux-g++"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j3 -f &quot;/home/anna/CLionProjects/RayData/cmake-build-debug/Makefile&quot;  VERBOSE=1 RayData"/>
+					<CompileFile command="/usr/bin/make -j3 -f &quot;/home/anna/CLionProjects/RayData/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j3 -f &quot;/home/anna/CLionProjects/RayData/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j3 -f &quot;/home/anna/CLionProjects/RayData/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RayData/fast">
+				<Option output="/home/anna/CLionProjects/RayData/cmake-build-debug/RayData" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anna/CLionProjects/RayData/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add directory="/home/anna/CLionProjects/RayData/cmake-build-debug"/>
+					<Add directory="/home/anna/CLionProjects/RayData"/>
+					<Add directory="/home/anna/CLionProjects/RayData/cmake-build-debug/RayData_autogen/include"/>
+					<Add directory="/home/anna/CLionProjects/RayData/."/>
+					<Add directory="/home/anna/CLionProjects/RayData/glm"/>
+					<Add directory="/home/anna/CLionProjects/RayData/glm/core"/>
+					<Add directory="/home/anna/CLionProjects/RayData/glm/gtc"/>
+					<Add directory="/home/anna/CLionProjects/RayData/glm/gtx"/>
+					<Add directory="/home/anna/CLionProjects/RayData/glm/virtrev"/>
+					<Add directory="/home/anna/CLionProjects/RayData/include"/>
+					<Add directory="/opt/Qt/5.12.3/gcc_64/include"/>
+					<Add directory="/opt/Qt/5.12.3/gcc_64/include/QtWidgets"/>
+					<Add directory="/opt/Qt/5.12.3/gcc_64/include/QtGui"/>
+					<Add directory="/opt/Qt/5.12.3/gcc_64/include/QtCore"/>
+					<Add directory="/opt/Qt/5.12.3/gcc_64/./mkspecs/linux-g++"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j3 -f &quot;/home/anna/CLionProjects/RayData/cmake-build-debug/Makefile&quot;  VERBOSE=1 RayData/fast"/>
+					<CompileFile command="/usr/bin/make -j3 -f &quot;/home/anna/CLionProjects/RayData/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j3 -f &quot;/home/anna/CLionProjects/RayData/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j3 -f &quot;/home/anna/CLionProjects/RayData/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/anna/CLionProjects/RayData/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j3 -f &quot;/home/anna/CLionProjects/RayData/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j3 -f &quot;/home/anna/CLionProjects/RayData/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j3 -f &quot;/home/anna/CLionProjects/RayData/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j3 -f &quot;/home/anna/CLionProjects/RayData/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RayData_autogen">
+				<Option working_dir="/home/anna/CLionProjects/RayData/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j3 -f &quot;/home/anna/CLionProjects/RayData/cmake-build-debug/Makefile&quot;  VERBOSE=1 RayData_autogen"/>
+					<CompileFile command="/usr/bin/make -j3 -f &quot;/home/anna/CLionProjects/RayData/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j3 -f &quot;/home/anna/CLionProjects/RayData/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j3 -f &quot;/home/anna/CLionProjects/RayData/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/anna/CLionProjects/RayData/cmake-build-debug/RayData_autogen/mocs_compilation.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/cmake-build-debug/qrc_resources.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/CMakeLists.txt">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/_detail.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/_fixes.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/_swizzle.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/_swizzle_func.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/_vectorize.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/func_common.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/func_common.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/func_exponential.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/func_exponential.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/func_geometric.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/func_geometric.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/func_integer.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/func_integer.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/func_matrix.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/func_matrix.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/func_noise.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/func_noise.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/func_packing.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/func_packing.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/func_trigonometric.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/func_trigonometric.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/func_vector_relational.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/func_vector_relational.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/hint.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/intrinsic_common.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/intrinsic_common.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/intrinsic_exponential.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/intrinsic_exponential.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/intrinsic_geometric.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/intrinsic_geometric.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/intrinsic_matrix.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/intrinsic_matrix.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/intrinsic_trigonometric.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/intrinsic_trigonometric.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/intrinsic_vector_relational.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/intrinsic_vector_relational.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/setup.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_float.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_gentype.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_gentype.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_half.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_half.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_int.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_mat.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_mat.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_mat2x2.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_mat2x2.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_mat2x3.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_mat2x3.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_mat2x4.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_mat2x4.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_mat3x2.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_mat3x2.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_mat3x3.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_mat3x3.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_mat3x4.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_mat3x4.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_mat4x2.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_mat4x2.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_mat4x3.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_mat4x3.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_mat4x4.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_mat4x4.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_size.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_vec.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_vec.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_vec1.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_vec1.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_vec2.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_vec2.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_vec3.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_vec3.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_vec4.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/core/type_vec4.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/ext.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/glm.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/constants.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/constants.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/epsilon.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/epsilon.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/half_float.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/half_float.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/matrix_access.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/matrix_access.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/matrix_integer.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/matrix_inverse.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/matrix_inverse.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/matrix_transform.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/matrix_transform.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/noise.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/noise.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/quaternion.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/quaternion.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/random.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/random.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/reciprocal.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/reciprocal.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/swizzle.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/swizzle.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/type_precision.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/type_precision.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/type_ptr.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/type_ptr.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/ulp.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtc/ulp.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/associated_min_max.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/associated_min_max.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/bit.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/bit.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/closest_point.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/closest_point.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/color_cast.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/color_cast.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/color_space.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/color_space.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/color_space_YCoCg.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/color_space_YCoCg.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/compatibility.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/compatibility.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/component_wise.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/component_wise.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/constants.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/epsilon.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/euler_angles.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/euler_angles.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/extend.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/extend.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/extented_min_max.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/extented_min_max.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/fast_exponential.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/fast_exponential.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/fast_square_root.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/fast_square_root.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/fast_trigonometry.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/fast_trigonometry.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/gradient_paint.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/gradient_paint.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/handed_coordinate_space.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/handed_coordinate_space.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/inertia.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/inertia.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/int_10_10_10_2.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/int_10_10_10_2.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/integer.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/integer.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/intersect.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/intersect.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/log_base.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/log_base.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/matrix_cross_product.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/matrix_cross_product.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/matrix_interpolation.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/matrix_interpolation.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/matrix_major_storage.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/matrix_major_storage.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/matrix_operation.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/matrix_operation.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/matrix_query.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/matrix_query.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/mixed_product.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/mixed_product.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/multiple.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/multiple.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/noise.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/norm.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/norm.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/normal.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/normal.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/normalize_dot.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/normalize_dot.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/number_precision.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/number_precision.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/ocl_type.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/ocl_type.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/optimum_pow.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/optimum_pow.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/orthonormalize.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/orthonormalize.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/perpendicular.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/perpendicular.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/polar_coordinates.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/polar_coordinates.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/projection.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/projection.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/quaternion.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/quaternion.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/random.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/raw_data.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/raw_data.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/reciprocal.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/rotate_vector.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/rotate_vector.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/simd_mat4.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/simd_mat4.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/simd_vec4.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/simd_vec4.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/spline.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/spline.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/std_based_type.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/std_based_type.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/string_cast.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/string_cast.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/transform.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/transform.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/transform2.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/transform2.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/ulp.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/unsigned_int.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/unsigned_int.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/vec1.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/vec1.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/vector_access.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/vector_access.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/vector_angle.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/vector_angle.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/vector_query.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/vector_query.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/verbose_operator.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/verbose_operator.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/wrap.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/gtx/wrap.inl">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/glm/virtrev/xstream.hpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/Animation.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/BoundaryObject.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/Camera.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/Cara.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/ColorMap.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/ColorMapStatic.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/Controller.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/DataReader.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/Hitable.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/Lambertian.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/Main.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/Material.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/Object.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/ObjectFactory.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/Plane.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/Ray.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/RayTracingGLU.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/RayTracingPPM.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/RayTracingTemps.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/ReadFile.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/Render.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/RenderFactory.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/Scene.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/SceneFactory.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/SceneFactoryData.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/SceneFactoryVirtual.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/SceneReader.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/Sphere.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/TG.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/Texture.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/include/Translate.h">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/resources.qrc">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/Animation.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/BoundaryObject.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/Camera.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/Cara.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/ColorMapStatic.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/Controller.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/DataReader.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/Hitable.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/Lambertian.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/Main.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/Material.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/Object.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/ObjectFactory.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/Plane.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/RayTracingGLU.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/RayTracingPPM.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/RayTracingTemps.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/ReadFile.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/Render.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/RenderFactory.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/Scene.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/SceneFactory.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/SceneFactoryData.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/SceneFactoryVirtual.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/SceneReader.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/Sphere.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/TG.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/Texture.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/src/Translate.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/resources.qrc">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5/Qt5Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEglFSEmulatorIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEglFSKmsEglDeviceIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QGtk3ThemePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QVirtualKeyboardPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QWaylandEglPlatformIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QWaylandIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QWaylandXCompositeEglPlatformIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QWaylandXCompositeGlxPlatformIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QWebGLIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/anna/CLionProjects/RayData/../../../../opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5Core/Qt5CoreMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\Qt\5.12.3\gcc_64\lib\cmake\Qt5Core\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
