@@ -57,6 +57,8 @@ vec3 Scene::ComputeColorRay (Ray &ray, int depth ) {
     return color;
 }
 
+
+
 void Scene::update(int nframe) {
     for (unsigned int i = 0; i< objects.size(); i++) {
         if (dynamic_cast<Animable*>(objects[i]) ) objects[i]->update(nframe);
