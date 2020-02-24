@@ -72,7 +72,7 @@
 #define __INT32_MAX__ 0x7fffffff
 #define __SIZEOF_LONG__ 8
 #define __STDC_IEC_559__ 1
-#define __STDC_ISO_10646__ 201605L
+#define __STDC_ISO_10646__ 201706L
 #define __UINT16_C(c) c
 #define __DECIMAL_DIG__ 21
 #define __gnu_linux__ 1
@@ -109,7 +109,6 @@
 #define __ATOMIC_HLE_RELEASE 131072
 #define __PTRDIFF_MAX__ 0x7fffffffffffffffL
 #define __amd64 1
-#define __STDC_NO_THREADS__ 1
 #define __ATOMIC_HLE_ACQUIRE 65536
 #define __GNUG__ 6
 #define __LONG_LONG_MAX__ 0x7fffffffffffffffLL

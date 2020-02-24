@@ -1,4 +1,4 @@
-/home/annapuig/CLionProjects/RayData/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/annapuig/CLionProjects/RayData/cmake-build-debug/CMakeFiles/RayData.dir
-/home/annapuig/CLionProjects/RayData/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/annapuig/CLionProjects/RayData/cmake-build-debug/CMakeFiles/RayData_autogen.dir
+/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles/RayData.dir
+/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles/RayData_autogen.dir
