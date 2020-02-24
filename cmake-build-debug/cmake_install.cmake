@@ -1,4 +1,4 @@
-# Install script for directory: /home/anna/CLionProjects/RayData
+# Install script for directory: /home/annapuig/CLionProjects/RayData
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/anna/CLionProjects/RayData/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/annapuig/CLionProjects/RayData/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

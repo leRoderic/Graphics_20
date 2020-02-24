@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.14)
 project(RayData)
 
 set(CMAKE_CXX_STANDARD 14)
@@ -20,11 +20,11 @@ endif()
 # Tell cmake where Qt is located
 
 # aules
-#set (Qt5_DIR /opt/Qt/5.9.1/gcc_64/lib/cmake/Qt5/)
+set (Qt5_DIR /opt/Qt/5.9.1/gcc_64/lib/cmake/Qt5/)
 # mac:
 #set(QT5_DIR "/Users/anna/qt/5.10.0/clang_64/lib/cmake/Qt5")
 # ubuntu:
-set(Qt5_DIR "/opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5/")
+#set(Qt5_DIR "/opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5/")
 
 # Find the QtWidgets library
 find_package(Qt5 REQUIRED COMPONENTS Widgets)
