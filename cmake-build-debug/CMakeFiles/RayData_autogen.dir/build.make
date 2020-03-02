@@ -43,10 +43,10 @@ RM = /opt/CLion-2019.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rcabezqu7.alumnes/Escriptori/dataray-f01
+CMAKE_SOURCE_DIR = /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug
+CMAKE_BINARY_DIR = /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug
 
 # Utility rule file for RayData_autogen.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-de
 include CMakeFiles/RayData_autogen.dir/progress.make
 
 CMakeFiles/RayData_autogen: qrc_resources.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target RayData"
-	/opt/CLion-2019.2/bin/cmake/linux/bin/cmake -E cmake_autogen /home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles/RayData_autogen.dir/AutogenInfo.cmake Debug
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target RayData"
+	/opt/CLion-2019.2/bin/cmake/linux/bin/cmake -E cmake_autogen /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles/RayData_autogen.dir/AutogenInfo.cmake Debug
 
 qrc_resources.cpp: ../resources/earth1.png
 qrc_resources.cpp: ../resources/cube.obj
@@ -67,8 +67,8 @@ qrc_resources.cpp: ../resources/data0.txt
 qrc_resources.cpp: ../resources/dataBCN.txt
 qrc_resources.cpp: ../resources/dataBCNZoom.txt
 qrc_resources.cpp: ../resources.qrc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating qrc_resources.cpp"
-	/opt/Qt/5.9.1/gcc_64/bin/rcc --name resources --output /home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/qrc_resources.cpp /home/rcabezqu7.alumnes/Escriptori/dataray-f01/resources.qrc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating qrc_resources.cpp"
+	/opt/Qt/5.9.1/gcc_64/bin/rcc --name resources --output /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/qrc_resources.cpp /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/resources.qrc
 
 RayData_autogen: CMakeFiles/RayData_autogen
 RayData_autogen: qrc_resources.cpp
@@ -86,6 +86,6 @@ CMakeFiles/RayData_autogen.dir/clean:
 .PHONY : CMakeFiles/RayData_autogen.dir/clean
 
 CMakeFiles/RayData_autogen.dir/depend:
-	cd /home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rcabezqu7.alumnes/Escriptori/dataray-f01 /home/rcabezqu7.alumnes/Escriptori/dataray-f01 /home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug /home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug /home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles/RayData_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles/RayData_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/RayData_autogen.dir/depend
 

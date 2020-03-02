@@ -43,10 +43,10 @@ RM = /opt/CLion-2019.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rcabezqu7.alumnes/Escriptori/dataray-f01
+CMAKE_SOURCE_DIR = /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug
+CMAKE_BINARY_DIR = /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/RayData.dir/depend.make
@@ -67,411 +67,411 @@ qrc_resources.cpp: ../resources/data0.txt
 qrc_resources.cpp: ../resources/dataBCN.txt
 qrc_resources.cpp: ../resources/dataBCNZoom.txt
 qrc_resources.cpp: ../resources.qrc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating qrc_resources.cpp"
-	/opt/Qt/5.9.1/gcc_64/bin/rcc --name resources --output /home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/qrc_resources.cpp /home/rcabezqu7.alumnes/Escriptori/dataray-f01/resources.qrc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating qrc_resources.cpp"
+	/opt/Qt/5.9.1/gcc_64/bin/rcc --name resources --output /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/qrc_resources.cpp /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/resources.qrc
 
 CMakeFiles/RayData.dir/RayData_autogen/mocs_compilation.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/RayData_autogen/mocs_compilation.cpp.o: RayData_autogen/mocs_compilation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/RayData.dir/RayData_autogen/mocs_compilation.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/RayData_autogen/mocs_compilation.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/RayData_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/RayData.dir/RayData_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/RayData_autogen/mocs_compilation.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/RayData_autogen/mocs_compilation.cpp
 
 CMakeFiles/RayData.dir/RayData_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/RayData_autogen/mocs_compilation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/RayData_autogen/mocs_compilation.cpp > CMakeFiles/RayData.dir/RayData_autogen/mocs_compilation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/RayData_autogen/mocs_compilation.cpp > CMakeFiles/RayData.dir/RayData_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/RayData.dir/RayData_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/RayData_autogen/mocs_compilation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/RayData_autogen/mocs_compilation.cpp -o CMakeFiles/RayData.dir/RayData_autogen/mocs_compilation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/RayData_autogen/mocs_compilation.cpp -o CMakeFiles/RayData.dir/RayData_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/RayData.dir/src/Animation.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/Animation.cpp.o: ../src/Animation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/RayData.dir/src/Animation.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Animation.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Animation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/RayData.dir/src/Animation.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Animation.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Animation.cpp
 
 CMakeFiles/RayData.dir/src/Animation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/Animation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Animation.cpp > CMakeFiles/RayData.dir/src/Animation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Animation.cpp > CMakeFiles/RayData.dir/src/Animation.cpp.i
 
 CMakeFiles/RayData.dir/src/Animation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/Animation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Animation.cpp -o CMakeFiles/RayData.dir/src/Animation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Animation.cpp -o CMakeFiles/RayData.dir/src/Animation.cpp.s
 
 CMakeFiles/RayData.dir/src/BoundaryObject.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/BoundaryObject.cpp.o: ../src/BoundaryObject.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/RayData.dir/src/BoundaryObject.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/BoundaryObject.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/BoundaryObject.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/RayData.dir/src/BoundaryObject.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/BoundaryObject.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/BoundaryObject.cpp
 
 CMakeFiles/RayData.dir/src/BoundaryObject.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/BoundaryObject.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/BoundaryObject.cpp > CMakeFiles/RayData.dir/src/BoundaryObject.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/BoundaryObject.cpp > CMakeFiles/RayData.dir/src/BoundaryObject.cpp.i
 
 CMakeFiles/RayData.dir/src/BoundaryObject.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/BoundaryObject.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/BoundaryObject.cpp -o CMakeFiles/RayData.dir/src/BoundaryObject.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/BoundaryObject.cpp -o CMakeFiles/RayData.dir/src/BoundaryObject.cpp.s
 
 CMakeFiles/RayData.dir/src/Camera.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/Camera.cpp.o: ../src/Camera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/RayData.dir/src/Camera.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Camera.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/RayData.dir/src/Camera.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Camera.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Camera.cpp
 
 CMakeFiles/RayData.dir/src/Camera.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/Camera.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Camera.cpp > CMakeFiles/RayData.dir/src/Camera.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Camera.cpp > CMakeFiles/RayData.dir/src/Camera.cpp.i
 
 CMakeFiles/RayData.dir/src/Camera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/Camera.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Camera.cpp -o CMakeFiles/RayData.dir/src/Camera.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Camera.cpp -o CMakeFiles/RayData.dir/src/Camera.cpp.s
 
 CMakeFiles/RayData.dir/src/Cara.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/Cara.cpp.o: ../src/Cara.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/RayData.dir/src/Cara.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Cara.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Cara.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/RayData.dir/src/Cara.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Cara.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Cara.cpp
 
 CMakeFiles/RayData.dir/src/Cara.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/Cara.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Cara.cpp > CMakeFiles/RayData.dir/src/Cara.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Cara.cpp > CMakeFiles/RayData.dir/src/Cara.cpp.i
 
 CMakeFiles/RayData.dir/src/Cara.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/Cara.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Cara.cpp -o CMakeFiles/RayData.dir/src/Cara.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Cara.cpp -o CMakeFiles/RayData.dir/src/Cara.cpp.s
 
 CMakeFiles/RayData.dir/src/ColorMapStatic.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/ColorMapStatic.cpp.o: ../src/ColorMapStatic.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/RayData.dir/src/ColorMapStatic.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/ColorMapStatic.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/ColorMapStatic.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/RayData.dir/src/ColorMapStatic.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/ColorMapStatic.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/ColorMapStatic.cpp
 
 CMakeFiles/RayData.dir/src/ColorMapStatic.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/ColorMapStatic.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/ColorMapStatic.cpp > CMakeFiles/RayData.dir/src/ColorMapStatic.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/ColorMapStatic.cpp > CMakeFiles/RayData.dir/src/ColorMapStatic.cpp.i
 
 CMakeFiles/RayData.dir/src/ColorMapStatic.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/ColorMapStatic.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/ColorMapStatic.cpp -o CMakeFiles/RayData.dir/src/ColorMapStatic.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/ColorMapStatic.cpp -o CMakeFiles/RayData.dir/src/ColorMapStatic.cpp.s
 
 CMakeFiles/RayData.dir/src/Controller.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/Controller.cpp.o: ../src/Controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/RayData.dir/src/Controller.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Controller.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Controller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/RayData.dir/src/Controller.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Controller.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Controller.cpp
 
 CMakeFiles/RayData.dir/src/Controller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/Controller.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Controller.cpp > CMakeFiles/RayData.dir/src/Controller.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Controller.cpp > CMakeFiles/RayData.dir/src/Controller.cpp.i
 
 CMakeFiles/RayData.dir/src/Controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/Controller.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Controller.cpp -o CMakeFiles/RayData.dir/src/Controller.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Controller.cpp -o CMakeFiles/RayData.dir/src/Controller.cpp.s
 
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../src/DataReader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/RayData.dir/src/DataReader.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/DataReader.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/DataReader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/RayData.dir/src/DataReader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/DataReader.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/DataReader.cpp
 
 CMakeFiles/RayData.dir/src/DataReader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/DataReader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/DataReader.cpp > CMakeFiles/RayData.dir/src/DataReader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/DataReader.cpp > CMakeFiles/RayData.dir/src/DataReader.cpp.i
 
 CMakeFiles/RayData.dir/src/DataReader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/DataReader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/DataReader.cpp -o CMakeFiles/RayData.dir/src/DataReader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/DataReader.cpp -o CMakeFiles/RayData.dir/src/DataReader.cpp.s
 
 CMakeFiles/RayData.dir/src/Hitable.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/Hitable.cpp.o: ../src/Hitable.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/RayData.dir/src/Hitable.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Hitable.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Hitable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/RayData.dir/src/Hitable.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Hitable.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Hitable.cpp
 
 CMakeFiles/RayData.dir/src/Hitable.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/Hitable.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Hitable.cpp > CMakeFiles/RayData.dir/src/Hitable.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Hitable.cpp > CMakeFiles/RayData.dir/src/Hitable.cpp.i
 
 CMakeFiles/RayData.dir/src/Hitable.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/Hitable.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Hitable.cpp -o CMakeFiles/RayData.dir/src/Hitable.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Hitable.cpp -o CMakeFiles/RayData.dir/src/Hitable.cpp.s
 
 CMakeFiles/RayData.dir/src/Lambertian.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/Lambertian.cpp.o: ../src/Lambertian.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/RayData.dir/src/Lambertian.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Lambertian.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Lambertian.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/RayData.dir/src/Lambertian.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Lambertian.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Lambertian.cpp
 
 CMakeFiles/RayData.dir/src/Lambertian.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/Lambertian.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Lambertian.cpp > CMakeFiles/RayData.dir/src/Lambertian.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Lambertian.cpp > CMakeFiles/RayData.dir/src/Lambertian.cpp.i
 
 CMakeFiles/RayData.dir/src/Lambertian.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/Lambertian.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Lambertian.cpp -o CMakeFiles/RayData.dir/src/Lambertian.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Lambertian.cpp -o CMakeFiles/RayData.dir/src/Lambertian.cpp.s
 
 CMakeFiles/RayData.dir/src/Main.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/Main.cpp.o: ../src/Main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/RayData.dir/src/Main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Main.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/RayData.dir/src/Main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Main.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Main.cpp
 
 CMakeFiles/RayData.dir/src/Main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/Main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Main.cpp > CMakeFiles/RayData.dir/src/Main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Main.cpp > CMakeFiles/RayData.dir/src/Main.cpp.i
 
 CMakeFiles/RayData.dir/src/Main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/Main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Main.cpp -o CMakeFiles/RayData.dir/src/Main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Main.cpp -o CMakeFiles/RayData.dir/src/Main.cpp.s
 
 CMakeFiles/RayData.dir/src/Material.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/Material.cpp.o: ../src/Material.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/RayData.dir/src/Material.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Material.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Material.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/RayData.dir/src/Material.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Material.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Material.cpp
 
 CMakeFiles/RayData.dir/src/Material.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/Material.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Material.cpp > CMakeFiles/RayData.dir/src/Material.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Material.cpp > CMakeFiles/RayData.dir/src/Material.cpp.i
 
 CMakeFiles/RayData.dir/src/Material.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/Material.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Material.cpp -o CMakeFiles/RayData.dir/src/Material.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Material.cpp -o CMakeFiles/RayData.dir/src/Material.cpp.s
 
 CMakeFiles/RayData.dir/src/Object.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/Object.cpp.o: ../src/Object.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/RayData.dir/src/Object.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Object.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Object.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/RayData.dir/src/Object.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Object.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Object.cpp
 
 CMakeFiles/RayData.dir/src/Object.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/Object.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Object.cpp > CMakeFiles/RayData.dir/src/Object.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Object.cpp > CMakeFiles/RayData.dir/src/Object.cpp.i
 
 CMakeFiles/RayData.dir/src/Object.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/Object.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Object.cpp -o CMakeFiles/RayData.dir/src/Object.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Object.cpp -o CMakeFiles/RayData.dir/src/Object.cpp.s
 
 CMakeFiles/RayData.dir/src/ObjectFactory.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/ObjectFactory.cpp.o: ../src/ObjectFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/RayData.dir/src/ObjectFactory.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/ObjectFactory.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/ObjectFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/RayData.dir/src/ObjectFactory.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/ObjectFactory.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/ObjectFactory.cpp
 
 CMakeFiles/RayData.dir/src/ObjectFactory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/ObjectFactory.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/ObjectFactory.cpp > CMakeFiles/RayData.dir/src/ObjectFactory.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/ObjectFactory.cpp > CMakeFiles/RayData.dir/src/ObjectFactory.cpp.i
 
 CMakeFiles/RayData.dir/src/ObjectFactory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/ObjectFactory.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/ObjectFactory.cpp -o CMakeFiles/RayData.dir/src/ObjectFactory.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/ObjectFactory.cpp -o CMakeFiles/RayData.dir/src/ObjectFactory.cpp.s
 
 CMakeFiles/RayData.dir/src/Plane.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/Plane.cpp.o: ../src/Plane.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/RayData.dir/src/Plane.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Plane.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Plane.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/RayData.dir/src/Plane.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Plane.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Plane.cpp
 
 CMakeFiles/RayData.dir/src/Plane.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/Plane.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Plane.cpp > CMakeFiles/RayData.dir/src/Plane.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Plane.cpp > CMakeFiles/RayData.dir/src/Plane.cpp.i
 
 CMakeFiles/RayData.dir/src/Plane.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/Plane.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Plane.cpp -o CMakeFiles/RayData.dir/src/Plane.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Plane.cpp -o CMakeFiles/RayData.dir/src/Plane.cpp.s
 
 CMakeFiles/RayData.dir/src/RayTracingGLU.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/RayTracingGLU.cpp.o: ../src/RayTracingGLU.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/RayData.dir/src/RayTracingGLU.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/RayTracingGLU.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/RayTracingGLU.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/RayData.dir/src/RayTracingGLU.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/RayTracingGLU.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/RayTracingGLU.cpp
 
 CMakeFiles/RayData.dir/src/RayTracingGLU.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/RayTracingGLU.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/RayTracingGLU.cpp > CMakeFiles/RayData.dir/src/RayTracingGLU.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/RayTracingGLU.cpp > CMakeFiles/RayData.dir/src/RayTracingGLU.cpp.i
 
 CMakeFiles/RayData.dir/src/RayTracingGLU.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/RayTracingGLU.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/RayTracingGLU.cpp -o CMakeFiles/RayData.dir/src/RayTracingGLU.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/RayTracingGLU.cpp -o CMakeFiles/RayData.dir/src/RayTracingGLU.cpp.s
 
 CMakeFiles/RayData.dir/src/RayTracingPPM.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/RayTracingPPM.cpp.o: ../src/RayTracingPPM.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/RayData.dir/src/RayTracingPPM.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/RayTracingPPM.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/RayTracingPPM.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/RayData.dir/src/RayTracingPPM.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/RayTracingPPM.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/RayTracingPPM.cpp
 
 CMakeFiles/RayData.dir/src/RayTracingPPM.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/RayTracingPPM.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/RayTracingPPM.cpp > CMakeFiles/RayData.dir/src/RayTracingPPM.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/RayTracingPPM.cpp > CMakeFiles/RayData.dir/src/RayTracingPPM.cpp.i
 
 CMakeFiles/RayData.dir/src/RayTracingPPM.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/RayTracingPPM.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/RayTracingPPM.cpp -o CMakeFiles/RayData.dir/src/RayTracingPPM.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/RayTracingPPM.cpp -o CMakeFiles/RayData.dir/src/RayTracingPPM.cpp.s
 
 CMakeFiles/RayData.dir/src/RayTracingTemps.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/RayTracingTemps.cpp.o: ../src/RayTracingTemps.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/RayData.dir/src/RayTracingTemps.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/RayTracingTemps.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/RayTracingTemps.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/RayData.dir/src/RayTracingTemps.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/RayTracingTemps.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/RayTracingTemps.cpp
 
 CMakeFiles/RayData.dir/src/RayTracingTemps.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/RayTracingTemps.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/RayTracingTemps.cpp > CMakeFiles/RayData.dir/src/RayTracingTemps.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/RayTracingTemps.cpp > CMakeFiles/RayData.dir/src/RayTracingTemps.cpp.i
 
 CMakeFiles/RayData.dir/src/RayTracingTemps.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/RayTracingTemps.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/RayTracingTemps.cpp -o CMakeFiles/RayData.dir/src/RayTracingTemps.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/RayTracingTemps.cpp -o CMakeFiles/RayData.dir/src/RayTracingTemps.cpp.s
 
 CMakeFiles/RayData.dir/src/ReadFile.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/ReadFile.cpp.o: ../src/ReadFile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/RayData.dir/src/ReadFile.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/ReadFile.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/ReadFile.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/RayData.dir/src/ReadFile.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/ReadFile.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/ReadFile.cpp
 
 CMakeFiles/RayData.dir/src/ReadFile.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/ReadFile.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/ReadFile.cpp > CMakeFiles/RayData.dir/src/ReadFile.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/ReadFile.cpp > CMakeFiles/RayData.dir/src/ReadFile.cpp.i
 
 CMakeFiles/RayData.dir/src/ReadFile.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/ReadFile.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/ReadFile.cpp -o CMakeFiles/RayData.dir/src/ReadFile.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/ReadFile.cpp -o CMakeFiles/RayData.dir/src/ReadFile.cpp.s
 
 CMakeFiles/RayData.dir/src/Render.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/Render.cpp.o: ../src/Render.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/RayData.dir/src/Render.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Render.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Render.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/RayData.dir/src/Render.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Render.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Render.cpp
 
 CMakeFiles/RayData.dir/src/Render.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/Render.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Render.cpp > CMakeFiles/RayData.dir/src/Render.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Render.cpp > CMakeFiles/RayData.dir/src/Render.cpp.i
 
 CMakeFiles/RayData.dir/src/Render.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/Render.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Render.cpp -o CMakeFiles/RayData.dir/src/Render.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Render.cpp -o CMakeFiles/RayData.dir/src/Render.cpp.s
 
 CMakeFiles/RayData.dir/src/RenderFactory.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/RenderFactory.cpp.o: ../src/RenderFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/RayData.dir/src/RenderFactory.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/RenderFactory.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/RenderFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/RayData.dir/src/RenderFactory.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/RenderFactory.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/RenderFactory.cpp
 
 CMakeFiles/RayData.dir/src/RenderFactory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/RenderFactory.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/RenderFactory.cpp > CMakeFiles/RayData.dir/src/RenderFactory.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/RenderFactory.cpp > CMakeFiles/RayData.dir/src/RenderFactory.cpp.i
 
 CMakeFiles/RayData.dir/src/RenderFactory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/RenderFactory.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/RenderFactory.cpp -o CMakeFiles/RayData.dir/src/RenderFactory.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/RenderFactory.cpp -o CMakeFiles/RayData.dir/src/RenderFactory.cpp.s
 
 CMakeFiles/RayData.dir/src/Scene.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/Scene.cpp.o: ../src/Scene.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/RayData.dir/src/Scene.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Scene.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Scene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/RayData.dir/src/Scene.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Scene.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Scene.cpp
 
 CMakeFiles/RayData.dir/src/Scene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/Scene.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Scene.cpp > CMakeFiles/RayData.dir/src/Scene.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Scene.cpp > CMakeFiles/RayData.dir/src/Scene.cpp.i
 
 CMakeFiles/RayData.dir/src/Scene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/Scene.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Scene.cpp -o CMakeFiles/RayData.dir/src/Scene.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Scene.cpp -o CMakeFiles/RayData.dir/src/Scene.cpp.s
 
 CMakeFiles/RayData.dir/src/SceneFactory.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/SceneFactory.cpp.o: ../src/SceneFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/RayData.dir/src/SceneFactory.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/SceneFactory.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/SceneFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/RayData.dir/src/SceneFactory.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/SceneFactory.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/SceneFactory.cpp
 
 CMakeFiles/RayData.dir/src/SceneFactory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/SceneFactory.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/SceneFactory.cpp > CMakeFiles/RayData.dir/src/SceneFactory.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/SceneFactory.cpp > CMakeFiles/RayData.dir/src/SceneFactory.cpp.i
 
 CMakeFiles/RayData.dir/src/SceneFactory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/SceneFactory.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/SceneFactory.cpp -o CMakeFiles/RayData.dir/src/SceneFactory.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/SceneFactory.cpp -o CMakeFiles/RayData.dir/src/SceneFactory.cpp.s
 
 CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.o: ../src/SceneFactoryData.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/SceneFactoryData.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/SceneFactoryData.cpp
 
 CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/SceneFactoryData.cpp > CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/SceneFactoryData.cpp > CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.i
 
 CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/SceneFactoryData.cpp -o CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/SceneFactoryData.cpp -o CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.s
 
 CMakeFiles/RayData.dir/src/SceneFactoryVirtual.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/SceneFactoryVirtual.cpp.o: ../src/SceneFactoryVirtual.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/RayData.dir/src/SceneFactoryVirtual.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/SceneFactoryVirtual.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/SceneFactoryVirtual.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/RayData.dir/src/SceneFactoryVirtual.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/SceneFactoryVirtual.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/SceneFactoryVirtual.cpp
 
 CMakeFiles/RayData.dir/src/SceneFactoryVirtual.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/SceneFactoryVirtual.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/SceneFactoryVirtual.cpp > CMakeFiles/RayData.dir/src/SceneFactoryVirtual.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/SceneFactoryVirtual.cpp > CMakeFiles/RayData.dir/src/SceneFactoryVirtual.cpp.i
 
 CMakeFiles/RayData.dir/src/SceneFactoryVirtual.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/SceneFactoryVirtual.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/SceneFactoryVirtual.cpp -o CMakeFiles/RayData.dir/src/SceneFactoryVirtual.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/SceneFactoryVirtual.cpp -o CMakeFiles/RayData.dir/src/SceneFactoryVirtual.cpp.s
 
 CMakeFiles/RayData.dir/src/SceneReader.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/SceneReader.cpp.o: ../src/SceneReader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/RayData.dir/src/SceneReader.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/SceneReader.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/SceneReader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/RayData.dir/src/SceneReader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/SceneReader.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/SceneReader.cpp
 
 CMakeFiles/RayData.dir/src/SceneReader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/SceneReader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/SceneReader.cpp > CMakeFiles/RayData.dir/src/SceneReader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/SceneReader.cpp > CMakeFiles/RayData.dir/src/SceneReader.cpp.i
 
 CMakeFiles/RayData.dir/src/SceneReader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/SceneReader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/SceneReader.cpp -o CMakeFiles/RayData.dir/src/SceneReader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/SceneReader.cpp -o CMakeFiles/RayData.dir/src/SceneReader.cpp.s
 
 CMakeFiles/RayData.dir/src/Sphere.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/Sphere.cpp.o: ../src/Sphere.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/RayData.dir/src/Sphere.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Sphere.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Sphere.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/RayData.dir/src/Sphere.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Sphere.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Sphere.cpp
 
 CMakeFiles/RayData.dir/src/Sphere.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/Sphere.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Sphere.cpp > CMakeFiles/RayData.dir/src/Sphere.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Sphere.cpp > CMakeFiles/RayData.dir/src/Sphere.cpp.i
 
 CMakeFiles/RayData.dir/src/Sphere.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/Sphere.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Sphere.cpp -o CMakeFiles/RayData.dir/src/Sphere.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Sphere.cpp -o CMakeFiles/RayData.dir/src/Sphere.cpp.s
 
 CMakeFiles/RayData.dir/src/TG.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/TG.cpp.o: ../src/TG.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/RayData.dir/src/TG.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/TG.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/TG.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/RayData.dir/src/TG.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/TG.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/TG.cpp
 
 CMakeFiles/RayData.dir/src/TG.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/TG.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/TG.cpp > CMakeFiles/RayData.dir/src/TG.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/TG.cpp > CMakeFiles/RayData.dir/src/TG.cpp.i
 
 CMakeFiles/RayData.dir/src/TG.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/TG.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/TG.cpp -o CMakeFiles/RayData.dir/src/TG.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/TG.cpp -o CMakeFiles/RayData.dir/src/TG.cpp.s
 
 CMakeFiles/RayData.dir/src/Texture.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/Texture.cpp.o: ../src/Texture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/RayData.dir/src/Texture.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Texture.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Texture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/RayData.dir/src/Texture.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Texture.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Texture.cpp
 
 CMakeFiles/RayData.dir/src/Texture.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/Texture.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Texture.cpp > CMakeFiles/RayData.dir/src/Texture.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Texture.cpp > CMakeFiles/RayData.dir/src/Texture.cpp.i
 
 CMakeFiles/RayData.dir/src/Texture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/Texture.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Texture.cpp -o CMakeFiles/RayData.dir/src/Texture.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Texture.cpp -o CMakeFiles/RayData.dir/src/Texture.cpp.s
 
 CMakeFiles/RayData.dir/src/Translate.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/Translate.cpp.o: ../src/Translate.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/RayData.dir/src/Translate.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Translate.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Translate.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/RayData.dir/src/Translate.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Translate.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Translate.cpp
 
 CMakeFiles/RayData.dir/src/Translate.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/Translate.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Translate.cpp > CMakeFiles/RayData.dir/src/Translate.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Translate.cpp > CMakeFiles/RayData.dir/src/Translate.cpp.i
 
 CMakeFiles/RayData.dir/src/Translate.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/Translate.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/src/Translate.cpp -o CMakeFiles/RayData.dir/src/Translate.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/src/Translate.cpp -o CMakeFiles/RayData.dir/src/Translate.cpp.s
 
 CMakeFiles/RayData.dir/qrc_resources.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/qrc_resources.cpp.o: qrc_resources.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/RayData.dir/qrc_resources.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/qrc_resources.cpp.o -c /home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/qrc_resources.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/RayData.dir/qrc_resources.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/qrc_resources.cpp.o -c /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/qrc_resources.cpp
 
 CMakeFiles/RayData.dir/qrc_resources.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/qrc_resources.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/qrc_resources.cpp > CMakeFiles/RayData.dir/qrc_resources.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/qrc_resources.cpp > CMakeFiles/RayData.dir/qrc_resources.cpp.i
 
 CMakeFiles/RayData.dir/qrc_resources.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/qrc_resources.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/qrc_resources.cpp -o CMakeFiles/RayData.dir/qrc_resources.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/qrc_resources.cpp -o CMakeFiles/RayData.dir/qrc_resources.cpp.s
 
 # Object files for target RayData
 RayData_OBJECTS = \
@@ -548,7 +548,7 @@ RayData: /usr/lib/x86_64-linux-gnu/libglut.so
 RayData: /opt/Qt/5.9.1/gcc_64/lib/libQt5Gui.so.5.9.1
 RayData: /opt/Qt/5.9.1/gcc_64/lib/libQt5Core.so.5.9.1
 RayData: CMakeFiles/RayData.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Linking CXX executable RayData"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Linking CXX executable RayData"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RayData.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -561,6 +561,6 @@ CMakeFiles/RayData.dir/clean:
 .PHONY : CMakeFiles/RayData.dir/clean
 
 CMakeFiles/RayData.dir/depend: qrc_resources.cpp
-	cd /home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rcabezqu7.alumnes/Escriptori/dataray-f01 /home/rcabezqu7.alumnes/Escriptori/dataray-f01 /home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug /home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug /home/rcabezqu7.alumnes/Escriptori/dataray-f01/cmake-build-debug/CMakeFiles/RayData.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles/RayData.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/RayData.dir/depend
 

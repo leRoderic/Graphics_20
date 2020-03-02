@@ -29,7 +29,25 @@ Scene::~Scene()
 */
 bool Scene::intersection(const Ray& raig, float t_min, float t_max, IntersectionInfo& info) const {
 
-    return true;
+    IntersectionInfo min_inter = info; //local copy to mantain the minimum
+    bool intersects = false;
+
+    //cycle through all the objects in the scene
+    for(auto it = this->objects.begin(); it != this->objects.end(); ++it){
+        //if the ray intersects the object
+        if((*it)->intersection(raig, t_min, t_max, info)){
+            intersects = true;
+            //compute at which distance
+            // if its less then the current minimum, save the new intersection
+            if(info.t < min_inter.t)
+                min_inter = info;
+        }
+    }
+
+    info = min_inter;
+
+    return intersects;
+
     // TODO FASE 0 i FASE 1: Heu de codificar la vostra solucio per aquest metode substituint el 'return true'
     // Una possible solucio es cridar el mètode intersection per a tots els objectes i quedar-se amb la interseccio
     // mes propera a l'observador, en el cas que n'hi hagi més d'una.
@@ -50,9 +68,18 @@ vec3 Scene::ComputeColorRay (Ray &ray, int depth ) {
     vec3 color;
     vec3 ray2;
 
-    ray2 = normalize(ray.direction);
-    // TODO: A canviar el càlcul del color en les diferents fases
-    color = 0.5f*vec3(ray2.x+1, ray2.y+1, ray2.z+1);
+    IntersectionInfo* info = new IntersectionInfo();
+
+    if(this->intersection(ray, -10, 10, *info)) {
+        //color = vec3(0, 0, 1);
+        color = info->normal;
+    }else{
+        // ((1.0, 1.0, 1.0) * t) + ((1 - t)(1.0, 0.0, 0.0))
+        ray2 = normalize(ray.direction);
+        color = vec3(1, 1, 1) - (((ray2.y + 1)/2) * vec3(0.7, 0.5, 0));
+    }
+
+    delete info;
 
     return color;
 }
