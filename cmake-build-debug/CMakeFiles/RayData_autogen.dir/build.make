@@ -63,6 +63,7 @@ qrc_resources.cpp: ../resources/europa.png
 qrc_resources.cpp: ../resources/map.png
 qrc_resources.cpp: ../resources/mapZoom.png
 qrc_resources.cpp: ../resources/spheres.txt
+qrc_resources.cpp: ../resources/spheres2.txt
 qrc_resources.cpp: ../resources/data0.txt
 qrc_resources.cpp: ../resources/dataBCN.txt
 qrc_resources.cpp: ../resources/dataBCNZoom.txt

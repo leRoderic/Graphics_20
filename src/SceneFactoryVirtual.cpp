@@ -39,8 +39,8 @@ void SceneFactoryVirtual::OneSphere(Scene *s) {
 
 Camera *SceneFactoryVirtual::createCamera() {
     // creacio de la camera
-    vec3 lookfrom(0, 0, 1);
-    vec3 lookat(0,0,0);
+    vec3 lookfrom(1, -1, 1);
+    vec3 lookat(-1,1,0);
     float dist_to_focus = 1.0;
     float aperture = 0.1;
     int pixelsX = 600;
