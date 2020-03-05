@@ -4,6 +4,7 @@
 #include "Object.h"
 #include "Sphere.h"
 #include "Plane.h"
+#include "Triangle.h"
 
 class ObjectFactory
 {
@@ -13,7 +14,10 @@ class ObjectFactory
 public:
     typedef enum {
         SPHERE,
-        PLANE
+        PLANE,
+        TRIANGLE,
+        BROBJECT,
+        CYLINDER
     } OBJECT_TYPES;
 
     static ObjectFactory *getInstance() {
@@ -27,6 +31,9 @@ public:
     }
 
     Object *createObject(float x, float y, float z, float aux, float v, OBJECT_TYPES t);
+
+    Object *createObject(float x1, float y1, float z1, float x2, float y2, float z2, float x3, float y3, float z3, float aux,
+                 float v, OBJECT_TYPES t);
 };
 
 #endif // OBJECTFACTORY_H

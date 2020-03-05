@@ -34,45 +34,30 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/CLion-2019.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /opt/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /opt/CLion-2019.2/bin/cmake/linux/bin/cmake -E remove -f
+RM = /opt/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b
+CMAKE_SOURCE_DIR = /mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596/cmake-build-debug
 
 # Utility rule file for RayData_autogen.
 
 # Include the progress variables for this target.
 include CMakeFiles/RayData_autogen.dir/progress.make
 
-CMakeFiles/RayData_autogen: qrc_resources.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target RayData"
-	/opt/CLion-2019.2/bin/cmake/linux/bin/cmake -E cmake_autogen /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles/RayData_autogen.dir/AutogenInfo.cmake Debug
-
-qrc_resources.cpp: ../resources/earth1.png
-qrc_resources.cpp: ../resources/cube.obj
-qrc_resources.cpp: ../resources/europa.png
-qrc_resources.cpp: ../resources/map.png
-qrc_resources.cpp: ../resources/mapZoom.png
-qrc_resources.cpp: ../resources/spheres.txt
-qrc_resources.cpp: ../resources/spheres2.txt
-qrc_resources.cpp: ../resources/data0.txt
-qrc_resources.cpp: ../resources/dataBCN.txt
-qrc_resources.cpp: ../resources/dataBCNZoom.txt
-qrc_resources.cpp: ../resources.qrc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating qrc_resources.cpp"
-	/opt/Qt/5.9.1/gcc_64/bin/rcc --name resources --output /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/qrc_resources.cpp /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/resources.qrc
+CMakeFiles/RayData_autogen:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target RayData"
+	/opt/cmake/bin/cmake -E cmake_autogen /mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596/cmake-build-debug/CMakeFiles/RayData_autogen.dir/AutogenInfo.cmake Debug
 
 RayData_autogen: CMakeFiles/RayData_autogen
-RayData_autogen: qrc_resources.cpp
 RayData_autogen: CMakeFiles/RayData_autogen.dir/build.make
 
 .PHONY : RayData_autogen
@@ -87,6 +72,6 @@ CMakeFiles/RayData_autogen.dir/clean:
 .PHONY : CMakeFiles/RayData_autogen.dir/clean
 
 CMakeFiles/RayData_autogen.dir/depend:
-	cd /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles/RayData_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596 /mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596 /mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596/cmake-build-debug /mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596/cmake-build-debug /mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596/cmake-build-debug/CMakeFiles/RayData_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/RayData_autogen.dir/depend
 

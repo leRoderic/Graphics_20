@@ -29,6 +29,22 @@ Object *ObjectFactory::createObject(float x, float y, float z, float aux, float 
             o = new Plane(vec3(x, y, z), aux, v);
             break;
         default:
+            break;
+    }
+
+    return o;
+}
+
+
+Object *ObjectFactory::createObject(float x1, float y1, float z1, float x2, float y2, float z2, float x3, float y3, float z3,
+                            float aux, float v, OBJECT_TYPES t) {
+
+    Object *o;
+    switch (t) {
+        case TRIANGLE:
+            o = new Triangle(vec3(x1, y1, z1), vec3(x2, y2, z2), vec3(x3, y3, z3), aux, v);
+            break;
+        default:
 
             break;
     }
