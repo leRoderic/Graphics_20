@@ -38,6 +38,8 @@ void SceneReader::fileLineRead (QString lineReaded) {
         sphereFound(fields);
     else if (QString::compare("Base", fields[0], Qt::CaseInsensitive) == 0)
         baseFound(fields);
+    else if (QString::compare("Triangle", fields[0], Qt::CaseInsensitive) == 0)
+        triangleFound(fields);
     else
         std::cerr << "Element unknown" << std::endl;
 }
@@ -74,6 +76,24 @@ void SceneReader::baseFound(QStringList fields) {
         scene->objects.push_back(o);
         // TODO Fase 4: llegir textura i afegir-la a l'objecte. Veure la classe Texture
     }
+    // TODO: Fase 3: Si cal instanciar una esfera com objecte base i no un pla, cal afegir aqui un switch
+}
+
+void SceneReader::triangleFound(QStringList fields) {
+    if (fields.size() != 11) {
+        std::cerr << "Wrong triangle format" << fields.size()<< std::endl;
+        return;
+    }
+
+    Object *o;
+    // TODO Fase 1: Cal fer un pla acotat i no un pla infinit. Les dimensions del pla acotat seran les dimensions de l'escena en x i z
+    o = ObjectFactory::getInstance()->createObject(fields[1].toDouble(), fields[2].toDouble(), fields[3].toDouble(),
+            fields[4].toDouble(), fields[5].toDouble(), fields[6].toDouble(),
+            fields[7].toDouble(),fields[8].toDouble(), fields[9].toDouble(),
+            fields[10].toDouble(), 1.0f,ObjectFactory::OBJECT_TYPES::TRIANGLE);
+    scene->objects.push_back(o);
+        // TODO Fase 4: llegir textura i afegir-la a l'objecte. Veure la classe Texture
+
     // TODO: Fase 3: Si cal instanciar una esfera com objecte base i no un pla, cal afegir aqui un switch
 }
 

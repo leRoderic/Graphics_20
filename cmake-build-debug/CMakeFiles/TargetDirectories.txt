@@ -1,4 +1,4 @@
-/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles/RayData.dir
-/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles/RayData_autogen.dir
+/mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596/cmake-build-debug/CMakeFiles/RayData.dir
+/mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596/cmake-build-debug/CMakeFiles/RayData_autogen.dir

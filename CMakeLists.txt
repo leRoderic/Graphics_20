@@ -340,7 +340,7 @@ add_executable(RayData
         src/TG.cpp
         src/Texture.cpp
         src/Translate.cpp
-        ${Res_SRC} )
+        ${Res_SRC} src/Triangle.cpp)
 
 
 # Set the GL and GLUT libraries

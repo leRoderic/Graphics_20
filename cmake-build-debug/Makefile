@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/CLion-2019.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /opt/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /opt/CLion-2019.2/bin/cmake/linux/bin/cmake -E remove -f
+RM = /opt/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b
+CMAKE_SOURCE_DIR = /mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-bui
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/opt/CLion-2019.2/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/cmake/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/opt/CLion-2019.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/opt/cmake/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596/cmake-build-debug/CMakeFiles /mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/oornaqbl13.alumnes/CLionProjects/dataray-f01b/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -973,6 +973,33 @@ src/Translate.cpp.s:
 	$(MAKE) -f CMakeFiles/RayData.dir/build.make CMakeFiles/RayData.dir/src/Translate.cpp.s
 .PHONY : src/Translate.cpp.s
 
+src/Triangle.o: src/Triangle.cpp.o
+
+.PHONY : src/Triangle.o
+
+# target to build an object file
+src/Triangle.cpp.o:
+	$(MAKE) -f CMakeFiles/RayData.dir/build.make CMakeFiles/RayData.dir/src/Triangle.cpp.o
+.PHONY : src/Triangle.cpp.o
+
+src/Triangle.i: src/Triangle.cpp.i
+
+.PHONY : src/Triangle.i
+
+# target to preprocess a source file
+src/Triangle.cpp.i:
+	$(MAKE) -f CMakeFiles/RayData.dir/build.make CMakeFiles/RayData.dir/src/Triangle.cpp.i
+.PHONY : src/Triangle.cpp.i
+
+src/Triangle.s: src/Triangle.cpp.s
+
+.PHONY : src/Triangle.s
+
+# target to generate assembly for a file
+src/Triangle.cpp.s:
+	$(MAKE) -f CMakeFiles/RayData.dir/build.make CMakeFiles/RayData.dir/src/Triangle.cpp.s
+.PHONY : src/Triangle.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1076,6 +1103,9 @@ help:
 	@echo "... src/Translate.o"
 	@echo "... src/Translate.i"
 	@echo "... src/Translate.s"
+	@echo "... src/Triangle.o"
+	@echo "... src/Triangle.i"
+	@echo "... src/Triangle.s"
 .PHONY : help
 
 

@@ -17,8 +17,6 @@ Scene::~Scene()
     }
 }
 
-
-
 /*
 ** TODO: FASE 1: Metode que testeja la interseccio contra tots els objectes de l'escena
 **
@@ -47,7 +45,6 @@ bool Scene::intersection(const Ray& raig, float t_min, float t_max, Intersection
     info = min_inter;
 
     return intersects;
-
     // TODO FASE 0 i FASE 1: Heu de codificar la vostra solucio per aquest metode substituint el 'return true'
     // Una possible solucio es cridar el mètode intersection per a tots els objectes i quedar-se amb la interseccio
     // mes propera a l'observador, en el cas que n'hi hagi més d'una.
@@ -55,7 +52,6 @@ bool Scene::intersection(const Ray& raig, float t_min, float t_max, Intersection
     // pero no en aquesta funcio.
 
 }
-
 
 /*
 ** TODO: Funcio ComputeColorRay es la funcio recursiva del RayTracing.
@@ -68,23 +64,20 @@ vec3 Scene::ComputeColorRay (Ray &ray, int depth ) {
     vec3 color;
     vec3 ray2;
 
-    IntersectionInfo* info = new IntersectionInfo();
+    IntersectionInfo info = IntersectionInfo();
 
-    if(this->intersection(ray, -10, 10, *info)) {
-        //color = vec3(0, 0, 1);
-        color = info->normal;
+    if(this->intersection(ray, -10, 10, info)) {
+        //color = vec3(1, 0, 0);
+
+        color = normalize(vec3(info.normal.x+1, info.normal.y+1, info.normal.z+1));
     }else{
         // ((1.0, 1.0, 1.0) * t) + ((1 - t)(1.0, 0.0, 0.0))
         ray2 = normalize(ray.direction);
-        color = vec3(1, 1, 1) - (((ray2.y + 1)/2) * vec3(0.7, 0.5, 0));
+        color = vec3(1, 1, 1) - (((ray2.t + 1)/2) * vec3(0.7, 0.5, 0));
     }
-
-    delete info;
 
     return color;
 }
-
-
 
 void Scene::update(int nframe) {
     for (unsigned int i = 0; i< objects.size(); i++) {
@@ -106,8 +99,13 @@ void Scene::setMaterials(ColorMap *cm) {
         //  Crear els materials segons la paleta de cada propietat a cada objecte de l'escena
         m = new Lambertian(cm->getColor(0));
     }
-    for (auto o:objects)
-        if (o->getMaterial()== nullptr) o->setMaterial(m);
+
+    for(auto it = this->objects.begin(); it != this->objects.end(); ++it){
+        if((*it)->getMaterial() == nullptr){
+            m = new Lambertian(vec3(0.5, 0.2, 0.7));
+            (*it)->setMaterial(m);
+        }
+    }
 }
 
 void Scene::setDimensions(vec3 p1, vec3 p2) {
