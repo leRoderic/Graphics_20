@@ -40,6 +40,8 @@ void SceneReader::fileLineRead (QString lineReaded) {
         baseFound(fields);
     else if (QString::compare("Triangle", fields[0], Qt::CaseInsensitive) == 0)
         triangleFound(fields);
+    else if (QString::compare("Brobject", fields[0], Qt::CaseInsensitive) == 0)
+        brObjectFound(fields);
     else
         std::cerr << "Element unknown" << std::endl;
 }
@@ -97,20 +99,19 @@ void SceneReader::triangleFound(QStringList fields) {
     // TODO: Fase 3: Si cal instanciar una esfera com objecte base i no un pla, cal afegir aqui un switch
 }
 
-void SceneReader::BrObjectFound(QStringList fields) {
+void SceneReader::brObjectFound(QStringList fields) {
 
-    // TODO Fase 1: Per incloure BrObjecte
+    //  Fase 1: Per incloure BrObjecte
     //  Es suposa que serà una linia del fitxer de l'estil
     //  brobject nomDelFitxer posició del seu centre, i la seva escala
 
-    if (fields.size() != 6) {
+    if (fields.size() != 3) {
         std::cerr << "Wrong brObject format" << std::endl;
         return;
     }
-    //    Object *o;
-    //    o = ObjectFactory::getInstance()->createObject(fields[1], fields[2].toDouble(), fields[3].toDouble(), fields[4].toDouble(),
-    //                                                fields[5].toDouble(),
-    //                                                ObjectFactory::OBJECT_TYPES::BROBJECT);
-    //    scene->objects.push_back(o);
-    //
+    Object *o;
+    o = ObjectFactory::getInstance()->createObject(fields[1], fields[2].toDouble(),
+            ObjectFactory::OBJECT_TYPES::BROBJECT);
+
+    scene->objects.push_back(o);
 }

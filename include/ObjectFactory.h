@@ -5,6 +5,7 @@
 #include "Sphere.h"
 #include "Plane.h"
 #include "Triangle.h"
+#include "BoundaryObject.h"
 
 class ObjectFactory
 {
@@ -34,6 +35,7 @@ public:
 
     Object *createObject(float x1, float y1, float z1, float x2, float y2, float z2, float x3, float y3, float z3, float aux,
                  float v, OBJECT_TYPES t);
+    Object *createObject(QString s, float data, OBJECT_TYPES t);
 };
 
 #endif // OBJECTFACTORY_H

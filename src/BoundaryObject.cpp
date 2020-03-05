@@ -25,7 +25,9 @@ bool BoundaryObject::intersection(const Ray& raig, float t_min, float t_max, Int
     return false;
 }
 
+void BoundaryObject::aplicaTG(TG *tg) {
 
+}
 
 BoundaryObject::BoundaryObject(const QString &fileName, float data): Object(data)
 {

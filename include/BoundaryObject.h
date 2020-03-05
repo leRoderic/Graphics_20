@@ -33,9 +33,9 @@ private:
     string nom;
     vector<Cara> cares; // cares de l'objecte
     vector<vec4> vertexs; // vertexs de l'objecte sense repetits
-
+    void aplicaTG(TG *tg);
     void readObj(string filename);
-    void construeix_cara ( char **words, int nwords, BoundaryObject *objActual, int vindexUlt);
+    void construeix_cara (char **words, int nwords, BoundaryObject *objActual, int vindexUlt);
 
 };
 
