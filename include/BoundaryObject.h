@@ -4,6 +4,11 @@
 #include <vector>
 #include <string>
 
+#include <QString>
+#include <QFile>
+#include <QRegularExpression>
+
+
 #include <iostream>
 #include <stdlib.h>
 #include <cstring>
@@ -18,6 +23,7 @@ class BoundaryObject : public Object
 {
 public:
     BoundaryObject(string s, float data);
+    BoundaryObject(const QString &fileName, float data);
     virtual bool intersection(const Ray& r, float t_min, float t_max, IntersectionInfo& info) const;
     virtual ~BoundaryObject();
 
