@@ -1,3 +1,6 @@
+#include <QVector>
+#include <QVector3D>
+
 #include "BoundaryObject.h"
 
 BoundaryObject::BoundaryObject(string s, float data) : Object(data)
@@ -21,6 +24,67 @@ bool BoundaryObject::intersection(const Ray& raig, float t_min, float t_max, Int
     // TO DO Fase 1: A implementar
     return false;
 }
+
+
+
+BoundaryObject::BoundaryObject(const QString &fileName, float data): Object(data)
+{
+    QFile file(fileName);
+    if(file.exists()) {
+        if(file.open(QFile::ReadOnly | QFile::Text)) {
+            QVector<QVector3D> v;
+
+            while(!file.atEnd()) {
+                QString line = file.readLine().trimmed();
+                QStringList lineParts = line.split(QRegularExpression("\\s+"));
+                if(lineParts.count() > 0) {
+                    // if it’s a comment
+                    if(lineParts.at(0).compare("#", Qt::CaseInsensitive) == 0)
+                    {
+                       // qDebug() << line.remove(0, 1).trimmed();
+                    }
+
+                        // if it’s a vertex position (v)
+                    else if(lineParts.at(0).compare("v", Qt::CaseInsensitive) == 0)
+                    {
+                        vertexs.push_back(vec4(lineParts.at(1).toFloat(),
+                                                 lineParts.at(2).toFloat(),
+                                                 lineParts.at(3).toFloat(), 1.0f));
+                    }
+
+                        // if it’s a normal (vn)
+                    else if(lineParts.at(0).compare("vn", Qt::CaseInsensitive) == 0)
+                    {
+
+                    }
+                    // if it’s a texture (vt)
+                    else if(lineParts.at(0).compare("vt", Qt::CaseInsensitive) == 0)
+                    {
+
+                    }
+
+                    // if it’s face data (f)
+                    // there’s an assumption here that faces are all triangles
+                    else if(lineParts.at(0).compare("f", Qt::CaseInsensitive) == 0)
+                    {
+                        Cara *cara = new Cara();
+
+                        // get points from v array
+                        cara->idxVertices.push_back(lineParts.at(1).split("/").at(0).toInt() - 1);
+                        cara->idxVertices.push_back(lineParts.at(2).split("/").at(0).toInt() - 1);
+                        cara->idxVertices.push_back(lineParts.at(3).split("/").at(0).toInt() - 1);
+
+                        cares.push_back(*cara);
+                    }
+
+                }
+            }
+
+            file.close();
+        }
+    }
+}
+
 
 // Llegeix un fitxer .obj
 //  Si el fitxer referencia fitxers de materials (.mtl), encara no es llegeixen
