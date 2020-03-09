@@ -35,7 +35,6 @@ Object *ObjectFactory::createObject(float x, float y, float z, float aux, float 
     return o;
 }
 
-
 Object *ObjectFactory::createObject(float x1, float y1, float z1, float x2, float y2, float z2, float x3, float y3, float z3,
                             float aux, float v, OBJECT_TYPES t) {
 
@@ -49,5 +48,18 @@ Object *ObjectFactory::createObject(float x1, float y1, float z1, float x2, floa
             break;
     }
 
+    return o;
+}
+
+Object *ObjectFactory::createObject(QString s, float data, OBJECT_TYPES t) {
+
+    Object *o;
+    switch(t){
+        case BROBJECT:
+            o = new BoundaryObject(s, data);
+            break;
+        default:
+            break;
+    }
     return o;
 }

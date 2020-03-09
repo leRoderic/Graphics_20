@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596
+# Install script for directory: /mnt/h/rcmik/Documents/GitHub/dataray-f01
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/h/rcmik/Documents/GitHub/dataray-f01/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

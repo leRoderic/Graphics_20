@@ -43,10 +43,10 @@ RM = /opt/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596
+CMAKE_SOURCE_DIR = /mnt/h/rcmik/Documents/GitHub/dataray-f01
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/h/rcmik/Documents/GitHub/dataray-f01/cmake-build-debug
 
 # Utility rule file for RayData_autogen.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa5
 include CMakeFiles/RayData_autogen.dir/progress.make
 
 CMakeFiles/RayData_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target RayData"
-	/opt/cmake/bin/cmake -E cmake_autogen /mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596/cmake-build-debug/CMakeFiles/RayData_autogen.dir/AutogenInfo.cmake Debug
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/h/rcmik/Documents/GitHub/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target RayData"
+	/opt/cmake/bin/cmake -E cmake_autogen /mnt/h/rcmik/Documents/GitHub/dataray-f01/cmake-build-debug/CMakeFiles/RayData_autogen.dir/AutogenInfo.cmake Debug
 
 RayData_autogen: CMakeFiles/RayData_autogen
 RayData_autogen: CMakeFiles/RayData_autogen.dir/build.make
@@ -72,6 +72,6 @@ CMakeFiles/RayData_autogen.dir/clean:
 .PHONY : CMakeFiles/RayData_autogen.dir/clean
 
 CMakeFiles/RayData_autogen.dir/depend:
-	cd /mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596 /mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596 /mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596/cmake-build-debug /mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596/cmake-build-debug /mnt/h/rcmik/Descargas/dataray-f01-243462cb30c1e3d11b96d46fa572d4042d29d596/cmake-build-debug/CMakeFiles/RayData_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/h/rcmik/Documents/GitHub/dataray-f01/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/h/rcmik/Documents/GitHub/dataray-f01 /mnt/h/rcmik/Documents/GitHub/dataray-f01 /mnt/h/rcmik/Documents/GitHub/dataray-f01/cmake-build-debug /mnt/h/rcmik/Documents/GitHub/dataray-f01/cmake-build-debug /mnt/h/rcmik/Documents/GitHub/dataray-f01/cmake-build-debug/CMakeFiles/RayData_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/RayData_autogen.dir/depend
 

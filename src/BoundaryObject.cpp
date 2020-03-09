@@ -3,12 +3,23 @@
 
 #include "BoundaryObject.h"
 
-BoundaryObject::BoundaryObject(string s, float data) : Object(data)
-{ 
+BoundaryObject::BoundaryObject(string s, float data) : Object(data){
 
-  readObj(s);
-  // TO DO: Cal fer un recorregut de totes les cares per a posar-les com Triangles
-  // Cal recorrer l'estructura de l'objecte segons cara-vertexs que es carrega
+    readObj(s);
+    vec4 p0, p1, p2;
+    for(int i=0; i<cares.size();i++){
+        // Cal fer un recorregut de totes les cares per a posar-les com Triangles
+        p0 = vertexs[cares[i].idxVertices[0]];
+        p1 = vertexs[cares[i].idxVertices[1]];
+        p2 = vertexs[cares[i].idxVertices[2]];
+
+
+        this->triangles.push_back(new Triangle(vec3(p0.x, p0.y, p0.z), vec3(p1.x, p1.y, p1.z),
+                                               vec3(p1.x, p2.y, p2.z), 0, data));
+
+    }
+    // Cal recorrer l'estructura de l'objecte segons cara-vertexs que es carrega
+
 
 
   vertexs.clear();
@@ -21,11 +32,15 @@ BoundaryObject::~BoundaryObject() {
 
 bool BoundaryObject::intersection(const Ray& raig, float t_min, float t_max, IntersectionInfo& info) const {
 
-    // TO DO Fase 1: A implementar
+    for(int i=0; i<this->triangles.size();i++){
+        triangles[i]->intersection(raig, t_min, t_max, info);
+    }
     return false;
 }
 
+void BoundaryObject::aplicaTG(TG *tg) {
 
+}
 
 BoundaryObject::BoundaryObject(const QString &fileName, float data): Object(data)
 {

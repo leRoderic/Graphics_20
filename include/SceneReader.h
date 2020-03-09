@@ -53,7 +53,7 @@ protected:
 
     void triangleFound(QStringList list);
 
-    void BrObjectFound(QStringList list);
+    void brObjectFound(QStringList list);
 };
 
 #endif // SCENEREADER_H
