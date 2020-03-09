@@ -14,7 +14,6 @@
 #include "Animation.h"
 #include "Object.h"
 #include "Sphere.h"
-#include "BoundaryObject.h"
 #include "Lambertian.h"
 #include "ColorMap.h"
 

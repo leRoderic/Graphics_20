@@ -12,7 +12,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <cstring>
-
+#include "Triangle.h"
 #include "Object.h"
 #include "Cara.h"
 #include "ReadFile.h"
@@ -29,10 +29,10 @@ public:
 
 private:
 
-
     string nom;
     vector<Cara> cares; // cares de l'objecte
     vector<vec4> vertexs; // vertexs de l'objecte sense repetits
+    vector<Triangle*> triangles;
     void aplicaTG(TG *tg);
     void readObj(string filename);
     void construeix_cara (char **words, int nwords, BoundaryObject *objActual, int vindexUlt);
