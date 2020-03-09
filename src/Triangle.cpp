@@ -11,7 +11,7 @@ Triangle::Triangle(vec3 p1, vec3 p2, vec3 p3, float aux, float d) : Object(d) {
 
     vec3 normal = vec3(u.y * v.z - u.z * v.y, u.x * v.z - u.z * v.x, u.x * v.y - u.y * v.x);
 
-    this->normal = normalize(normal);
+    this->normal = normalize(vec3(normal.x + 1, normal.y+1, normal.z+1));
 }
 
 bool Triangle::intersection(const Ray &raig, float t_min, float t_max, IntersectionInfo &info) const {

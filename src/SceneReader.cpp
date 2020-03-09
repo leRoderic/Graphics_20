@@ -114,6 +114,7 @@ void SceneReader::brObjectFound(QStringList fields) {
         return;
     }
     Object *o;
+
     o = ObjectFactory::getInstance()->createObject(fields[1], fields[2].toDouble(),
             ObjectFactory::OBJECT_TYPES::BROBJECT);
 

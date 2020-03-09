@@ -6,44 +6,44 @@
 BoundaryObject::BoundaryObject(string s, float data) : Object(data){
 
     readObj(s);
-    vec4 p0, p1, p2;
-    for(int i=0; i<cares.size();i++){
-        // Cal fer un recorregut de totes les cares per a posar-les com Triangles
-        p0 = vertexs[cares[i].idxVertices[0]];
-        p1 = vertexs[cares[i].idxVertices[1]];
-        p2 = vertexs[cares[i].idxVertices[2]];
 
-
-        this->triangles.push_back(new Triangle(vec3(p0.x, p0.y, p0.z), vec3(p1.x, p1.y, p1.z),
-                                               vec3(p1.x, p2.y, p2.z), 0, data));
-
-    }
     // Cal recorrer l'estructura de l'objecte segons cara-vertexs que es carrega
-
-
-
   vertexs.clear();
   cares.clear();
 }
 
 BoundaryObject::~BoundaryObject() {
 
+    int nTriangles = this->triangles.size();
+    for(int i=0; i<nTriangles; i++){
+        delete (Triangle*) this->triangles[i];
+    }
+
 }
 
 bool BoundaryObject::intersection(const Ray& raig, float t_min, float t_max, IntersectionInfo& info) const {
 
-    for(int i=0; i<this->triangles.size();i++){
-        triangles[i]->intersection(raig, t_min, t_max, info);
+    int nTriangles = this->triangles.size();
+    for(int i=0; i<nTriangles;i++){
+        // Cal fer un recorregut de totes les cares per a posar-les com Triangles
+        this->triangles[i]->intersection(raig, t_min, t_max, info);
     }
+
     return false;
 }
 
 void BoundaryObject::aplicaTG(TG *tg) {
 
+    int nTriangles = this->triangles.size();
+    for(int i=0; i<nTriangles;i++){
+        // Cal fer un recorregut de totes les cares per a posar-les com Triangles
+        this->triangles[i]->aplicaTG(tg);
+    }
 }
 
 BoundaryObject::BoundaryObject(const QString &fileName, float data): Object(data)
 {
+    std::string asd = fileName.toUtf8().constData();
     QFile file(fileName);
     if(file.exists()) {
         if(file.open(QFile::ReadOnly | QFile::Text)) {
@@ -96,6 +96,18 @@ BoundaryObject::BoundaryObject(const QString &fileName, float data): Object(data
             }
 
             file.close();
+        }
+
+        vec4 p0, p1, p2;
+        int nCares = this->cares.size();
+        for(int i=0; i<nCares;i++){
+            // Cal fer un recorregut de totes les cares per a posar-les com Triangles
+            p0 = vertexs[cares[i].idxVertices[0]];
+            p1 = vertexs[cares[i].idxVertices[1]];
+            p2 = vertexs[cares[i].idxVertices[2]];
+
+            this->triangles.push_back(new Triangle(vec3(p0.x, p0.y, p0.z), vec3(p1.x, p1.y, p1.z),
+                                                   vec3(p1.x, p2.y, p2.z), 0, data));
         }
     }
 }

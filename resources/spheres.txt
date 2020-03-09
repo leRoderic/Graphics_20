@@ -1,1 +1,1 @@
-brobject, :/resources/cube.obj, 5
+brobject,://resources/cube.obj, 5
