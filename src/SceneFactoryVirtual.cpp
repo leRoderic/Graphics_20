@@ -40,7 +40,7 @@ void SceneFactoryVirtual::OneSphere(Scene *s) {
 Camera *SceneFactoryVirtual::createCamera() {
     // creacio de la camera
     // Camera changed: !the same as the template
-    vec3 lookfrom(0, 0, 1);
+    vec3 lookfrom(2, 0.7, 1);
     vec3 lookat(0,0,0);
     float dist_to_focus = 1.0;
     float aperture = 20;

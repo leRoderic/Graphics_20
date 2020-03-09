@@ -54,6 +54,10 @@ protected:
     void triangleFound(QStringList list);
 
     void brObjectFound(QStringList list);
+
+    void cylinderFound(QStringList fields);
+
+    void circleFound(QStringList fields);
 };
 
 #endif // SCENEREADER_H

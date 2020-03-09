@@ -28,6 +28,12 @@ Object *ObjectFactory::createObject(float x, float y, float z, float aux, float 
         case PLANE:
             o = new Plane(vec3(x, y, z), aux, v);
             break;
+        case CYLINDER:
+            o = new Cylinder(vec3(x, y, z), aux, v);
+            break;
+        case CIRCLE:
+            o = new Circle(vec3(x, y, z), vec3(x, y, z), v);
+            break;
         default:
             break;
     }

@@ -40,6 +40,10 @@ void SceneReader::fileLineRead (QString lineReaded) {
         baseFound(fields);
     else if (QString::compare("Triangle", fields[0], Qt::CaseInsensitive) == 0)
         triangleFound(fields);
+    else if (QString::compare("Cylinder", fields[0], Qt::CaseInsensitive) == 0)
+        cylinderFound(fields);
+    else if (QString::compare("Circle", fields[0], Qt::CaseInsensitive) == 0)
+        circleFound(fields);
     else if (QString::compare("Brobject", fields[0], Qt::CaseInsensitive) == 0)
         brObjectFound(fields);
     else
@@ -113,5 +117,34 @@ void SceneReader::brObjectFound(QStringList fields) {
     o = ObjectFactory::getInstance()->createObject(fields[1], fields[2].toDouble(),
             ObjectFactory::OBJECT_TYPES::BROBJECT);
 
+    scene->objects.push_back(o);
+}
+
+void SceneReader::cylinderFound(QStringList fields) {
+    if (fields.size() != 6) {
+        std::cerr << "Wrong cylinder format" << fields.size()<< std::endl;
+        return;
+    }
+
+    Object *o;
+    // TODO Fase 1: Cal fer un pla acotat i no un pla infinit. Les dimensions del pla acotat seran les dimensions de l'escena en x i z
+    o = ObjectFactory::getInstance()->createObject(fields[1].toDouble(), fields[2].toDouble(), fields[3].toDouble(),
+                                                   fields[4].toDouble(),
+                                                   1.0f, ObjectFactory::OBJECT_TYPES::CYLINDER);
+    scene->objects.push_back(o);
+    // TODO Fase 4: llegir textura i afegir-la a l'objecte. Veure la classe Texture
+
+    // TODO: Fase 3: Si cal instanciar una esfera com objecte base i no un pla, cal afegir aqui un switch
+}
+void SceneReader::circleFound(QStringList fields) {
+    if (fields.size() != 5 ) {
+        std::cerr << "Wrong circle format" << std::endl;
+        return;
+    }
+    Object *o;
+
+    o = ObjectFactory::getInstance()->createObject(fields[1].toDouble(), fields[2].toDouble(), fields[3].toDouble(),
+                                                   fields[4].toDouble(),
+                                                   1.0f, ObjectFactory::OBJECT_TYPES::CIRCLE);
     scene->objects.push_back(o);
 }

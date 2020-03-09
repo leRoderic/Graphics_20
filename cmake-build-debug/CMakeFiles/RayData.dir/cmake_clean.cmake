@@ -34,6 +34,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/RayData.dir/src/Translate.cpp.o"
   "CMakeFiles/RayData.dir/qrc_resources.cpp.o"
   "CMakeFiles/RayData.dir/src/Triangle.cpp.o"
+  "CMakeFiles/RayData.dir/src/Circle.cpp.o"
+  "CMakeFiles/RayData.dir/src/Cylinder.cpp.o"
   "RayData.pdb"
   "RayData"
 )
