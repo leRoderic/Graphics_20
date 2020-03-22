@@ -26,6 +26,7 @@ Scene *SceneFactoryVirtual::createScene() {
 }
 
 void SceneFactoryVirtual::OneSphere(Scene *s) {
+
     Sphere * sphere = new Sphere(vec3(0, 0, -1), 0.5, 1.0);
     sphere->setMaterial(new Lambertian(vec3(0.5, 0.2, 0.7)));
 

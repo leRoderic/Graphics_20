@@ -1,3 +1,6 @@
+#include <include/Plane.h>
+#include <include/Cylinder.h>
+#include <include/FittedPlane.h>
 #include "Scene.h"
 
 Scene::Scene()
@@ -8,11 +11,23 @@ Scene::Scene()
 
 Scene::~Scene()
 {
-// TODO Fase 1: Quan s'incloguin nous objectes, cal retocar aquest destructor
+// Hecho:TODO Fase 1: Quan s'incloguin nous objectes, cal retocar aquest destructor
     for(unsigned int i = 0; i < objects.size(); ++i){
         if(objects[i]){
             if (dynamic_cast<Sphere*>(objects[i]))
                     delete (Sphere *)(objects[i]);
+            else if (dynamic_cast<Triangle*>(objects[i]))
+                delete (Triangle *)(objects[i]);
+            else if (dynamic_cast<Plane*>(objects[i]))
+                delete (Plane *)(objects[i]);
+            else if (dynamic_cast<Cylinder*>(objects[i]))
+                delete (Cylinder *)(objects[i]);
+            else if (dynamic_cast<FittedPlane*>(objects[i]))
+                delete (FittedPlane *)(objects[i]);
+            else if (dynamic_cast<BoundaryObject*>(objects[i]))
+                delete (BoundaryObject *)(objects[i]);
+            else if (dynamic_cast<Circle*>(objects[i]))
+                delete (Circle *)(objects[i]);
         }
     }
 }
@@ -88,8 +103,7 @@ void Scene::update(int nframe) {
 void Scene::setMaterials(ColorMap *cm) {
 
     Material *m;
-    // TODO: Fase 0
-    // Cal canviar el codi per a afegir més materials.
+
     // TODO: Fase 2
     // Cal canviar el tipus de material Lambertian, Specular, Transparent, Tipus Textura
     if (cm == nullptr)

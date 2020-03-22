@@ -54,7 +54,7 @@ void DataReader::baseFound(QStringList fields) {
     }
 
     if (QString::compare("plane", fields[1], Qt::CaseInsensitive) == 0) {
-        // TODO Fase 1: Cal fer un pla acotat i no un pla infinit. Les dimensions del pla acotat seran les dimensions de l'escena en x i z
+        // TO-DO Fase 1: Cal fer un pla acotat i no un pla infinit. Les dimensions del pla acotat seran les dimensions de l'escena en x i z
         Object *o;
 
         vec3 p1 = this->scene->pmax;
@@ -78,7 +78,11 @@ void DataReader::limitsFound(QStringList fields) {
         std::cerr << "Wrong limits format" << std::endl;
         return;
     }
-    // TODO Fase 1: Cal guardar el limits del mapa per saber on mapejar les posicions dels objectes
+    xmin = fields[1].toDouble();
+    xmax = fields[2].toDouble();
+    zmin = fields[3].toDouble();
+    zmax = fields[4].toDouble();
+    // TO-DO Fase 1: Cal guardar el limits del mapa per saber on mapejar les posicions dels objectes
 }
 
 void DataReader::propFound(QStringList fields) {
@@ -93,6 +97,12 @@ void DataReader::propFound(QStringList fields) {
     cout<<fields[4].toStdString()<<endl;
     if (QString::compare("sphere", fields[4], Qt::CaseInsensitive) == 0) {
         props.push_back(ObjectFactory::OBJECT_TYPES::SPHERE);
+    }else if (QString::compare("cylinder", fields[4], Qt::CaseInsensitive) == 0) {
+        props.push_back(ObjectFactory::OBJECT_TYPES::CYLINDER);
+    }else if (QString::compare("brobject", fields[4], Qt::CaseInsensitive) == 0) {
+        props.push_back(ObjectFactory::OBJECT_TYPES::BROBJECT);
+    }else if (QString::compare("triangle", fields[4], Qt::CaseInsensitive) == 0) {
+        props.push_back(ObjectFactory::OBJECT_TYPES::TRIANGLE);
     }
 
     // TODO Fase 2: Aquesta valors minim i maxim tambe serviran per mapejar el material des de la paleta

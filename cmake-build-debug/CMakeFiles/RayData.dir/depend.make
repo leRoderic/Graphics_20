@@ -2456,6 +2456,10 @@ CMakeFiles/RayData.dir/src/RenderFactory.cpp.o: /usr/include/x86_64-linux-gnu/qt
 
 CMakeFiles/RayData.dir/src/Scene.cpp.o: ../glm/glm.hpp
 CMakeFiles/RayData.dir/src/Scene.cpp.o: ../glm/gtc/matrix_transform.hpp
+CMakeFiles/RayData.dir/src/Scene.cpp.o: ../glm/gtx/constants.hpp
+CMakeFiles/RayData.dir/src/Scene.cpp.o: ../include/Cylinder.h
+CMakeFiles/RayData.dir/src/Scene.cpp.o: ../include/FittedPlane.h
+CMakeFiles/RayData.dir/src/Scene.cpp.o: ../include/Plane.h
 CMakeFiles/RayData.dir/src/Scene.cpp.o: ../glm/./core/_detail.hpp
 CMakeFiles/RayData.dir/src/Scene.cpp.o: ../glm/./core/_fixes.hpp
 CMakeFiles/RayData.dir/src/Scene.cpp.o: ../glm/./core/_swizzle.hpp
@@ -2518,15 +2522,21 @@ CMakeFiles/RayData.dir/src/Scene.cpp.o: ../glm/./core/type_vec4.inl
 CMakeFiles/RayData.dir/src/Scene.cpp.o: ../glm/core/_fixes.hpp
 CMakeFiles/RayData.dir/src/Scene.cpp.o: ../glm/core/setup.hpp
 CMakeFiles/RayData.dir/src/Scene.cpp.o: ../glm/glm.hpp
+CMakeFiles/RayData.dir/src/Scene.cpp.o: ../glm/gtc/constants.hpp
+CMakeFiles/RayData.dir/src/Scene.cpp.o: ../glm/gtc/constants.inl
+CMakeFiles/RayData.dir/src/Scene.cpp.o: ../glm/gtc/half_float.hpp
+CMakeFiles/RayData.dir/src/Scene.cpp.o: ../glm/gtc/half_float.inl
 CMakeFiles/RayData.dir/src/Scene.cpp.o: ../glm/gtc/matrix_transform.inl
 CMakeFiles/RayData.dir/src/Scene.cpp.o: ../include/Animation.h
 CMakeFiles/RayData.dir/src/Scene.cpp.o: ../include/BoundaryObject.h
 CMakeFiles/RayData.dir/src/Scene.cpp.o: ../include/Cara.h
+CMakeFiles/RayData.dir/src/Scene.cpp.o: ../include/Circle.h
 CMakeFiles/RayData.dir/src/Scene.cpp.o: ../include/ColorMap.h
 CMakeFiles/RayData.dir/src/Scene.cpp.o: ../include/Hitable.h
 CMakeFiles/RayData.dir/src/Scene.cpp.o: ../include/Lambertian.h
 CMakeFiles/RayData.dir/src/Scene.cpp.o: ../include/Material.h
 CMakeFiles/RayData.dir/src/Scene.cpp.o: ../include/Object.h
+CMakeFiles/RayData.dir/src/Scene.cpp.o: ../include/Plane.h
 CMakeFiles/RayData.dir/src/Scene.cpp.o: ../include/Ray.h
 CMakeFiles/RayData.dir/src/Scene.cpp.o: ../include/ReadFile.h
 CMakeFiles/RayData.dir/src/Scene.cpp.o: ../include/Scene.h

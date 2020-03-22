@@ -33,6 +33,7 @@ protected:
 
 private:
     int numProp;
+    float xmin, xmax, zmin, zmax;
     vector<ObjectFactory::OBJECT_TYPES> props;
 };
 
