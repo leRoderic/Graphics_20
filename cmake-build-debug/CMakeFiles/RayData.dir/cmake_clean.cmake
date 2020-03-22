@@ -36,6 +36,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/RayData.dir/src/Triangle.cpp.o"
   "CMakeFiles/RayData.dir/src/Circle.cpp.o"
   "CMakeFiles/RayData.dir/src/Cylinder.cpp.o"
+  "CMakeFiles/RayData.dir/src/FittedPlane.cpp.o"
   "RayData.pdb"
   "RayData"
 )

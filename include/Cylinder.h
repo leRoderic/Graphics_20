@@ -13,7 +13,7 @@
 
 class Cylinder: public Object  {
 public:
-    Cylinder(vec3 center, float radius, float high);
+    Cylinder(vec3 center, float radius, float height);
     virtual ~Cylinder();
     virtual bool intersection(const Ray& r, float t_min, float t_max, IntersectionInfo& info) const;
     bool intersect(const Ray& r, float t_min, float t_max, IntersectionInfo& info) const;
@@ -24,7 +24,7 @@ private:
     // Radi cilindre
     float radius;
     // Altura cilindre
-    float high;
+    float height;
 
     double const EPSILON = 0.0000000000001;
 

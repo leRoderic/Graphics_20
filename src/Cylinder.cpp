@@ -4,14 +4,14 @@
 
 #include "Cylinder.h"
 
-Cylinder::Cylinder(vec3 center, float radius, float high) :Object(high) {
+Cylinder::Cylinder(vec3 center, float radius, float height) : Object(height) {
     this->center = vec3(0.0,0.0,0.0);
-    this->radius = 1;
-    this->high = high;
+    this->radius = 1.0;
+    this->height = height;
     this->normal1 = vec3(0.0,1.0,0.0);
     this->normal2 = vec3(0.0,-1.0,0.0);
-    this->top1 = new Circle(normal1,this->center.y+vec3(0,high,0), 1);
-    this->top2 = new Circle(normal2,this->center,1);
+    this->top1 = new Circle(normal1, this->center.y + vec3(0, height, 0), 1.0);
+    this->top2 = new Circle(normal2, this->center, 1.0);
 }
 
 Cylinder::~Cylinder() {
@@ -38,11 +38,11 @@ bool Cylinder::intersect(const Ray &raig, float t_min, float t_max, Intersection
     if(a < EPSILON || discriminant < EPSILON){
         return false;
     }
-    //Raig tangent al cilindre, una unica intersecció
+        //Raig tangent al cilindre, una unica intersecció
     else if(discriminant > 0-EPSILON && discriminant < 0+EPSILON){
         temp1 = temp2 = -b / (2 * a);
     }
-    //Sino tenim 2 interseccions i hem d'agafar la mes petita
+        //Sino tenim 2 interseccions i hem d'agafar la mes petita
     else{
         temp1 = (-b + sqrtf(discriminant))/(2 * a);
         temp2 = (-b - sqrtf(discriminant))/(2 * a);
@@ -57,7 +57,7 @@ bool Cylinder::intersect(const Ray &raig, float t_min, float t_max, Intersection
         //Calculem les coordenades del punt d'intersecció.
         vec3 t = raig.pointAtParameter(temp1);
         //Si la intersecció és més petita que l'alçada, voldra dir es troba dins del cilindre.
-        if(t.y < center.y+high+EPSILON && t.y > center.y-EPSILON){
+        if (t.y < center.y + height + EPSILON && t.y > center.y - EPSILON) {
             //afegim informacio
             info.t = temp1;
             info.p = raig.pointAtParameter(info.t);
@@ -85,7 +85,7 @@ bool Cylinder::intersection(const Ray& raig, float t_min, float t_max, Intersect
         intersect_top1 = info.t;
         intersecta = true;
     }
-    //calcul de la intersecció amb circle top1
+    //calcul de la intersecció amb circle top2
     if(top2->intersection(raig,t_min,t_max,info)){
         intersect_top2 = info.t;
         intersecta = true;

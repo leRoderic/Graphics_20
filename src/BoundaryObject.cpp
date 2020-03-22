@@ -14,11 +14,9 @@ BoundaryObject::BoundaryObject(string s, float data) : Object(data){
 
 BoundaryObject::~BoundaryObject() {
 
-    int nTriangles = this->triangles.size();
-    for(int i=0; i<nTriangles; i++){
-        delete (Triangle*) this->triangles[i];
+    for(Triangle *t: triangles){
+        delete (Triangle*) t;
     }
-
 }
 
 bool BoundaryObject::intersection(const Ray& raig, float t_min, float t_max, IntersectionInfo& info) const {
@@ -97,8 +95,25 @@ BoundaryObject::BoundaryObject(const QString &fileName, float data): Object(data
 
             file.close();
         }
+        vec3 minimumX, maximumX, minimumY, maximumY, minimumZ, maximumZ;
+        int idV1, idV2, idV3;
+        for(Cara c: cares){
+            idV1 = c.idxVertices[0];
+            idV2 = c.idxVertices[1];
+            idV3 = c.idxVertices[2];
+            maximumX = max(vec3(vertexs[idV1]), maximumX);
+            minimumX = min(vec3(vertexs[idV1]), minimumX);
+            maximumY = max(vec3(vertexs[idV2]), maximumY);
+            minimumY = min(vec3(vertexs[idV2]), minimumY);
+            maximumZ = max(vec3(vertexs[idV3]), maximumZ);
+            minimumZ = min(vec3(vertexs[idV3]), minimumZ);
 
-        vec4 p0, p1, p2;
+            this->triangles.push_back(new Triangle(vec3(vertexs[idV1]),
+                                                   vec3(vertexs[idV2]),
+                                                   vec3(vertexs[idV3]),
+                                                   0, data));
+        }
+        /*vec4 p0, p1, p2;
         int nCares = this->cares.size();
         for(int i=0; i<nCares;i++){
             // Cal fer un recorregut de totes les cares per a posar-les com Triangles
@@ -108,7 +123,7 @@ BoundaryObject::BoundaryObject(const QString &fileName, float data): Object(data
 
             this->triangles.push_back(new Triangle(vec3(p0.x, p0.y, p0.z), vec3(p1.x, p1.y, p1.z),
                                                    vec3(p1.x, p2.y, p2.z), 0, data));
-        }
+        }*/
     }
 }
 

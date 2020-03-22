@@ -925,6 +925,88 @@ CMakeFiles/RayData.dir/src/DataReader.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h
+CMakeFiles/RayData.dir/src/FittedPlane.cpp.o
+ ..//glm/glm.hpp
+ ..//glm/gtc/matrix_transform.hpp
+ ..//glm/gtx/constants.hpp
+ ../glm/./core/_detail.hpp
+ ../glm/./core/_fixes.hpp
+ ../glm/./core/_swizzle.hpp
+ ../glm/./core/_swizzle_func.hpp
+ ../glm/./core/_vectorize.hpp
+ ../glm/./core/func_common.hpp
+ ../glm/./core/func_common.inl
+ ../glm/./core/func_exponential.hpp
+ ../glm/./core/func_exponential.inl
+ ../glm/./core/func_geometric.hpp
+ ../glm/./core/func_geometric.inl
+ ../glm/./core/func_integer.hpp
+ ../glm/./core/func_integer.inl
+ ../glm/./core/func_matrix.hpp
+ ../glm/./core/func_matrix.inl
+ ../glm/./core/func_noise.hpp
+ ../glm/./core/func_noise.inl
+ ../glm/./core/func_packing.hpp
+ ../glm/./core/func_packing.inl
+ ../glm/./core/func_trigonometric.hpp
+ ../glm/./core/func_trigonometric.inl
+ ../glm/./core/func_vector_relational.hpp
+ ../glm/./core/func_vector_relational.inl
+ ../glm/./core/setup.hpp
+ ../glm/./core/type.hpp
+ ../glm/./core/type_float.hpp
+ ../glm/./core/type_gentype.hpp
+ ../glm/./core/type_half.hpp
+ ../glm/./core/type_half.inl
+ ../glm/./core/type_int.hpp
+ ../glm/./core/type_mat.hpp
+ ../glm/./core/type_mat2x2.hpp
+ ../glm/./core/type_mat2x2.inl
+ ../glm/./core/type_mat2x3.hpp
+ ../glm/./core/type_mat2x3.inl
+ ../glm/./core/type_mat2x4.hpp
+ ../glm/./core/type_mat2x4.inl
+ ../glm/./core/type_mat3x2.hpp
+ ../glm/./core/type_mat3x2.inl
+ ../glm/./core/type_mat3x3.hpp
+ ../glm/./core/type_mat3x3.inl
+ ../glm/./core/type_mat3x4.hpp
+ ../glm/./core/type_mat3x4.inl
+ ../glm/./core/type_mat4x2.hpp
+ ../glm/./core/type_mat4x2.inl
+ ../glm/./core/type_mat4x3.hpp
+ ../glm/./core/type_mat4x3.inl
+ ../glm/./core/type_mat4x4.hpp
+ ../glm/./core/type_mat4x4.inl
+ ../glm/./core/type_size.hpp
+ ../glm/./core/type_vec.hpp
+ ../glm/./core/type_vec1.hpp
+ ../glm/./core/type_vec1.inl
+ ../glm/./core/type_vec2.hpp
+ ../glm/./core/type_vec2.inl
+ ../glm/./core/type_vec3.hpp
+ ../glm/./core/type_vec3.inl
+ ../glm/./core/type_vec4.hpp
+ ../glm/./core/type_vec4.inl
+ ../glm/core/_fixes.hpp
+ ../glm/core/setup.hpp
+ ../glm/glm.hpp
+ ../glm/gtc/constants.hpp
+ ../glm/gtc/constants.inl
+ ../glm/gtc/half_float.hpp
+ ../glm/gtc/half_float.inl
+ ../glm/gtc/matrix_transform.inl
+ ../include/Animation.h
+ ../include/FittedPlane.h
+ ../include/Hitable.h
+ ../include/Lambertian.h
+ ../include/Material.h
+ ../include/Object.h
+ ../include/Plane.h
+ ../include/Ray.h
+ ../include/TG.h
+ ../include/Translate.h
+ /mnt/h/rcmik/Documents/GitHub/dataray-f01/src/FittedPlane.cpp
 CMakeFiles/RayData.dir/src/Hitable.cpp.o
  ..//glm/glm.hpp
  ../glm/./core/_detail.hpp
@@ -1377,6 +1459,7 @@ CMakeFiles/RayData.dir/src/ObjectFactory.cpp.o
  ..//glm/glm.hpp
  ..//glm/gtc/matrix_transform.hpp
  ..//glm/gtx/constants.hpp
+ ..//include/FittedPlane.h
  ../glm/./core/_detail.hpp
  ../glm/./core/_fixes.hpp
  ../glm/./core/_swizzle.hpp

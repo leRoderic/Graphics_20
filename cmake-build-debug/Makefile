@@ -433,6 +433,33 @@ src/DataReader.cpp.s:
 	$(MAKE) -f CMakeFiles/RayData.dir/build.make CMakeFiles/RayData.dir/src/DataReader.cpp.s
 .PHONY : src/DataReader.cpp.s
 
+src/FittedPlane.o: src/FittedPlane.cpp.o
+
+.PHONY : src/FittedPlane.o
+
+# target to build an object file
+src/FittedPlane.cpp.o:
+	$(MAKE) -f CMakeFiles/RayData.dir/build.make CMakeFiles/RayData.dir/src/FittedPlane.cpp.o
+.PHONY : src/FittedPlane.cpp.o
+
+src/FittedPlane.i: src/FittedPlane.cpp.i
+
+.PHONY : src/FittedPlane.i
+
+# target to preprocess a source file
+src/FittedPlane.cpp.i:
+	$(MAKE) -f CMakeFiles/RayData.dir/build.make CMakeFiles/RayData.dir/src/FittedPlane.cpp.i
+.PHONY : src/FittedPlane.cpp.i
+
+src/FittedPlane.s: src/FittedPlane.cpp.s
+
+.PHONY : src/FittedPlane.s
+
+# target to generate assembly for a file
+src/FittedPlane.cpp.s:
+	$(MAKE) -f CMakeFiles/RayData.dir/build.make CMakeFiles/RayData.dir/src/FittedPlane.cpp.s
+.PHONY : src/FittedPlane.cpp.s
+
 src/Hitable.o: src/Hitable.cpp.o
 
 .PHONY : src/Hitable.o
@@ -1097,6 +1124,9 @@ help:
 	@echo "... src/DataReader.o"
 	@echo "... src/DataReader.i"
 	@echo "... src/DataReader.s"
+	@echo "... src/FittedPlane.o"
+	@echo "... src/FittedPlane.i"
+	@echo "... src/FittedPlane.s"
 	@echo "... src/Hitable.o"
 	@echo "... src/Hitable.i"
 	@echo "... src/Hitable.s"

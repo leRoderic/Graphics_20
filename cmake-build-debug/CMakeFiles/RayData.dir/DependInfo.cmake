@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/mnt/h/rcmik/Documents/GitHub/dataray-f01/src/Controller.cpp" "/mnt/h/rcmik/Documents/GitHub/dataray-f01/cmake-build-debug/CMakeFiles/RayData.dir/src/Controller.cpp.o"
   "/mnt/h/rcmik/Documents/GitHub/dataray-f01/src/Cylinder.cpp" "/mnt/h/rcmik/Documents/GitHub/dataray-f01/cmake-build-debug/CMakeFiles/RayData.dir/src/Cylinder.cpp.o"
   "/mnt/h/rcmik/Documents/GitHub/dataray-f01/src/DataReader.cpp" "/mnt/h/rcmik/Documents/GitHub/dataray-f01/cmake-build-debug/CMakeFiles/RayData.dir/src/DataReader.cpp.o"
+  "/mnt/h/rcmik/Documents/GitHub/dataray-f01/src/FittedPlane.cpp" "/mnt/h/rcmik/Documents/GitHub/dataray-f01/cmake-build-debug/CMakeFiles/RayData.dir/src/FittedPlane.cpp.o"
   "/mnt/h/rcmik/Documents/GitHub/dataray-f01/src/Hitable.cpp" "/mnt/h/rcmik/Documents/GitHub/dataray-f01/cmake-build-debug/CMakeFiles/RayData.dir/src/Hitable.cpp.o"
   "/mnt/h/rcmik/Documents/GitHub/dataray-f01/src/Lambertian.cpp" "/mnt/h/rcmik/Documents/GitHub/dataray-f01/cmake-build-debug/CMakeFiles/RayData.dir/src/Lambertian.cpp.o"
   "/mnt/h/rcmik/Documents/GitHub/dataray-f01/src/Main.cpp" "/mnt/h/rcmik/Documents/GitHub/dataray-f01/cmake-build-debug/CMakeFiles/RayData.dir/src/Main.cpp.o"

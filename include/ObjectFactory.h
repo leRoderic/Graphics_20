@@ -20,6 +20,7 @@ public:
         PLANE,
         TRIANGLE,
         BROBJECT,
+        FITTED_PLANE,
         CYLINDER,
         CIRCLE
     } OBJECT_TYPES;

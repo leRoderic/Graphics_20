@@ -1,3 +1,4 @@
+
 #include "DataReader.h"
 #include <QFile>
 #include <QTextStream>
@@ -55,8 +56,15 @@ void DataReader::baseFound(QStringList fields) {
     if (QString::compare("plane", fields[1], Qt::CaseInsensitive) == 0) {
         // TODO Fase 1: Cal fer un pla acotat i no un pla infinit. Les dimensions del pla acotat seran les dimensions de l'escena en x i z
         Object *o;
-        o = ObjectFactory::getInstance()->createObject(fields[1].toDouble(), fields[2].toDouble(), fields[3].toDouble(), fields[4].toDouble(),
-                1.0f,ObjectFactory::OBJECT_TYPES::PLANE);
+
+        vec3 p1 = this->scene->pmax;
+        vec3 p2 = this->scene->pmin;
+
+        o = ObjectFactory::getInstance()->createObject(0, 0, 0, 0, 0, 0, 0, 0, 0,
+                                                       0, 0, ObjectFactory::OBJECT_TYPES::FITTED_PLANE);
+
+        //o = ObjectFactory::getInstance()->createObject(fields[1].toDouble(), fields[2].toDouble(), fields[3].toDouble(), fields[4].toDouble(),
+        //        1.0f,ObjectFactory::OBJECT_TYPES::PLANE);
         scene->objects.push_back(o);
         // TODO Fase 4: llegir textura i afegir-la a l'objecte. Veure la classe Texture
     }
@@ -102,8 +110,8 @@ void DataReader::dataFound(QStringList fields) {
         //  amb el seu color corresponent segons el seu ColorMap
         Object *o;
         o = ObjectFactory::getInstance()->createObject(fields[1].toDouble(), 0.0, fields[2].toDouble(),
-                                                       fields[3 + i].toDouble(), 1.0f,
-                                                       props[i]);
+                                                       0, 0, 0, 0, 0, 0, fields[3 + i].toDouble(),
+                                                       1.0f, props[i]);
         scene->objects.push_back(o);
     }
 }

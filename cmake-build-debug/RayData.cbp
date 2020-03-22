@@ -838,6 +838,9 @@
 		<Unit filename="/mnt/h/rcmik/Documents/GitHub/dataray-f01/include/DataReader.h">
 			<Option target="RayData"/>
 		</Unit>
+		<Unit filename="/mnt/h/rcmik/Documents/GitHub/dataray-f01/include/FittedPlane.h">
+			<Option target="RayData"/>
+		</Unit>
 		<Unit filename="/mnt/h/rcmik/Documents/GitHub/dataray-f01/include/Hitable.h">
 			<Option target="RayData"/>
 		</Unit>
@@ -935,6 +938,9 @@
 			<Option target="RayData"/>
 		</Unit>
 		<Unit filename="/mnt/h/rcmik/Documents/GitHub/dataray-f01/src/DataReader.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/mnt/h/rcmik/Documents/GitHub/dataray-f01/src/FittedPlane.cpp">
 			<Option target="RayData"/>
 		</Unit>
 		<Unit filename="/mnt/h/rcmik/Documents/GitHub/dataray-f01/src/Hitable.cpp">

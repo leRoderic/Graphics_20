@@ -8,7 +8,6 @@
 SceneReader::SceneReader(Scene *s)
 {
     scene = s;
-
 }
 
 void SceneReader::readFile(QString fileName) {
@@ -60,7 +59,7 @@ void SceneReader::sphereFound(QStringList fields) {
     Object *o;
 
     o = ObjectFactory::getInstance()->createObject(fields[1].toDouble(), fields[2].toDouble(), fields[3].toDouble(),
-                                                   fields[4].toDouble(),
+                                                   0, 0, 0, 0, 0, 0, fields[4].toDouble(),
                                                    1.0f, ObjectFactory::OBJECT_TYPES::SPHERE);
     scene->objects.push_back(o);
 }
@@ -69,7 +68,7 @@ void SceneReader::sphereFound(QStringList fields) {
 // Exemple de base:
 // Base,  plane,  0.0,  1.0,  0.0,  -0.5, ://resources/map.png
 void SceneReader::baseFound(QStringList fields) {
-    if (fields.size() != 7) {
+    if (fields.size() != 10) {
         std::cerr << "Wrong base format" << std::endl;
         return;
     }
@@ -77,8 +76,10 @@ void SceneReader::baseFound(QStringList fields) {
     if (QString::compare("plane", fields[1], Qt::CaseInsensitive) == 0) {
         Object *o;
         // TODO Fase 1: Cal fer un pla acotat i no un pla infinit. Les dimensions del pla acotat seran les dimensions de l'escena en x i z
-        o = ObjectFactory::getInstance()->createObject(fields[1].toDouble(), fields[2].toDouble(), fields[3].toDouble(), fields[4].toDouble(), 1.0f,
-                                                       ObjectFactory::OBJECT_TYPES::PLANE);
+        o = ObjectFactory::getInstance()->createObject(fields[2].toDouble(), fields[3].toDouble(), fields[4].toDouble(),
+                                                       fields[5].toDouble(), fields[6].toDouble(), fields[7].toDouble(),
+                                                       0, 0, 0, fields[8].toDouble(),
+                                                       1.0f, ObjectFactory::OBJECT_TYPES::PLANE);
         scene->objects.push_back(o);
         // TODO Fase 4: llegir textura i afegir-la a l'objecte. Veure la classe Texture
     }
@@ -87,18 +88,18 @@ void SceneReader::baseFound(QStringList fields) {
 
 void SceneReader::triangleFound(QStringList fields) {
     if (fields.size() != 11) {
-        std::cerr << "Wrong triangle format" << fields.size()<< std::endl;
+        std::cerr << "Wrong triangle format" << fields.size() << std::endl;
         return;
     }
 
     Object *o;
     // TODO Fase 1: Cal fer un pla acotat i no un pla infinit. Les dimensions del pla acotat seran les dimensions de l'escena en x i z
     o = ObjectFactory::getInstance()->createObject(fields[1].toDouble(), fields[2].toDouble(), fields[3].toDouble(),
-            fields[4].toDouble(), fields[5].toDouble(), fields[6].toDouble(),
-            fields[7].toDouble(),fields[8].toDouble(), fields[9].toDouble(),
-            fields[10].toDouble(), 1.0f,ObjectFactory::OBJECT_TYPES::TRIANGLE);
+                                                   fields[4].toDouble(), fields[5].toDouble(), fields[6].toDouble(),
+                                                   fields[7].toDouble(),fields[8].toDouble(), fields[9].toDouble(),
+                                                   fields[10].toDouble(), 1.0f,ObjectFactory::OBJECT_TYPES::TRIANGLE);
     scene->objects.push_back(o);
-        // TODO Fase 4: llegir textura i afegir-la a l'objecte. Veure la classe Texture
+    // TODO Fase 4: llegir textura i afegir-la a l'objecte. Veure la classe Texture
 
     // TODO: Fase 3: Si cal instanciar una esfera com objecte base i no un pla, cal afegir aqui un switch
 }
@@ -116,7 +117,7 @@ void SceneReader::brObjectFound(QStringList fields) {
     Object *o;
 
     o = ObjectFactory::getInstance()->createObject(fields[1], fields[2].toDouble(),
-            ObjectFactory::OBJECT_TYPES::BROBJECT);
+                                                   ObjectFactory::OBJECT_TYPES::BROBJECT);
 
     scene->objects.push_back(o);
 }
@@ -130,7 +131,7 @@ void SceneReader::cylinderFound(QStringList fields) {
     Object *o;
     // TODO Fase 1: Cal fer un pla acotat i no un pla infinit. Les dimensions del pla acotat seran les dimensions de l'escena en x i z
     o = ObjectFactory::getInstance()->createObject(fields[1].toDouble(), fields[2].toDouble(), fields[3].toDouble(),
-                                                   fields[4].toDouble(),
+                                                   0, 0, 0, 0, 0, 0, fields[4].toDouble(),
                                                    1.0f, ObjectFactory::OBJECT_TYPES::CYLINDER);
     scene->objects.push_back(o);
     // TODO Fase 4: llegir textura i afegir-la a l'objecte. Veure la classe Texture
@@ -145,7 +146,7 @@ void SceneReader::circleFound(QStringList fields) {
     Object *o;
 
     o = ObjectFactory::getInstance()->createObject(fields[1].toDouble(), fields[2].toDouble(), fields[3].toDouble(),
-                                                   fields[4].toDouble(),
+                                                   0, 0, 0, 0, 0, 0, fields[4].toDouble(),
                                                    1.0f, ObjectFactory::OBJECT_TYPES::CIRCLE);
     scene->objects.push_back(o);
 }
