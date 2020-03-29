@@ -122,15 +122,18 @@ vec3 Scene::BlinnPhong(vec3 point, vec3 normal, const Material *material) {
 
         float atenuacio = dot(light->atenuacio, vec3(1.0f, d, pow(d, 2)));
 
-        Ray rL(point, L);
-
         IntersectionInfo *info = new IntersectionInfo();
 
         float shadowFactor = 1.0f;
 
-        if (this->intersection(rL, 0.01f, d, *info)) {
+        if (this->intersection(Ray(point, L), 0.01f, d, *info)) {
             if (info->mat_ptr->alpha == 1.0f) {
                 shadowFactor = 1.0f;
+
+                IntersectionInfo *info2 = new IntersectionInfo();
+                if(this->intersection(Ray(info->p, info->p - point), 0.01f, distance(info->p, point), *info2)){
+                    if (info2->mat_ptr->alpha != 1.0f) shadowFactor = 0.0f;
+                }
             } else {
                 shadowFactor = 0.0f;
             }
