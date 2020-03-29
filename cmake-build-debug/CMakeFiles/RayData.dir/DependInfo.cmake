@@ -41,6 +41,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/QIJUNJIN/projects/dataray-f01/src/TG.cpp" "/Users/QIJUNJIN/projects/dataray-f01/cmake-build-debug/CMakeFiles/RayData.dir/src/TG.cpp.o"
   "/Users/QIJUNJIN/projects/dataray-f01/src/Texture.cpp" "/Users/QIJUNJIN/projects/dataray-f01/cmake-build-debug/CMakeFiles/RayData.dir/src/Texture.cpp.o"
   "/Users/QIJUNJIN/projects/dataray-f01/src/Translate.cpp" "/Users/QIJUNJIN/projects/dataray-f01/cmake-build-debug/CMakeFiles/RayData.dir/src/Translate.cpp.o"
+  "/Users/QIJUNJIN/projects/dataray-f01/src/Transparent.cpp" "/Users/QIJUNJIN/projects/dataray-f01/cmake-build-debug/CMakeFiles/RayData.dir/src/Transparent.cpp.o"
   "/Users/QIJUNJIN/projects/dataray-f01/src/Triangle.cpp" "/Users/QIJUNJIN/projects/dataray-f01/cmake-build-debug/CMakeFiles/RayData.dir/src/Triangle.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
@@ -64,6 +65,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../glm/gtx"
   "../glm/virtrev"
   "../include"
+  "/opt/X11/include"
   "/Users/QIJUNJIN/anaconda3/include/qt"
   "/Users/QIJUNJIN/anaconda3/include/qt/QtWidgets"
   "/Users/QIJUNJIN/anaconda3/include/qt/QtGui"

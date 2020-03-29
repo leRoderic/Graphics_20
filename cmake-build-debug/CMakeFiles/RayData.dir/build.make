@@ -474,9 +474,22 @@ CMakeFiles/RayData.dir/src/Light.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/Light.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/QIJUNJIN/projects/dataray-f01/src/Light.cpp -o CMakeFiles/RayData.dir/src/Light.cpp.s
 
+CMakeFiles/RayData.dir/src/Transparent.cpp.o: CMakeFiles/RayData.dir/flags.make
+CMakeFiles/RayData.dir/src/Transparent.cpp.o: ../src/Transparent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/QIJUNJIN/projects/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/RayData.dir/src/Transparent.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Transparent.cpp.o -c /Users/QIJUNJIN/projects/dataray-f01/src/Transparent.cpp
+
+CMakeFiles/RayData.dir/src/Transparent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayData.dir/src/Transparent.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/QIJUNJIN/projects/dataray-f01/src/Transparent.cpp > CMakeFiles/RayData.dir/src/Transparent.cpp.i
+
+CMakeFiles/RayData.dir/src/Transparent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayData.dir/src/Transparent.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/QIJUNJIN/projects/dataray-f01/src/Transparent.cpp -o CMakeFiles/RayData.dir/src/Transparent.cpp.s
+
 CMakeFiles/RayData.dir/qrc_resources.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/qrc_resources.cpp.o: qrc_resources.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/QIJUNJIN/projects/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/RayData.dir/qrc_resources.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/QIJUNJIN/projects/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/RayData.dir/qrc_resources.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/qrc_resources.cpp.o -c /Users/QIJUNJIN/projects/dataray-f01/cmake-build-debug/qrc_resources.cpp
 
 CMakeFiles/RayData.dir/qrc_resources.cpp.i: cmake_force
@@ -489,7 +502,7 @@ CMakeFiles/RayData.dir/qrc_resources.cpp.s: cmake_force
 
 CMakeFiles/RayData.dir/src/Triangle.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/Triangle.cpp.o: ../src/Triangle.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/QIJUNJIN/projects/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/RayData.dir/src/Triangle.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/QIJUNJIN/projects/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/RayData.dir/src/Triangle.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Triangle.cpp.o -c /Users/QIJUNJIN/projects/dataray-f01/src/Triangle.cpp
 
 CMakeFiles/RayData.dir/src/Triangle.cpp.i: cmake_force
@@ -502,7 +515,7 @@ CMakeFiles/RayData.dir/src/Triangle.cpp.s: cmake_force
 
 CMakeFiles/RayData.dir/src/Circle.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/Circle.cpp.o: ../src/Circle.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/QIJUNJIN/projects/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/RayData.dir/src/Circle.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/QIJUNJIN/projects/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/RayData.dir/src/Circle.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Circle.cpp.o -c /Users/QIJUNJIN/projects/dataray-f01/src/Circle.cpp
 
 CMakeFiles/RayData.dir/src/Circle.cpp.i: cmake_force
@@ -515,7 +528,7 @@ CMakeFiles/RayData.dir/src/Circle.cpp.s: cmake_force
 
 CMakeFiles/RayData.dir/src/Cylinder.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/Cylinder.cpp.o: ../src/Cylinder.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/QIJUNJIN/projects/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/RayData.dir/src/Cylinder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/QIJUNJIN/projects/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/RayData.dir/src/Cylinder.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Cylinder.cpp.o -c /Users/QIJUNJIN/projects/dataray-f01/src/Cylinder.cpp
 
 CMakeFiles/RayData.dir/src/Cylinder.cpp.i: cmake_force
@@ -528,7 +541,7 @@ CMakeFiles/RayData.dir/src/Cylinder.cpp.s: cmake_force
 
 CMakeFiles/RayData.dir/src/FittedPlane.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/FittedPlane.cpp.o: ../src/FittedPlane.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/QIJUNJIN/projects/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/RayData.dir/src/FittedPlane.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/QIJUNJIN/projects/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/RayData.dir/src/FittedPlane.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/FittedPlane.cpp.o -c /Users/QIJUNJIN/projects/dataray-f01/src/FittedPlane.cpp
 
 CMakeFiles/RayData.dir/src/FittedPlane.cpp.i: cmake_force
@@ -541,7 +554,7 @@ CMakeFiles/RayData.dir/src/FittedPlane.cpp.s: cmake_force
 
 CMakeFiles/RayData.dir/src/Mate.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/Mate.cpp.o: ../src/Mate.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/QIJUNJIN/projects/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/RayData.dir/src/Mate.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/QIJUNJIN/projects/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/RayData.dir/src/Mate.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Mate.cpp.o -c /Users/QIJUNJIN/projects/dataray-f01/src/Mate.cpp
 
 CMakeFiles/RayData.dir/src/Mate.cpp.i: cmake_force
@@ -554,7 +567,7 @@ CMakeFiles/RayData.dir/src/Mate.cpp.s: cmake_force
 
 CMakeFiles/RayData.dir/src/Metall.cpp.o: CMakeFiles/RayData.dir/flags.make
 CMakeFiles/RayData.dir/src/Metall.cpp.o: ../src/Metall.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/QIJUNJIN/projects/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/RayData.dir/src/Metall.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/QIJUNJIN/projects/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/RayData.dir/src/Metall.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RayData.dir/src/Metall.cpp.o -c /Users/QIJUNJIN/projects/dataray-f01/src/Metall.cpp
 
 CMakeFiles/RayData.dir/src/Metall.cpp.i: cmake_force
@@ -598,6 +611,7 @@ RayData_OBJECTS = \
 "CMakeFiles/RayData.dir/src/Texture.cpp.o" \
 "CMakeFiles/RayData.dir/src/Translate.cpp.o" \
 "CMakeFiles/RayData.dir/src/Light.cpp.o" \
+"CMakeFiles/RayData.dir/src/Transparent.cpp.o" \
 "CMakeFiles/RayData.dir/qrc_resources.cpp.o" \
 "CMakeFiles/RayData.dir/src/Triangle.cpp.o" \
 "CMakeFiles/RayData.dir/src/Circle.cpp.o" \
@@ -640,6 +654,7 @@ RayData: CMakeFiles/RayData.dir/src/TG.cpp.o
 RayData: CMakeFiles/RayData.dir/src/Texture.cpp.o
 RayData: CMakeFiles/RayData.dir/src/Translate.cpp.o
 RayData: CMakeFiles/RayData.dir/src/Light.cpp.o
+RayData: CMakeFiles/RayData.dir/src/Transparent.cpp.o
 RayData: CMakeFiles/RayData.dir/qrc_resources.cpp.o
 RayData: CMakeFiles/RayData.dir/src/Triangle.cpp.o
 RayData: CMakeFiles/RayData.dir/src/Circle.cpp.o
@@ -649,12 +664,12 @@ RayData: CMakeFiles/RayData.dir/src/Mate.cpp.o
 RayData: CMakeFiles/RayData.dir/src/Metall.cpp.o
 RayData: CMakeFiles/RayData.dir/build.make
 RayData: /Users/QIJUNJIN/anaconda3/lib/libQt5Widgets.5.9.7.dylib
-RayData: /usr/lib/x86_64-linux-gnu/libGL.so
-RayData: /usr/lib/x86_64-linux-gnu/libglut.so
+RayData: /opt/X11/lib/libGL.dylib
+RayData: /opt/X11/lib/libGLUT.dylib
 RayData: /Users/QIJUNJIN/anaconda3/lib/libQt5Gui.5.9.7.dylib
 RayData: /Users/QIJUNJIN/anaconda3/lib/libQt5Core.5.9.7.dylib
 RayData: CMakeFiles/RayData.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/QIJUNJIN/projects/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Linking CXX executable RayData"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/QIJUNJIN/projects/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Linking CXX executable RayData"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RayData.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
