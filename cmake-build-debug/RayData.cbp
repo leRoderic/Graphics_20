@@ -57,6 +57,7 @@
 					<Add directory="/Users/QIJUNJIN/projects/dataray-f01/glm/gtx"/>
 					<Add directory="/Users/QIJUNJIN/projects/dataray-f01/glm/virtrev"/>
 					<Add directory="/Users/QIJUNJIN/projects/dataray-f01/include"/>
+					<Add directory="/opt/X11/include"/>
 					<Add directory="/Users/QIJUNJIN/anaconda3/include/qt"/>
 					<Add directory="/Users/QIJUNJIN/anaconda3/include/qt/QtWidgets"/>
 					<Add directory="/Users/QIJUNJIN/anaconda3/include/qt/QtGui"/>
@@ -97,6 +98,7 @@
 					<Add directory="/Users/QIJUNJIN/projects/dataray-f01/glm/gtx"/>
 					<Add directory="/Users/QIJUNJIN/projects/dataray-f01/glm/virtrev"/>
 					<Add directory="/Users/QIJUNJIN/projects/dataray-f01/include"/>
+					<Add directory="/opt/X11/include"/>
 					<Add directory="/Users/QIJUNJIN/anaconda3/include/qt"/>
 					<Add directory="/Users/QIJUNJIN/anaconda3/include/qt/QtWidgets"/>
 					<Add directory="/Users/QIJUNJIN/anaconda3/include/qt/QtGui"/>
@@ -917,6 +919,9 @@
 		<Unit filename="/Users/QIJUNJIN/projects/dataray-f01/include/Translate.h">
 			<Option target="RayData"/>
 		</Unit>
+		<Unit filename="/Users/QIJUNJIN/projects/dataray-f01/include/Transparent.h">
+			<Option target="RayData"/>
+		</Unit>
 		<Unit filename="/Users/QIJUNJIN/projects/dataray-f01/resources.qrc">
 			<Option target="RayData"/>
 		</Unit>
@@ -1023,6 +1028,9 @@
 			<Option target="RayData"/>
 		</Unit>
 		<Unit filename="/Users/QIJUNJIN/projects/dataray-f01/src/Translate.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/Users/QIJUNJIN/projects/dataray-f01/src/Transparent.cpp">
 			<Option target="RayData"/>
 		</Unit>
 		<Unit filename="/Users/QIJUNJIN/projects/dataray-f01/src/Triangle.cpp">

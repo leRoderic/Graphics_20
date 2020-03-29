@@ -39,6 +39,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/RayData.dir/src/TG.cpp.o"
   "CMakeFiles/RayData.dir/src/Texture.cpp.o"
   "CMakeFiles/RayData.dir/src/Translate.cpp.o"
+  "CMakeFiles/RayData.dir/src/Transparent.cpp.o"
   "CMakeFiles/RayData.dir/src/Triangle.cpp.o"
   "RayData"
   "RayData.pdb"

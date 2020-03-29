@@ -12,24 +12,23 @@ set(CMAKE_AUTORCC ON)
 # Add a compiler flag
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
 
-# Make this a GUI application on Windows
-if (WIN32)
-    set(CMAKE_WIN32_EXECUTABLE ON)
-endif ()
-
-# MAC
-#set(OPENGL_LIBRARIES /opt/X11/lib/libGL.dylib)
-#set(GLUT_LIBRARY /opt/X11/lib/libGLUT.dylib)
-#set(QT5_DIR "/Users/anna/qt/5.10.0/clang_64/lib/cmake/Qt5")
-#set(OPENGL_INCLUDE_DIRS /opt/X11/include)
-#set(GLUT_INCLUDE_DIRS /opt/X11/include)
-
 # ubuntu
+if($ENV{USER} STREQUAL "user")
+    set(Qt5_DIR "/home/user/Qt/5.14.1/gcc_64/lib/cmake/Qt5/")
+else()
+    set (Qt5_DIR /opt/Qt/5.9.1/gcc_64/lib/cmake/Qt5/)
+endif()
 set (OPENGL_LIBRARIES /usr/lib/x86_64-linux-gnu/libGL.so)
 set (GLUT_LIBRARY /usr/lib/x86_64-linux-gnu/libglut.so)
-set (Qt5_DIR /opt/Qt/5.9.1/gcc_64/lib/cmake/Qt5/)
 set (OPENGL_INCLUDE_DIRS /usr/include)
 set (GLUT_INCLUDE_DIRS /usr/include)
+
+# MAC
+set(OPENGL_LIBRARIES /opt/X11/lib/libGL.dylib)
+set(GLUT_LIBRARY /opt/X11/lib/libGLUT.dylib)
+set(QT5_DIR "/Users/anna/qt/5.10.0/clang_64/lib/cmake/Qt5")
+set(OPENGL_INCLUDE_DIRS /opt/X11/include)
+set(GLUT_INCLUDE_DIRS /opt/X11/include)
 
 # ubuntu:
 #set(Qt5_DIR "/opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5/")
@@ -344,6 +343,8 @@ add_executable(RayData
         src/Texture.cpp
         src/Translate.cpp
         src/Light.cpp
+        src/Transparent.cpp
+        include/Transparent.h
         include/Light.h
         ${Res_SRC} src/Triangle.cpp src/Circle.cpp src/Cylinder.cpp include/Circle.h include/Cylinder.h src/FittedPlane.cpp include/FittedPlane.h src/Mate.cpp include/Mate.h src/Metall.cpp include/Metall.h)
 
