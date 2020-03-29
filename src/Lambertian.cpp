@@ -15,3 +15,4 @@ bool Lambertian::scatter(const Ray& r_in, const IntersectionInfo& rec, vec3& col
     color = diffuse;
     return true;
 }
+

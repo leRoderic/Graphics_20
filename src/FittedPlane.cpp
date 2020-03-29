@@ -75,4 +75,3 @@ void FittedPlane::aplicaTG(TG *t){
     }
 
 }
-

@@ -9,7 +9,7 @@
 
 class Plane: public Object{
 public:
-    Plane(vec3 normal, vec3 pass_point, float d);
+    Plane(vec3 normal, vec3 pass_point, float v);
 
     Plane(vec3 normal, float d, float v);
 

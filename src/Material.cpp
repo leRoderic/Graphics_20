@@ -1,16 +1,18 @@
 #include "Material.h"
 
-
-
-Material::Material():
-    diffuse(1.0f)
-  {}
+Material::Material() {
+    this->diffuse = vec3(1.0f);
+}
 
 Material::~Material()
 {}
 
-Material::Material(vec3 a, vec3 d, vec3 s, vec3 k, float beta){
+Material::Material(vec3 a, vec3 d, vec3 s, float alpha, float beta) {
     diffuse = d;
+    ambient = a;
+    specular = s;
+    this->alpha = alpha; // Transparence
+    this->beta = beta; // Shineness
 }
 
 vec3 Material::RandomInSphere() const {
@@ -20,4 +22,3 @@ vec3 Material::RandomInSphere() const {
     } while (glm::length(p) >=  1.0f);
     return p;
 }
-

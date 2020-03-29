@@ -20,8 +20,8 @@ public:
            VIRTUAL,
            DATA,
            TEMPORAL
-    } SCENE_FACTORIES;
 
+    } SCENE_FACTORIES;
 
     virtual Scene    *createScene(QString nomFitxer) = 0;
     virtual ColorMap *createColorMap(ColorMapStatic::ColorMapType t) {return nullptr;};

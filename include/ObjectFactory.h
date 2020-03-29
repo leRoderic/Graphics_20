@@ -18,9 +18,9 @@ public:
     typedef enum {
         SPHERE,
         PLANE,
+        FITTED_PLANE,
         TRIANGLE,
         BROBJECT,
-        FITTED_PLANE,
         CYLINDER,
         CIRCLE
     } OBJECT_TYPES;

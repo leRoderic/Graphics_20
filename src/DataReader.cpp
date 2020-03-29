@@ -1,4 +1,3 @@
-
 #include "DataReader.h"
 #include <QFile>
 #include <QTextStream>
@@ -30,7 +29,7 @@ void DataReader::readFile(QString fileName) {
     file.close();
 }
 
-// TODO: Fase 1: Cal afegir més tipus d'objectes
+// TO-DO: Fase 1: Cal afegir més tipus d'objectes
 void DataReader::fileLineRead (QString lineReaded) {
 
     QStringList fields = lineReaded.split(",");
@@ -53,22 +52,28 @@ void DataReader::baseFound(QStringList fields) {
         return;
     }
 
-    if (QString::compare("plane", fields[1], Qt::CaseInsensitive) == 0) {
+    Object *o;
+
+    if (QString::compare(" plane", fields[1], Qt::CaseInsensitive) == 0) {
         // TO-DO Fase 1: Cal fer un pla acotat i no un pla infinit. Les dimensions del pla acotat seran les dimensions de l'escena en x i z
-        Object *o;
 
-        vec3 p1 = this->scene->pmax;
-        vec3 p2 = this->scene->pmin;
 
-        o = ObjectFactory::getInstance()->createObject(0, 0, 0, 0, 0, 0, 0, 0, 0,
-                                                       0, 0, ObjectFactory::OBJECT_TYPES::FITTED_PLANE);
+        //vec3 p1 = this->scene->pmax;
+        //vec3 p2 = this->scene->pmin;
 
-        //o = ObjectFactory::getInstance()->createObject(fields[1].toDouble(), fields[2].toDouble(), fields[3].toDouble(), fields[4].toDouble(),
-        //        1.0f,ObjectFactory::OBJECT_TYPES::PLANE);
-        scene->objects.push_back(o);
+        o = ObjectFactory::getInstance()->createObject(fields[2].toDouble(), fields[3].toDouble(),
+                fields[4].toDouble(), 0, 0, 0, 0, 0, 0,
+                fields[5].toDouble(), 0, ObjectFactory::OBJECT_TYPES::FITTED_PLANE);
+
         // TODO Fase 4: llegir textura i afegir-la a l'objecte. Veure la classe Texture
+    }else if(QString::compare(" sphere", fields[1], Qt::CaseInsensitive) == 0){
+        // TO-DO: Fase 3: Si cal instanciar una esfera com objecte base i no un pla, cal afegir aqui un else
+        o = ObjectFactory::getInstance()->createObject(fields[2].toDouble(), fields[3].toDouble(),
+                                                       fields[4].toDouble(), 0, 0, 0, 0, 0, 0,
+                                                       fields[5].toDouble(), 0, ObjectFactory::OBJECT_TYPES::SPHERE);
     }
-    // TODO: Fase 3: Si cal instanciar una esfera com objecte base i no un pla, cal afegir aqui un else
+    scene->objects.push_back(o);
+
 }
 
 
@@ -78,10 +83,11 @@ void DataReader::limitsFound(QStringList fields) {
         std::cerr << "Wrong limits format" << std::endl;
         return;
     }
-    xmin = fields[1].toDouble();
-    xmax = fields[2].toDouble();
-    zmin = fields[3].toDouble();
-    zmax = fields[4].toDouble();
+    xMin = fields[1].toDouble();
+    xMax = fields[2].toDouble();
+    zMin = fields[3].toDouble();
+    zMax = fields[4].toDouble();
+
     // TO-DO Fase 1: Cal guardar el limits del mapa per saber on mapejar les posicions dels objectes
 }
 
@@ -92,19 +98,22 @@ void DataReader::propFound(QStringList fields) {
         return;
     }
     numProp++;
-    // TODO Fase 1: Cal guardar els valors per a poder escalar els objectes i el tipus de
+    // TO-DO Fase 1: Cal guardar els valors per a poder escalar els objectes i el tipus de
     //  gizmo de totes les propietats (SPHERE, BR_OBJ, CILINDRE...)
     cout<<fields[4].toStdString()<<endl;
-    if (QString::compare("sphere", fields[4], Qt::CaseInsensitive) == 0) {
+    if (QString::compare(" sphere", fields[4], Qt::CaseInsensitive) == 0) {
+        spMin = fields[2].toDouble();
+        spMax = fields[3].toDouble();
         props.push_back(ObjectFactory::OBJECT_TYPES::SPHERE);
-    }else if (QString::compare("cylinder", fields[4], Qt::CaseInsensitive) == 0) {
+    } else if (QString::compare(" cylinder", fields[4], Qt::CaseInsensitive) == 0) {
+        cyMin = fields[2].toDouble();
+        cyMax = fields[3].toDouble();
         props.push_back(ObjectFactory::OBJECT_TYPES::CYLINDER);
-    }else if (QString::compare("brobject", fields[4], Qt::CaseInsensitive) == 0) {
+    } else if (QString::compare(" brobject", fields[4], Qt::CaseInsensitive) == 0) {
+        brMin = fields[2].toDouble();
+        brMax = fields[3].toDouble();
         props.push_back(ObjectFactory::OBJECT_TYPES::BROBJECT);
-    }else if (QString::compare("triangle", fields[4], Qt::CaseInsensitive) == 0) {
-        props.push_back(ObjectFactory::OBJECT_TYPES::TRIANGLE);
     }
-
     // TODO Fase 2: Aquesta valors minim i maxim tambe serviran per mapejar el material des de la paleta
 }
 
@@ -115,13 +124,29 @@ void DataReader::dataFound(QStringList fields) {
         std::cerr << "Wrong data format" << std::endl;
         return;
     }
+
+    Object *o;
+    float scaledData, scaledX, scaledZ;
+
     for (int i=0; i<numProp; i++) {
         // TODO Fase 1: Cal colocar els objectes al seu lloc del mon virtual, escalats segons el valor i
         //  amb el seu color corresponent segons el seu ColorMap
-        Object *o;
-        o = ObjectFactory::getInstance()->createObject(fields[1].toDouble(), 0.0, fields[2].toDouble(),
-                                                       0, 0, 0, 0, 0, 0, fields[3 + i].toDouble(),
-                                                       1.0f, props[i]);
+
+        scaledX = (fields[1].toDouble() - xMin)/(xMax - xMin);
+        scaledZ = (fields[1].toDouble() - zMin)/(zMax - zMin);
+
+        if(props.back() == ObjectFactory::OBJECT_TYPES::SPHERE){
+            scaledData = (fields[3].toDouble() - spMin)/(spMax - spMin);
+        }else if(props.back() == ObjectFactory::OBJECT_TYPES::CYLINDER){
+            scaledData = (fields[3].toDouble() - cyMin)/(cyMax - cyMin);
+        }else if(props.back() == ObjectFactory::OBJECT_TYPES::BROBJECT) {
+            scaledData = (fields[3].toDouble() - brMin) / (brMax - brMin);
+        }
+
+
+        o = ObjectFactory::getInstance()->createObject(scaledX, 0.0f, scaledZ,
+                                                       0, 0, 0, 0, 0, 0, 0,
+                                                       scaledData, props[i]);
         scene->objects.push_back(o);
     }
 }

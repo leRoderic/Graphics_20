@@ -17,15 +17,13 @@ Camera *SceneFactoryData::createCamera() {
     int pixelsX = 600;
     int pixelsY = 400;
 
-    return ( new Camera(lookfrom, lookat, vec3(0,1,0), 90, pixelsX, pixelsY, aperture, dist_to_focus));
-
+    return (new Camera(lookfrom, lookat, vec3(0, 1, 0), 90, pixelsX, pixelsY, aperture, dist_to_focus));
 }
 
 Scene *SceneFactoryData::createScene(QString filename) {
-
     Scene *s = new Scene();
     DataReader *sc = new DataReader(s);
-    // TO-DO: Fase 1: construccio de l'escena dins de dataReader
+    // TODO: Fase 1: construccio de l'escena dins de dataReader
     sc->readFile(filename);
     return s;
 }

@@ -21,7 +21,7 @@ ObjectFactory::ObjectFactory()
 Object *
 ObjectFactory::createObject(float x, float y, float z, float x2, float y2, float z2, float x3, float y3, float z3,
                             float aux, float v, OBJECT_TYPES t) {
-
+    
     Object *o;
     // TODO Fase 1: Incloure diferents objectes: CILINDRES, TRIANGLES, BR_OBJECTES
     switch (t) {

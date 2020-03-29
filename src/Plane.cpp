@@ -1,7 +1,7 @@
 #include "Plane.h"
 
 Plane::Plane(vec3 normal, vec3 pass_point, float v) : Object(v){
-    this->normal = normalize(normal);
+    this->normal = normal;
     this->point = pass_point;
 }
 
@@ -9,7 +9,6 @@ Plane::Plane(vec3 normal, float d, float v) : Object(v) {
     this->normal = normalize(normal);
 
     if (abs(normal.z)>DBL_EPSILON)
-
         this->point = vec3(0.0, 0.0, -d/normal.z);
     else if (abs(normal.y)>DBL_EPSILON)
         this->point = vec3(0.0, -d/normal.y, 0.0);
@@ -23,9 +22,7 @@ bool Plane::intersection(const Ray &raig, float t_min, float t_max, Intersection
     // Comprovem si el normal al pla i el raig son ortogonals.
     // En aquest cas son paralels i no hi ha interseccio
 
-    if(dot(raig.dirVector(), normal) == 0){
-        return false;
-    }
+    if (dot(raig.dirVector(), normal) == 0) return false;
 
     // En els altres casos hi haurà interseccio (si estem en el rang de min/max).
     // Cal omplir la info.
@@ -47,12 +44,9 @@ bool Plane::intersection(const Ray &raig, float t_min, float t_max, Intersection
     temp/= normal[0]*vp[0] + normal[1]*vp[1] + normal[2]*vp[2];
 
     // Retornem false si no estem en el rang demanat
-    if (temp > t_max || temp < t_min) {
-        return false;
-    }
+    if (temp > t_max || temp < t_min) return false;
 
     // Omplim el camp de info:
-
     info.t = temp;
     info.p = raig.pointAtParameter(info.t);
 
@@ -72,6 +66,5 @@ void Plane::aplicaTG(TG *t){
         this->point.y = newp.y;
         this->point.z = newp.z;
     }
-
 }
 

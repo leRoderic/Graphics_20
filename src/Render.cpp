@@ -19,15 +19,18 @@ void Render::rendering() {
     for (int y = cam->viewportY-1; y >= 0; y--) {
          for (int x = 0; x < cam->viewportX; x++) {
 
-            vec3 col(0, 0, 0);
-            float u = float(x) / float(cam->viewportX);
-            float v = float(y) / float(cam->viewportY);
+             vec3 col(0, 0, 0);
+             int numSamples = 10;
+             for (int i = 0; i < numSamples; i++) {
+                 float u = float(x + drand48()) / float(cam->viewportX);
+                 float v = float(y + drand48()) / float(cam->viewportY);
 
-            Ray r = cam->getRay(u, v);
-
-            col += scene->ComputeColorRay(r, 0);
-            setPixelColor(col, x, y);
-
+                 Ray r = cam->getRay(u, v);
+                 col += scene->ComputeColorRay(r, 0);
+             }
+             col /= vec3(numSamples);
+             //col = vec3(sqrt(col.x), sqrt(col.y), sqrt(col.z));
+             setPixelColor(col, x, y);
          }
     }
 }

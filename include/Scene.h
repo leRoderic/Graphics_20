@@ -10,6 +10,8 @@
 #include "BoundaryObject.h"
 #include "Lambertian.h"
 #include "ColorMap.h"
+#include "Light.h"
+#include "Camera.h"
 
 class Scene: public Hitable
 {
@@ -24,7 +26,7 @@ public:
 
     // Funcio recursiva que calcula el color. Inicialment es
     // es crida a cada pixel. Tambe es crida en calcular les ombres o les reflexions.
-    vec3 ComputeColorRay (Ray &ray, int depth );
+    vec3 ComputeColorRay(Ray &ray, int depth);
 
     void update(int nframe);
 
@@ -32,14 +34,22 @@ public:
 
     void setDimensions(vec3 p1, vec3 p2);
 
+    vec3 BlinnPhong(vec3 point, vec3 normal, const Material *material);
+
     // dimensions de l'escena virtual
     vec3 pmin, pmax;
 
     // Vector d'objectes continguts a l'escena
-    std::vector<Object*> objects;
+    std::vector<Object *> objects;
 
     // TODO FASE 2: Afegir llums a l'escena
+    Light *light;
 
+    vec3 ambientGlobal;
+
+    Camera *cam;
+private:
+    int const MAX_DEPTH = 10;
 };
 
 #endif // SCENE_H

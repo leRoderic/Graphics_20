@@ -4,14 +4,14 @@
 
 #include "Circle.h"
 
-Circle::Circle(vec3 normal, vec3 pass_point, float radius) :Plane(normal, pass_point,radius){
-    this->normal = normalize(normal);
+Circle::Circle(vec3 normal, vec3 pass_point, float radius) : Plane(normal, pass_point, radius) {
+    this->normal = normal;
     this->center = pass_point;
     this->radius = radius;
 }
 
 bool Circle::intersection(const Ray& raig, float t_min, float t_max, IntersectionInfo& info) const {
-    if(Plane::intersection(raig,t_min,t_max,info)){//Comprovem que hi ha interseccio amb el pla.
+    if (Plane::intersection(raig, t_min, t_max, info)) {//Comprovem que hi ha interseccio amb el pla.
         float x2 = (info.p.x - center.x)*(info.p.x - center.x);
         float z2 = (info.p.z - center.z)*(info.p.z - center.z);
         //Equacio d'un cercle (x - cx)²+ (z - cz)² = r

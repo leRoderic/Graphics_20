@@ -33,7 +33,10 @@ protected:
 
 private:
     int numProp;
-    float xmin, xmax, zmin, zmax;
+    float xMin, xMax, zMin, zMax;
+    float spMin, spMax; // Sphere value range
+    float cyMin, cyMax; // Cylinder value range
+    float brMin, brMax; // BoundaryObject value range
     vector<ObjectFactory::OBJECT_TYPES> props;
 };
 

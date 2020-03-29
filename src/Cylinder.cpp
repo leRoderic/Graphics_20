@@ -38,11 +38,11 @@ bool Cylinder::intersect(const Ray &raig, float t_min, float t_max, Intersection
     if(a < EPSILON || discriminant < EPSILON){
         return false;
     }
-        //Raig tangent al cilindre, una unica intersecció
+    //Raig tangent al cilindre, una unica intersecció
     else if(discriminant > 0-EPSILON && discriminant < 0+EPSILON){
         temp1 = temp2 = -b / (2 * a);
     }
-        //Sino tenim 2 interseccions i hem d'agafar la mes petita
+    //Sino tenim 2 interseccions i hem d'agafar la mes petita
     else{
         temp1 = (-b + sqrtf(discriminant))/(2 * a);
         temp2 = (-b - sqrtf(discriminant))/(2 * a);

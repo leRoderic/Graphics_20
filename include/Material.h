@@ -7,16 +7,23 @@
 
 
 // Classe abstracte Material. Totes les seves filles hauran de definir el metode abstracte sccater
-class Material
-{
+class Material {
 public:
 
     Material();
-    Material(vec3 a, vec3 d, vec3 s, vec3 k, float beta);
+
+    Material(vec3 a, vec3 d, vec3 s, float alpha, float beta);
+
     ~Material();
 
-    virtual bool scatter(const Ray& r_in, const IntersectionInfo& rec, vec3& color, std::vector<Ray>& r_out) const = 0;
+    virtual bool scatter(const Ray &r_in, const IntersectionInfo &rec, vec3 &color, std::vector<Ray> &r_out) const = 0;
+
     vec3 diffuse;
+    vec3 ambient;
+    vec3 specular;
+    float alpha;
+    int beta;
+
 
 protected:
     vec3 RandomInSphere() const;

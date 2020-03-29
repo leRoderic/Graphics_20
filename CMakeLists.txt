@@ -13,16 +13,24 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
 
 # Make this a GUI application on Windows
-if(WIN32)
+if (WIN32)
     set(CMAKE_WIN32_EXECUTABLE ON)
-endif()
+endif ()
 
-# Tell cmake where Qt is located
-
-# aules
-set (Qt5_DIR /opt/Qt/5.9.1/gcc_64/lib/cmake/Qt5/)
-# mac:
+# MAC
+#set(OPENGL_LIBRARIES /opt/X11/lib/libGL.dylib)
+#set(GLUT_LIBRARY /opt/X11/lib/libGLUT.dylib)
 #set(QT5_DIR "/Users/anna/qt/5.10.0/clang_64/lib/cmake/Qt5")
+#set(OPENGL_INCLUDE_DIRS /opt/X11/include)
+#set(GLUT_INCLUDE_DIRS /opt/X11/include)
+
+# ubuntu
+set (OPENGL_LIBRARIES /usr/lib/x86_64-linux-gnu/libGL.so)
+set (GLUT_LIBRARY /usr/lib/x86_64-linux-gnu/libglut.so)
+set (Qt5_DIR /opt/Qt/5.9.1/gcc_64/lib/cmake/Qt5/)
+set (OPENGL_INCLUDE_DIRS /usr/include)
+set (GLUT_INCLUDE_DIRS /usr/include)
+
 # ubuntu:
 #set(Qt5_DIR "/opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5/")
 
@@ -43,17 +51,12 @@ include_directories(include)
 # find_package(GL REQUIRED)
 # find_package(GLUT REQUIRED)
 
-# Find gl and glut library: ubuntu
-set (OPENGL_INCLUDE_DIRS /usr/include)
-set (GLUT_INCLUDE_DIRS /usr/include)
 
-# settings de GL en el MAC
-#set (OPENGL_INCLUDE_DIRS /opt/X11/include)
-#set (GLUT_INCLUDE_DIRS /opt/X11/include)
+# Find gl and glut library: ubuntu
+
+
 
 include_directories(${OPENGL_INCLUDE_DIRS} ${GLUT_INCLUDE_DIRS})
-
-
 
 add_executable(RayData
         glm/core/_detail.hpp
@@ -340,17 +343,13 @@ add_executable(RayData
         src/TG.cpp
         src/Texture.cpp
         src/Translate.cpp
-        ${Res_SRC} src/Triangle.cpp src/Circle.cpp src/Cylinder.cpp include/Circle.h include/Cylinder.h include/FittedPlane.h src/FittedPlane.cpp)
+        src/Light.cpp
+        include/Light.h
+        ${Res_SRC} src/Triangle.cpp src/Circle.cpp src/Cylinder.cpp include/Circle.h include/Cylinder.h src/FittedPlane.cpp include/FittedPlane.h src/Mate.cpp include/Mate.h src/Metall.cpp include/Metall.h)
 
 
 # Set the GL and GLUT libraries
-#mac
-#set (OPENGL_LIBRARIES /opt/X11/lib/libGL.dylib)
-#set (GLUT_LIBRARY /opt/X11/lib/libGLUT.dylib)
 
-
-set (OPENGL_LIBRARIES /usr/lib/x86_64-linux-gnu/libGL.so)
-set (GLUT_LIBRARY /usr/lib/x86_64-linux-gnu/libglut.so)
 
 # Add the Qt5 Widgets, GL and GLUT  for linking
 target_link_libraries(RayData Qt5::Widgets ${OPENGL_LIBRARIES} ${GLUT_LIBRARY})

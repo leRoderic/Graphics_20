@@ -10,11 +10,14 @@ Controller::Controller(QString fileName, SceneFactory::SCENE_FACTORIES s, Render
     // S'usa un Abstract Factory per a construir l'escena, la camera
     // TODO Fase 2: crear les llums i pasar-les a l'escena
     SceneFactory *scFac = createFactory(s);
+
     Scene *scene;
     scene = scFac->createScene(fileName);
 
     Camera *camera;
     camera = scFac->createCamera();
+
+    scene->cam = camera;
 
     // Es crea aqui només un ColorMap
     // TODO Fase 2: Cal tenir en compte tants ColorMaps com numero de propietats, en el cas que el fitxer de dades en
@@ -23,7 +26,7 @@ Controller::Controller(QString fileName, SceneFactory::SCENE_FACTORIES s, Render
     scene->setMaterials(colorMap);
 
     // TODO Fase 1: Cal posar les dimensions de l'escena virtual usant setDimensions de la classe Scene
-
+    scene->setDimensions(vec3(-5.0f, -5.0f, -5.0f), vec3(5.0f, 5.0f, 5.0f));
 
     // ETAPA 2: Inicialitzacio del Rendering
     // usa un Factory Template per a construir el tipus de render

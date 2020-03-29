@@ -5,6 +5,7 @@ RenderFactory *RenderFactory::instance = nullptr;
 RenderFactory::RenderFactory() {
 
 }
+
 Render *RenderFactory::getRender(RENDER_TYPES t)
 {
     Render *r;
@@ -18,7 +19,7 @@ Render *RenderFactory::getRender(RENDER_TYPES t)
     case TEMPORAL:
         r = new RayTracingTemps();
         break;
-         }
+    }
     return r;
 }
 

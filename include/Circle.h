@@ -24,7 +24,7 @@ private:
     vec3 normal;
     vec3 center;
     float radius;
-    double const EPSILON = 0.0000000000001;
+    double const EPSILON = 0.000001;
 };
 
 

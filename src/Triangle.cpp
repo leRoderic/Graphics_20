@@ -6,7 +6,7 @@ Triangle::Triangle(vec3 p1, vec3 p2, vec3 p3, float aux, float d) : Object(d) {
     this->p2 = p2;
     this->p3 = p3;
 
-    this->normal = cross(p2 - p1, p3 - p1);
+    this->normal = normalize(cross(p2 - p1, p3 - p1));
 }
 
 bool Triangle::intersection(const Ray &raig, float t_min, float t_max, IntersectionInfo &info) const {
@@ -23,15 +23,6 @@ bool Triangle::intersection(const Ray &raig, float t_min, float t_max, Intersect
     vec3 point = raig.pointAtParameter(temp); //
 
     // intersect area calculations
-    /*
-    float triangleABC = normalize(dot(p2 - p1, p3 - p1)) / 2.0;
-    float triangleABP = normalize(dot(p2 - p1, point - p1)) / 2.0;
-    float triangleBCP = normalize(dot(p3 - p2, point - p2)) / 2.0;
-    float triangleCAP = normalize(dot(p1 - p3, point - p3)) / 2.0;
-    float u = triangleCAP / triangleABC;
-    float v = triangleABP / triangleABC;
-    float w = triangleBCP / triangleABC;
-    */
     float e1 = dot(cross((p3 - p1), (point - p1)), normal);
     float e2 = dot(cross((p2 - p3), (point - p3)), normal);
     float e3 = dot(cross((p1 - p2), (point - p2)), normal);
@@ -51,22 +42,28 @@ bool Triangle::intersection(const Ray &raig, float t_min, float t_max, Intersect
             return true;
         }
     }
-
     return false;
 }
 
 /*
     float r = abs(u + v + w);
+
     if (abs(1 - r) < 0.000001) return false;
+
     if (temp > t_max || temp < t_min) return false;
+
     info.t = temp;
     info.p = point;
+
     if (dot(normal, raig.dirVector()) < 0)
         info.normal = normal;
     else
         info.normal = - normal;
+
     info.mat_ptr = material;
+
     return true;
+
     if (abs(1 - r) > 0.000001) {
         if ((1 >= u && u >= 0) && (1 >= v && v >= 0) && (1 >= w && w >= 0)) {
             if (temp < t_max && temp > t_min) {
@@ -82,6 +79,7 @@ bool Triangle::intersection(const Ray &raig, float t_min, float t_max, Intersect
         }
     }
     return false;
+
 }*/
 
 void Triangle::aplicaTG(TG *t) {
