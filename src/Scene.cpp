@@ -107,31 +107,36 @@ vec3 Scene::BlinnPhong(vec3 point, vec3 normal, const Material *material) {
 
     vec3 resultat = vec3(0.0f);
 
-    for (Light *light:lights){
-    vec3 L = normalize(light->pos - point); // entre punt i llum
-    vec3 V = normalize(cam->origin - point); // entre punt i observador
-    vec3 H = normalize(L + V);
+    for (Light *light:lights) {
 
-    float d = distance(light->pos, point);
+        vec3 L = normalize(light->pos - point); // entre punt i llum
+        vec3 V = normalize(cam->origin - point); // entre punt i observador
+        vec3 H = normalize(L + V);
 
-    vec3 ambient = light->ambient * material->ambient;
-    vec3 diffuse = light->diffuse * material->diffuse * glm::max(dot(L, normal), 0.0f);
-    vec3 specular = light->specular * material->specular * (float) pow(glm::max(dot(normal, H), 0.0f), material->beta);
+        float d = distance(light->pos, point);
 
-    float atenuacio = dot(light->atenuacio, vec3(1.0f, d, pow(d, 2)));
+        vec3 ambient = light->ambient * material->ambient;
+        vec3 diffuse = light->diffuse * material->diffuse * glm::max(dot(L, normal), 0.0f);
+        vec3 specular =
+                light->specular * material->specular * (float) pow(glm::max(dot(normal, H), 0.0f), material->beta);
 
-    Ray rL(point, L);
+        float atenuacio = dot(light->atenuacio, vec3(1.0f, d, pow(d, 2)));
 
-    IntersectionInfo *info = new IntersectionInfo();
+        Ray rL(point, L);
 
-    float shadowFactor = 1.0f;
-    vec3 directa = (diffuse + specular) / atenuacio;
+        IntersectionInfo *info = new IntersectionInfo();
 
-    if (this->intersection(rL, 0.01f, d, *info))
-        shadowFactor = info->mat_ptr->alpha == 1.0f ? 1.0f : 0.0f;
+        float shadowFactor = 1.0f;
 
-    resultat += directa * shadowFactor + ambient;
+        if (this->intersection(rL, 0.01f, d, *info)) {
+            if (info->mat_ptr->alpha == 1.0f) {
+                shadowFactor = 1.0f;
+            } else {
+                shadowFactor = 0.0f;
+            }
+        }
 
+        resultat += ((diffuse + specular) / atenuacio) * shadowFactor + ambient;
     }
 
     return resultat;

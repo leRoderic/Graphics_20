@@ -27,7 +27,7 @@ Scene *SceneFactoryVirtual::createScene(QString filename) {
 
     s->ambientGlobal = vec3(0.1f);
     s->lights.push_back(new Light(vec3(2, 8, 10), vec3(0.3f), vec3(0.7f), vec3(1.0f), vec3(0.5, 0.0, 0.01)));
-    s->lights.push_back(new Light(vec3(2, 8, -5), vec3(0.3f), vec3(0.7f), vec3(1.0f), vec3(0.5, 0.0, 0.01)));
+    s->lights.push_back(new Light(vec3(2, 8, -10), vec3(0.3f), vec3(0.7f), vec3(1.0f), vec3(0.5, 0.0, 0.01)));
 
     return s;
 }
