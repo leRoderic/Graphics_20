@@ -105,6 +105,9 @@ vec3 Scene::ComputeColorRay(Ray &ray, int depth) {
 
 vec3 Scene::BlinnPhong(vec3 point, vec3 normal, const Material *material) {
 
+    vec3 resultat = vec3(0.0f);
+
+    for (Light *light:lights){
     vec3 L = normalize(light->pos - point); // entre punt i llum
     vec3 V = normalize(cam->origin - point); // entre punt i observador
     vec3 H = normalize(L + V);
@@ -127,7 +130,11 @@ vec3 Scene::BlinnPhong(vec3 point, vec3 normal, const Material *material) {
     if (this->intersection(rL, 0.01f, d, *info))
         shadowFactor = info->mat_ptr->alpha == 1.0f ? 1.0f : 0.0f;
 
-    return directa * shadowFactor + ambient;
+    resultat += directa * shadowFactor + ambient;
+
+    }
+
+    return resultat;
 }
 
 void Scene::update(int nframe) {

@@ -43,7 +43,7 @@ public:
     std::vector<Object *> objects;
 
     // TODO FASE 2: Afegir llums a l'escena
-    Light *light;
+    std::vector<Light *> lights;
 
     vec3 ambientGlobal;
 
