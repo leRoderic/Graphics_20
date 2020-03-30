@@ -1,4 +1,4 @@
-ToolSet: Ubuntu 18.04.4 LTS (local)@C:\Users\abdel\AppData\Local\Microsoft\WindowsApps\ubuntu1804.exe
+ToolSet: Ubuntu 18.04.4 LTS (local)@C:\Users\rcmik\AppData\Local\Microsoft\WindowsApps\ubuntu.exe
 Options: 
 
 Options:

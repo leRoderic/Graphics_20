@@ -129,27 +129,25 @@ void DataReader::dataFound(QStringList fields) {
     }
 
     Object *o;
-    float scaledData, scaledX, scaledZ;
+    float scaledX, scaledZ, scaledData;
 
     for (int i=0; i<numProp; i++) {
         // TODO Fase 1: Cal colocar els objectes al seu lloc del mon virtual, escalats segons el valor i
         //  amb el seu color corresponent segons el seu ColorMap
 
         scaledX = (fields[1].toDouble() - xMin)/(xMax - xMin);
-        scaledZ = (fields[1].toDouble() - zMin)/(zMax - zMin);
+        scaledZ = (fields[2].toDouble() - zMin)/(zMax - zMin);
 
         if(props.back() == ObjectFactory::OBJECT_TYPES::SPHERE){
-            scaledData = (fields[3].toDouble() - spMin)/(spMax - spMin);
+            scaledData = (((fields[3].toDouble() - spMin) * (255 - 0)) / (spMax - spMin)) + 0;
         }else if(props.back() == ObjectFactory::OBJECT_TYPES::CYLINDER){
-            scaledData = (fields[3].toDouble() - cyMin)/(cyMax - cyMin);
+            scaledData = (((fields[3].toDouble() - cyMin) * (255 - 0)) / (cyMax - cyMin)) + 0;
         }else if(props.back() == ObjectFactory::OBJECT_TYPES::BROBJECT) {
-            scaledData = (fields[3].toDouble() - brMin) / (brMax - brMin);
+            scaledData = (((fields[3].toDouble() - brMin) * (255 - 0)) / (brMax - brMin)) + 0;
         }
 
-
-        o = ObjectFactory::getInstance()->createObject(scaledX, 0.0f, scaledZ,
-                                                       0, 0, 0, 0, 0, 0, 0,
-                                                       scaledData, props[i]);
+        o =  ObjectFactory::getInstance()->createObject(scaledX, 0.0f, scaledZ,0, 0, 0, 0, 0, 0, 0.02*(scaledData/100), scaledData, props[i]);
         scene->objects.push_back(o);
     }
+
 }

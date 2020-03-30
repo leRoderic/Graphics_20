@@ -173,9 +173,10 @@ void Scene::setMaterials(ColorMap *cm) {
             m = new Lambertian(vec3(0.5, 0.2, 0.7));
             /* modify data objects color depending on the value of data */
             if ((*it)->getData() != -1.0) {
-                vec3 qwe = cm->getColor((*it)->getData());
+                //vec3 qwe = cm->getColor((*it)->getData());
                 //std::cerr << (*it)->getData() << std::endl;
                 //std::cerr << "(" << qwe.r << ", " << qwe.g << ", " << qwe.b << ")" << std::endl;
+                float asd = (*it)->getData();
                 m = new Lambertian(cm->getColor((*it)->getData()));
             } else
                 m = new Lambertian(vec3(0.5, 0.2, 0.7));

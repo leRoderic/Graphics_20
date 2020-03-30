@@ -696,9 +696,9 @@ Lambertian.h
 ColorMap.h
 ../include/ColorMap.h
 
-/mnt/c/Users/abdel/OneDrive - Universitat de Barcelona/3CARRERA/Grafics/Practiques/P1/dataray-f01/src/DataReader.cpp
+/mnt/h/rcmik/Documents/GitHub/dataray-f01/src/DataReader.cpp
 DataReader.h
-/mnt/c/Users/abdel/OneDrive - Universitat de Barcelona/3CARRERA/Grafics/Practiques/P1/dataray-f01/src/DataReader.h
+/mnt/h/rcmik/Documents/GitHub/dataray-f01/src/DataReader.h
 QFile
 -
 QTextStream
