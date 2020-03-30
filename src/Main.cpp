@@ -6,7 +6,9 @@ int main(int argc, char **argv) {
 
     cout << "Init..." <<endl;
     Q_INIT_RESOURCE(resources);
-    setenv("DISPLAY", "127.0.0.1:0", true);
+    
+    if(argc == 2 && string(argv[1]) == "wsl")
+        setenv("DISPLAY", "127.0.0.1:0", true);
 
 
     //Controller *controller = new Controller("://resources/spheres2.txt", SceneFactory::VIRTUAL, RenderFactory::ONLINE);

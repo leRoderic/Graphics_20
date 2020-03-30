@@ -151,7 +151,7 @@ void DataReader::dataFound(QStringList fields) {
             o =  ObjectFactory::getInstance()->createObject(scaledX, 0.0f, scaledZ,0, 0, 0, 0, 0, 0, 2, scaledData, props.back());
         }else if(props.back() == ObjectFactory::OBJECT_TYPES::CYLINDER){
             scaledData = (((fields[3].toDouble() - cyMin) * (255 - 0)) / (cyMax - cyMin)) + 0;
-            o =  ObjectFactory::getInstance()->createObject(scaledX*3, 0.0f, scaledZ,0, 0, 0, 0, 0, 0, 2, 251, props.back());
+            o =  ObjectFactory::getInstance()->createObject(scaledX*3, 0.0f, scaledZ,0, 0, 0, 0, 0, 0, 2, scaledData, props.back());
         }else if(props.back() == ObjectFactory::OBJECT_TYPES::BROBJECT) {
             scaledData = (((fields[3].toDouble() - brMin) * (255 - 0)) / (brMax - brMin)) + 0;
             o =  ObjectFactory::getInstance()->createObject(objFile, scaledData, props.back());
