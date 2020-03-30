@@ -30,6 +30,7 @@ Scene::~Scene() {
                 delete (BoundaryObject *) (objects[i]);
         }
     }
+    delete (cam);
 }
 
 /*
@@ -170,6 +171,14 @@ void Scene::setMaterials(ColorMap *cm) {
     for (auto it = this->objects.begin(); it != this->objects.end(); ++it) {
         if ((*it)->getMaterial() == nullptr) {
             m = new Lambertian(vec3(0.5, 0.2, 0.7));
+            /* modify data objects color depending on the value of data */
+            if ((*it)->getData() != -1.0) {
+                vec3 qwe = cm->getColor((*it)->getData());
+                //std::cerr << (*it)->getData() << std::endl;
+                //std::cerr << "(" << qwe.r << ", " << qwe.g << ", " << qwe.b << ")" << std::endl;
+                m = new Lambertian(cm->getColor((*it)->getData()));
+            } else
+                m = new Lambertian(vec3(0.5, 0.2, 0.7));
             (*it)->setMaterial(m);
         }
     }

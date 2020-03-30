@@ -6,85 +6,381 @@
 
 #IncludeRegexTransform: 
 
-../glm/core/_detail.hpp
-setup.hpp
+..//glm/glm.hpp
+core/_fixes.hpp
+../glm/core/_fixes.hpp
+cmath
+-
+climits
+-
+cfloat
+-
+limits
+-
+cstdio
+-
+core/setup.hpp
 ../glm/core/setup.hpp
+./core/_detail.hpp
+../glm/./core/_detail.hpp
+./core/_vectorize.hpp
+../glm/./core/_vectorize.hpp
+./core/type.hpp
+../glm/./core/type.hpp
+./core/func_trigonometric.hpp
+../glm/./core/func_trigonometric.hpp
+./core/func_exponential.hpp
+../glm/./core/func_exponential.hpp
+./core/func_common.hpp
+../glm/./core/func_common.hpp
+./core/func_packing.hpp
+../glm/./core/func_packing.hpp
+./core/func_geometric.hpp
+../glm/./core/func_geometric.hpp
+./core/func_matrix.hpp
+../glm/./core/func_matrix.hpp
+./core/func_vector_relational.hpp
+../glm/./core/func_vector_relational.hpp
+./core/func_integer.hpp
+../glm/./core/func_integer.hpp
+./core/func_noise.hpp
+../glm/./core/func_noise.hpp
+./core/_swizzle.hpp
+../glm/./core/_swizzle.hpp
+
+..//glm/gtc/matrix_transform.hpp
+../glm.hpp
+../glm/glm.hpp
+matrix_transform.inl
+../glm/gtc/matrix_transform.inl
+
+..//glm/gtx/constants.hpp
+../gtc/constants.hpp
+../glm/gtc/constants.hpp
+
+..//include/ObjectFactory.h
+Object.h
+../include/Object.h
+Sphere.h
+../include/Sphere.h
+Plane.h
+../include/Plane.h
+Triangle.h
+../include/Triangle.h
+BoundaryObject.h
+../include/BoundaryObject.h
+Circle.h
+../include/Circle.h
+Cylinder.h
+../include/Cylinder.h
+
+../glm/./core/_detail.hpp
+setup.hpp
+../glm/./core/setup.hpp
 cassert
 -
 cstdint
 -
 
-../glm/core/_fixes.hpp
+../glm/./core/_fixes.hpp
 cmath
 -
 
-../glm/core/_swizzle.hpp
+../glm/./core/_swizzle.hpp
 _swizzle_func.hpp
-../glm/core/_swizzle_func.hpp
+../glm/./core/_swizzle_func.hpp
 
-../glm/core/_swizzle_func.hpp
+../glm/./core/_swizzle_func.hpp
 
-../glm/core/_vectorize.hpp
+../glm/./core/_vectorize.hpp
 
-../glm/core/func_common.hpp
+../glm/./core/func_common.hpp
 _fixes.hpp
-../glm/core/_fixes.hpp
+../glm/./core/_fixes.hpp
 func_common.inl
-../glm/core/func_common.inl
+../glm/./core/func_common.inl
 
-../glm/core/func_common.inl
+../glm/./core/func_common.inl
 
-../glm/core/func_exponential.hpp
+../glm/./core/func_exponential.hpp
 func_exponential.inl
-../glm/core/func_exponential.inl
+../glm/./core/func_exponential.inl
 
-../glm/core/func_exponential.inl
+../glm/./core/func_exponential.inl
 
-../glm/core/func_geometric.hpp
+../glm/./core/func_geometric.hpp
 func_geometric.inl
-../glm/core/func_geometric.inl
+../glm/./core/func_geometric.inl
 
-../glm/core/func_geometric.inl
+../glm/./core/func_geometric.inl
 
-../glm/core/func_integer.hpp
+../glm/./core/func_integer.hpp
 func_integer.inl
-../glm/core/func_integer.inl
+../glm/./core/func_integer.inl
 
-../glm/core/func_integer.inl
+../glm/./core/func_integer.inl
 intrin.h
 -
 
-../glm/core/func_matrix.hpp
+../glm/./core/func_matrix.hpp
 func_matrix.inl
-../glm/core/func_matrix.inl
+../glm/./core/func_matrix.inl
 
-../glm/core/func_matrix.inl
+../glm/./core/func_matrix.inl
 
-../glm/core/func_noise.hpp
+../glm/./core/func_noise.hpp
 func_noise.inl
-../glm/core/func_noise.inl
+../glm/./core/func_noise.inl
 
-../glm/core/func_noise.inl
+../glm/./core/func_noise.inl
 
-../glm/core/func_packing.hpp
+../glm/./core/func_packing.hpp
 func_packing.inl
-../glm/core/func_packing.inl
+../glm/./core/func_packing.inl
 
-../glm/core/func_packing.inl
+../glm/./core/func_packing.inl
 
-../glm/core/func_trigonometric.hpp
+../glm/./core/func_trigonometric.hpp
 func_trigonometric.inl
-../glm/core/func_trigonometric.inl
+../glm/./core/func_trigonometric.inl
 
-../glm/core/func_trigonometric.inl
+../glm/./core/func_trigonometric.inl
 
-../glm/core/func_vector_relational.hpp
+../glm/./core/func_vector_relational.hpp
 _detail.hpp
-../glm/core/_detail.hpp
+../glm/./core/_detail.hpp
 func_vector_relational.inl
-../glm/core/func_vector_relational.inl
+../glm/./core/func_vector_relational.inl
 
-../glm/core/func_vector_relational.inl
+../glm/./core/func_vector_relational.inl
+
+../glm/./core/setup.hpp
+intrin.h
+-
+immintrin.h
+-
+immintrin.h
+-
+smmintrin.h
+-
+pmmintrin.h
+-
+emmintrin.h
+-
+
+../glm/./core/type.hpp
+type_half.hpp
+../glm/./core/type_half.hpp
+type_float.hpp
+../glm/./core/type_float.hpp
+type_int.hpp
+../glm/./core/type_int.hpp
+type_gentype.hpp
+../glm/./core/type_gentype.hpp
+type_vec1.hpp
+../glm/./core/type_vec1.hpp
+type_vec2.hpp
+../glm/./core/type_vec2.hpp
+type_vec3.hpp
+../glm/./core/type_vec3.hpp
+type_vec4.hpp
+../glm/./core/type_vec4.hpp
+type_mat2x2.hpp
+../glm/./core/type_mat2x2.hpp
+type_mat2x3.hpp
+../glm/./core/type_mat2x3.hpp
+type_mat2x4.hpp
+../glm/./core/type_mat2x4.hpp
+type_mat3x2.hpp
+../glm/./core/type_mat3x2.hpp
+type_mat3x3.hpp
+../glm/./core/type_mat3x3.hpp
+type_mat3x4.hpp
+../glm/./core/type_mat3x4.hpp
+type_mat4x2.hpp
+../glm/./core/type_mat4x2.hpp
+type_mat4x3.hpp
+../glm/./core/type_mat4x3.hpp
+type_mat4x4.hpp
+../glm/./core/type_mat4x4.hpp
+
+../glm/./core/type_float.hpp
+type_half.hpp
+../glm/./core/type_half.hpp
+setup.hpp
+../glm/./core/setup.hpp
+
+../glm/./core/type_gentype.hpp
+type_size.hpp
+../glm/./core/type_size.hpp
+
+../glm/./core/type_half.hpp
+cstdlib
+-
+type_half.inl
+../glm/./core/type_half.inl
+
+../glm/./core/type_half.inl
+_detail.hpp
+../glm/./core/_detail.hpp
+
+../glm/./core/type_int.hpp
+setup.hpp
+../glm/./core/setup.hpp
+_detail.hpp
+../glm/./core/_detail.hpp
+
+../glm/./core/type_mat.hpp
+type_gentype.hpp
+../glm/./core/type_gentype.hpp
+
+../glm/./core/type_mat2x2.hpp
+type_mat.hpp
+../glm/./core/type_mat.hpp
+type_mat2x2.inl
+../glm/./core/type_mat2x2.inl
+
+../glm/./core/type_mat2x2.inl
+
+../glm/./core/type_mat2x3.hpp
+type_mat.hpp
+../glm/./core/type_mat.hpp
+type_mat2x3.inl
+../glm/./core/type_mat2x3.inl
+
+../glm/./core/type_mat2x3.inl
+
+../glm/./core/type_mat2x4.hpp
+type_mat.hpp
+../glm/./core/type_mat.hpp
+type_mat2x4.inl
+../glm/./core/type_mat2x4.inl
+
+../glm/./core/type_mat2x4.inl
+
+../glm/./core/type_mat3x2.hpp
+type_mat.hpp
+../glm/./core/type_mat.hpp
+type_mat3x2.inl
+../glm/./core/type_mat3x2.inl
+
+../glm/./core/type_mat3x2.inl
+
+../glm/./core/type_mat3x3.hpp
+type_mat.hpp
+../glm/./core/type_mat.hpp
+type_mat3x3.inl
+../glm/./core/type_mat3x3.inl
+
+../glm/./core/type_mat3x3.inl
+
+../glm/./core/type_mat3x4.hpp
+type_mat.hpp
+../glm/./core/type_mat.hpp
+type_mat3x4.inl
+../glm/./core/type_mat3x4.inl
+
+../glm/./core/type_mat3x4.inl
+
+../glm/./core/type_mat4x2.hpp
+type_mat.hpp
+../glm/./core/type_mat.hpp
+type_mat4x2.inl
+../glm/./core/type_mat4x2.inl
+
+../glm/./core/type_mat4x2.inl
+
+../glm/./core/type_mat4x3.hpp
+type_mat.hpp
+../glm/./core/type_mat.hpp
+type_mat4x3.inl
+../glm/./core/type_mat4x3.inl
+
+../glm/./core/type_mat4x3.inl
+
+../glm/./core/type_mat4x4.hpp
+type_mat.hpp
+../glm/./core/type_mat.hpp
+type_mat4x4.inl
+../glm/./core/type_mat4x4.inl
+
+../glm/./core/type_mat4x4.inl
+
+../glm/./core/type_size.hpp
+cstdlib
+-
+
+../glm/./core/type_vec.hpp
+type_gentype.hpp
+../glm/./core/type_gentype.hpp
+
+../glm/./core/type_vec1.hpp
+type_vec.hpp
+../glm/./core/type_vec.hpp
+type_float.hpp
+../glm/./core/type_float.hpp
+type_int.hpp
+../glm/./core/type_int.hpp
+type_size.hpp
+../glm/./core/type_size.hpp
+_swizzle.hpp
+../glm/./core/_swizzle.hpp
+type_vec1.inl
+../glm/./core/type_vec1.inl
+
+../glm/./core/type_vec1.inl
+
+../glm/./core/type_vec2.hpp
+type_vec.hpp
+../glm/./core/type_vec.hpp
+type_float.hpp
+../glm/./core/type_float.hpp
+type_int.hpp
+../glm/./core/type_int.hpp
+type_size.hpp
+../glm/./core/type_size.hpp
+_swizzle.hpp
+../glm/./core/_swizzle.hpp
+type_vec2.inl
+../glm/./core/type_vec2.inl
+
+../glm/./core/type_vec2.inl
+
+../glm/./core/type_vec3.hpp
+type_vec.hpp
+../glm/./core/type_vec.hpp
+type_float.hpp
+../glm/./core/type_float.hpp
+type_int.hpp
+../glm/./core/type_int.hpp
+type_size.hpp
+../glm/./core/type_size.hpp
+_swizzle.hpp
+../glm/./core/_swizzle.hpp
+type_vec3.inl
+../glm/./core/type_vec3.inl
+
+../glm/./core/type_vec3.inl
+
+../glm/./core/type_vec4.hpp
+type_vec.hpp
+../glm/./core/type_vec.hpp
+type_float.hpp
+../glm/./core/type_float.hpp
+type_int.hpp
+../glm/./core/type_int.hpp
+type_size.hpp
+../glm/./core/type_size.hpp
+_swizzle.hpp
+../glm/./core/_swizzle.hpp
+type_vec4.inl
+../glm/./core/type_vec4.inl
+
+../glm/./core/type_vec4.inl
+
+../glm/core/_fixes.hpp
+cmath
+-
 
 ../glm/core/setup.hpp
 intrin.h
@@ -99,216 +395,6 @@ pmmintrin.h
 -
 emmintrin.h
 -
-
-../glm/core/type.hpp
-type_half.hpp
-../glm/core/type_half.hpp
-type_float.hpp
-../glm/core/type_float.hpp
-type_int.hpp
-../glm/core/type_int.hpp
-type_gentype.hpp
-../glm/core/type_gentype.hpp
-type_vec1.hpp
-../glm/core/type_vec1.hpp
-type_vec2.hpp
-../glm/core/type_vec2.hpp
-type_vec3.hpp
-../glm/core/type_vec3.hpp
-type_vec4.hpp
-../glm/core/type_vec4.hpp
-type_mat2x2.hpp
-../glm/core/type_mat2x2.hpp
-type_mat2x3.hpp
-../glm/core/type_mat2x3.hpp
-type_mat2x4.hpp
-../glm/core/type_mat2x4.hpp
-type_mat3x2.hpp
-../glm/core/type_mat3x2.hpp
-type_mat3x3.hpp
-../glm/core/type_mat3x3.hpp
-type_mat3x4.hpp
-../glm/core/type_mat3x4.hpp
-type_mat4x2.hpp
-../glm/core/type_mat4x2.hpp
-type_mat4x3.hpp
-../glm/core/type_mat4x3.hpp
-type_mat4x4.hpp
-../glm/core/type_mat4x4.hpp
-
-../glm/core/type_float.hpp
-type_half.hpp
-../glm/core/type_half.hpp
-setup.hpp
-../glm/core/setup.hpp
-
-../glm/core/type_gentype.hpp
-type_size.hpp
-../glm/core/type_size.hpp
-
-../glm/core/type_half.hpp
-cstdlib
--
-type_half.inl
-../glm/core/type_half.inl
-
-../glm/core/type_half.inl
-_detail.hpp
-../glm/core/_detail.hpp
-
-../glm/core/type_int.hpp
-setup.hpp
-../glm/core/setup.hpp
-_detail.hpp
-../glm/core/_detail.hpp
-
-../glm/core/type_mat.hpp
-type_gentype.hpp
-../glm/core/type_gentype.hpp
-
-../glm/core/type_mat2x2.hpp
-type_mat.hpp
-../glm/core/type_mat.hpp
-type_mat2x2.inl
-../glm/core/type_mat2x2.inl
-
-../glm/core/type_mat2x2.inl
-
-../glm/core/type_mat2x3.hpp
-type_mat.hpp
-../glm/core/type_mat.hpp
-type_mat2x3.inl
-../glm/core/type_mat2x3.inl
-
-../glm/core/type_mat2x3.inl
-
-../glm/core/type_mat2x4.hpp
-type_mat.hpp
-../glm/core/type_mat.hpp
-type_mat2x4.inl
-../glm/core/type_mat2x4.inl
-
-../glm/core/type_mat2x4.inl
-
-../glm/core/type_mat3x2.hpp
-type_mat.hpp
-../glm/core/type_mat.hpp
-type_mat3x2.inl
-../glm/core/type_mat3x2.inl
-
-../glm/core/type_mat3x2.inl
-
-../glm/core/type_mat3x3.hpp
-type_mat.hpp
-../glm/core/type_mat.hpp
-type_mat3x3.inl
-../glm/core/type_mat3x3.inl
-
-../glm/core/type_mat3x3.inl
-
-../glm/core/type_mat3x4.hpp
-type_mat.hpp
-../glm/core/type_mat.hpp
-type_mat3x4.inl
-../glm/core/type_mat3x4.inl
-
-../glm/core/type_mat3x4.inl
-
-../glm/core/type_mat4x2.hpp
-type_mat.hpp
-../glm/core/type_mat.hpp
-type_mat4x2.inl
-../glm/core/type_mat4x2.inl
-
-../glm/core/type_mat4x2.inl
-
-../glm/core/type_mat4x3.hpp
-type_mat.hpp
-../glm/core/type_mat.hpp
-type_mat4x3.inl
-../glm/core/type_mat4x3.inl
-
-../glm/core/type_mat4x3.inl
-
-../glm/core/type_mat4x4.hpp
-type_mat.hpp
-../glm/core/type_mat.hpp
-type_mat4x4.inl
-../glm/core/type_mat4x4.inl
-
-../glm/core/type_mat4x4.inl
-
-../glm/core/type_size.hpp
-cstdlib
--
-
-../glm/core/type_vec.hpp
-type_gentype.hpp
-../glm/core/type_gentype.hpp
-
-../glm/core/type_vec1.hpp
-type_vec.hpp
-../glm/core/type_vec.hpp
-type_float.hpp
-../glm/core/type_float.hpp
-type_int.hpp
-../glm/core/type_int.hpp
-type_size.hpp
-../glm/core/type_size.hpp
-_swizzle.hpp
-../glm/core/_swizzle.hpp
-type_vec1.inl
-../glm/core/type_vec1.inl
-
-../glm/core/type_vec1.inl
-
-../glm/core/type_vec2.hpp
-type_vec.hpp
-../glm/core/type_vec.hpp
-type_float.hpp
-../glm/core/type_float.hpp
-type_int.hpp
-../glm/core/type_int.hpp
-type_size.hpp
-../glm/core/type_size.hpp
-_swizzle.hpp
-../glm/core/_swizzle.hpp
-type_vec2.inl
-../glm/core/type_vec2.inl
-
-../glm/core/type_vec2.inl
-
-../glm/core/type_vec3.hpp
-type_vec.hpp
-../glm/core/type_vec.hpp
-type_float.hpp
-../glm/core/type_float.hpp
-type_int.hpp
-../glm/core/type_int.hpp
-type_size.hpp
-../glm/core/type_size.hpp
-_swizzle.hpp
-../glm/core/_swizzle.hpp
-type_vec3.inl
-../glm/core/type_vec3.inl
-
-../glm/core/type_vec3.inl
-
-../glm/core/type_vec4.hpp
-type_vec.hpp
-../glm/core/type_vec.hpp
-type_float.hpp
-../glm/core/type_float.hpp
-type_int.hpp
-../glm/core/type_int.hpp
-type_size.hpp
-../glm/core/type_size.hpp
-_swizzle.hpp
-../glm/core/_swizzle.hpp
-type_vec4.inl
-../glm/core/type_vec4.inl
-
-../glm/core/type_vec4.inl
 
 ../glm/glm.hpp
 core/_fixes.hpp
@@ -326,31 +412,31 @@ cstdio
 core/setup.hpp
 ../glm/core/setup.hpp
 ./core/_detail.hpp
-../glm/core/_detail.hpp
+../glm/./core/_detail.hpp
 ./core/_vectorize.hpp
-../glm/core/_vectorize.hpp
+../glm/./core/_vectorize.hpp
 ./core/type.hpp
-../glm/core/type.hpp
+../glm/./core/type.hpp
 ./core/func_trigonometric.hpp
-../glm/core/func_trigonometric.hpp
+../glm/./core/func_trigonometric.hpp
 ./core/func_exponential.hpp
-../glm/core/func_exponential.hpp
+../glm/./core/func_exponential.hpp
 ./core/func_common.hpp
-../glm/core/func_common.hpp
+../glm/./core/func_common.hpp
 ./core/func_packing.hpp
-../glm/core/func_packing.hpp
+../glm/./core/func_packing.hpp
 ./core/func_geometric.hpp
-../glm/core/func_geometric.hpp
+../glm/./core/func_geometric.hpp
 ./core/func_matrix.hpp
-../glm/core/func_matrix.hpp
+../glm/./core/func_matrix.hpp
 ./core/func_vector_relational.hpp
-../glm/core/func_vector_relational.hpp
+../glm/./core/func_vector_relational.hpp
 ./core/func_integer.hpp
-../glm/core/func_integer.hpp
+../glm/./core/func_integer.hpp
 ./core/func_noise.hpp
-../glm/core/func_noise.hpp
+../glm/./core/func_noise.hpp
 ./core/_swizzle.hpp
-../glm/core/_swizzle.hpp
+../glm/./core/_swizzle.hpp
 
 ../glm/gtc/constants.hpp
 ../glm.hpp
@@ -370,17 +456,7 @@ half_float.inl
 
 ../glm/gtc/half_float.inl
 
-../glm/gtc/matrix_transform.hpp
-../glm.hpp
-../glm/glm.hpp
-matrix_transform.inl
 ../glm/gtc/matrix_transform.inl
-
-../glm/gtc/matrix_transform.inl
-
-../glm/gtx/constants.hpp
-../gtc/constants.hpp
-../glm/gtc/constants.hpp
 
 ../include/Animation.h
 glm/glm.hpp
@@ -444,10 +520,6 @@ Plane.h
 glm/glm.hpp
 ../include/glm/glm.hpp
 
-../include/ColorMapStatic.h
-ColorMap.h
-../include/ColorMap.h
-
 ../include/Cylinder.h
 Object.h
 ../include/Object.h
@@ -473,6 +545,10 @@ Scene.h
 ../include/Scene.h
 ObjectFactory.h
 ../include/ObjectFactory.h
+
+../include/FittedPlane.h
+Plane.h
+../include/Plane.h
 
 ../include/Hitable.h
 Ray.h
@@ -529,6 +605,8 @@ Animation.h
 ../include/Animation.h
 Translate.h
 ../include/Translate.h
+Scale.h
+../include/Scale.h
 glm/gtx/constants.hpp
 ../include/glm/gtx/constants.hpp
 
@@ -543,6 +621,10 @@ stdlib.h
 -
 string
 -
+
+../include/Scale.h
+TG.h
+../include/TG.h
 
 ../include/Scene.h
 vector
@@ -567,32 +649,8 @@ Light.h
 ../include/Light.h
 Camera.h
 ../include/Camera.h
-
-../include/SceneFactory.h
-string.h
--
-Scene.h
-../include/Scene.h
-Camera.h
-../include/Camera.h
-ColorMap.h
-../include/ColorMap.h
-ReadFile.h
-../include/ReadFile.h
-ObjectFactory.h
-../include/ObjectFactory.h
-ColorMapStatic.h
-../include/ColorMapStatic.h
-QString
--
-
-../include/SceneFactoryData.h
-SceneFactory.h
-../include/SceneFactory.h
-ColorMapStatic.h
-../include/ColorMapStatic.h
-DataReader.h
-../include/DataReader.h
+FittedPlane.h
+../include/FittedPlane.h
 
 ../include/Sphere.h
 Object.h
@@ -601,6 +659,8 @@ Animation.h
 ../include/Animation.h
 Translate.h
 ../include/Translate.h
+Scale.h
+../include/Scale.h
 
 ../include/TG.h
 glm/glm.hpp
@@ -636,59 +696,77 @@ Lambertian.h
 ColorMap.h
 ../include/ColorMap.h
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/QFile
+/mnt/c/Users/abdel/OneDrive - Universitat de Barcelona/3CARRERA/Grafics/Practiques/P1/dataray-f01/src/DataReader.cpp
+DataReader.h
+/mnt/c/Users/abdel/OneDrive - Universitat de Barcelona/3CARRERA/Grafics/Practiques/P1/dataray-f01/src/DataReader.h
+QFile
+-
+QTextStream
+-
+iostream
+-
+sstream
+-
+include/ObjectFactory.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QFile
 qfile.h
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qfile.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/QObject
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QObject
 qobject.h
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qobject.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/QRegularExpression
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QRegularExpression
 qregularexpression.h
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qregularexpression.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/QString
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QString
 qstring.h
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qstring.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/QStringList
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QStringList
 qstringlist.h
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qstringlist.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qalgorithms.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QTextStream
+qtextstream.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
 QtCore/qglobal.h
 -
 intrin.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qarraydata.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
 QtCore/qrefcount.h
 -
 string.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qatomic.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h
 QtCore/qglobal.h
 -
 QtCore/qbasicatomic.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qatomic_bootstrap.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_bootstrap.h
 QtCore/qgenericatomic.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qatomic_cxx11.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_cxx11.h
 QtCore/qgenericatomic.h
 -
 atomic
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qatomic_msvc.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_msvc.h
 QtCore/qgenericatomic.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qbasicatomic.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h
 QtCore/qatomic.h
 -
 QtCore/qatomic_bootstrap.h
@@ -698,7 +776,7 @@ QtCore/qatomic_cxx11.h
 QtCore/qatomic_msvc.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qbytearray.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h
 QtCore/qrefcount.h
 -
 QtCore/qnamespace.h
@@ -718,31 +796,31 @@ iterator
 QtCore/qstring.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qbytearraylist.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h
 QtCore/qlist.h
 -
 QtCore/qbytearray.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qchar.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h
 QtCore/qglobal.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qcompilerdetection.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qcompilerdetection.h
 QtCore/qglobal.h
 -
 utility
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qconfig-bootstrapped.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig-bootstrapped.h
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qconfig.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qcontainerfwd.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h
 QtCore/qglobal.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qcontiguouscache.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h
 QtCore/qatomic.h
 -
 limits.h
@@ -750,7 +828,7 @@ limits.h
 new
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qcoreevent.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
 QtCore/qnamespace.h
 -
 QtCore/qbytearray.h
@@ -758,7 +836,7 @@ QtCore/qbytearray.h
 QtCore/qobjectdefs.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qdebug.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
 QtCore/qalgorithms.h
 -
 QtCore/qhash.h
@@ -790,7 +868,7 @@ map
 utility
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qfile.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h
 QtCore/qfiledevice.h
 -
 QtCore/qstring.h
@@ -798,25 +876,25 @@ QtCore/qstring.h
 stdio.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qfiledevice.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h
 QtCore/qiodevice.h
 -
 QtCore/qstring.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qflags.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h
 QtCore/qglobal.h
 -
 initializer_list
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qgenericatomic.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h
 QtCore/qglobal.h
 -
 QtCore/qtypeinfo.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qglobal.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h
 type_traits
 -
 cstddef
@@ -856,7 +934,7 @@ QtCore/qnumeric.h
 QtCore/qversiontagging.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qglobalstatic.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h
 QtCore/qglobal.h
 -
 QtCore/qatomic.h
@@ -864,7 +942,7 @@ QtCore/qatomic.h
 QtCore/qmutex.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qhash.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h
 QtCore/qchar.h
 -
 QtCore/qiterator.h
@@ -880,7 +958,7 @@ initializer_list
 algorithm
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qhashfunctions.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h
 QtCore/qchar.h
 -
 QtCore/qpair.h
@@ -888,7 +966,7 @@ QtCore/qpair.h
 numeric
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qiodevice.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h
 QtCore/qglobal.h
 -
 QtCore/qobject.h
@@ -900,11 +978,11 @@ QtCore/qscopedpointer.h
 QtCore/qstring.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qiterator.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
 QtCore/qglobal.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qlist.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h
 QtCore/qalgorithms.h
 -
 QtCore/qiterator.h
@@ -936,7 +1014,7 @@ QtCore/qbytearraylist.h
 QtCore/qstringlist.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qlocale.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h
 QtCore/qvariant.h
 -
 QtCore/qstring.h
@@ -946,11 +1024,11 @@ QtCore/qobjectdefs.h
 QtCore/qshareddata.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qlogging.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
 QtCore/qglobal.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qmap.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h
 QtCore/qiterator.h
 -
 QtCore/qlist.h
@@ -970,7 +1048,7 @@ functional
 initializer_list
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qmetatype.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
 QtCore/qglobal.h
 -
 QtCore/qatomic.h
@@ -990,7 +1068,7 @@ list
 map
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qmutex.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
 QtCore/qglobal.h
 -
 QtCore/qatomic.h
@@ -1002,15 +1080,15 @@ chrono
 limits
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qnamespace.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
 QtCore/qglobal.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qnumeric.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h
 QtCore/qglobal.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qobject.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h
 QtCore/qobjectdefs.h
 -
 QtCore/qstring.h
@@ -1030,41 +1108,41 @@ QtCore/qobject_impl.h
 chrono
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qobject_impl.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject_impl.h
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qobjectdefs.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h
 QtCore/qnamespace.h
 -
 QtCore/qobjectdefs_impl.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qobjectdefs_impl.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h
 QtCore/qnamespace.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qpair.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qpair.h
 QtCore/qglobal.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qpoint.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h
 QtCore/qnamespace.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qprocessordetection.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qprocessordetection.h
 QtCore/qglobal.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qrefcount.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h
 QtCore/qatomic.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qregexp.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h
 QtCore/qglobal.h
 -
 QtCore/qstring.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qregularexpression.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h
 QtCore/qglobal.h
 -
 QtCore/qstring.h
@@ -1076,13 +1154,13 @@ QtCore/qshareddata.h
 QtCore/qvariant.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qscopedpointer.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h
 QtCore/qglobal.h
 -
 stdlib.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qset.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h
 QtCore/qhash.h
 -
 initializer_list
@@ -1090,7 +1168,7 @@ initializer_list
 iterator
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qshareddata.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h
 QtCore/qglobal.h
 -
 QtCore/qatomic.h
@@ -1100,7 +1178,7 @@ QtCore/qhash.h
 QtCore/qhashfunctions.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qsharedpointer.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer.h
 QtCore/qglobal.h
 -
 QtCore/qatomic.h
@@ -1110,7 +1188,7 @@ QtCore/qshareddata.h
 QtCore/qsharedpointer_impl.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qsharedpointer_impl.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer_impl.h
 new
 -
 QtCore/qatomic.h
@@ -1122,7 +1200,7 @@ QtCore/qhash.h
 QtCore/qhashfunctions.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qstring.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
 QtCore/qchar.h
 -
 QtCore/qbytearray.h
@@ -1140,7 +1218,7 @@ stdarg.h
 QtCore/qstringbuilder.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qstringbuilder.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qstringbuilder.h
 QtCore/qstring.h
 -
 QtCore/qbytearray.h
@@ -1148,7 +1226,7 @@ QtCore/qbytearray.h
 string.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qstringlist.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h
 QtCore/qlist.h
 -
 QtCore/qalgorithms.h
@@ -1160,15 +1238,15 @@ QtCore/qstring.h
 QtCore/qstringmatcher.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qstringmatcher.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h
 QtCore/qstring.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qsysinfo.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h
 QtCore/qglobal.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qsystemdetection.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h
 QtCore/qglobal.h
 -
 TargetConditionals.h
@@ -1178,9 +1256,9 @@ Availability.h
 AvailabilityMacros.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qtcore-config.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qtcore-config.h
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qtextstream.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h
 QtCore/qiodevice.h
 -
 QtCore/qstring.h
@@ -1194,11 +1272,11 @@ QtCore/qscopedpointer.h
 stdio.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qtypeinfo.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h
 QtCore/qglobal.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qvariant.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h
 QtCore/qatomic.h
 -
 QtCore/qbytearray.h
@@ -1220,7 +1298,7 @@ QtCore/qobject.h
 QtCore/qbytearraylist.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qvarlengtharray.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h
 QtCore/qcontainerfwd.h
 -
 QtCore/qglobal.h
@@ -1240,7 +1318,7 @@ initializer_list
 iterator
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qvector.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h
 QtCore/qalgorithms.h
 -
 QtCore/qiterator.h
@@ -1268,11 +1346,7 @@ algorithm
 QtCore/qpoint.h
 -
 
-/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qversiontagging.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h
 QtCore/qglobal.h
 -
-
-/Users/QIJUNJIN/projects/dataray-f01/src/SceneFactoryData.cpp
-SceneFactoryData.h
-/Users/QIJUNJIN/projects/dataray-f01/src/SceneFactoryData.h
 

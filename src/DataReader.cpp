@@ -58,13 +58,16 @@ void DataReader::baseFound(QStringList fields) {
         // TO-DO Fase 1: Cal fer un pla acotat i no un pla infinit. Les dimensions del pla acotat seran les dimensions de l'escena en x i z
 
 
-        //vec3 p1 = this->scene->pmax;
-        //vec3 p2 = this->scene->pmin;
+        vec3 p1 = this->scene->pmax;
+        vec3 p2 = this->scene->pmin;
 
-        o = ObjectFactory::getInstance()->createObject(fields[2].toDouble(), fields[3].toDouble(),
-                fields[4].toDouble(), 0, 0, 0, 0, 0, 0,
-                fields[5].toDouble(), 0, ObjectFactory::OBJECT_TYPES::FITTED_PLANE);
-
+        float y = 1.0f;
+        y = fields[5].toDouble();
+        o = ObjectFactory::getInstance()->createObject(p1.x, p1.y, p1.z, p2.x, p2.y, p2.z, fields[2].toDouble(),
+                                                       fields[3].toDouble(), fields[4].toDouble(),
+                                                       y, 0, ObjectFactory::OBJECT_TYPES::FITTED_PLANE);
+        //Fase 1 / 3.2 / b / a
+        scene->ground = (FittedPlane *) o;
         // TODO Fase 4: llegir textura i afegir-la a l'objecte. Veure la classe Texture
     }else if(QString::compare(" sphere", fields[1], Qt::CaseInsensitive) == 0){
         // TO-DO: Fase 3: Si cal instanciar una esfera com objecte base i no un pla, cal afegir aqui un else
