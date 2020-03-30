@@ -20,6 +20,7 @@ class Object: public Hitable, public Animable {
     virtual void aplicaTG(TG *tg) = 0;
 
     float    getData();
+    void    setData(float d);
     void     setMaterial(Material *m);
 
     Material *getMaterial();

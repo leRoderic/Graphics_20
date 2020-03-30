@@ -10,6 +10,7 @@
 #include "Object.h"
 #include "Animation.h"
 #include "Translate.h"
+#include "Scale.h"
 
 
 class Sphere: public Object  {
@@ -22,8 +23,9 @@ public:
 private:
         // Centre de l'esfera
         vec3 center;
-        // Radi de l'esfera
-        float radius;
+    // Radi de l'esfera
+    float radius;
+    float factor;
 
 };
 

@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "RayData_autogen"
+  "CMakeFiles/RayData_autogen.dir/AutogenOldSettings.txt"
   "CMakeFiles/RayData_autogen"
   "RayData_autogen/mocs_compilation.cpp"
 )

@@ -8,7 +8,7 @@ SceneFactoryData::SceneFactoryData()
 Camera *SceneFactoryData::createCamera() {
     // creacio de la camera
     //vec3 lookfrom(3,2,2);
-    vec3 lookfrom(13, 2, 3);
+    vec3 lookfrom(0, 1, 0.5);
     vec3 lookat(0,0,0);
 
     float dist_to_focus = 2;
@@ -25,6 +25,8 @@ Scene *SceneFactoryData::createScene(QString filename) {
     DataReader *sc = new DataReader(s);
     // TODO: Fase 1: construccio de l'escena dins de dataReader
     sc->readFile(filename);
+
+    s->lights.push_back(new Light(vec3(2, 8, 10), vec3(0.3f), vec3(0.7f), vec3(1.0f), vec3(0.5, 0.0, 0.01)));
     return s;
 }
 
