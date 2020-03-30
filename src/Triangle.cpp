@@ -6,7 +6,7 @@ Triangle::Triangle(vec3 p1, vec3 p2, vec3 p3, float aux, float d) : Object(d) {
     this->p2 = p2;
     this->p3 = p3;
 
-    this->normal = normalize(cross(p2 - p1, p3 - p1));
+    //this->normal = normalize(cross(p2 - p1, p3 - p1));
 }
 
 bool Triangle::intersection(const Ray &raig, float t_min, float t_max, IntersectionInfo &info) const {

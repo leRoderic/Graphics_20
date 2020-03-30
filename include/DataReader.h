@@ -35,6 +35,7 @@ private:
     int numProp, tmp;
     float xMin, xMax, zMin, zMax;
     float spMin, spMax; // Sphere value range
+    float tMin, tMax; // Sphere value range
     float cyMin, cyMax; // Cylinder value range
     float brMin, brMax; // BoundaryObject value range
     QString objFile;
