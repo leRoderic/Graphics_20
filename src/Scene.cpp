@@ -105,29 +105,45 @@ vec3 Scene::ComputeColorRay(Ray &ray, int depth) {
 
 vec3 Scene::BlinnPhong(vec3 point, vec3 normal, const Material *material) {
 
-    vec3 L = normalize(light->pos - point); // entre punt i llum
-    vec3 V = normalize(cam->origin - point); // entre punt i observador
-    vec3 H = normalize(L + V);
+    vec3 resultat = vec3(0.0f);
 
-    float d = distance(light->pos, point);
+    for (Light *light:lights) {
 
-    vec3 ambient = light->ambient * material->ambient;
-    vec3 diffuse = light->diffuse * material->diffuse * glm::max(dot(L, normal), 0.0f);
-    vec3 specular = light->specular * material->specular * (float) pow(glm::max(dot(normal, H), 0.0f), material->beta);
+        vec3 L = normalize(light->pos - point); // entre punt i llum
+        vec3 V = normalize(cam->origin - point); // entre punt i observador
+        vec3 H = normalize(L + V);
 
-    float atenuacio = dot(light->atenuacio, vec3(1.0f, d, pow(d, 2)));
+        float d = distance(light->pos, point);
 
-    Ray rL(point, L);
+        vec3 ambient = light->ambient * material->ambient;
+        vec3 diffuse = light->diffuse * material->diffuse * glm::max(dot(L, normal), 0.0f);
+        vec3 specular =
+                light->specular * material->specular * (float) pow(glm::max(dot(normal, H), 0.0f), material->beta);
 
-    IntersectionInfo *info = new IntersectionInfo();
+        float atenuacio = dot(light->atenuacio, vec3(1.0f, d, pow(d, 2)));
 
-    float shadowFactor = 1.0f;
-    vec3 directa = (diffuse + specular) / atenuacio;
+        IntersectionInfo *info = new IntersectionInfo();
 
-    if (this->intersection(rL, 0.01f, d, *info))
-        shadowFactor = info->mat_ptr->alpha == 1.0f ? 1.0f : 0.0f;
+        float shadowFactor = 1.0f;
 
-    return directa * shadowFactor + ambient;
+        if (this->intersection(Ray(point, L), 0.01f, d, *info)) {
+            if (info->mat_ptr->alpha == 1.0f) {
+                shadowFactor = 1.0f;
+
+                IntersectionInfo *info2 = new IntersectionInfo();
+                if(this->intersection(Ray(info->p, info->p - point), 0.01f, distance(info->p, point), *info2)){
+                    if (info2->mat_ptr->alpha != 1.0f) shadowFactor = 0.0f;
+                }
+
+            } else {
+                shadowFactor = 0.0f;
+            }
+        }
+
+        resultat += ((diffuse + specular) / atenuacio) * shadowFactor + ambient;
+    }
+
+    return resultat;
 }
 
 void Scene::update(int nframe) {

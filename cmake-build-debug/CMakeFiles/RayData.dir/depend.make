@@ -661,6 +661,13 @@ CMakeFiles/RayData.dir/src/Controller.cpp.o: /Users/QIJUNJIN/anaconda3/include/q
 CMakeFiles/RayData.dir/src/Controller.cpp.o: /Users/QIJUNJIN/anaconda3/include/qt/QtCore/qvector.h
 CMakeFiles/RayData.dir/src/Controller.cpp.o: /Users/QIJUNJIN/anaconda3/include/qt/QtCore/qversiontagging.h
 CMakeFiles/RayData.dir/src/Controller.cpp.o: ../src/Controller.cpp
+CMakeFiles/RayData.dir/src/Controller.cpp.o: /opt/X11/include/GL/freeglut_std.h
+CMakeFiles/RayData.dir/src/Controller.cpp.o: /opt/X11/include/GL/gl.h
+CMakeFiles/RayData.dir/src/Controller.cpp.o: /opt/X11/include/GL/gl_mangle.h
+CMakeFiles/RayData.dir/src/Controller.cpp.o: /opt/X11/include/GL/glext.h
+CMakeFiles/RayData.dir/src/Controller.cpp.o: /opt/X11/include/GL/glu.h
+CMakeFiles/RayData.dir/src/Controller.cpp.o: /opt/X11/include/GL/glu_mangle.h
+CMakeFiles/RayData.dir/src/Controller.cpp.o: /opt/X11/include/GL/glut.h
 
 CMakeFiles/RayData.dir/src/Cylinder.cpp.o: ../glm/core/_detail.hpp
 CMakeFiles/RayData.dir/src/Cylinder.cpp.o: ../glm/core/_fixes.hpp
@@ -1345,6 +1352,13 @@ CMakeFiles/RayData.dir/src/Main.cpp.o: /Users/QIJUNJIN/anaconda3/include/qt/QtCo
 CMakeFiles/RayData.dir/src/Main.cpp.o: /Users/QIJUNJIN/anaconda3/include/qt/QtCore/qvector.h
 CMakeFiles/RayData.dir/src/Main.cpp.o: /Users/QIJUNJIN/anaconda3/include/qt/QtCore/qversiontagging.h
 CMakeFiles/RayData.dir/src/Main.cpp.o: ../src/Main.cpp
+CMakeFiles/RayData.dir/src/Main.cpp.o: /opt/X11/include/GL/freeglut_std.h
+CMakeFiles/RayData.dir/src/Main.cpp.o: /opt/X11/include/GL/gl.h
+CMakeFiles/RayData.dir/src/Main.cpp.o: /opt/X11/include/GL/gl_mangle.h
+CMakeFiles/RayData.dir/src/Main.cpp.o: /opt/X11/include/GL/glext.h
+CMakeFiles/RayData.dir/src/Main.cpp.o: /opt/X11/include/GL/glu.h
+CMakeFiles/RayData.dir/src/Main.cpp.o: /opt/X11/include/GL/glu_mangle.h
+CMakeFiles/RayData.dir/src/Main.cpp.o: /opt/X11/include/GL/glut.h
 
 CMakeFiles/RayData.dir/src/Mate.cpp.o: ../glm/core/_detail.hpp
 CMakeFiles/RayData.dir/src/Mate.cpp.o: ../glm/core/_fixes.hpp
@@ -1994,6 +2008,13 @@ CMakeFiles/RayData.dir/src/RayTracingGLU.cpp.o: /Users/QIJUNJIN/anaconda3/includ
 CMakeFiles/RayData.dir/src/RayTracingGLU.cpp.o: /Users/QIJUNJIN/anaconda3/include/qt/QtCore/qvector.h
 CMakeFiles/RayData.dir/src/RayTracingGLU.cpp.o: /Users/QIJUNJIN/anaconda3/include/qt/QtCore/qversiontagging.h
 CMakeFiles/RayData.dir/src/RayTracingGLU.cpp.o: ../src/RayTracingGLU.cpp
+CMakeFiles/RayData.dir/src/RayTracingGLU.cpp.o: /opt/X11/include/GL/freeglut_std.h
+CMakeFiles/RayData.dir/src/RayTracingGLU.cpp.o: /opt/X11/include/GL/gl.h
+CMakeFiles/RayData.dir/src/RayTracingGLU.cpp.o: /opt/X11/include/GL/gl_mangle.h
+CMakeFiles/RayData.dir/src/RayTracingGLU.cpp.o: /opt/X11/include/GL/glext.h
+CMakeFiles/RayData.dir/src/RayTracingGLU.cpp.o: /opt/X11/include/GL/glu.h
+CMakeFiles/RayData.dir/src/RayTracingGLU.cpp.o: /opt/X11/include/GL/glu_mangle.h
+CMakeFiles/RayData.dir/src/RayTracingGLU.cpp.o: /opt/X11/include/GL/glut.h
 
 CMakeFiles/RayData.dir/src/RayTracingPPM.cpp.o: ../glm/core/_detail.hpp
 CMakeFiles/RayData.dir/src/RayTracingPPM.cpp.o: ../glm/core/_fixes.hpp
@@ -2596,6 +2617,13 @@ CMakeFiles/RayData.dir/src/RenderFactory.cpp.o: /Users/QIJUNJIN/anaconda3/includ
 CMakeFiles/RayData.dir/src/RenderFactory.cpp.o: /Users/QIJUNJIN/anaconda3/include/qt/QtCore/qvector.h
 CMakeFiles/RayData.dir/src/RenderFactory.cpp.o: /Users/QIJUNJIN/anaconda3/include/qt/QtCore/qversiontagging.h
 CMakeFiles/RayData.dir/src/RenderFactory.cpp.o: ../src/RenderFactory.cpp
+CMakeFiles/RayData.dir/src/RenderFactory.cpp.o: /opt/X11/include/GL/freeglut_std.h
+CMakeFiles/RayData.dir/src/RenderFactory.cpp.o: /opt/X11/include/GL/gl.h
+CMakeFiles/RayData.dir/src/RenderFactory.cpp.o: /opt/X11/include/GL/gl_mangle.h
+CMakeFiles/RayData.dir/src/RenderFactory.cpp.o: /opt/X11/include/GL/glext.h
+CMakeFiles/RayData.dir/src/RenderFactory.cpp.o: /opt/X11/include/GL/glu.h
+CMakeFiles/RayData.dir/src/RenderFactory.cpp.o: /opt/X11/include/GL/glu_mangle.h
+CMakeFiles/RayData.dir/src/RenderFactory.cpp.o: /opt/X11/include/GL/glut.h
 
 CMakeFiles/RayData.dir/src/Scene.cpp.o: ../glm/core/_detail.hpp
 CMakeFiles/RayData.dir/src/Scene.cpp.o: ../glm/core/_fixes.hpp

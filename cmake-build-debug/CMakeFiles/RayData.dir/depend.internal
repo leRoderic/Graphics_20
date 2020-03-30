@@ -662,6 +662,13 @@ CMakeFiles/RayData.dir/src/Controller.cpp.o
  /Users/QIJUNJIN/anaconda3/include/qt/QtCore/qvector.h
  /Users/QIJUNJIN/anaconda3/include/qt/QtCore/qversiontagging.h
  /Users/QIJUNJIN/projects/dataray-f01/src/Controller.cpp
+ /opt/X11/include/GL/freeglut_std.h
+ /opt/X11/include/GL/gl.h
+ /opt/X11/include/GL/gl_mangle.h
+ /opt/X11/include/GL/glext.h
+ /opt/X11/include/GL/glu.h
+ /opt/X11/include/GL/glu_mangle.h
+ /opt/X11/include/GL/glut.h
 CMakeFiles/RayData.dir/src/Cylinder.cpp.o
  ../glm/core/_detail.hpp
  ../glm/core/_fixes.hpp
@@ -1346,6 +1353,13 @@ CMakeFiles/RayData.dir/src/Main.cpp.o
  /Users/QIJUNJIN/anaconda3/include/qt/QtCore/qvector.h
  /Users/QIJUNJIN/anaconda3/include/qt/QtCore/qversiontagging.h
  /Users/QIJUNJIN/projects/dataray-f01/src/Main.cpp
+ /opt/X11/include/GL/freeglut_std.h
+ /opt/X11/include/GL/gl.h
+ /opt/X11/include/GL/gl_mangle.h
+ /opt/X11/include/GL/glext.h
+ /opt/X11/include/GL/glu.h
+ /opt/X11/include/GL/glu_mangle.h
+ /opt/X11/include/GL/glut.h
 CMakeFiles/RayData.dir/src/Mate.cpp.o
  ../glm/core/_detail.hpp
  ../glm/core/_fixes.hpp
@@ -1995,6 +2009,13 @@ CMakeFiles/RayData.dir/src/RayTracingGLU.cpp.o
  /Users/QIJUNJIN/anaconda3/include/qt/QtCore/qvector.h
  /Users/QIJUNJIN/anaconda3/include/qt/QtCore/qversiontagging.h
  /Users/QIJUNJIN/projects/dataray-f01/src/RayTracingGLU.cpp
+ /opt/X11/include/GL/freeglut_std.h
+ /opt/X11/include/GL/gl.h
+ /opt/X11/include/GL/gl_mangle.h
+ /opt/X11/include/GL/glext.h
+ /opt/X11/include/GL/glu.h
+ /opt/X11/include/GL/glu_mangle.h
+ /opt/X11/include/GL/glut.h
 CMakeFiles/RayData.dir/src/RayTracingPPM.cpp.o
  ../glm/core/_detail.hpp
  ../glm/core/_fixes.hpp
@@ -2597,6 +2618,13 @@ CMakeFiles/RayData.dir/src/RenderFactory.cpp.o
  /Users/QIJUNJIN/anaconda3/include/qt/QtCore/qvector.h
  /Users/QIJUNJIN/anaconda3/include/qt/QtCore/qversiontagging.h
  /Users/QIJUNJIN/projects/dataray-f01/src/RenderFactory.cpp
+ /opt/X11/include/GL/freeglut_std.h
+ /opt/X11/include/GL/gl.h
+ /opt/X11/include/GL/gl_mangle.h
+ /opt/X11/include/GL/glext.h
+ /opt/X11/include/GL/glu.h
+ /opt/X11/include/GL/glu_mangle.h
+ /opt/X11/include/GL/glut.h
 CMakeFiles/RayData.dir/src/Scene.cpp.o
  ../glm/core/_detail.hpp
  ../glm/core/_fixes.hpp
