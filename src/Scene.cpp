@@ -131,6 +131,14 @@ vec3 Scene::BlinnPhong(vec3 point, vec3 normal, const Material *material) {
             if (info->mat_ptr->alpha == 1.0f) {
                 shadowFactor = 1.0f;
 
+                for(Object *o: objects){
+
+                    if(o->intersection(Ray(point, L), 0.01f, d, *info)){
+                        if(info->mat_ptr->alpha != 1.0f)
+                            shadowFactor = 0.0f;
+                    }
+                }
+
                 IntersectionInfo *info2 = new IntersectionInfo();
                 if(this->intersection(Ray(info->p, info->p - point), 0.01f, distance(info->p, point), *info2)){
                     if (info2->mat_ptr->alpha != 1.0f) shadowFactor = 0.0f;
