@@ -8,7 +8,7 @@ SceneFactoryData::SceneFactoryData()
 Camera *SceneFactoryData::createCamera() {
     // creacio de la camera
     //vec3 lookfrom(3,2,2);
-    vec3 lookfrom(0, 1, 0.5);
+    vec3 lookfrom(1, 1, 0.5);
     vec3 lookat(0,0,0);
 
     float dist_to_focus = 2;

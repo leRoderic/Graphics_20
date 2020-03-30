@@ -148,7 +148,7 @@ void DataReader::dataFound(QStringList fields) {
 
         if(props.back() == ObjectFactory::OBJECT_TYPES::SPHERE){
             scaledData = (((fields[3].toDouble() - spMin) * (255 - 0)) / (spMax - spMin)) + 0;
-            o =  ObjectFactory::getInstance()->createObject(scaledX, 0.0f, scaledZ,0, 0, 0, 0, 0, 0, 2, scaledData, props.back());
+            o =  ObjectFactory::getInstance()->createObject(scaledX, 0.0f, scaledZ,0, 0, 0, 0, 0, 0, 0.02, scaledData, props.back());
         }else if(props.back() == ObjectFactory::OBJECT_TYPES::CYLINDER){
             scaledData = (((fields[3].toDouble() - cyMin) * (255 - 0)) / (cyMax - cyMin)) + 0;
             o =  ObjectFactory::getInstance()->createObject(scaledX*3, 0.0f, scaledZ,0, 0, 0, 0, 0, 0, 2, scaledData, props.back());
