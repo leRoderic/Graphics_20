@@ -115,9 +115,10 @@ void DataReader::propFound(QStringList fields) {
         cyMin = fields[2].toDouble();
         cyMax = fields[3].toDouble();
         props.push_back(ObjectFactory::OBJECT_TYPES::CYLINDER);
-    } else if (QString::compare(" brobject", fields[4], Qt::CaseInsensitive) == 0) {
+    } else if (QString::compare(" brobject", fields[5], Qt::CaseInsensitive) == 0) {
         brMin = fields[2].toDouble();
         brMax = fields[3].toDouble();
+        objFile = fields[4];
         props.push_back(ObjectFactory::OBJECT_TYPES::BROBJECT);
     }
     // TODO Fase 2: Aquesta valors minim i maxim tambe serviran per mapejar el material des de la paleta
@@ -143,13 +144,15 @@ void DataReader::dataFound(QStringList fields) {
 
         if(props.back() == ObjectFactory::OBJECT_TYPES::SPHERE){
             scaledData = (((fields[3].toDouble() - spMin) * (255 - 0)) / (spMax - spMin)) + 0;
+            o =  ObjectFactory::getInstance()->createObject(scaledX, 0.0f, scaledZ,0, 0, 0, 0, 0, 0, 2, scaledData, props[i]);
         }else if(props.back() == ObjectFactory::OBJECT_TYPES::CYLINDER){
             scaledData = (((fields[3].toDouble() - cyMin) * (255 - 0)) / (cyMax - cyMin)) + 0;
+            o =  ObjectFactory::getInstance()->createObject(scaledX, 0.0f, scaledZ,0, 0, 0, 0, 0, 0, 2, 2, props[i]);
         }else if(props.back() == ObjectFactory::OBJECT_TYPES::BROBJECT) {
             scaledData = (((fields[3].toDouble() - brMin) * (255 - 0)) / (brMax - brMin)) + 0;
+            o =  ObjectFactory::getInstance()->createObject(objFile, scaledData, props[i]);
         }
 
-        o =  ObjectFactory::getInstance()->createObject(scaledX, 0.0f, scaledZ,0, 0, 0, 0, 0, 0, 0.02*(scaledData/100), scaledData, props[i]);
         scene->objects.push_back(o);
     }
 
