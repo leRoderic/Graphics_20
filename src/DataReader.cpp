@@ -110,27 +110,31 @@ void DataReader::propFound(QStringList fields) {
     if (QString::compare(" sphere", fields[4], Qt::CaseInsensitive) == 0) {
         spMin = fields[2].toDouble();
         spMax = fields[3].toDouble();
+        tmp = numProp;
         props.push_back(ObjectFactory::OBJECT_TYPES::SPHERE);
     } else if (QString::compare(" cylinder", fields[4], Qt::CaseInsensitive) == 0) {
         cyMin = fields[2].toDouble();
         cyMax = fields[3].toDouble();
+        tmp = numProp;
         props.push_back(ObjectFactory::OBJECT_TYPES::CYLINDER);
     } else if (QString::compare(" brobject", fields[5], Qt::CaseInsensitive) == 0) {
         brMin = fields[2].toDouble();
         brMax = fields[3].toDouble();
         objFile = fields[4];
+        tmp = numProp;
         props.push_back(ObjectFactory::OBJECT_TYPES::BROBJECT);
     }
+
     // TODO Fase 2: Aquesta valors minim i maxim tambe serviran per mapejar el material des de la paleta
 }
 
 
 void DataReader::dataFound(QStringList fields) {
     //data x z valor1 valor2...
-    if (fields.size() != (numProp+3)) {
+    /*if (fields.size() != (numProp+3)) {
         std::cerr << "Wrong data format" << std::endl;
         return;
-    }
+    }*/
 
     Object *o;
     float scaledX, scaledZ, scaledData;
@@ -144,16 +148,15 @@ void DataReader::dataFound(QStringList fields) {
 
         if(props.back() == ObjectFactory::OBJECT_TYPES::SPHERE){
             scaledData = (((fields[3].toDouble() - spMin) * (255 - 0)) / (spMax - spMin)) + 0;
-            o =  ObjectFactory::getInstance()->createObject(scaledX, 0.0f, scaledZ,0, 0, 0, 0, 0, 0, 2, scaledData, props[i]);
+            o =  ObjectFactory::getInstance()->createObject(scaledX, 0.0f, scaledZ,0, 0, 0, 0, 0, 0, 2, scaledData, props.back());
         }else if(props.back() == ObjectFactory::OBJECT_TYPES::CYLINDER){
             scaledData = (((fields[3].toDouble() - cyMin) * (255 - 0)) / (cyMax - cyMin)) + 0;
-            o =  ObjectFactory::getInstance()->createObject(scaledX, 0.0f, scaledZ,0, 0, 0, 0, 0, 0, 2, 2, props[i]);
+            o =  ObjectFactory::getInstance()->createObject(scaledX*3, 0.0f, scaledZ,0, 0, 0, 0, 0, 0, 2, 251, props.back());
         }else if(props.back() == ObjectFactory::OBJECT_TYPES::BROBJECT) {
             scaledData = (((fields[3].toDouble() - brMin) * (255 - 0)) / (brMax - brMin)) + 0;
-            o =  ObjectFactory::getInstance()->createObject(objFile, scaledData, props[i]);
+            o =  ObjectFactory::getInstance()->createObject(objFile, scaledData, props.back());
         }
 
         scene->objects.push_back(o);
     }
-
 }

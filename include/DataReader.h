@@ -32,7 +32,7 @@ protected:
     void dataFound(QStringList list);
 
 private:
-    int numProp;
+    int numProp, tmp;
     float xMin, xMax, zMin, zMax;
     float spMin, spMax; // Sphere value range
     float cyMin, cyMax; // Cylinder value range
