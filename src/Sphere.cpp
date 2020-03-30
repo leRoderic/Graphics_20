@@ -3,6 +3,7 @@
 Sphere::Sphere(vec3 cen, float r, float d) :Object(d) {
     center = cen;
     radius = r;
+    factor = d;
 }
 
 bool Sphere::intersection(const Ray& raig, float t_min, float t_max, IntersectionInfo& info) const {
@@ -33,11 +34,16 @@ bool Sphere::intersection(const Ray& raig, float t_min, float t_max, Intersectio
 }
 
 void Sphere::aplicaTG(TG *t) {
+    vec4 c(center, 1.0);
+    c = t->getTG() * c;
     if (dynamic_cast<Translate *>(t)) {
         // Per ara només es preveuen translacions
-        vec4 c(center, 1.0);
-        c = t->getTG() * c;
-        center.x = c.x; center.y = c.y; center.z = c.z;
+        center.x = c.x;
+        center.y = c.y;
+        center.z = c.z;
+    }
+    if (dynamic_cast<Scale *>(t)) {
+        this->radius = radius * this->factor;
     }
 }
 

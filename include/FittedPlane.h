@@ -13,6 +13,8 @@ class FittedPlane : public Plane {
 public:
     FittedPlane(vec3 normal, vec3 pass_point, float v);
 
+    FittedPlane(vec3 limit1, vec3 limit2, vec3 normal, float d, float v);
+
     FittedPlane(vec3 normal, float d, float v);
 
     virtual ~FittedPlane(){}
