@@ -74,7 +74,10 @@ void DataReader::baseFound(QStringList fields) {
         o = ObjectFactory::getInstance()->createObject(fields[2].toDouble(), fields[3].toDouble(),
                                                        fields[4].toDouble(), 0, 0, 0, 0, 0, 0,
                                                        fields[5].toDouble(), 0, ObjectFactory::OBJECT_TYPES::SPHERE);
+        scene->ground = (Sphere *) o;
+
     }
+
     scene->objects.push_back(o);
 
 }

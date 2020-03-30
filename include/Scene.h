@@ -44,7 +44,7 @@ public:
     std::vector<Object *> objects;
 
     //Fase 1 / 3.2 / b / a
-    FittedPlane *ground;
+    Object *ground;
 
     // TODO FASE 2: Afegir llums a l'escena
     std::vector<Light *> lights;
