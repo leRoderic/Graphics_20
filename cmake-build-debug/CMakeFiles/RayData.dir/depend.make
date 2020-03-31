@@ -772,6 +772,7 @@ CMakeFiles/RayData.dir/src/Cylinder.cpp.o: ../src/Cylinder.cpp
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../glm/glm.hpp
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../glm/gtc/matrix_transform.hpp
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../glm/gtx/constants.hpp
+CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../include/Mate.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../include/ObjectFactory.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../glm/./core/_detail.hpp
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../glm/./core/_fixes.hpp

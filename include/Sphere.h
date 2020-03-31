@@ -15,17 +15,20 @@
 
 class Sphere: public Object  {
 public:
-        Sphere(vec3 cen, float r, float data);
-        virtual ~Sphere() {}
-        virtual bool intersection(const Ray& r, float t_min, float t_max, IntersectionInfo& info) const;
+    Sphere(vec3 cen, float r, float data);
 
-         virtual void aplicaTG(TG *t);
-private:
-        // Centre de l'esfera
-        vec3 center;
+    virtual ~Sphere() {}
+
+    virtual bool intersection(const Ray &r, float t_min, float t_max, IntersectionInfo &info) const;
+
+    virtual void aplicaTG(TG *t);
+
+    // Centre de l'esfera
+    vec3 center;
     // Radi de l'esfera
     float radius;
     float factor;
+private:
 
 };
 
