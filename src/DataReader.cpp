@@ -150,7 +150,7 @@ void DataReader::dataFound(QStringList fields) {
         //scaledX = ((fields[1].toDouble() - pMin.x)*(xMax - xMin) / (pMax.x - pMin.x)) + pMin.x;
         //scaledZ = ((fields[2].toDouble() - pMin.z)*(zMax - zMin) / (pMax.z - pMin.z)) + pMin.z;
         scaledX = (fields[1].toDouble() - xMin) / (xMax - xMin) * (pMax.x - pMin.x) + pMin.x;
-        scaledZ = (fields[2].toDouble() - zMin) / (zMax - zMin) * (pMax.z - pMin.z) + pMin.z;
+        scaledZ = pMax.z - (fields[2].toDouble() - zMin) / (zMax - zMin) * (pMax.z - pMin.z);
         /*vec3 planeCenter(xMax-xMin, 0, zMax - zMin);
         vec3 pos(scaledX*planeCenter.x, 0, scaledZ*planeCenter.z);
         scaledX = pos.x;

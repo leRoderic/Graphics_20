@@ -12,23 +12,13 @@ set(CMAKE_AUTORCC ON)
 # Add a compiler flag
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
 
-# ubuntu
-if($ENV{USER} STREQUAL "user")
-    set(Qt5_DIR "/home/user/Qt/5.14.1/gcc_64/lib/cmake/Qt5/")
-else ()
-    set(Qt5_DIR /opt/Qt/5.9.1/gcc_64/lib/cmake/Qt5/)
-endif ()
-set(OPENGL_LIBRARIES /usr/lib/x86_64-linux-gnu/libGL.so)
-set(GLUT_LIBRARY /usr/lib/x86_64-linux-gnu/libglut.so)
-set(OPENGL_INCLUDE_DIRS /usr/include)
-set(GLUT_INCLUDE_DIRS /usr/include)
 
 # MAC
-#set(OPENGL_LIBRARIES /opt/X11/lib/libGL.dylib)
-#set(GLUT_LIBRARY /opt/X11/lib/libGLUT.dylib)
-#set(QT5_DIR "/Users/anna/qt/5.10.0/clang_64/lib/cmake/Qt5")
-#set(OPENGL_INCLUDE_DIRS /opt/X11/include)
-#set(GLUT_INCLUDE_DIRS /opt/X11/include)
+set(OPENGL_LIBRARIES /opt/X11/lib/libGL.dylib)
+set(GLUT_LIBRARY /opt/X11/lib/libGLUT.dylib)
+set(QT5_DIR "/Users/anna/qt/5.10.0/clang_64/lib/cmake/Qt5")
+set(OPENGL_INCLUDE_DIRS /opt/X11/include)
+set(GLUT_INCLUDE_DIRS /opt/X11/include)
 
 # ubuntu:
 #set(Qt5_DIR "/opt/Qt/5.12.3/gcc_64/lib/cmake/Qt5/")
