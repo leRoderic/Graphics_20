@@ -59,14 +59,9 @@ void DataReader::baseFound(QStringList fields) {
     if (QString::compare(" plane", fields[1], Qt::CaseInsensitive) == 0) {
         // TO-DO Fase 1: Cal fer un pla acotat i no un pla infinit. Les dimensions del pla acotat seran les dimensions de l'escena en x i z
 
-
         float y = -1.0f;
         y = fields[5].toDouble();
 
-        /*float dx = (xMax - xMin)/2;
-        float dz = (zMax - zMin)/2;
-        vec3 p1 = vec3(xMin - xMin - dx, y, zMin - zMin - dz);
-        vec3 p2 = vec3(xMax - xMax + dx, y, zMax - zMax + dz);*/
         pMin = vec3(-5, -5, -5);
         pMax = vec3(5, 5, 5);
 
@@ -148,25 +143,18 @@ void DataReader::dataFound(QStringList fields) {
         // TODO Fase 1: Cal colocar els objectes al seu lloc del mon virtual, escalats segons el valor i
         //  amb el seu color corresponent segons el seu ColorMap
 
-        //obenim Xscene = ((Xread - Xminread)*(Xmaxscene - Xminscene) / (Xmaxread - Xminread)) + Xminscene
-        //scaledX = ((fields[1].toDouble() - pMin.x)*(xMax - xMin) / (pMax.x - pMin.x)) + pMin.x;
-        //scaledZ = ((fields[2].toDouble() - pMin.z)*(zMax - zMin) / (pMax.z - pMin.z)) + pMin.z;
         scaledX = (fields[1].toDouble() - xMin) / (xMax - xMin) * (pMax.x - pMin.x) + pMin.x;
         scaledZ = pMax.z - (fields[2].toDouble() - zMin) / (zMax - zMin) * (pMax.z - pMin.z);
-        /*vec3 planeCenter(xMax-xMin, 0, zMax - zMin);
-        vec3 pos(scaledX*planeCenter.x, 0, scaledZ*planeCenter.z);
-        scaledX = pos.x;
-        scaledZ = pos.z;*/
 
         if (props.back() == ObjectFactory::OBJECT_TYPES::SPHERE) {
 
-            //scaledData = (((fields[3].toDouble() - spMin) * (255 - 0)) / (spMax - spMin)) + 0;
             scaledData = (fields[3].toDouble() - spMin) / (spMax - spMin);
+
             o = ObjectFactory::getInstance()->createObject(scaledX, 0.0f, scaledZ, scaledZ, 0, scaledX, scaledZ, 0,
                                                            scaledX, 1, scaledData, props.back());
-            //o->aplicaTG(new Translate(vec3(scaledX,0,scaledZ)));
-            o->setMaterial(new Mate(vec3(0.2f), vec3(0.8, 0.8, 0), vec3(1.0f), 10, 0.0f));
+
             o->aplicaTG(new Scale(vec3(scaledData)));
+
         } else if (props.back() == ObjectFactory::OBJECT_TYPES::CYLINDER) {
             scaledData = (((fields[3].toDouble() - cyMin) * (255 - 0)) / (cyMax - cyMin)) + 0;
             o =  ObjectFactory::getInstance()->createObject(scaledX, 0.0f, scaledZ,0, 0, 0, 0, 0, 0, 2, scaledData, props.back());

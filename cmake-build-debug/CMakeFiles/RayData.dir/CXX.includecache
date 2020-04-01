@@ -448,16 +448,6 @@ glm/glm.hpp
 ColorMap.h
 ../include/ColorMap.h
 
-../include/Controller.h
-RenderFactory.h
-../include/RenderFactory.h
-SceneFactory.h
-../include/SceneFactory.h
-SceneFactoryData.h
-../include/SceneFactoryData.h
-SceneFactoryVirtual.h
-../include/SceneFactoryVirtual.h
-
 ../include/Cylinder.h
 Object.h
 ../include/Object.h
@@ -500,14 +490,6 @@ Material.h
 Ray.h
 ../include/Ray.h
 
-../include/Main.h
-Controller.h
-../include/Controller.h
-
-../include/Mate.h
-Material.h
-../include/Material.h
-
 ../include/Material.h
 vector
 -
@@ -519,10 +501,6 @@ Hitable.h
 ../include/MaterialTextura.h
 Texture.h
 ../include/Texture.h
-Material.h
-../include/Material.h
-
-../include/Metall.h
 Material.h
 ../include/Material.h
 
@@ -570,34 +548,6 @@ glm/gtx/constants.hpp
 glm/glm.hpp
 ../include/glm/glm.hpp
 
-../include/RayTracingGLU.h
-GL/glut.h
--
-GLUT/glut.h
--
-Render.h
-../include/Render.h
-
-../include/RayTracingPPM.h
-cstdlib
--
-cmath
--
-vector
--
-iostream
--
-fstream
--
-cstring
--
-Render.h
-../include/Render.h
-
-../include/RayTracingTemps.h
-RayTracingPPM.h
-../include/RayTracingPPM.h
-
 ../include/ReadFile.h
 stdio.h
 -
@@ -605,20 +555,6 @@ stdlib.h
 -
 string
 -
-
-../include/Render.h
-Scene.h
-../include/Scene.h
-Camera.h
-../include/Camera.h
-
-../include/RenderFactory.h
-RayTracingGLU.h
-../include/RayTracingGLU.h
-RayTracingPPM.h
-../include/RayTracingPPM.h
-RayTracingTemps.h
-../include/RayTracingTemps.h
 
 ../include/Scale.h
 TG.h
@@ -676,26 +612,6 @@ ColorMapStatic.h
 DataReader.h
 ../include/DataReader.h
 
-../include/SceneFactoryVirtual.h
-SceneFactory.h
-../include/SceneFactory.h
-SceneReader.h
-../include/SceneReader.h
-
-../include/SceneReader.h
-QObject
--
-QString
--
-QStringList
--
-vector
--
-glm/glm.hpp
-../include/glm/glm.hpp
-Scene.h
-../include/Scene.h
-
 ../include/Sphere.h
 Object.h
 ../include/Object.h
@@ -728,10 +644,6 @@ glm/glm.hpp
 TG.h
 ../include/TG.h
 
-../include/Transparent.h
-Material.h
-../include/Material.h
-
 ../include/Triangle.h
 Object.h
 ../include/Object.h
@@ -756,222 +668,76 @@ Lambertian.h
 ColorMap.h
 ../include/ColorMap.h
 
-/home/user/CLionProjects/dataray-f01/src/BoundaryObject.cpp
-QVector
--
-QVector3D
--
-BoundaryObject.h
-/home/user/CLionProjects/dataray-f01/src/BoundaryObject.h
-
-/home/user/CLionProjects/dataray-f01/src/Circle.cpp
-Circle.h
-/home/user/CLionProjects/dataray-f01/src/Circle.h
-
-/home/user/CLionProjects/dataray-f01/src/Controller.cpp
-Controller.h
-/home/user/CLionProjects/dataray-f01/src/Controller.h
-
-/home/user/CLionProjects/dataray-f01/src/Cylinder.cpp
+/Users/QIJUNJIN/CLionProjects/dataray-f01/src/Scene.cpp
+Scene.h
+/Users/QIJUNJIN/CLionProjects/dataray-f01/src/Scene.h
+Plane.h
+/Users/QIJUNJIN/CLionProjects/dataray-f01/src/Plane.h
 Cylinder.h
-/home/user/CLionProjects/dataray-f01/src/Cylinder.h
+/Users/QIJUNJIN/CLionProjects/dataray-f01/src/Cylinder.h
+Circle.h
+/Users/QIJUNJIN/CLionProjects/dataray-f01/src/Circle.h
 
-/home/user/CLionProjects/dataray-f01/src/DataReader.cpp
-DataReader.h
-/home/user/CLionProjects/dataray-f01/src/DataReader.h
-QFile
--
-QTextStream
--
-iostream
--
-sstream
--
-include/ObjectFactory.h
--
-include/Mate.h
--
+/Users/QIJUNJIN/CLionProjects/dataray-f01/src/SceneFactoryData.cpp
 include/MaterialTextura.h
 -
-
-/home/user/CLionProjects/dataray-f01/src/FittedPlane.cpp
-FittedPlane.h
-/home/user/CLionProjects/dataray-f01/src/FittedPlane.h
-
-/home/user/CLionProjects/dataray-f01/src/Lambertian.cpp
-Lambertian.h
-/home/user/CLionProjects/dataray-f01/src/Lambertian.h
-
-/home/user/CLionProjects/dataray-f01/src/Main.cpp
-Main.h
-/home/user/CLionProjects/dataray-f01/src/Main.h
-
-/home/user/CLionProjects/dataray-f01/src/Mate.cpp
-Mate.h
-/home/user/CLionProjects/dataray-f01/src/Mate.h
-
-/home/user/CLionProjects/dataray-f01/src/Material.cpp
-Material.h
-/home/user/CLionProjects/dataray-f01/src/Material.h
-
-/home/user/CLionProjects/dataray-f01/src/MaterialTextura.cpp
-MaterialTextura.h
-/home/user/CLionProjects/dataray-f01/src/MaterialTextura.h
-
-/home/user/CLionProjects/dataray-f01/src/Metall.cpp
-Metall.h
-/home/user/CLionProjects/dataray-f01/src/Metall.h
-
-/home/user/CLionProjects/dataray-f01/src/Object.cpp
-Object.h
-/home/user/CLionProjects/dataray-f01/src/Object.h
-
-/home/user/CLionProjects/dataray-f01/src/ObjectFactory.cpp
-include/FittedPlane.h
--
-ObjectFactory.h
-/home/user/CLionProjects/dataray-f01/src/ObjectFactory.h
-
-/home/user/CLionProjects/dataray-f01/src/Plane.cpp
-Plane.h
-/home/user/CLionProjects/dataray-f01/src/Plane.h
-
-/home/user/CLionProjects/dataray-f01/src/RayTracingGLU.cpp
-RayTracingGLU.h
-/home/user/CLionProjects/dataray-f01/src/RayTracingGLU.h
-
-/home/user/CLionProjects/dataray-f01/src/RayTracingPPM.cpp
-RayTracingPPM.h
-/home/user/CLionProjects/dataray-f01/src/RayTracingPPM.h
-
-/home/user/CLionProjects/dataray-f01/src/RayTracingTemps.cpp
-RayTracingTemps.h
-/home/user/CLionProjects/dataray-f01/src/RayTracingTemps.h
-
-/home/user/CLionProjects/dataray-f01/src/Render.cpp
-Render.h
-/home/user/CLionProjects/dataray-f01/src/Render.h
-
-/home/user/CLionProjects/dataray-f01/src/RenderFactory.cpp
-RenderFactory.h
-/home/user/CLionProjects/dataray-f01/src/RenderFactory.h
-
-/home/user/CLionProjects/dataray-f01/src/Scene.cpp
-Scene.h
-/home/user/CLionProjects/dataray-f01/src/Scene.h
-Plane.h
-/home/user/CLionProjects/dataray-f01/src/Plane.h
-Cylinder.h
-/home/user/CLionProjects/dataray-f01/src/Cylinder.h
-Circle.h
-/home/user/CLionProjects/dataray-f01/src/Circle.h
-
-/home/user/CLionProjects/dataray-f01/src/SceneFactory.cpp
-SceneFactory.h
-/home/user/CLionProjects/dataray-f01/src/SceneFactory.h
-
-/home/user/CLionProjects/dataray-f01/src/SceneFactoryData.cpp
 SceneFactoryData.h
-/home/user/CLionProjects/dataray-f01/src/SceneFactoryData.h
+/Users/QIJUNJIN/CLionProjects/dataray-f01/src/SceneFactoryData.h
 
-/home/user/CLionProjects/dataray-f01/src/SceneFactoryVirtual.cpp
-include/Mate.h
--
-include/Metall.h
--
-include/Transparent.h
--
-SceneFactoryVirtual.h
-/home/user/CLionProjects/dataray-f01/src/SceneFactoryVirtual.h
-
-/home/user/CLionProjects/dataray-f01/src/SceneReader.cpp
-SceneReader.h
-/home/user/CLionProjects/dataray-f01/src/SceneReader.h
-QFile
--
-QTextStream
--
-iostream
--
-sstream
--
-include/ObjectFactory.h
--
-
-/home/user/CLionProjects/dataray-f01/src/Sphere.cpp
-Sphere.h
-/home/user/CLionProjects/dataray-f01/src/Sphere.h
-
-/home/user/CLionProjects/dataray-f01/src/Transparent.cpp
-Transparent.h
-/home/user/CLionProjects/dataray-f01/src/Transparent.h
-
-/home/user/CLionProjects/dataray-f01/src/Triangle.cpp
-Triangle.h
-/home/user/CLionProjects/dataray-f01/src/Triangle.h
-
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/QFile
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/QFile
 qfile.h
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qfile.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qfile.h
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/QObject
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/QObject
 qobject.h
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qobject.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qobject.h
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/QRegularExpression
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/QRegularExpression
 qregularexpression.h
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qregularexpression.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qregularexpression.h
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/QString
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/QString
 qstring.h
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qstring.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qstring.h
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/QStringList
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/QStringList
 qstringlist.h
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qstringlist.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qstringlist.h
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/QTextStream
-qtextstream.h
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qtextstream.h
-
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/QVector
-qvector.h
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qvector.h
-
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qalgorithms.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qalgorithms.h
 QtCore/qglobal.h
 -
 intrin.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qarraydata.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qarraydata.h
 QtCore/qrefcount.h
 -
 string.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qatomic.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qatomic.h
 QtCore/qglobal.h
 -
 QtCore/qbasicatomic.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qatomic_bootstrap.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qatomic_bootstrap.h
 QtCore/qgenericatomic.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qatomic_cxx11.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qatomic_cxx11.h
 QtCore/qgenericatomic.h
 -
 atomic
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qatomic_msvc.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qatomic_msvc.h
 QtCore/qgenericatomic.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qbasicatomic.h
-QtCore/qglobal.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qbasicatomic.h
+QtCore/qatomic.h
 -
 QtCore/qatomic_bootstrap.h
 -
@@ -980,7 +746,7 @@ QtCore/qatomic_cxx11.h
 QtCore/qatomic_msvc.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qbytearray.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qbytearray.h
 QtCore/qrefcount.h
 -
 QtCore/qnamespace.h
@@ -997,38 +763,34 @@ string
 -
 iterator
 -
+QtCore/qstring.h
+-
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qbytearraylist.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qbytearraylist.h
 QtCore/qlist.h
 -
 QtCore/qbytearray.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qchar.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qchar.h
 QtCore/qglobal.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qcompilerdetection.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qcompilerdetection.h
 QtCore/qglobal.h
 -
 utility
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qconfig-bootstrapped.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qconfig-bootstrapped.h
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qconfig.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qconfig.h
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qcontainerfwd.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qcontainerfwd.h
 QtCore/qglobal.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qcontainertools_impl.h
-QtCore/qglobal.h
--
-iterator
--
-
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qcontiguouscache.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qcontiguouscache.h
 QtCore/qatomic.h
 -
 limits.h
@@ -1036,7 +798,7 @@ limits.h
 new
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qcoreevent.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qcoreevent.h
 QtCore/qnamespace.h
 -
 QtCore/qbytearray.h
@@ -1044,7 +806,7 @@ QtCore/qbytearray.h
 QtCore/qobjectdefs.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qdatastream.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qdatastream.h
 QtCore/qscopedpointer.h
 -
 QtCore/qiodevice.h
@@ -1052,7 +814,7 @@ QtCore/qiodevice.h
 QtCore/qpair.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qdebug.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qdebug.h
 QtCore/qalgorithms.h
 -
 QtCore/qhash.h
@@ -1084,7 +846,7 @@ map
 utility
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qfile.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qfile.h
 QtCore/qfiledevice.h
 -
 QtCore/qstring.h
@@ -1092,32 +854,30 @@ QtCore/qstring.h
 stdio.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qfiledevice.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qfiledevice.h
 QtCore/qiodevice.h
 -
 QtCore/qstring.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qflags.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qflags.h
 QtCore/qglobal.h
 -
 initializer_list
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qgenericatomic.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qgenericatomic.h
 QtCore/qglobal.h
 -
 QtCore/qtypeinfo.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qglobal.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qglobal.h
 type_traits
 -
 cstddef
 -
 utility
--
-assert.h
 -
 stddef.h
 -
@@ -1152,17 +912,15 @@ QtCore/qnumeric.h
 QtCore/qversiontagging.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qglobalstatic.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qglobalstatic.h
 QtCore/qglobal.h
 -
 QtCore/qatomic.h
 -
 QtCore/qmutex.h
 -
-mutex
--
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qhash.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qhash.h
 QtCore/qchar.h
 -
 QtCore/qiterator.h
@@ -1173,24 +931,20 @@ QtCore/qrefcount.h
 -
 QtCore/qhashfunctions.h
 -
-QtCore/qcontainertools_impl.h
+initializer_list
 -
 algorithm
 -
-initializer_list
--
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qhashfunctions.h
-QtCore/qstring.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qhashfunctions.h
+QtCore/qchar.h
 -
 QtCore/qpair.h
 -
 numeric
 -
-functional
--
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qiodevice.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qiodevice.h
 QtCore/qglobal.h
 -
 QtCore/qobject.h
@@ -1202,15 +956,15 @@ QtCore/qscopedpointer.h
 QtCore/qstring.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qiterator.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qiterator.h
 QtCore/qglobal.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qline.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qline.h
 QtCore/qpoint.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qlist.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qlist.h
 QtCore/qalgorithms.h
 -
 QtCore/qiterator.h
@@ -1221,17 +975,13 @@ QtCore/qarraydata.h
 -
 QtCore/qhashfunctions.h
 -
-QtCore/qvector.h
+iterator
 -
-QtCore/qcontainertools_impl.h
+list
 -
 algorithm
 -
 initializer_list
--
-iterator
--
-list
 -
 stdlib.h
 -
@@ -1246,7 +996,7 @@ QtCore/qbytearraylist.h
 QtCore/qstringlist.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qlocale.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qlocale.h
 QtCore/qvariant.h
 -
 QtCore/qstring.h
@@ -1256,11 +1006,11 @@ QtCore/qobjectdefs.h
 QtCore/qshareddata.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qlogging.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qlogging.h
 QtCore/qglobal.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qmap.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qmap.h
 QtCore/qiterator.h
 -
 QtCore/qlist.h
@@ -1271,20 +1021,20 @@ QtCore/qpair.h
 -
 QtCore/qdebug.h
 -
-functional
--
-initializer_list
--
 map
 -
 new
 -
+functional
+-
+initializer_list
+-
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qmargins.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qmargins.h
 QtCore/qnamespace.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qmetatype.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qmetatype.h
 QtCore/qglobal.h
 -
 QtCore/qatomic.h
@@ -1304,7 +1054,7 @@ list
 map
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qmutex.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qmutex.h
 QtCore/qglobal.h
 -
 QtCore/qatomic.h
@@ -1316,15 +1066,15 @@ chrono
 limits
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qnamespace.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qnamespace.h
 QtCore/qglobal.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qnumeric.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qnumeric.h
 QtCore/qglobal.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qobject.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qobject.h
 QtCore/qobjectdefs.h
 -
 QtCore/qstring.h
@@ -1344,31 +1094,31 @@ QtCore/qobject_impl.h
 chrono
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qobject_impl.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qobject_impl.h
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qobjectdefs.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qobjectdefs.h
 QtCore/qnamespace.h
 -
 QtCore/qobjectdefs_impl.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qobjectdefs_impl.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qobjectdefs_impl.h
 QtCore/qnamespace.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qpair.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qpair.h
 QtCore/qglobal.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qpoint.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qpoint.h
 QtCore/qnamespace.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qprocessordetection.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qprocessordetection.h
 QtCore/qglobal.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qrect.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qrect.h
 QtCore/qmargins.h
 -
 QtCore/qsize.h
@@ -1376,17 +1126,17 @@ QtCore/qsize.h
 QtCore/qpoint.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qrefcount.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qrefcount.h
 QtCore/qatomic.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qregexp.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qregexp.h
 QtCore/qglobal.h
 -
 QtCore/qstring.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qregularexpression.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qregularexpression.h
 QtCore/qglobal.h
 -
 QtCore/qstring.h
@@ -1398,23 +1148,21 @@ QtCore/qshareddata.h
 QtCore/qvariant.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qscopedpointer.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qscopedpointer.h
 QtCore/qglobal.h
 -
 stdlib.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qset.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qset.h
 QtCore/qhash.h
--
-QtCore/qcontainertools_impl.h
 -
 initializer_list
 -
 iterator
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qshareddata.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qshareddata.h
 QtCore/qglobal.h
 -
 QtCore/qatomic.h
@@ -1424,7 +1172,7 @@ QtCore/qhash.h
 QtCore/qhashfunctions.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qsharedpointer.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qsharedpointer.h
 QtCore/qglobal.h
 -
 QtCore/qatomic.h
@@ -1433,10 +1181,8 @@ QtCore/qshareddata.h
 -
 QtCore/qsharedpointer_impl.h
 -
-memory
--
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qsharedpointer_impl.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qsharedpointer_impl.h
 new
 -
 QtCore/qatomic.h
@@ -1447,16 +1193,12 @@ QtCore/qhash.h
 -
 QtCore/qhashfunctions.h
 -
-memory
--
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qsize.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qsize.h
 QtCore/qnamespace.h
 -
-QtCore/qmargins.h
--
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qstring.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qstring.h
 QtCore/qchar.h
 -
 QtCore/qbytearray.h
@@ -1464,12 +1206,6 @@ QtCore/qbytearray.h
 QtCore/qrefcount.h
 -
 QtCore/qnamespace.h
--
-QtCore/qstringliteral.h
--
-QtCore/qstringalgorithms.h
--
-QtCore/qstringview.h
 -
 string
 -
@@ -1480,11 +1216,7 @@ stdarg.h
 QtCore/qstringbuilder.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qstringalgorithms.h
-QtCore/qnamespace.h
--
-
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qstringbuilder.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qstringbuilder.h
 QtCore/qstring.h
 -
 QtCore/qbytearray.h
@@ -1492,12 +1224,10 @@ QtCore/qbytearray.h
 string.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qstringlist.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qstringlist.h
 QtCore/qlist.h
 -
 QtCore/qalgorithms.h
--
-QtCore/qcontainertools_impl.h
 -
 QtCore/qregexp.h
 -
@@ -1506,33 +1236,15 @@ QtCore/qstring.h
 QtCore/qstringmatcher.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qstringliteral.h
-QtCore/qarraydata.h
--
-
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qstringmatcher.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qstringmatcher.h
 QtCore/qstring.h
 -
-QtCore/qstringview.h
--
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qstringview.h
-QtCore/qchar.h
--
-QtCore/qbytearray.h
--
-QtCore/qstringliteral.h
--
-QtCore/qstringalgorithms.h
--
-string
--
-
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qsysinfo.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qsysinfo.h
 QtCore/qglobal.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qsystemdetection.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qsystemdetection.h
 QtCore/qglobal.h
 -
 TargetConditionals.h
@@ -1542,9 +1254,9 @@ Availability.h
 AvailabilityMacros.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qtcore-config.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qtcore-config.h
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qtextstream.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qtextstream.h
 QtCore/qiodevice.h
 -
 QtCore/qstring.h
@@ -1558,11 +1270,11 @@ QtCore/qscopedpointer.h
 stdio.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qtypeinfo.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qtypeinfo.h
 QtCore/qglobal.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qvariant.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qvariant.h
 QtCore/qatomic.h
 -
 QtCore/qbytearray.h
@@ -1583,25 +1295,13 @@ QtCore/qobject.h
 -
 QtCore/qbytearraylist.h
 -
-variant
--
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qvarlengtharray.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qvarlengtharray.h
 QtCore/qcontainerfwd.h
 -
 QtCore/qglobal.h
 -
 QtCore/qalgorithms.h
--
-QtCore/qcontainertools_impl.h
--
-QtCore/qhashfunctions.h
--
-algorithm
--
-initializer_list
--
-iterator
 -
 new
 -
@@ -1609,11 +1309,19 @@ string.h
 -
 stdlib.h
 -
+algorithm
+-
+initializer_list
+-
+iterator
+-
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qvector.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qvector.h
 QtCore/qalgorithms.h
 -
 QtCore/qiterator.h
+-
+QtCore/qlist.h
 -
 QtCore/qrefcount.h
 -
@@ -1621,11 +1329,7 @@ QtCore/qarraydata.h
 -
 QtCore/qhashfunctions.h
 -
-QtCore/qcontainertools_impl.h
--
 iterator
--
-initializer_list
 -
 vector
 -
@@ -1633,28 +1337,26 @@ stdlib.h
 -
 string.h
 -
+initializer_list
+-
 algorithm
 -
 QtCore/qpoint.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtCore/qversiontagging.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtCore/qversiontagging.h
 QtCore/qglobal.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtGui/QColor
+/Users/QIJUNJIN/anaconda3/include/qt/QtGui/QColor
 qcolor.h
-/home/user/Qt/5.14.1/gcc_64/include/QtGui/qcolor.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtGui/qcolor.h
 
-/home/user/Qt/5.14.1/gcc_64/include/QtGui/QImage
+/Users/QIJUNJIN/anaconda3/include/qt/QtGui/QImage
 qimage.h
-/home/user/Qt/5.14.1/gcc_64/include/QtGui/qimage.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtGui/qimage.h
 
-/home/user/Qt/5.14.1/gcc_64/include/QtGui/QVector3D
-qvector3d.h
-/home/user/Qt/5.14.1/gcc_64/include/QtGui/qvector3d.h
-
-/home/user/Qt/5.14.1/gcc_64/include/QtGui/qcolor.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtGui/qcolor.h
 QtGui/qtguiglobal.h
 -
 QtGui/qrgb.h
@@ -1666,7 +1368,7 @@ QtCore/qstringlist.h
 QtGui/qrgba64.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtGui/qimage.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtGui/qimage.h
 QtGui/qtguiglobal.h
 -
 QtGui/qcolor.h
@@ -1688,7 +1390,7 @@ QtCore/qstring.h
 QtCore/qstringlist.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtGui/qmatrix.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtGui/qmatrix.h
 QtGui/qtguiglobal.h
 -
 QtGui/qpolygon.h
@@ -1704,7 +1406,7 @@ QtCore/qpoint.h
 QtCore/qrect.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtGui/qpaintdevice.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtGui/qpaintdevice.h
 QtGui/qtguiglobal.h
 -
 QtGui/qwindowdefs.h
@@ -1712,7 +1414,7 @@ QtGui/qwindowdefs.h
 QtCore/qrect.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtGui/qpainterpath.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtGui/qpainterpath.h
 QtGui/qtguiglobal.h
 -
 QtGui/qmatrix.h
@@ -1728,11 +1430,11 @@ QtCore/qvector.h
 QtCore/qscopedpointer.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtGui/qpixelformat.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtGui/qpixelformat.h
 QtGui/qtguiglobal.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtGui/qpolygon.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtGui/qpolygon.h
 QtGui/qtguiglobal.h
 -
 QtCore/qvector.h
@@ -1742,7 +1444,7 @@ QtCore/qpoint.h
 QtCore/qrect.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtGui/qregion.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtGui/qregion.h
 QtGui/qtguiglobal.h
 -
 QtCore/qatomic.h
@@ -1754,27 +1456,27 @@ QtGui/qwindowdefs.h
 QtCore/qdatastream.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtGui/qrgb.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtGui/qrgb.h
 QtGui/qtguiglobal.h
 -
 QtCore/qprocessordetection.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtGui/qrgba64.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtGui/qrgba64.h
 QtGui/qtguiglobal.h
 -
 QtCore/qprocessordetection.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtGui/qtgui-config.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtGui/qtgui-config.h
 
-/home/user/Qt/5.14.1/gcc_64/include/QtGui/qtguiglobal.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtGui/qtguiglobal.h
 QtCore/qglobal.h
 -
 QtGui/qtgui-config.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtGui/qtransform.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtGui/qtransform.h
 QtGui/qtguiglobal.h
 -
 QtGui/qmatrix.h
@@ -1794,15 +1496,7 @@ QtCore/qpoint.h
 QtCore/qrect.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtGui/qvector3d.h
-QtGui/qtguiglobal.h
--
-QtCore/qpoint.h
--
-QtCore/qmetatype.h
--
-
-/home/user/Qt/5.14.1/gcc_64/include/QtGui/qwindowdefs.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtGui/qwindowdefs.h
 QtGui/qtguiglobal.h
 -
 QtCore/qobjectdefs.h
@@ -1812,7 +1506,7 @@ QtCore/qnamespace.h
 QtGui/qwindowdefs_win.h
 -
 
-/home/user/Qt/5.14.1/gcc_64/include/QtGui/qwindowdefs_win.h
+/Users/QIJUNJIN/anaconda3/include/qt/QtGui/qwindowdefs_win.h
 QtGui/qtguiglobal.h
 -
 

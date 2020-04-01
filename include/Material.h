@@ -20,7 +20,7 @@ public:
 
     /*Para todos los materiales devolver diffuse
     (MaterialTextura sobrecarga esta función para devolver el téxel*/
-    vec3 getDiffuse(vec2 point) const;
+    virtual vec3 getDiffuse(vec2 point) const;
 
     vec3 diffuse;
     vec3 ambient;

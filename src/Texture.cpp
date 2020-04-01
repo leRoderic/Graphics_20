@@ -11,10 +11,11 @@ Texture::Texture(QString nomfitxer)
     if (!success) std::cout << "Imatge no trobada" << endl;
 
 }
-Texture::~Texture() {
 
+Texture::~Texture() {
 }
+
 vec3 Texture::getColorPixel(vec2 uv) {
     QColor c(image.pixel((uv.x)*image.width(), (uv.y)*image.height() ));
-    return(vec3(c.redF(), c.greenF(), c.blueF()));
+    return(vec3(255*c.redF(),255* c.greenF(), 255*c.blueF()));
 }
