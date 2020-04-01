@@ -836,6 +836,7 @@ CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../include/Lambertian.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../include/Light.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../include/Mate.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../include/Material.h
+CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../include/MaterialTextura.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../include/Object.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../include/ObjectFactory.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../include/Plane.h
@@ -845,6 +846,7 @@ CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../include/Scale.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../include/Scene.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../include/Sphere.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../include/TG.h
+CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../include/Texture.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../include/Translate.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../include/Triangle.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../src/DataReader.cpp
@@ -871,6 +873,7 @@ CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qcontainertools_impl.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qcontiguouscache.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qcoreevent.h
+CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qdatastream.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qdebug.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qfile.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qfiledevice.h
@@ -882,10 +885,12 @@ CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qhashfunctions.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qiodevice.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qiterator.h
+CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qline.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qlist.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qlocale.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qlogging.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qmap.h
+CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qmargins.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qmetatype.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qmutex.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qnamespace.h
@@ -897,6 +902,7 @@ CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qpair.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qpoint.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qprocessordetection.h
+CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qrect.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qrefcount.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qregexp.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qregularexpression.h
@@ -905,6 +911,7 @@ CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qshareddata.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qsharedpointer.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qsharedpointer_impl.h
+CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qsize.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qstring.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qstringalgorithms.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qstringbuilder.h
@@ -921,6 +928,23 @@ CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qvarlengtharray.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qvector.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtCore/qversiontagging.h
+CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtGui/QColor
+CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtGui/QImage
+CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtGui/qcolor.h
+CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtGui/qimage.h
+CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtGui/qmatrix.h
+CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtGui/qpaintdevice.h
+CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtGui/qpainterpath.h
+CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtGui/qpixelformat.h
+CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtGui/qpolygon.h
+CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtGui/qregion.h
+CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtGui/qrgb.h
+CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtGui/qrgba64.h
+CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtGui/qtgui-config.h
+CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtGui/qtguiglobal.h
+CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtGui/qtransform.h
+CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtGui/qwindowdefs.h
+CMakeFiles/RayData.dir/src/DataReader.cpp.o: /home/user/Qt/5.14.1/gcc_64/include/QtGui/qwindowdefs_win.h
 
 CMakeFiles/RayData.dir/src/FittedPlane.cpp.o: ../glm/core/_detail.hpp
 CMakeFiles/RayData.dir/src/FittedPlane.cpp.o: ../glm/core/_fixes.hpp

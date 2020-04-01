@@ -20,7 +20,7 @@ public:
 
     virtual bool scatter(const Ray &r_in, const IntersectionInfo &rec, vec3 &color, std::vector<Ray> &r_out) const;
 
-    vec3 getDiffuse(vec2 point) const;
+    virtual vec3 getDiffuse(vec2 point) const;
 
 protected:
     Texture* texture;
