@@ -67,6 +67,7 @@ qrc_resources.cpp: ../resources/spheres2.txt
 qrc_resources.cpp: ../resources/data0.txt
 qrc_resources.cpp: ../resources/dataBCN.txt
 qrc_resources.cpp: ../resources/dataBCNZoom.txt
+qrc_resources.cpp: ../resources/dadesEuropa.txt
 qrc_resources.cpp: resources.qrc.depends
 qrc_resources.cpp: ../resources.qrc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/CLionProjects/dataray-f01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating qrc_resources.cpp"

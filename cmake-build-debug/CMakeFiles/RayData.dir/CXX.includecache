@@ -444,6 +444,10 @@ Plane.h
 glm/glm.hpp
 ../include/glm/glm.hpp
 
+../include/ColorMapStatic.h
+ColorMap.h
+../include/ColorMap.h
+
 ../include/Cylinder.h
 Object.h
 ../include/Object.h
@@ -453,6 +457,22 @@ Translate.h
 ../include/Translate.h
 Circle.h
 ../include/Circle.h
+
+../include/DataReader.h
+QObject
+-
+QString
+-
+QStringList
+-
+vector
+-
+glm/glm.hpp
+../include/glm/glm.hpp
+Scene.h
+../include/Scene.h
+ObjectFactory.h
+../include/ObjectFactory.h
 
 ../include/FittedPlane.h
 Plane.h
@@ -489,6 +509,22 @@ Lambertian.h
 ../include/Lambertian.h
 Animation.h
 ../include/Animation.h
+
+../include/ObjectFactory.h
+Object.h
+../include/Object.h
+Sphere.h
+../include/Sphere.h
+Plane.h
+../include/Plane.h
+Triangle.h
+../include/Triangle.h
+BoundaryObject.h
+../include/BoundaryObject.h
+Circle.h
+../include/Circle.h
+Cylinder.h
+../include/Cylinder.h
 
 ../include/Plane.h
 Object.h
@@ -544,6 +580,32 @@ Camera.h
 FittedPlane.h
 ../include/FittedPlane.h
 
+../include/SceneFactory.h
+string.h
+-
+Scene.h
+../include/Scene.h
+Camera.h
+../include/Camera.h
+ColorMap.h
+../include/ColorMap.h
+ReadFile.h
+../include/ReadFile.h
+ObjectFactory.h
+../include/ObjectFactory.h
+ColorMapStatic.h
+../include/ColorMapStatic.h
+QString
+-
+
+../include/SceneFactoryData.h
+SceneFactory.h
+../include/SceneFactory.h
+ColorMapStatic.h
+../include/ColorMapStatic.h
+DataReader.h
+../include/DataReader.h
+
 ../include/Sphere.h
 Object.h
 ../include/Object.h
@@ -588,19 +650,17 @@ Lambertian.h
 ColorMap.h
 ../include/ColorMap.h
 
-/home/user/CLionProjects/dataray-f01/src/Scene.cpp
-Scene.h
-/home/user/CLionProjects/dataray-f01/src/Scene.h
-Plane.h
-/home/user/CLionProjects/dataray-f01/src/Plane.h
-Cylinder.h
-/home/user/CLionProjects/dataray-f01/src/Cylinder.h
-Circle.h
-/home/user/CLionProjects/dataray-f01/src/Circle.h
+/home/user/CLionProjects/dataray-f01/src/SceneFactoryData.cpp
+SceneFactoryData.h
+/home/user/CLionProjects/dataray-f01/src/SceneFactoryData.h
 
 /home/user/Qt/5.14.1/gcc_64/include/QtCore/QFile
 qfile.h
 /home/user/Qt/5.14.1/gcc_64/include/QtCore/qfile.h
+
+/home/user/Qt/5.14.1/gcc_64/include/QtCore/QObject
+qobject.h
+/home/user/Qt/5.14.1/gcc_64/include/QtCore/qobject.h
 
 /home/user/Qt/5.14.1/gcc_64/include/QtCore/QRegularExpression
 qregularexpression.h
@@ -609,6 +669,10 @@ qregularexpression.h
 /home/user/Qt/5.14.1/gcc_64/include/QtCore/QString
 qstring.h
 /home/user/Qt/5.14.1/gcc_64/include/QtCore/qstring.h
+
+/home/user/Qt/5.14.1/gcc_64/include/QtCore/QStringList
+qstringlist.h
+/home/user/Qt/5.14.1/gcc_64/include/QtCore/qstringlist.h
 
 /home/user/Qt/5.14.1/gcc_64/include/QtCore/qalgorithms.h
 QtCore/qglobal.h
