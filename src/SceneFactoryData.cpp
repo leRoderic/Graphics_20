@@ -27,10 +27,11 @@ Scene *SceneFactoryData::createScene(QString filename) {
     // TODO: Fase 1: construccio de l'escena dins de dataReader
     sc->readFile(filename);
 
-    s->ambientGlobal = vec3(0.5f);
     s->lights.push_back(new Light(vec3(2, 8, 10), vec3(0.1f), vec3(0.7f), vec3(0.7f), vec3(0.0,0.0,1.0)));
     s->lights.push_back(new Light(vec3(-5, 20, 10), vec3(0.01f), vec3(0.5f), vec3(0.4f), vec3(0.0,0.0,1.0)));
     s->lights.push_back(new Light(vec3(2, 8, -50), vec3(0.1f), vec3(0.7f), vec3(0.7f), vec3(0.0,0.0,1.0)));
+    s->ambientGlobal = vec3(0.5f);
+
     s->ground->setMaterial(new MaterialTextura());
 
     return s;

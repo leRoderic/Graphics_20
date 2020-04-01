@@ -7,8 +7,7 @@
 #include <include/Mate.h>
 #include <include/MaterialTextura.h>
 
-DataReader::DataReader(Scene *s)
-{
+DataReader::DataReader(Scene *s) {
     scene = s;
     numProp = 0;
 
@@ -17,13 +16,13 @@ DataReader::DataReader(Scene *s)
 void DataReader::readFile(QString fileName) {
     QFile file(fileName);
 
-    if(!file.open(QIODevice::ReadOnly)) {
+    if (!file.open(QIODevice::ReadOnly)) {
         std::cerr << "Error opening the file" << std::endl;
         return;
     }
 
     QTextStream in(&file);
-    while(!in.atEnd()) {
+    while (!in.atEnd()) {
         QString line = in.readLine();
         fileLineRead(line);
     }
@@ -32,7 +31,7 @@ void DataReader::readFile(QString fileName) {
 }
 
 // TO-DO: Fase 1: Cal afegir més tipus d'objectes
-void DataReader::fileLineRead (QString lineReaded) {
+void DataReader::fileLineRead(QString lineReaded) {
 
     QStringList fields = lineReaded.split(",");
     if (QString::compare("limits", fields[0], Qt::CaseInsensitive) == 0)
@@ -62,27 +61,19 @@ void DataReader::baseFound(QStringList fields) {
         float y = -1.0f;
         y = fields[5].toDouble();
 
-        pMin = vec3(-5, -5, -5);
-        pMax = vec3(5, 5, 5);
-
-        o = ObjectFactory::getInstance()->createObject(pMin.x, y, pMin.z, pMax.x, y, pMax.z, fields[2].toDouble(),
-                                                       fields[3].toDouble(), fields[4].toDouble(),
+        o = ObjectFactory::getInstance()->createObject(scene->pmin.x, y, scene->pmin.z, scene->pmax.x, y, scene->pmax.z,
+                                                       fields[2].toDouble(), fields[3].toDouble(), fields[4].toDouble(),
                                                        y, 0, ObjectFactory::OBJECT_TYPES::FITTED_PLANE);
-        o->setMaterial(new MaterialTextura(vec3(1), vec3(1), vec3(1), 1, 1, fields[6].simplified()));
         //Fase 1 / 3.2 / b / a
         scene->ground = (FittedPlane *) o;
         // TODO Fase 4: llegir textura i afegir-la a l'objecte. Veure la classe Texture
-    }else if(QString::compare(" sphere", fields[1], Qt::CaseInsensitive) == 0){
+    } else if (QString::compare(" sphere", fields[1], Qt::CaseInsensitive) == 0) {
         // TO-DO: Fase 3: Si cal instanciar una esfera com objecte base i no un pla, cal afegir aqui un else
         o = ObjectFactory::getInstance()->createObject(fields[2].toDouble(), fields[3].toDouble(),
                                                        fields[4].toDouble(), 0, 0, 0, 0, 0, 0,
                                                        fields[5].toDouble(), 0, ObjectFactory::OBJECT_TYPES::SPHERE);
         scene->ground = (Sphere *) o;
-
     }
-
-    //scene->objects.push_back(o);
-
 }
 
 
@@ -109,12 +100,12 @@ void DataReader::propFound(QStringList fields) {
     numProp++;
     // TO-DO Fase 1: Cal guardar els valors per a poder escalar els objectes i el tipus de
     //  gizmo de totes les propietats (SPHERE, BR_OBJ, CILINDRE...)
-    cout<<fields[4].toStdString()<<endl;
+    cout << fields[4].toStdString() << endl;
     if (QString::compare(" sphere", fields[4], Qt::CaseInsensitive) == 0) {
         spMin = fields[2].toDouble();
         spMax = fields[3].toDouble();
         props.push_back(ObjectFactory::OBJECT_TYPES::SPHERE);
-    }else if (QString::compare(" cylinder", fields[4], Qt::CaseInsensitive) == 0) {
+    } else if (QString::compare(" cylinder", fields[4], Qt::CaseInsensitive) == 0) {
         cyMin = fields[2].toDouble();
         cyMax = fields[3].toDouble();
         props.push_back(ObjectFactory::OBJECT_TYPES::CYLINDER);
@@ -137,30 +128,34 @@ void DataReader::dataFound(QStringList fields) {
     }*/
 
     Object *o;
-    float scaledX, scaledZ, scaledData;
+    vec3 translation = vec3(0.0f);
+    float scaledData;
 
-    for (int i=0; i<numProp; i++) {
+    for (int i = 0; i < numProp; i++) {
         // TODO Fase 1: Cal colocar els objectes al seu lloc del mon virtual, escalats segons el valor i
         //  amb el seu color corresponent segons el seu ColorMap
 
-        scaledX = (fields[1].toDouble() - xMin) / (xMax - xMin) * (pMax.x - pMin.x) + pMin.x;
-        scaledZ = pMax.z - (fields[2].toDouble() - zMin) / (zMax - zMin) * (pMax.z - pMin.z);
+        translation.x = (fields[1].toDouble() - xMin) / (xMax - xMin) * (scene->pmax.x - scene->pmin.x) + scene->pmin.x;
+        translation.z = scene->pmax.z - (fields[2].toDouble() - zMin) / (zMax - zMin) * (scene->pmax.z - scene->pmin.z);
 
         if (props.back() == ObjectFactory::OBJECT_TYPES::SPHERE) {
 
             scaledData = (fields[3].toDouble() - spMin) / (spMax - spMin);
 
-            o = ObjectFactory::getInstance()->createObject(scaledX, 0.0f, scaledZ, scaledZ, 0, scaledX, scaledZ, 0,
-                                                           scaledX, 1, scaledData, props.back());
-
-            o->aplicaTG(new Scale(vec3(scaledData)));
+            o = ObjectFactory::getInstance()->createObject(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f,
+                                                           0.0f, 1, 0.0f, props.back());
+            o->aplicaTG(new Scale(scaledData));
+            o->aplicaTG(new Translate(translation));
 
         } else if (props.back() == ObjectFactory::OBJECT_TYPES::CYLINDER) {
-            scaledData = (((fields[3].toDouble() - cyMin) * (255 - 0)) / (cyMax - cyMin)) + 0;
-            o =  ObjectFactory::getInstance()->createObject(scaledX, 0.0f, scaledZ,0, 0, 0, 0, 0, 0, 2, scaledData, props.back());
-        }else if(props.back() == ObjectFactory::OBJECT_TYPES::BROBJECT) {
-            scaledData = (((fields[3].toDouble() - brMin) * (255 - 0)) / (brMax - brMin)) + 0;
-            o =  ObjectFactory::getInstance()->createObject(objFile, scaledData, props.back());
+            scaledData = (fields[3].toDouble() - cyMin) / (cyMax - cyMin);
+            o = ObjectFactory::getInstance()->createObject(0.0f, 0.0f, 0.0f, 0, 0, 0, 0, 0, 0, 1, 0.0f,
+                                                           props.back());
+            //o->aplicaTG(new Scale(scaledData));
+            o->aplicaTG(new Translate(translation));
+        } else if (props.back() == ObjectFactory::OBJECT_TYPES::BROBJECT) {
+            scaledData = (fields[3].toDouble() - brMin) / (brMax - brMin);
+            o = ObjectFactory::getInstance()->createObject(objFile, scaledData, props.back());
         }
 
         scene->objects.push_back(o);

@@ -4,12 +4,8 @@
 #include "Circle.h" // Afegits
 
 Scene::Scene() {
-    pmin.x = -0.5f;
-    pmin.y = -0.5f;
-    pmin.z = -0.5f;
-    pmax.x = 0.5f;
-    pmax.y = 0.5f;
-    pmax.z = 0.5f;
+    pmin = vec3 (-5.0f);
+    pmax = vec3 (5.0f);
 }
 
 Scene::~Scene() {

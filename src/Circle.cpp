@@ -27,6 +27,8 @@ void Circle::aplicaTG(TG *t) {
         // Per ara només es preveuen translacions
         vec4 c(center, 1.0);
         c = t->getTG() * c;
-        center.x = c.x; center.y = c.y; center.z = c.z;
+        center.x = c.x;
+        center.y = c.y;
+        center.z = c.z;
     }
 }
