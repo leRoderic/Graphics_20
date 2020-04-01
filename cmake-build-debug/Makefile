@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = "/Users/QIJUNJIN/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/bin/cmake"
+CMAKE_COMMAND = /home/user/Descargas/CLion-2019.3.4/clion-2019.3.4/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = "/Users/QIJUNJIN/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E remove -f
+RM = /home/user/Descargas/CLion-2019.3.4/clion-2019.3.4/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/QIJUNJIN/CLionProjects/dataray-f01
+CMAKE_SOURCE_DIR = /home/user/CLionProjects/dataray-f01
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/QIJUNJIN/CLionProjects/dataray-f01/cmake-build-debug
+CMAKE_BINARY_DIR = /home/user/CLionProjects/dataray-f01/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/QIJUNJIN/CLionProjects/dataray-f01/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"/Users/QIJUNJIN/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/bin/cmake" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/user/Descargas/CLion-2019.3.4/clion-2019.3.4/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"/Users/QIJUNJIN/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/user/Descargas/CLion-2019.3.4/clion-2019.3.4/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/QIJUNJIN/CLionProjects/dataray-f01/cmake-build-debug/CMakeFiles /Users/QIJUNJIN/CLionProjects/dataray-f01/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/CLionProjects/dataray-f01/cmake-build-debug/CMakeFiles /home/user/CLionProjects/dataray-f01/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/QIJUNJIN/CLionProjects/dataray-f01/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/CLionProjects/dataray-f01/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -621,6 +621,33 @@ src/Material.s: src/Material.cpp.s
 src/Material.cpp.s:
 	$(MAKE) -f CMakeFiles/RayData.dir/build.make CMakeFiles/RayData.dir/src/Material.cpp.s
 .PHONY : src/Material.cpp.s
+
+src/MaterialTextura.o: src/MaterialTextura.cpp.o
+
+.PHONY : src/MaterialTextura.o
+
+# target to build an object file
+src/MaterialTextura.cpp.o:
+	$(MAKE) -f CMakeFiles/RayData.dir/build.make CMakeFiles/RayData.dir/src/MaterialTextura.cpp.o
+.PHONY : src/MaterialTextura.cpp.o
+
+src/MaterialTextura.i: src/MaterialTextura.cpp.i
+
+.PHONY : src/MaterialTextura.i
+
+# target to preprocess a source file
+src/MaterialTextura.cpp.i:
+	$(MAKE) -f CMakeFiles/RayData.dir/build.make CMakeFiles/RayData.dir/src/MaterialTextura.cpp.i
+.PHONY : src/MaterialTextura.cpp.i
+
+src/MaterialTextura.s: src/MaterialTextura.cpp.s
+
+.PHONY : src/MaterialTextura.s
+
+# target to generate assembly for a file
+src/MaterialTextura.cpp.s:
+	$(MAKE) -f CMakeFiles/RayData.dir/build.make CMakeFiles/RayData.dir/src/MaterialTextura.cpp.s
+.PHONY : src/MaterialTextura.cpp.s
 
 src/Metall.o: src/Metall.cpp.o
 
@@ -1223,8 +1250,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... RayData"
+	@echo "... edit_cache"
 	@echo "... RayData_autogen"
 	@echo "... RayData_autogen/mocs_compilation.o"
 	@echo "... RayData_autogen/mocs_compilation.i"
@@ -1280,6 +1307,9 @@ help:
 	@echo "... src/Material.o"
 	@echo "... src/Material.i"
 	@echo "... src/Material.s"
+	@echo "... src/MaterialTextura.o"
+	@echo "... src/MaterialTextura.i"
+	@echo "... src/MaterialTextura.s"
 	@echo "... src/Metall.o"
 	@echo "... src/Metall.i"
 	@echo "... src/Metall.s"

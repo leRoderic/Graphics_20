@@ -116,8 +116,13 @@ vec3 Scene::BlinnPhong(vec3 point, vec3 normal, const Material *material) {
 
         float d = distance(light->pos, point);
 
+        vec3 p2 = this->pmax;
+        vec3 p1 = this->pmin;
+        vec2 uvPoint = vec2(point.x / (p2.x - p1.x) - p1.x / (p2.x - p1.x),
+                            point.z / (p2.z - p1.z) - p1.z / (p2.z - p1.z));
+
         vec3 ambient = light->ambient * material->ambient;
-        vec3 diffuse = light->diffuse * material->diffuse * glm::max(dot(L, normal), 0.0f);
+        vec3 diffuse = light->diffuse * material->getDiffuse(uvPoint) * glm::max(dot(L, normal), 0.0f);
         vec3 specular =
                 light->specular * material->specular * (float) pow(glm::max(dot(normal, H), 0.0f), material->beta);
 
