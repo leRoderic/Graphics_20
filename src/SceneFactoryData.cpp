@@ -17,8 +17,8 @@ Camera *SceneFactoryData::createCamera() {
 
     //float aperture = 0.1;
     float aperture = 30;
-    int pixelsX = 582;
-    int pixelsY = 660;
+    int pixelsX = 600;
+    int pixelsY = 400;
 
     return (new Camera(lookfrom, lookat, vec3(0, 1, 0), 10, pixelsX, pixelsY, aperture, dist_to_focus));
 }

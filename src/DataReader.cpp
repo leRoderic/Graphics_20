@@ -5,6 +5,7 @@
 #include <sstream>
 #include <include/ObjectFactory.h>
 #include <include/Mate.h>
+#include <include/MaterialTextura.h>
 
 DataReader::DataReader(Scene *s)
 {
@@ -72,6 +73,7 @@ void DataReader::baseFound(QStringList fields) {
         o = ObjectFactory::getInstance()->createObject(pMin.x, y, pMin.z, pMax.x, y, pMax.z, fields[2].toDouble(),
                                                        fields[3].toDouble(), fields[4].toDouble(),
                                                        y, 0, ObjectFactory::OBJECT_TYPES::FITTED_PLANE);
+        o->setMaterial(new MaterialTextura(vec3(1), vec3(1), vec3(1), 1, 1, fields[6].simplified()));
         //Fase 1 / 3.2 / b / a
         scene->ground = (FittedPlane *) o;
         // TODO Fase 4: llegir textura i afegir-la a l'objecte. Veure la classe Texture
@@ -84,7 +86,7 @@ void DataReader::baseFound(QStringList fields) {
 
     }
 
-    scene->objects.push_back(o);
+    //scene->objects.push_back(o);
 
 }
 

@@ -30,6 +30,7 @@ Scene::~Scene() {
                 delete (BoundaryObject *) (objects[i]);
         }
     }
+    delete this->ground;
     delete (cam);
 }
 
@@ -123,8 +124,7 @@ vec3 Scene::BlinnPhong(vec3 point, vec3 normal, const Material *material) {
 
         vec3 ambient = light->ambient * material->ambient;
         vec3 diffuse = light->diffuse * material->getDiffuse(uvPoint) * glm::max(dot(L, normal), 0.0f);
-        vec3 specular =
-                light->specular * material->specular * (float) pow(glm::max(dot(normal, H), 0.0f), material->beta);
+        vec3 specular = light->specular * material->specular * (float) pow(glm::max(dot(normal, H), 0.0f), material->beta);
 
         float atenuacio = dot(light->atenuacio, vec3(1.0f, d, pow(d, 2)));
 
@@ -189,7 +189,7 @@ void Scene::setMaterials(ColorMap *cm) {
                 //vec3 qwe = cm->getColor((*it)->getData());
                 //std::cerr << (*it)->getData() << std::endl;
                 //std::cerr << "(" << qwe.r << ", " << qwe.g << ", " << qwe.b << ")" << std::endl;
-                float asd = (*it)->getData();
+                //float asd = (*it)->getData();
                 m = new Lambertian(cm->getColor((*it)->getData()));
             } else
                 m = new Lambertian(vec3(0.5, 0.2, 0.7));
