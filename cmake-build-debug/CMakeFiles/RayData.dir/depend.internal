@@ -835,6 +835,7 @@ CMakeFiles/RayData.dir/src/DataReader.cpp.o
  ../include/Hitable.h
  ../include/Lambertian.h
  ../include/Light.h
+ ../include/Mate.h
  ../include/Material.h
  ../include/Object.h
  ../include/ObjectFactory.h

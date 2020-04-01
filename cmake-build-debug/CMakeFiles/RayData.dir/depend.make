@@ -834,6 +834,7 @@ CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../include/FittedPlane.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../include/Hitable.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../include/Lambertian.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../include/Light.h
+CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../include/Mate.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../include/Material.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../include/Object.h
 CMakeFiles/RayData.dir/src/DataReader.cpp.o: ../include/ObjectFactory.h

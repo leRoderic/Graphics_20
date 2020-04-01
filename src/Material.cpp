@@ -22,3 +22,7 @@ vec3 Material::RandomInSphere() const {
     } while (glm::length(p) >=  1.0f);
     return p;
 }
+
+vec3 Material::getDiffuse(vec2 point) const{
+    return this->diffuse;
+}

@@ -26,3 +26,7 @@ bool MaterialTextura::scatter(const Ray &r_in, const IntersectionInfo &rec, vec3
     //color = diffuse;
     return false;
 }
+
+vec3 MaterialTextura::getDiffuse(vec2 point) const{
+    return  this->texture->getColorPixel(point);
+}
