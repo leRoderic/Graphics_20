@@ -20,6 +20,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/RayData.dir/src/Main.cpp.o"
   "CMakeFiles/RayData.dir/src/Mate.cpp.o"
   "CMakeFiles/RayData.dir/src/Material.cpp.o"
+  "CMakeFiles/RayData.dir/src/MaterialTextura.cpp.o"
   "CMakeFiles/RayData.dir/src/Metall.cpp.o"
   "CMakeFiles/RayData.dir/src/Object.cpp.o"
   "CMakeFiles/RayData.dir/src/ObjectFactory.cpp.o"
