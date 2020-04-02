@@ -15,7 +15,7 @@ Controller::Controller(QString fileName, SceneFactory::SCENE_FACTORIES s, Render
 
     scene = scFac->createScene(fileName);
     // TODO Fase 1: Cal posar les dimensions de l'escena virtual usant setDimensions de la classe Scene
-    scene->setDimensions(vec3(-5.0f), vec3(5.0f));
+    //scene->setDimensions(vec3(-5.0f), vec3(5.0f));
 
     Camera *camera;
     camera = scFac->createCamera();
@@ -25,7 +25,7 @@ Controller::Controller(QString fileName, SceneFactory::SCENE_FACTORIES s, Render
     // Es crea aqui només un ColorMap
     // TODO Fase 2: Cal tenir en compte tants ColorMaps com numero de propietats, en el cas que el fitxer de dades en
     //  tingui més d'una. On es pot fer això millor?
-    ColorMap *colorMap = scFac->createColorMap(ColorMapStatic::ColorMapType::COLOR_MAP_TYPE_PLASMA);
+    ColorMap *colorMap = scFac->createColorMap(ColorMapStatic::ColorMapType::COLOR_MAP_TYPE_INFERNO);
     scene->setMaterials(colorMap);
 
     // ETAPA 2: Inicialitzacio del Rendering

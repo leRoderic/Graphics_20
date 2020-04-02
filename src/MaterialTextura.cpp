@@ -3,12 +3,13 @@
 //
 
 #include "MaterialTextura.h"
-MaterialTextura::MaterialTextura() : Material(){
-    this->diffuse = vec3(0.5,0.5,0.5);
+MaterialTextura::MaterialTextura(const QString &textureFile) : Material(){
+    this->diffuse = vec3(0.2,0.2,1.0);//0.5,0.5,0.5
     this->specular = vec3(0.0,0.0,0.0);
     this->ambient = vec3(0.1,0.1,0.1);
     this->alpha = 0.0;
     this->beta = 1.0;
+    this->texture = new Texture(textureFile);
 }
 
 MaterialTextura::MaterialTextura(const vec3 &ambient, const vec3 &diffuse, const vec3 &specular, const int &beta, const float &alpha, const QString &textureFile) : Material(){
@@ -27,4 +28,9 @@ bool MaterialTextura::scatter(const Ray &r_in, const IntersectionInfo &rec, vec3
 
 vec3 MaterialTextura::getDiffuse(vec2 point) const{
     return  this->texture->getColorPixel(point);
+}
+
+MaterialTextura::~MaterialTextura() {
+
+    delete this->texture;
 }

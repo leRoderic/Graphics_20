@@ -7,6 +7,8 @@
 #include <include/Mate.h>
 #include <include/MaterialTextura.h>
 
+float toColorMapUnderstandable(float d);
+
 DataReader::DataReader(Scene *s) {
     scene = s;
     numProp = 0;
@@ -61,11 +63,17 @@ void DataReader::baseFound(QStringList fields) {
         float y = -1.0f;
         y = fields[5].toDouble();
 
+        scene->pmin = vec3 (xMin, y, zMin);
+        scene->pmax = vec3 (xMax, y, zMax);
+
         o = ObjectFactory::getInstance()->createObject(scene->pmin.x, y, scene->pmin.z, scene->pmax.x, y, scene->pmax.z,
                                                        fields[2].toDouble(), fields[3].toDouble(), fields[4].toDouble(),
                                                        y, 0, ObjectFactory::OBJECT_TYPES::FITTED_PLANE);
+
+        o->setMaterial(new MaterialTextura(fields[6].simplified()));
         //Fase 1 / 3.2 / b / a
         scene->ground = (FittedPlane *) o;
+
         // TODO Fase 4: llegir textura i afegir-la a l'objecte. Veure la classe Texture
     } else if (QString::compare(" sphere", fields[1], Qt::CaseInsensitive) == 0) {
         // TO-DO: Fase 3: Si cal instanciar una esfera com objecte base i no un pla, cal afegir aqui un else
@@ -143,21 +151,33 @@ void DataReader::dataFound(QStringList fields) {
             scaledData = (fields[3].toDouble() - spMin) / (spMax - spMin);
 
             o = ObjectFactory::getInstance()->createObject(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f,
-                                                           0.0f, 1, 0.0f, props.back());
+                                                           0.0f, 1, toColorMapUnderstandable(scaledData), props.back());
             o->aplicaTG(new Scale(scaledData));
             o->aplicaTG(new Translate(translation));
 
         } else if (props.back() == ObjectFactory::OBJECT_TYPES::CYLINDER) {
             scaledData = (fields[3].toDouble() - cyMin) / (cyMax - cyMin);
-            o = ObjectFactory::getInstance()->createObject(0.0f, 0.0f, 0.0f, 0, 0, 0, 0, 0, 0, 1, 0.0f,
+            o = ObjectFactory::getInstance()->createObject(0.0f, 0.0f, 0.0f, 0, 0, 0, 0, 0, 0, 1, toColorMapUnderstandable(scaledData),
                                                            props.back());
-            //o->aplicaTG(new Scale(scaledData));
+            o->aplicaTG(new Scale(scaledData));
             o->aplicaTG(new Translate(translation));
         } else if (props.back() == ObjectFactory::OBJECT_TYPES::BROBJECT) {
             scaledData = (fields[3].toDouble() - brMin) / (brMax - brMin);
-            o = ObjectFactory::getInstance()->createObject(objFile, scaledData, props.back());
+            o = ObjectFactory::getInstance()->createObject(objFile, toColorMapUnderstandable(scaledData), props.back());
         }
 
         scene->objects.push_back(o);
     }
+}
+
+float toColorMapUnderstandable(float d){
+
+    float scaled = (d - 0) / (1 - 0);
+
+    if(scaled > 1)
+        return 255;
+    else if(scaled < 0)
+        return 0;
+
+    return scaled*255;
 }

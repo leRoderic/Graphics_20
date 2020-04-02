@@ -4,8 +4,7 @@
 #include "Circle.h" // Afegits
 
 Scene::Scene() {
-    pmin = vec3 (-5.0f);
-    pmax = vec3 (5.0f);
+
 }
 
 Scene::~Scene() {
@@ -177,8 +176,7 @@ void Scene::setMaterials(ColorMap *cm) {
 
     for (auto it = this->objects.begin(); it != this->objects.end(); ++it) {
         std::cerr << "Color..." << endl;
-        if ((*it)->getMaterial() == nullptr) {
-            m = new Lambertian(vec3(0.5, 0.2, 0.7));
+        if ((*it)->getMaterial() != nullptr) {
 
             if ((*it)->getData() != -1.0) {
 
@@ -186,8 +184,10 @@ void Scene::setMaterials(ColorMap *cm) {
             } else {
                 m = new Lambertian(vec3(0.5, 0.2, 0.7));
             }
-            (*it)->setMaterial(m);
+        } else {
+            m = new Lambertian(vec3(0.5, 0.2, 0.7));
         }
+        (*it)->setMaterial(m);
     }
 }
 
