@@ -1,4 +1,4 @@
-/mnt/h/rcmik/Documents/GitHub/dataray-f01/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/mnt/h/rcmik/Documents/GitHub/dataray-f01/cmake-build-debug/CMakeFiles/RayData.dir
-/mnt/h/rcmik/Documents/GitHub/dataray-f01/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/h/rcmik/Documents/GitHub/dataray-f01/cmake-build-debug/CMakeFiles/RayData_autogen.dir
+/mnt/c/Users/abdel/OneDrive - Universitat de Barcelona/3CARRERA/Grafics/Practiques/P1/dataray-f01/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/abdel/OneDrive - Universitat de Barcelona/3CARRERA/Grafics/Practiques/P1/dataray-f01/cmake-build-debug/CMakeFiles/RayData.dir
+/mnt/c/Users/abdel/OneDrive - Universitat de Barcelona/3CARRERA/Grafics/Practiques/P1/dataray-f01/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/abdel/OneDrive - Universitat de Barcelona/3CARRERA/Grafics/Practiques/P1/dataray-f01/cmake-build-debug/CMakeFiles/RayData_autogen.dir
