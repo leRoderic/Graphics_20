@@ -4,12 +4,7 @@
 #include "Circle.h" // Afegits
 
 Scene::Scene() {
-    pmin.x = -0.5f;
-    pmin.y = -0.5f;
-    pmin.z = -0.5f;
-    pmax.x = 0.5f;
-    pmax.y = 0.5f;
-    pmax.z = 0.5f;
+
 }
 
 Scene::~Scene() {
@@ -28,8 +23,11 @@ Scene::~Scene() {
                 delete (Circle *) (objects[i]);
             else if (dynamic_cast<BoundaryObject *>(objects[i]))
                 delete (BoundaryObject *) (objects[i]);
+            else if (dynamic_cast<FittedPlane *>(objects[i]))
+                delete (FittedPlane *) (objects[i]);
         }
     }
+    //delete this->ground;
     delete (cam);
 }
 
@@ -45,6 +43,13 @@ bool Scene::intersection(const Ray &raig, float t_min, float t_max, Intersection
 
     IntersectionInfo min_inter = info; //local copy to maintain the minimum
     bool intersects = false;
+
+    if (ground->intersection(raig, t_min, t_max, info)) {//comprovem si es el terra
+        intersects = true;
+        if (info.t < min_inter.t) {
+            min_inter = info;
+        }
+    }
 
     //cycle through all the objects in the scene
     for (auto it = this->objects.begin(); it != this->objects.end(); ++it) {
@@ -116,8 +121,13 @@ vec3 Scene::BlinnPhong(vec3 point, vec3 normal, const Material *material) {
 
         float d = distance(light->pos, point);
 
+        vec3 p2 = this->pmax;
+        vec3 p1 = this->pmin;
+        vec2 uvPoint = vec2(point.x / (p2.x - p1.x) - p1.x / (p2.x - p1.x),
+                            point.z / (p2.z - p1.z) - p1.z / (p2.z - p1.z));
+
         vec3 ambient = light->ambient * material->ambient;
-        vec3 diffuse = light->diffuse * material->diffuse * glm::max(dot(L, normal), 0.0f);
+        vec3 diffuse = light->diffuse * material->getDiffuse(uvPoint) * glm::max(dot(L, normal), 0.0f);
         vec3 specular =
                 light->specular * material->specular * (float) pow(glm::max(dot(normal, H), 0.0f), material->beta);
 
@@ -127,30 +137,18 @@ vec3 Scene::BlinnPhong(vec3 point, vec3 normal, const Material *material) {
 
         float shadowFactor = 1.0f;
 
-        if (this->intersection(Ray(point, L), 0.01f, d, *info)) {
-            if (info->mat_ptr->alpha == 1.0f) {
-                shadowFactor = 1.0f;
+        for (Object *o: objects) {
 
-                for(Object *o: objects){
-
-                    if(o->intersection(Ray(point, L), 0.01f, d, *info)){
-                        if(info->mat_ptr->alpha != 1.0f)
-                            shadowFactor = 0.0f;
-                    }
-                }
-
-                IntersectionInfo *info2 = new IntersectionInfo();
-                if(this->intersection(Ray(info->p, info->p - point), 0.01f, distance(info->p, point), *info2)){
-                    if (info2->mat_ptr->alpha != 1.0f) shadowFactor = 0.0f;
-                }
-
-            } else {
-                shadowFactor = 0.0f;
+            if (o->intersection(Ray(point, L), 0.01f, d, *info)) {
+                if (info->mat_ptr->alpha != 1.0f)
+                    shadowFactor = 0.0f;
             }
         }
 
         resultat += ((diffuse + specular) / atenuacio) * shadowFactor + ambient;
+
     }
+
 
     return resultat;
 }
@@ -177,19 +175,19 @@ void Scene::setMaterials(ColorMap *cm) {
     }
 
     for (auto it = this->objects.begin(); it != this->objects.end(); ++it) {
-        if ((*it)->getMaterial() == nullptr) {
-            m = new Lambertian(vec3(0.5, 0.2, 0.7));
-            /* modify data objects color depending on the value of data */
+        std::cerr << "Color..." << endl;
+        if ((*it)->getMaterial() != nullptr) {
+
             if ((*it)->getData() != -1.0) {
-                //vec3 qwe = cm->getColor((*it)->getData());
-                //std::cerr << (*it)->getData() << std::endl;
-                //std::cerr << "(" << qwe.r << ", " << qwe.g << ", " << qwe.b << ")" << std::endl;
-                float asd = (*it)->getData();
+
                 m = new Lambertian(cm->getColor((*it)->getData()));
-            } else
+            } else {
                 m = new Lambertian(vec3(0.5, 0.2, 0.7));
-            (*it)->setMaterial(m);
+            }
+        } else {
+            m = new Lambertian(vec3(0.5, 0.2, 0.7));
         }
+        (*it)->setMaterial(m);
     }
 }
 

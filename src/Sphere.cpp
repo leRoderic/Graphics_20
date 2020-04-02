@@ -43,7 +43,7 @@ void Sphere::aplicaTG(TG *t) {
         center.z = c.z;
     }
     if (dynamic_cast<Scale *>(t)) {
-        this->radius = radius * this->factor;
+        this->radius *= t->matTG[0][0];
     }
 }
 

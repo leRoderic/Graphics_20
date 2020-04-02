@@ -18,6 +18,10 @@ public:
 
     virtual bool scatter(const Ray &r_in, const IntersectionInfo &rec, vec3 &color, std::vector<Ray> &r_out) const = 0;
 
+    /*Para todos los materiales devolver diffuse
+    (MaterialTextura sobrecarga esta función para devolver el téxel*/
+    virtual vec3 getDiffuse(vec2 point) const;
+
     vec3 diffuse;
     vec3 ambient;
     vec3 specular;

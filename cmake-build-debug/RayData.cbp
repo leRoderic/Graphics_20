@@ -859,6 +859,9 @@
 		<Unit filename="/mnt/h/rcmik/Documents/GitHub/dataray-f01/include/Material.h">
 			<Option target="RayData"/>
 		</Unit>
+		<Unit filename="/mnt/h/rcmik/Documents/GitHub/dataray-f01/include/MaterialTextura.h">
+			<Option target="RayData"/>
+		</Unit>
 		<Unit filename="/mnt/h/rcmik/Documents/GitHub/dataray-f01/include/Metall.h">
 			<Option target="RayData"/>
 		</Unit>
@@ -974,6 +977,9 @@
 			<Option target="RayData"/>
 		</Unit>
 		<Unit filename="/mnt/h/rcmik/Documents/GitHub/dataray-f01/src/Material.cpp">
+			<Option target="RayData"/>
+		</Unit>
+		<Unit filename="/mnt/h/rcmik/Documents/GitHub/dataray-f01/src/MaterialTextura.cpp">
 			<Option target="RayData"/>
 		</Unit>
 		<Unit filename="/mnt/h/rcmik/Documents/GitHub/dataray-f01/src/Metall.cpp">

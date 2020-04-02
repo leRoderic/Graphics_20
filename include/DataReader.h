@@ -33,6 +33,7 @@ protected:
 
 private:
     int numProp, tmp;
+    vec3 pMin, pMax;
     float xMin, xMax, zMin, zMax;
     float spMin, spMax; // Sphere value range
     float cyMin, cyMax; // Cylinder value range
