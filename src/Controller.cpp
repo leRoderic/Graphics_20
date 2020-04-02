@@ -12,7 +12,10 @@ Controller::Controller(QString fileName, SceneFactory::SCENE_FACTORIES s, Render
     SceneFactory *scFac = createFactory(s);
 
     Scene *scene;
+
     scene = scFac->createScene(fileName);
+    // TODO Fase 1: Cal posar les dimensions de l'escena virtual usant setDimensions de la classe Scene
+    //scene->setDimensions(vec3(-5.0f), vec3(5.0f));
 
     Camera *camera;
     camera = scFac->createCamera();
@@ -24,9 +27,6 @@ Controller::Controller(QString fileName, SceneFactory::SCENE_FACTORIES s, Render
     //  tingui més d'una. On es pot fer això millor?
     ColorMap *colorMap = scFac->createColorMap(ColorMapStatic::ColorMapType::COLOR_MAP_TYPE_INFERNO);
     scene->setMaterials(colorMap);
-
-    // TODO Fase 1: Cal posar les dimensions de l'escena virtual usant setDimensions de la classe Scene
-    scene->setDimensions(vec3(-5.0f, -5.0f, -5.0f), vec3(5.0f, 5.0f, 5.0f));
 
     // ETAPA 2: Inicialitzacio del Rendering
     // usa un Factory Template per a construir el tipus de render

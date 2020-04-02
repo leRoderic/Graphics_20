@@ -22,6 +22,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/mnt/h/rcmik/Documents/GitHub/dataray-f01/src/Main.cpp" "/mnt/h/rcmik/Documents/GitHub/dataray-f01/cmake-build-debug/CMakeFiles/RayData.dir/src/Main.cpp.o"
   "/mnt/h/rcmik/Documents/GitHub/dataray-f01/src/Mate.cpp" "/mnt/h/rcmik/Documents/GitHub/dataray-f01/cmake-build-debug/CMakeFiles/RayData.dir/src/Mate.cpp.o"
   "/mnt/h/rcmik/Documents/GitHub/dataray-f01/src/Material.cpp" "/mnt/h/rcmik/Documents/GitHub/dataray-f01/cmake-build-debug/CMakeFiles/RayData.dir/src/Material.cpp.o"
+  "/mnt/h/rcmik/Documents/GitHub/dataray-f01/src/MaterialTextura.cpp" "/mnt/h/rcmik/Documents/GitHub/dataray-f01/cmake-build-debug/CMakeFiles/RayData.dir/src/MaterialTextura.cpp.o"
   "/mnt/h/rcmik/Documents/GitHub/dataray-f01/src/Metall.cpp" "/mnt/h/rcmik/Documents/GitHub/dataray-f01/cmake-build-debug/CMakeFiles/RayData.dir/src/Metall.cpp.o"
   "/mnt/h/rcmik/Documents/GitHub/dataray-f01/src/Object.cpp" "/mnt/h/rcmik/Documents/GitHub/dataray-f01/cmake-build-debug/CMakeFiles/RayData.dir/src/Object.cpp.o"
   "/mnt/h/rcmik/Documents/GitHub/dataray-f01/src/ObjectFactory.cpp" "/mnt/h/rcmik/Documents/GitHub/dataray-f01/cmake-build-debug/CMakeFiles/RayData.dir/src/ObjectFactory.cpp.o"

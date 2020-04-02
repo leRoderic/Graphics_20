@@ -622,6 +622,33 @@ src/Material.cpp.s:
 	$(MAKE) -f CMakeFiles/RayData.dir/build.make CMakeFiles/RayData.dir/src/Material.cpp.s
 .PHONY : src/Material.cpp.s
 
+src/MaterialTextura.o: src/MaterialTextura.cpp.o
+
+.PHONY : src/MaterialTextura.o
+
+# target to build an object file
+src/MaterialTextura.cpp.o:
+	$(MAKE) -f CMakeFiles/RayData.dir/build.make CMakeFiles/RayData.dir/src/MaterialTextura.cpp.o
+.PHONY : src/MaterialTextura.cpp.o
+
+src/MaterialTextura.i: src/MaterialTextura.cpp.i
+
+.PHONY : src/MaterialTextura.i
+
+# target to preprocess a source file
+src/MaterialTextura.cpp.i:
+	$(MAKE) -f CMakeFiles/RayData.dir/build.make CMakeFiles/RayData.dir/src/MaterialTextura.cpp.i
+.PHONY : src/MaterialTextura.cpp.i
+
+src/MaterialTextura.s: src/MaterialTextura.cpp.s
+
+.PHONY : src/MaterialTextura.s
+
+# target to generate assembly for a file
+src/MaterialTextura.cpp.s:
+	$(MAKE) -f CMakeFiles/RayData.dir/build.make CMakeFiles/RayData.dir/src/MaterialTextura.cpp.s
+.PHONY : src/MaterialTextura.cpp.s
+
 src/Metall.o: src/Metall.cpp.o
 
 .PHONY : src/Metall.o
@@ -1280,6 +1307,9 @@ help:
 	@echo "... src/Material.o"
 	@echo "... src/Material.i"
 	@echo "... src/Material.s"
+	@echo "... src/MaterialTextura.o"
+	@echo "... src/MaterialTextura.i"
+	@echo "... src/MaterialTextura.s"
 	@echo "... src/Metall.o"
 	@echo "... src/Metall.i"
 	@echo "... src/Metall.s"

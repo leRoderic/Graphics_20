@@ -10,13 +10,10 @@
 
 class Scale : public TG {
 public:
-    glm::vec3 scalation;
+    glm::vec3 scale;
     float escala;
-
     Scale(glm::vec3 scale);
-
     Scale(float esc);
-
     ~Scale();
 };
 

@@ -53,7 +53,7 @@ public:
 
     Camera *cam;
 private:
-    int const MAX_DEPTH = 10;
+    int const MAX_DEPTH = 1;
 };
 
 #endif // SCENE_H

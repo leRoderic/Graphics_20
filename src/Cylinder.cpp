@@ -4,14 +4,14 @@
 
 #include "Cylinder.h"
 
-Cylinder::Cylinder(vec3 center, float radius, float height) : Object(height) {
-    this->center = vec3(0.0,0.0,0.0);
-    this->radius = 1.0;
+Cylinder::Cylinder(vec3 center, float height, float d) : Object(d) {
+    this->center = center;
+    this->radius = 1.0f;
     this->height = height;
     this->normal1 = vec3(0.0,1.0,0.0);
     this->normal2 = vec3(0.0,-1.0,0.0);
-    this->top1 = new Circle(normal1, this->center.y + vec3(0, height, 0), 1.0);
-    this->top2 = new Circle(normal2, this->center, 1.0);
+    this->top1 = new Circle(normal1, this->center + vec3(0, height, 0), radius);
+    this->top2 = new Circle(normal2, this->center, radius);
 }
 
 Cylinder::~Cylinder() {
@@ -77,7 +77,7 @@ bool Cylinder::intersection(const Ray& raig, float t_min, float t_max, Intersect
 
     //calcul de la intersecció amb el cilindre
     if(intersect(raig,t_min,t_max,info)){
-        intersect_top1 = info.t;
+        intersect_cilindre = info.t;
         intersecta = true;
     }
     //calcul de la intersecció amb circle top1
@@ -115,6 +115,12 @@ void Cylinder::aplicaTG(TG *t) {
         // Per ara només es preveuen translacions
         vec4 c(center, 1.0);
         c = t->getTG() * c;
-        center.x = c.x; center.y = c.y; center.z = c.z;
+        center.x = c.x;
+        center.y = c.y;
+        center.z = c.z;
     }
+    if (dynamic_cast<Scale *>(t)) {
+        this->radius *= t->matTG[0][0];
+    }
+
 }

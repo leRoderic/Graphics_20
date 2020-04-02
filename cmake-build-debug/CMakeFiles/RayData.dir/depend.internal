@@ -773,6 +773,8 @@ CMakeFiles/RayData.dir/src/DataReader.cpp.o
  ..//glm/glm.hpp
  ..//glm/gtc/matrix_transform.hpp
  ..//glm/gtx/constants.hpp
+ ..//include/Mate.h
+ ..//include/MaterialTextura.h
  ..//include/ObjectFactory.h
  ../glm/./core/_detail.hpp
  ../glm/./core/_fixes.hpp
@@ -863,6 +865,7 @@ CMakeFiles/RayData.dir/src/DataReader.cpp.o
  ../include/Scene.h
  ../include/Sphere.h
  ../include/TG.h
+ ../include/Texture.h
  ../include/Translate.h
  ../include/Triangle.h
  /mnt/h/rcmik/Documents/GitHub/dataray-f01/src/DataReader.cpp
@@ -888,6 +891,7 @@ CMakeFiles/RayData.dir/src/DataReader.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h
@@ -899,10 +903,12 @@ CMakeFiles/RayData.dir/src/DataReader.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qline.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
@@ -914,6 +920,7 @@ CMakeFiles/RayData.dir/src/DataReader.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qpair.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocessordetection.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h
@@ -922,6 +929,7 @@ CMakeFiles/RayData.dir/src/DataReader.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer_impl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringbuilder.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h
@@ -935,6 +943,23 @@ CMakeFiles/RayData.dir/src/DataReader.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QColor
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QImage
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qimage.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs_win.h
 CMakeFiles/RayData.dir/src/FittedPlane.cpp.o
  ..//glm/glm.hpp
  ..//glm/gtc/matrix_transform.hpp
@@ -1529,6 +1554,146 @@ CMakeFiles/RayData.dir/src/Material.cpp.o
  ../include/Material.h
  ../include/Ray.h
  /mnt/h/rcmik/Documents/GitHub/dataray-f01/src/Material.cpp
+CMakeFiles/RayData.dir/src/MaterialTextura.cpp.o
+ ..//glm/glm.hpp
+ ../glm/./core/_detail.hpp
+ ../glm/./core/_fixes.hpp
+ ../glm/./core/_swizzle.hpp
+ ../glm/./core/_swizzle_func.hpp
+ ../glm/./core/_vectorize.hpp
+ ../glm/./core/func_common.hpp
+ ../glm/./core/func_common.inl
+ ../glm/./core/func_exponential.hpp
+ ../glm/./core/func_exponential.inl
+ ../glm/./core/func_geometric.hpp
+ ../glm/./core/func_geometric.inl
+ ../glm/./core/func_integer.hpp
+ ../glm/./core/func_integer.inl
+ ../glm/./core/func_matrix.hpp
+ ../glm/./core/func_matrix.inl
+ ../glm/./core/func_noise.hpp
+ ../glm/./core/func_noise.inl
+ ../glm/./core/func_packing.hpp
+ ../glm/./core/func_packing.inl
+ ../glm/./core/func_trigonometric.hpp
+ ../glm/./core/func_trigonometric.inl
+ ../glm/./core/func_vector_relational.hpp
+ ../glm/./core/func_vector_relational.inl
+ ../glm/./core/setup.hpp
+ ../glm/./core/type.hpp
+ ../glm/./core/type_float.hpp
+ ../glm/./core/type_gentype.hpp
+ ../glm/./core/type_half.hpp
+ ../glm/./core/type_half.inl
+ ../glm/./core/type_int.hpp
+ ../glm/./core/type_mat.hpp
+ ../glm/./core/type_mat2x2.hpp
+ ../glm/./core/type_mat2x2.inl
+ ../glm/./core/type_mat2x3.hpp
+ ../glm/./core/type_mat2x3.inl
+ ../glm/./core/type_mat2x4.hpp
+ ../glm/./core/type_mat2x4.inl
+ ../glm/./core/type_mat3x2.hpp
+ ../glm/./core/type_mat3x2.inl
+ ../glm/./core/type_mat3x3.hpp
+ ../glm/./core/type_mat3x3.inl
+ ../glm/./core/type_mat3x4.hpp
+ ../glm/./core/type_mat3x4.inl
+ ../glm/./core/type_mat4x2.hpp
+ ../glm/./core/type_mat4x2.inl
+ ../glm/./core/type_mat4x3.hpp
+ ../glm/./core/type_mat4x3.inl
+ ../glm/./core/type_mat4x4.hpp
+ ../glm/./core/type_mat4x4.inl
+ ../glm/./core/type_size.hpp
+ ../glm/./core/type_vec.hpp
+ ../glm/./core/type_vec1.hpp
+ ../glm/./core/type_vec1.inl
+ ../glm/./core/type_vec2.hpp
+ ../glm/./core/type_vec2.inl
+ ../glm/./core/type_vec3.hpp
+ ../glm/./core/type_vec3.inl
+ ../glm/./core/type_vec4.hpp
+ ../glm/./core/type_vec4.inl
+ ../glm/core/_fixes.hpp
+ ../glm/core/setup.hpp
+ ../include/Hitable.h
+ ../include/Material.h
+ ../include/MaterialTextura.h
+ ../include/Ray.h
+ ../include/Texture.h
+ /mnt/h/rcmik/Documents/GitHub/dataray-f01/src/MaterialTextura.cpp
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_bootstrap.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_cxx11.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_msvc.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcompilerdetection.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig-bootstrapped.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qline.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject_impl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpair.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocessordetection.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringbuilder.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtcore-config.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QColor
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QImage
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qimage.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs_win.h
 CMakeFiles/RayData.dir/src/Metall.cpp.o
  ..//glm/glm.hpp
  ../glm/./core/_detail.hpp
@@ -3113,6 +3278,8 @@ CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.o
  ..//glm/glm.hpp
  ..//glm/gtc/matrix_transform.hpp
  ..//glm/gtx/constants.hpp
+ ..//include/MaterialTextura.h
+ ..//include/Metall.h
  ../glm/./core/_detail.hpp
  ../glm/./core/_fixes.hpp
  ../glm/./core/_swizzle.hpp
@@ -3205,6 +3372,7 @@ CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.o
  ../include/SceneFactoryData.h
  ../include/Sphere.h
  ../include/TG.h
+ ../include/Texture.h
  ../include/Translate.h
  ../include/Triangle.h
  /mnt/h/rcmik/Documents/GitHub/dataray-f01/src/SceneFactoryData.cpp
@@ -3229,6 +3397,7 @@ CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h
@@ -3240,10 +3409,12 @@ CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qline.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
@@ -3255,6 +3426,7 @@ CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qpair.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocessordetection.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h
@@ -3263,6 +3435,7 @@ CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer_impl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringbuilder.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h
@@ -3276,6 +3449,23 @@ CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QColor
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QImage
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qimage.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs_win.h
 CMakeFiles/RayData.dir/src/SceneFactoryVirtual.cpp.o
  ..//glm/glm.hpp
  ..//glm/gtc/matrix_transform.hpp

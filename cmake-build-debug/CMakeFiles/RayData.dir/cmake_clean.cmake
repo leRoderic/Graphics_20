@@ -42,6 +42,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/RayData.dir/src/FittedPlane.cpp.o"
   "CMakeFiles/RayData.dir/src/Mate.cpp.o"
   "CMakeFiles/RayData.dir/src/Metall.cpp.o"
+  "CMakeFiles/RayData.dir/src/MaterialTextura.cpp.o"
   "RayData.pdb"
   "RayData"
 )

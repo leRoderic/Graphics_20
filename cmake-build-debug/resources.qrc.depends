@@ -10,5 +10,6 @@
         <file>resources/data0.txt</file>
         <file>resources/dataBCN.txt</file>
         <file>resources/dataBCNZoom.txt</file>
+        <file>resources/dadesEuropa.txt</file>
     </qresource>
 </RCC>
