@@ -17,8 +17,8 @@ Camera *SceneFactoryData::createCamera() {
     float dist_to_focus = distance(lookfrom, lookat);
 
     float aperture = 30;
-    int pixelsX = 1000;//582
-    int pixelsY = 600;//600
+    int pixelsX = 600;//582
+    int pixelsY = 400;//600
 
     return (new Camera(lookfrom, lookat, vec3(0, 1, 0), 25, pixelsX, pixelsY, aperture, dist_to_focus));
 }
@@ -29,14 +29,10 @@ Scene *SceneFactoryData::createScene(QString filename) {
     // TODO: Fase 1: construccio de l'escena dins de dataReader
     sc->readFile(filename);
 
-    s->lights.push_back(new Light(vec3(-5, 20, 10), vec3(0.1f), vec3(0.7f), vec3(0.7f), vec3(0.0,0.0,1.0)));
-    s->lights.push_back(new Light(vec3(2, 8, -50), vec3(0.1f), vec3(0.7f), vec3(0.7f), vec3(0.0,0.0,1.0)));
-    s->lights.push_back(new Light(vec3(2, 8, 10), vec3(0.1f), vec3(0.7f), vec3(0.7f), vec3(0.0,0.0,1.0)));
-    s->ambientGlobal = vec3(0.02f);
-    /*s->lights.push_back(new Light(vec3(2, 8, 10), vec3(0.1f), vec3(0.7f), vec3(0.7f), vec3(0.0,0.0,1.0)));
-    s->lights.push_back(new Light(vec3(-5, 20, 10), vec3(0.01f), vec3(0.5f), vec3(0.4f), vec3(0.0,0.0,1.0)));
-    s->lights.push_back(new Light(vec3(2, 8, -50), vec3(0.1f), vec3(0.7f), vec3(0.7f), vec3(0.0,0.0,1.0)));
-    s->ambientGlobal = vec3(0.5f);*/
+    s->lights.push_back(new Light(vec3(-5, 20, 10), vec3(0.1f), vec3(0.7f), vec3(0.7f), vec3(1.0,0.0,1.0)));
+    s->lights.push_back(new Light(vec3(-5, 5, -40), vec3(0.01f), vec3(0.5f), vec3(0.4f), vec3(1.0,0.0,1.0)));
+    s->lights.push_back(new Light(vec3(2, 15, 10), vec3(0.1f), vec3(0.7f), vec3(0.7f), vec3(3.0,2.0,1.0)));
+    s->ambientGlobal = vec3(0.3f);
 
     //s->ground->setMaterial(new MaterialTextura());
     for(Object *o: s->objects){
