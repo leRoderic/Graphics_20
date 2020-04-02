@@ -28,22 +28,23 @@ bool Cylinder::intersect(const Ray &raig, float t_min, float t_max, Intersection
      * b = 2 * (ox’ * dx’ + oz’ * dz’)
      * c = ox’^2 + oz’^2 – 1
     */
-    float a = ((raig.dirVector().x*raig.dirVector().x) + (raig.dirVector().z*raig.dirVector().z));
-    float b = 2*(raig.dirVector().x * raig.initialPoint().x + raig.dirVector().z * raig.initialPoint().z);
-    float c = (raig.initialPoint().x * raig.initialPoint().x ) + (raig.initialPoint().z * raig.initialPoint().z) - 1;
-    float discriminant = b*b -4*a*c;
-    float temp1,temp2; //(-b +- SQRT(b² – 4 * a * c) ) / (2 * a)
-
+    float a = ((raig.dirVector().x * raig.dirVector().x) + (raig.dirVector().z * raig.dirVector().z));
+    float b = 2 * (raig.dirVector().x * (raig.initialPoint().x - center.x) +
+                   raig.dirVector().z * (raig.initialPoint().z - center.z));
+    float c = ((raig.initialPoint().x - center.x) * (raig.initialPoint().x - center.x)) +
+              ((raig.initialPoint().z - center.z) * (raig.initialPoint().z - center.z)) - 1;
+    float discriminant = b * b - 4 * a * c;
+    float temp1, temp2; //(-b +- SQRT(b² – 4 * a * c) ) / (2 * a)
     //Si a < EPSILON o l'arrel es < que ESPSILON, llavors no hi ha intersecció
-    if(a < EPSILON || discriminant < EPSILON){
+    if (a < EPSILON || discriminant < EPSILON) {
         return false;
     }
-    //Raig tangent al cilindre, una unica intersecció
-    else if(discriminant > 0-EPSILON && discriminant < 0+EPSILON){
+        //Raig tangent al cilindre, una unica intersecció
+    else if (discriminant > 0 - EPSILON && discriminant < 0 + EPSILON) {
         temp1 = temp2 = -b / (2 * a);
     }
-    //Sino tenim 2 interseccions i hem d'agafar la mes petita
-    else{
+        //Sino tenim 2 interseccions i hem d'agafar la mes petita
+    else {
         temp1 = (-b + sqrtf(discriminant))/(2 * a);
         temp2 = (-b - sqrtf(discriminant))/(2 * a);
     }
@@ -77,7 +78,7 @@ bool Cylinder::intersection(const Ray& raig, float t_min, float t_max, Intersect
 
     //calcul de la intersecció amb el cilindre
     if(intersect(raig,t_min,t_max,info)){
-        intersect_cilindre = info.t;
+        intersect_top1 = info.t;
         intersecta = true;
     }
     //calcul de la intersecció amb circle top1
@@ -119,8 +120,19 @@ void Cylinder::aplicaTG(TG *t) {
         center.y = c.y;
         center.z = c.z;
     }
-    if (dynamic_cast<Scale *>(t)) {
-        this->radius *= t->matTG[0][0];
+    if (dynamic_cast<Scale *>(t)) {//augmentem l'altura
+        vec4 c(1.0, 1.0, 1.0, 1.0);
+        c = t->getTG() * c;
+        this->height = c.x * height;
+    }
+    //reconstruim tapes
+    if (top1 != NULL) {
+        delete top1;
+        top1 = new Circle(normal1, this->center + vec3(0, height, 0), radius);
+    }
+    if (top2 != NULL) {
+        delete top2;
+        top2 = new Circle(normal2, this->center, radius);
     }
 
 }
