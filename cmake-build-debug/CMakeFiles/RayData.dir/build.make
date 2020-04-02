@@ -61,11 +61,13 @@ qrc_resources.cpp: ../resources/earth1.png
 qrc_resources.cpp: ../resources/cube.obj
 qrc_resources.cpp: ../resources/europa.png
 qrc_resources.cpp: ../resources/map.png
+qrc_resources.cpp: ../resources/greenpointbcn.png
 qrc_resources.cpp: ../resources/mapZoom.png
 qrc_resources.cpp: ../resources/spheres.txt
 qrc_resources.cpp: ../resources/spheres2.txt
 qrc_resources.cpp: ../resources/data0.txt
 qrc_resources.cpp: ../resources/dataBCN.txt
+qrc_resources.cpp: ../resources/dataBCNPuntosVerdes.txt
 qrc_resources.cpp: ../resources/dataBCNZoom.txt
 qrc_resources.cpp: ../resources/dadesEuropa.txt
 qrc_resources.cpp: ../resources.qrc
