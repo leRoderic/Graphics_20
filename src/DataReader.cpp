@@ -63,8 +63,8 @@ void DataReader::baseFound(QStringList fields) {
         float y = -1.0f;
         y = fields[5].toDouble();
 
-        scene->pmin = vec3 (xMin, y, zMin);
-        scene->pmax = vec3 (xMax, y, zMax);
+        scene->pmin = vec3(-50);//vec3 (xMin, y, zMin);
+        scene->pmax = vec3(50);//vec3 (xMax, y, zMax);
 
         o = ObjectFactory::getInstance()->createObject(scene->pmin.x, y, scene->pmin.z, scene->pmax.x, y, scene->pmax.z,
                                                        fields[2].toDouble(), fields[3].toDouble(), fields[4].toDouble(),
