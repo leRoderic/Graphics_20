@@ -29,7 +29,7 @@ Como ejemplo del punto anterior, se han extraído datos reales del Ayuntamiento 
 
 ## Extensions
 
-* <ins>Carga de escena híbridas</ins>: La escena DATA es capaz de cargar diferentes tipos de gizmos a la vez, por ejemplo cilindros y esferas.
+* <ins>Carga de escena híbridas</in>: La escena DATA es capaz de cargar diferentes tipos de gizmos a la vez, por ejemplo cilindros y esferas.
 
 ## Screenshots
 ![](https://i.imgur.com/kM5vTC3.png)
@@ -43,7 +43,7 @@ Como ejemplo del punto anterior, se han extraído datos reales del Ayuntamiento 
 ![](https://i.imgur.com/8kULdvL.png)
 ![](https://i.imgur.com/W5ZBxk0.png)
 
-| Escena:        	| Data ([Fichero RAW](https://pastebin.com/6LxqsarW)) 	|
+| Escena:        	| Data - Puntos verdes de Barcelona([Fichero RAW](https://pastebin.com/6LxqsarW)) 	|
 |----------------	|-----------------------------------------------------	|
 | Fichero datos: 	| [dataBCNPuntosVerdes.txt](https://github.com/GiVD2019/dataray-f01/blob/master/resources/dataBCNPuntosVerdes.txt)                             	|
 | Materiales:    	| ![](https://i.imgur.com/CFfRjly.png)                	|
@@ -53,7 +53,7 @@ Como ejemplo del punto anterior, se han extraído datos reales del Ayuntamiento 
 ![](https://i.imgur.com/cRvJ1t6.png)
 ![](https://i.imgur.com/41O4k5B.png)
 
-| Escena:        	| Virtual ([Fichero RAW](https://pastebin.com/CmmPbZPQ)) 	|
+| Escena:        	| Virtual - Esferas 1 ([Fichero RAW](https://pastebin.com/CmmPbZPQ)) 	|
 |----------------	|-------------------------------------------------------	|
 | Fichero datos: 	| ![](https://i.imgur.com/hO49HRp.png)                  	|
 | Materiales:    	| ![](https://i.imgur.com/OgNa6f3.png)                  	|
@@ -62,7 +62,7 @@ Como ejemplo del punto anterior, se han extraído datos reales del Ayuntamiento 
 
 ![](https://i.imgur.com/VNk8oXn.png)
 
-| Fase           	| Data ([Fichero RAW](https://pastebin.com/tXJJyAkb)) 	|
+| Escena:           	| Virtual - Cara 1 ([Fichero RAW](https://pastebin.com/tXJJyAkb)) 	|
 |----------------	|----------------------------------------------------	|
 | Fichero datos: 	| ![](https://i.imgur.com/ZUnmbFV.png)               	|
 | Materiales:    	| ![](https://i.imgur.com/o7ZD2q2.png)               	|
@@ -71,12 +71,21 @@ Como ejemplo del punto anterior, se han extraído datos reales del Ayuntamiento 
 
 ![](https://i.imgur.com/aIZxaol.png)
 
-| Fase           	| Data ([Fichero RAW](https://pastebin.com/QyL0DqLL)) 	|
+| Escena:           	| Virtual - Cara 2 ([Fichero RAW](https://pastebin.com/QyL0DqLL)) 	|
 |----------------	|----------------------------------------------------	|
 | Fichero datos: 	| ![](https://i.imgur.com/nPQCCCN.png)               	|
 | Materiales:    	| ![](https://i.imgur.com/Cde0Mfx.png)               	|
 | Iluminación:   	| ![](https://i.imgur.com/LMXy8pJ.png)               	|
 | Cámara:        	| ![](https://i.imgur.com/J3vgqpe.png)               	|
+
+![](https://i.imgur.com/oMPQ8ZA.png)
+
+| Escena:           	| Data - Hospitales de Barcelona ([Fichero RAW](https://pastebin.com/BFJ5hnsj)) 	|
+|----------------	|-------------------------------------------------------------------------------	|
+| Fichero datos: 	| ![](https://i.imgur.com/VJbjZU8.png)                                          	|
+| Iluminación:   	| ![](https://i.imgur.com/rpOMVCd.png)                                          	|
+| Cámara:        	| ![](https://i.imgur.com/lKXuib1.png)                                          	|
+
 
 
 ## Additional 
