@@ -40,7 +40,7 @@ GiV — Práctica 1 :::: Grupo F01
 ![](https://i.imgur.com/8kULdvL.png)
 ![](https://i.imgur.com/W5ZBxk0.png)
 
-| Escena:        	| Data ((Fichero RAW)[https://pastebin.com/6LxqsarW]) 	|
+| Escena:        	| Data ([Fichero RAW](https://pastebin.com/6LxqsarW])) 	|
 |----------------	|-----------------------------------------------------	|
 | Fichero datos: 	| dataBCNPuntosVerdes.txt                             	|
 | Materiales:    	| ![](https://i.imgur.com/CFfRjly.png)                	|
