@@ -25,7 +25,7 @@ Controller::Controller(QString fileName, SceneFactory::SCENE_FACTORIES s, Render
     // Es crea aqui només un ColorMap
     // TODO Fase 2: Cal tenir en compte tants ColorMaps com numero de propietats, en el cas que el fitxer de dades en
     //  tingui més d'una. On es pot fer això millor?
-    ColorMap *colorMap = scFac->createColorMap(ColorMapStatic::ColorMapType::COLOR_MAP_TYPE_INFERNO);
+    ColorMap *colorMap = scFac->createColorMap(ColorMapStatic::ColorMapType::COLOR_MAP_TYPE_PLASMA);
     scene->setMaterials(colorMap);
 
     // ETAPA 2: Inicialitzacio del Rendering

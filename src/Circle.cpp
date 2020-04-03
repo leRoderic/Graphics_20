@@ -31,4 +31,7 @@ void Circle::aplicaTG(TG *t) {
         center.y = c.y;
         center.z = c.z;
     }
+    if (dynamic_cast<Scale *>(t)) {
+        this->radius *= t->matTG[0][0];
+    }
 }

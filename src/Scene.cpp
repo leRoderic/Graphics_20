@@ -173,8 +173,19 @@ void Scene::setMaterials(ColorMap *cm) {
         //  Crear els materials segons la paleta de cada propietat a cada objecte de l'escena
         m = new Lambertian(cm->getColor(0));
     }
-
     for (auto it = this->objects.begin(); it != this->objects.end(); ++it) {
+        if ((*it)->getMaterial() == nullptr) {
+            m = new Lambertian(vec3(0.5, 0.2, 0.7));
+            if ((*it)->getData() != -1.0) {
+                m = new Lambertian(cm->getColor((*it)->getData()));
+            } else {
+                m = new Lambertian(vec3(0.5, 0.2, 0.7));
+            }
+            (*it)->setMaterial(m);
+        }
+    }
+    /*Para DATA
+      for (auto it = this->objects.begin(); it != this->objects.end(); ++it) {
         std::cerr << "Color..." << endl;
         if ((*it)->getMaterial() != nullptr) {
 
@@ -189,6 +200,7 @@ void Scene::setMaterials(ColorMap *cm) {
         }
         (*it)->setMaterial(m);
     }
+      */
 }
 
 void Scene::setDimensions(vec3 p1, vec3 p2) {

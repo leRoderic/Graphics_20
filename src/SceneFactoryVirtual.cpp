@@ -19,16 +19,27 @@ Scene *SceneFactoryVirtual::createScene(QString filename) {
     SceneReader *sc = new SceneReader(s);
     sc->readFile(filename);
 
-    s->objects[0]->setMaterial(new Mate(vec3(0.2f), vec3(0.8, 0.8, 0), vec3(1.0f), 10, 0.0f));
-    //s->objects[0]->setMaterial(new Mate(vec3(0.2f), vec3(0.8, 0.8, 0), vec3(1.0f), 10, 0.0f));
+    s->objects[0]->setMaterial(new Metall(vec3(0.2f), vec3(0.7, 0.6, 0.5), vec3(0.7f), 10, 0.0f));
+    s->ground = s->objects[0];
     //s->objects[1]->setMaterial(new Mate(vec3(0.2f), vec3(0.5f), vec3(1.0f), 10, 0.0f));
-    //s->objects[2]->setMaterial(new Metall(vec3(0.2f), vec3(0.7, 0.6, 0.5), vec3(0.7f), 10, 0.0f));
     //s->objects[3]->setMaterial(new Transparent(vec3(0.2f), vec3(0.7, 0.6, 0.5), vec3(0.7f), 10, 1.0f, 1.5f));
+    s->objects[1]->setMaterial(new Metall(vec3(0.2f), vec3(0.7, 0.6, 0.5), vec3(0.7f), 10, 0.0f));
+    s->objects[2]->setMaterial(new Metall(vec3(0.2f), vec3(0.7, 0.6, 0.5), vec3(0.7f), 10, 0.0f));
+    s->objects[3]->setMaterial(new Metall(vec3(0.2f), vec3(0.7, 0.6, 0.5), vec3(0.7f), 10, 0.0f));
+    s->objects[4]->setMaterial(new Metall(vec3(0.2f), vec3(0.7, 0.6, 0.5), vec3(0.7f), 10, 0.0f));
+    s->objects[5]->setMaterial(new Metall(vec3(0.2f), vec3(0.7, 0.6, 0.5), vec3(0.7f), 10, 0.0f));
+    s->objects[6]->setMaterial(new Metall(vec3(0.2f), vec3(0.7, 0.6, 0.5), vec3(0.7f), 10, 0.0f));
+    s->objects[7]->setMaterial(new Metall(vec3(0.2f), vec3(0.7, 0.6, 0.5), vec3(0.7f), 10, 0.0f));
+    s->objects[8]->setMaterial(new Metall(vec3(0.2f), vec3(0.7, 0.6, 0.5), vec3(0.7f), 10, 0.0f));
+    s->objects[9]->setMaterial(new Mate(vec3(0.2f), vec3(0.5f), vec3(1.0f), 10, 1.0f));
 
 
     s->ambientGlobal = vec3(0.1f);
-    s->lights.push_back(new Light(vec3(2, 8, 10), vec3(0.3f), vec3(0.7f), vec3(1.0f), vec3(0.5, 0.0, 0.01)));
-    s->lights.push_back(new Light(vec3(2, 8, -10), vec3(0.3f), vec3(0.7f), vec3(1.0f), vec3(0.5, 0.0, 0.01)));
+    s->lights.push_back(new Light(vec3(-30, 0, 5), vec3(0.3f), vec3(0.7f), vec3(1.0f), vec3(0.5, 0.0, 0.01)));
+    s->lights.push_back(new Light(vec3(30, 0, 5), vec3(0.3f), vec3(0.7f), vec3(1.0f), vec3(0.5, 0.0, 0.01)));
+    s->lights.push_back(new Light(vec3(0, -30, 5), vec3(0.3f), vec3(0.7f), vec3(1.0f), vec3(0.5, 0.0, 0.01)));
+    s->lights.push_back(new Light(vec3(0, 30, 5), vec3(0.3f), vec3(0.7f), vec3(1.0f), vec3(0.5, 0.0, 0.01)));
+    //s->lights.push_back(new Light(vec3(2, 8, -10), vec3(0.3f), vec3(0.7f), vec3(1.0f), vec3(0.5, 0.0, 0.01)));
 
     return s;
 }
@@ -38,25 +49,14 @@ Camera *SceneFactoryVirtual::createCamera() {
     // creacio de la camera
     // Camera changed: !the same as the template
 
-    vec3 lookfrom(13, 2, 3);
+    vec3 lookfrom(0, 0, 40);
     vec3 lookat(0, 0, 0);
     float dist_to_focus = length(lookfrom - lookat);
-    float aperture = 0.1;
+    float aperture = 30;
     int pixelsX = 600;
     int pixelsY = 400;
 
     return (new Camera(lookfrom, lookat, vec3(0, 1, 0), 20, pixelsX, pixelsY, aperture, dist_to_focus));
-/*
-    vec3 lookfrom(0, 0, 3);
-    vec3 lookat(0, 0, -1); // 1, -1, -1
-
-    float dist_to_focus = 1.0;
-    float aperture = 20;
-    int pixelsX = 600;
-
-    int pixelsY = 400;
-    return (new Camera(lookfrom, lookat, vec3(0, 1, 0), 90, pixelsX, pixelsY, aperture, dist_to_focus));
-    */
 
 }
 
