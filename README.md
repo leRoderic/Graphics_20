@@ -94,7 +94,7 @@ Como ejemplo del punto anterior, se han extraído datos reales del Ayuntamiento 
     <tr>
       <th>Fase</th>
       <th align="center">Horas</th>
-      <th align="right">Problemas</th>
+      <th align="center">Problemas</th>
     </tr>
     <tr>
       <td>0</td>
@@ -122,7 +122,7 @@ Como ejemplo del punto anterior, se han extraído datos reales del Ayuntamiento 
       <tr>
       <td>3</td>
       <td align="center">10</td>
-      <td align="right">
+      <td align="left">
           <li>Los parámetros de las visualizaciones son incorrectos e incompletos.</li>
           <li>El fichero de datos de Europa estaba sin etiquetas y con un campo erróneo.</li>
      </td>
