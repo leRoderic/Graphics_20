@@ -38,7 +38,6 @@ GiV — Práctica 1 :::: Grupo F01
 ![](https://i.imgur.com/I2TYz5u.png)
 ![](https://i.imgur.com/N5AwqlP.png)
 ![](https://i.imgur.com/8kULdvL.png)
-![](https://i.imgur.com/e0Ji5tb.png)
 ![](https://i.imgur.com/W5ZBxk0.png)
 | Escena:        	| Data ((Fichero RAW)[https://pastebin.com/6LxqsarW]) 	|
 |----------------	|-----------------------------------------------------	|
