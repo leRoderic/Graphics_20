@@ -105,7 +105,7 @@ Como ejemplo del punto anterior, se han extraído datos reales del Ayuntamiento 
       <tr>
       <td>1</td>
       <td align="center">25</td>
-      <td align="right">
+      <td align="left">
           <li>Fórmula teoría cálculo intersección de un triángulo no nos iba, hemos cambiado la fórmula.</li>
           <li>Problemas al cargar los triángulos de las mallas.</li>
           <li>La explicación de caja mínima contenedora y los límites del .txt no es muy precisa.</li>
@@ -114,8 +114,8 @@ Como ejemplo del punto anterior, se han extraído datos reales del Ayuntamiento 
       <tr>
       <td>2</td>
       <td align="center">81</td>
-      <td align="right">
-          <li>Sombras con múltiples objetos (resuelto).</li>
+      <td align="left">
+          <li>Sombras con múltiples objetos.</li>
           <li>Sombras de los objetos transparentes.</li>
      </td>
     </tr>
