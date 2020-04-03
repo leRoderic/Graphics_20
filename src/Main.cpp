@@ -13,7 +13,7 @@ int main(int argc, char **argv) {
     //Controller *controller = new Controller("://resources/data0.txt", SceneFactory::VIRTUAL, RenderFactory::ONLINE);
 
     // TO-DO: Fase 1 carregar dades del fitxer de dades
-    Controller *controller = new Controller("://resources/dataBCNPuntosVerdes.txt", SceneFactory::DATA, RenderFactory::ONLINE);
+    Controller *controller = new Controller("://resources/dadesEuropa.txt", SceneFactory::DATA, RenderFactory::ONLINE);
     controller->start(argc, argv);
 
     return(0);

@@ -7,7 +7,6 @@ BoundaryObject::BoundaryObject(string s, float data) : Object(data) {
 
     readObj(s);
 
-    // Cal recorrer l'estructura de l'objecte segons cara-vertexs que es carrega
     vertexs.clear();
     cares.clear();
 }
@@ -25,7 +24,7 @@ bool BoundaryObject::intersection(const Ray &raig, float t_min, float t_max, Int
     float t_menor(std::numeric_limits<float>::infinity());
     bool h = false;
 
-    for (Triangle *t : triangles) {//provem tots els hits i ens quedem el triangle de t mes petita ja que sera la primera en xocar
+    for (Triangle *t : triangles) {
         if (t->intersection(raig, t_min, t_max, info)) {
             if (info.t < t_menor) {
                 t_menor = info.t;
@@ -34,7 +33,6 @@ bool BoundaryObject::intersection(const Ray &raig, float t_min, float t_max, Int
         }
     }
 
-    // actualitzem info
     info.t = t_menor;
     info.p = raig.pointAtParameter(info.t);
     info.normal = vec3(info.p.x, 0, info.p.z);
@@ -47,7 +45,6 @@ void BoundaryObject::aplicaTG(TG *tg) {
 
     int nTriangles = this->triangles.size();
     for (int i = 0; i < nTriangles; i++) {
-        // Cal fer un recorregut de totes les cares per a posar-les com Triangles
         this->triangles[i]->aplicaTG(tg);
     }
 }
@@ -106,7 +103,7 @@ BoundaryObject::BoundaryObject(const QString &fileName, float data) : Object(dat
         vec4 p0, p1, p2;
         int nCares = this->cares.size();
         for (int i = 0; i < nCares; i++) {
-            // Cal fer un recorregut de totes les cares per a posar-les com Triangles
+
             p0 = vertexs[cares[i].idxVertices[0]];
             p1 = vertexs[cares[i].idxVertices[1]];
             p2 = vertexs[cares[i].idxVertices[2]];

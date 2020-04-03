@@ -22,7 +22,6 @@ bool Triangle::intersection(const Ray &raig, float t_min, float t_max, Intersect
     temp /= normal[0] * vp[0] + normal[1] * vp[1] + normal[2] * vp[2]; //
     vec3 point = raig.pointAtParameter(temp); //
 
-    // intersect area calculations
     float e1 = dot(cross((p3 - p1), (point - p1)), normal);
     float e2 = dot(cross((p2 - p3), (point - p3)), normal);
     float e3 = dot(cross((p1 - p2), (point - p2)), normal);
@@ -45,46 +44,9 @@ bool Triangle::intersection(const Ray &raig, float t_min, float t_max, Intersect
     return false;
 }
 
-/*
-    float r = abs(u + v + w);
-
-    if (abs(1 - r) < 0.000001) return false;
-
-    if (temp > t_max || temp < t_min) return false;
-
-    info.t = temp;
-    info.p = point;
-
-    if (dot(normal, raig.dirVector()) < 0)
-        info.normal = normal;
-    else
-        info.normal = - normal;
-
-    info.mat_ptr = material;
-
-    return true;
-
-    if (abs(1 - r) > 0.000001) {
-        if ((1 >= u && u >= 0) && (1 >= v && v >= 0) && (1 >= w && w >= 0)) {
-            if (temp < t_max && temp > t_min) {
-                info.t = temp;
-                info.p = raig.pointAtParameter(info.t);
-                if (dot(normal, raig.dirVector()) < 0)
-                    info.normal = normal;
-                else
-                    info.normal = -normal;
-                info.mat_ptr = material;
-                return true;
-            }
-        }
-    }
-    return false;
-
-}*/
-
 void Triangle::aplicaTG(TG *t) {
     if (dynamic_cast<Translate *>(t)) {
-        // Nomes movem el punt de pas
+
         vec4 newp(p1, 1.0);
         newp = t->getTG() * newp;
         p1.x = newp.x;
