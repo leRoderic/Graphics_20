@@ -38,6 +38,7 @@ GiV — Práctica 1 :::: Grupo F01
 ![](https://i.imgur.com/I2TYz5u.png)
 ![](https://i.imgur.com/N5AwqlP.png)
 ![](https://i.imgur.com/8kULdvL.png)
+![](https://i.imgur.com/e0Ji5tb.png)
 NO ES DEFINITIVA
 ![](https://i.imgur.com/NR603ao.png)
 ![](https://i.imgur.com/cRvJ1t6.png)
