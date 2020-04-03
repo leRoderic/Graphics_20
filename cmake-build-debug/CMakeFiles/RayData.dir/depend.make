@@ -3277,6 +3277,7 @@ CMakeFiles/RayData.dir/src/SceneFactory.cpp.o: /usr/include/x86_64-linux-gnu/qt5
 CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.o: ../glm/glm.hpp
 CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.o: ../glm/gtc/matrix_transform.hpp
 CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.o: ../glm/gtx/constants.hpp
+CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.o: ../include/Mate.h
 CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.o: ../include/MaterialTextura.h
 CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.o: ../include/Metall.h
 CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.o: ../glm/./core/_detail.hpp

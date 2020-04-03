@@ -3278,6 +3278,7 @@ CMakeFiles/RayData.dir/src/SceneFactoryData.cpp.o
  ..//glm/glm.hpp
  ..//glm/gtc/matrix_transform.hpp
  ..//glm/gtx/constants.hpp
+ ..//include/Mate.h
  ..//include/MaterialTextura.h
  ..//include/Metall.h
  ../glm/./core/_detail.hpp
