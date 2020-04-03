@@ -43,7 +43,7 @@ Como ejemplo del punto anterior, se han extraído datos reales del Ayuntamiento 
 ![](https://i.imgur.com/8kULdvL.png)
 ![](https://i.imgur.com/W5ZBxk0.png)
 
-| Escena:        	| Data - Puntos verdes de Barcelona([Fichero RAW](https://pastebin.com/6LxqsarW)) 	|
+| Escena:        	| Data - Puntos verdes de Barcelona ([Fichero RAW](https://pastebin.com/6LxqsarW)) 	|
 |----------------	|-----------------------------------------------------	|
 | Fichero datos: 	| [dataBCNPuntosVerdes.txt](https://github.com/GiVD2019/dataray-f01/blob/master/resources/dataBCNPuntosVerdes.txt)                             	|
 | Materiales:    	| ![](https://i.imgur.com/CFfRjly.png)                	|
