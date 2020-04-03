@@ -100,32 +100,31 @@ Como ejemplo del punto anterior, se han extraído datos reales del Ayuntamiento 
       <td>0</td>
       <td align="center">2</td>
       <td align="right">
-          <li>item1</li>
-          <li>item2</li>
      </td>
     </tr>
       <tr>
       <td>1</td>
       <td align="center">25</td>
       <td align="right">
-          <li>item1</li>
-          <li>item2</li>
+          <li>Fórmula teoría cálculo intersección de un triángulo no nos iba, hemos cambiado la fórmula.</li>
+          <li>Problemas al cargar los triángulos de las mallas.</li>
+          <li>La explicación de caja mínima contenedora y los límites del .txt no es muy precisa.</li>
      </td>
     </tr>
       <tr>
       <td>2</td>
       <td align="center">81</td>
       <td align="right">
-          <li>item1</li>
-          <li>item2</li>
+          <li>Sombras con múltiples objetos (resuelto).</li>
+          <li>Sombras de los objetos transparentes.</li>
      </td>
     </tr>
       <tr>
       <td>3</td>
       <td align="center">10</td>
       <td align="right">
-          <li>item1</li>
-          <li>item2</li>
+          <li>Los parámetros de las visualizaciones son incorrectos e incompletos.</li>
+          <li>El fichero de datos de Europa estaba sin etiquetas y con un campo erróneo.</li>
      </td>
     </tr>
   </tbody>
