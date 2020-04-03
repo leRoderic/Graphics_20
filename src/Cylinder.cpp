@@ -125,7 +125,7 @@ void Cylinder::aplicaTG(TG *t) {
         vec4 c(1.0, 1.0, 1.0, 1.0);
         c = t->getTG() * c;
         this->height *= c.x;
-        std::cerr << "Sphere scaled by " << t->matTG[0][0] << std::endl;
+        std::cerr << "Cylinder scaled by " << t->matTG[0][0] << std::endl;
     }
     //reconstruim tapes
     if (top1 != NULL) {

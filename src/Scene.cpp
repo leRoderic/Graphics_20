@@ -28,6 +28,10 @@ Scene::~Scene() {
         }
     }
     if (ground) delete this->ground;
+
+    for(auto it = this->lights.begin(); it != this->lights.end(); ++it)
+        delete *it;
+
     delete (cam);
 }
 
@@ -160,10 +164,7 @@ void Scene::update(int nframe) {
 void Scene::setMaterials(ColorMap *cm) {
 
     Material *m;
-    // TO-DO: Fase 0
-    // Cal canviar el codi per a afegir més materials.
-    // TO-DO: Fase 2
-    // Cal canviar el tipus de material Lambertian, Specular, Transparent, Tipus Textura
+
     if (cm == nullptr)
         m = new Lambertian(vec3(0.5, 0.2, 0.7));
     else {
@@ -172,31 +173,16 @@ void Scene::setMaterials(ColorMap *cm) {
         m = new Lambertian(cm->getColor(0));
     }
     //Para VIRTUAL
-    /*for (auto it = this->objects.begin(); it != this->objects.end(); ++it) {
+    for (auto it = this->objects.begin(); it != this->objects.end(); ++it) {
         if ((*it)->getMaterial() == nullptr) {
             m = new Lambertian(vec3(0.5, 0.2, 0.7));
-            if ((*it)->getData() != -1.0) {
+            if ((*it)->getData() != -1.0 && cm != nullptr) {
                 m = new Lambertian(cm->getColor((*it)->getData()));
             } else {
                 m = new Lambertian(vec3(0.5, 0.2, 0.7));
             }
             (*it)->setMaterial(m);
         }
-    }*/
-    //Para DATA
-    for (auto it = this->objects.begin(); it != this->objects.end(); ++it) {
-        if ((*it)->getMaterial() != nullptr) {
-
-            if ((*it)->getData() != -1.0) {
-
-                m = new Lambertian(cm->getColor((*it)->getData()));
-            } else {
-                m = new Lambertian(vec3(0.5, 0.2, 0.7));
-            }
-        } else {
-            m = new Lambertian(vec3(0.5, 0.2, 0.7));
-        }
-        (*it)->setMaterial(m);
     }
 }
 
