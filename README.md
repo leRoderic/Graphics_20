@@ -29,7 +29,7 @@ Como ejemplo del punto anterior, se han extraído datos reales del Ayuntamiento 
 
 ## Extensions
 
-* <ins>Carga de escenas</in>:
+* <ins>Carga de escena híbridas</in>: La escena DATA es capaz de cargar diferentes tipos de gizmos a la vez, por ejemplo cilindros y esferas.
 
 ## Screenshots
 ![](https://i.imgur.com/kM5vTC3.png)
