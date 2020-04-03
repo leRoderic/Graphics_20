@@ -8,7 +8,7 @@ Scene::Scene() {
 }
 
 Scene::~Scene() {
-// TODO Fase 1: Quan s'incloguin nous objectes, cal retocar aquest destructor
+// TO-DO Fase 1: Quan s'incloguin nous objectes, cal retocar aquest destructor
     for (unsigned int i = 0; i < objects.size(); ++i) {
         if (objects[i]) {
             if (dynamic_cast<Sphere *>(objects[i]))
@@ -32,7 +32,7 @@ Scene::~Scene() {
 }
 
 /*
-** TODO: FASE 1: Metode que testeja la interseccio contra tots els objectes de l'escena
+** TO-DO: FASE 1: Metode que testeja la interseccio contra tots els objectes de l'escena
 **
 ** Si un objecte es intersecat pel raig, el parametre  de tipus IntersectInfo conte
 ** la informació sobre la interesccio.
@@ -66,7 +66,7 @@ bool Scene::intersection(const Ray &raig, float t_min, float t_max, Intersection
     info = min_inter;
 
     return intersects;
-    // TODO FASE 0 i FASE 1: Heu de codificar la vostra solucio per aquest metode substituint el 'return true'
+    // TO-DO FASE 0 i FASE 1: Heu de codificar la vostra solucio per aquest metode substituint el 'return true'
     // Una possible solucio es cridar el mètode intersection per a tots els objectes i quedar-se amb la interseccio
     // mes propera a l'observador, en el cas que n'hi hagi més d'una.
     // Cada vegada que s'intersecta un objecte s'ha d'actualitzar el IntersectionInfo del raig,
@@ -75,10 +75,10 @@ bool Scene::intersection(const Ray &raig, float t_min, float t_max, Intersection
 }
 
 /*
-** TODO: Funcio ComputeColorRay es la funcio recursiva del RayTracing.
- * TODO: FASE 1 per a cridar a la intersecció amb l'escena i posar el color de l'objecte
-** TODO: Fase 2 de l'enunciat per incloure Blinn-Phong  i ombres
-** TODO: Fase 2 per a tractar reflexions i transparències
+** TO-DO: Funcio ComputeColorRay es la funcio recursiva del RayTracing.
+ * TO-DO: FASE 1 per a cridar a la intersecció amb l'escena i posar el color de l'objecte
+** TO-DO: Fase 2 de l'enunciat per incloure Blinn-Phong  i ombres
+** TO-DO: Fase 2 per a tractar reflexions i transparències
 **
 */
 vec3 Scene::ComputeColorRay(Ray &ray, int depth) {
@@ -162,14 +162,14 @@ void Scene::update(int nframe) {
 void Scene::setMaterials(ColorMap *cm) {
 
     Material *m;
-    // TODO: Fase 0
+    // TO-DO: Fase 0
     // Cal canviar el codi per a afegir més materials.
-    // TODO: Fase 2
+    // TO-DO: Fase 2
     // Cal canviar el tipus de material Lambertian, Specular, Transparent, Tipus Textura
     if (cm == nullptr)
         m = new Lambertian(vec3(0.5, 0.2, 0.7));
     else {
-        // TODO: Fase 2:
+        // TO-DO: Fase 2:
         //  Crear els materials segons la paleta de cada propietat a cada objecte de l'escena
         m = new Lambertian(cm->getColor(0));
     }

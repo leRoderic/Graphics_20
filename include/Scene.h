@@ -46,7 +46,7 @@ public:
     //Fase 1 / 3.2 / b / a
     Object *ground;
 
-    // TODO FASE 2: Afegir llums a l'escena
+    // TO-DO FASE 2: Afegir llums a l'escena
     std::vector<Light *> lights;
 
     vec3 ambientGlobal;

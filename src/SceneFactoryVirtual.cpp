@@ -63,8 +63,8 @@ Camera *SceneFactoryVirtual::createCamera() {
 
 Scene *SceneFactoryVirtual::createScene() {
     Scene *s = new Scene();
-    //  TODO Fase 0: Test amb una esfera.
-    //  TODO Fase 1: Aquest codi es pot modificar per a provar la visualització de diferents primitives bàsiques
+    //  TO-DO Fase 0: Test amb una esfera.
+    //  TO-DO Fase 1: Aquest codi es pot modificar per a provar la visualització de diferents primitives bàsiques
     this->OneSphere(s);
     return s;
 }

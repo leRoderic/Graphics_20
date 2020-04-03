@@ -74,7 +74,7 @@ void DataReader::baseFound(QStringList fields) {
         //Fase 1 / 3.2 / b / a
         scene->ground = (FittedPlane *) o;
 
-        // TODO Fase 4: llegir textura i afegir-la a l'objecte. Veure la classe Texture
+        // TO-DO Fase 4: llegir textura i afegir-la a l'objecte. Veure la classe Texture
     } else if (QString::compare(" sphere", fields[1], Qt::CaseInsensitive) == 0) {
         // TO-DO: Fase 3: Si cal instanciar una esfera com objecte base i no un pla, cal afegir aqui un else
         o = ObjectFactory::getInstance()->createObject(fields[2].toDouble(), fields[3].toDouble(),
@@ -124,7 +124,7 @@ void DataReader::propFound(QStringList fields) {
         props.push_back(ObjectFactory::OBJECT_TYPES::BROBJECT);
     }
 
-    // TODO Fase 2: Aquesta valors minim i maxim tambe serviran per mapejar el material des de la paleta
+    // TO-DO Fase 2: Aquesta valors minim i maxim tambe serviran per mapejar el material des de la paleta
 }
 
 
@@ -140,7 +140,7 @@ void DataReader::dataFound(QStringList fields) {
     float scaledData;
 
     for (int i = 0; i < numProp; i++) {
-        // TODO Fase 1: Cal colocar els objectes al seu lloc del mon virtual, escalats segons el valor i
+        // TO-DO Fase 1: Cal colocar els objectes al seu lloc del mon virtual, escalats segons el valor i
         //  amb el seu color corresponent segons el seu ColorMap
 
         translation.x = (fields[1].toDouble() - xMin) / (xMax - xMin) * (scene->pmax.x - scene->pmin.x) + scene->pmin.x;

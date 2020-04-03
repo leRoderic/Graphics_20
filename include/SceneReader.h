@@ -16,7 +16,7 @@
  *  Posicion 02:    Sphere Centro Y
  *  Posicion 03:    Sphere Centro Z
  *  Posicion 04:    Sphere Radio
- *  TODO FASE 2: Añadir componentes del material
+ *  TO-DO FASE 2: Añadir componentes del material
  *
  *
  *  Formate para la base

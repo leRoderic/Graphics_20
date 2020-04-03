@@ -30,7 +30,7 @@ void SceneReader::readFile(QString fileName) {
     file.close();
 }
 
-// TODO: Fase 1: Cal afegir més tipus d'objectes
+// TO-DO: Fase 1: Cal afegir més tipus d'objectes
 void SceneReader::fileLineRead (QString lineReaded) {
     QStringList fields = lineReaded.split(",");
     if (QString::compare("Sphere", fields[0], Qt::CaseInsensitive) == 0)
@@ -74,20 +74,20 @@ void SceneReader::baseFound(QStringList fields) {
     }
     Object *o;
     if (QString::compare("plane", fields[1], Qt::CaseInsensitive) == 0) {
-        // TODO Fase 1: Cal fer un pla acotat i no un pla infinit. Les dimensions del pla acotat seran les dimensions de l'escena en x i z
+        // TO-DO Fase 1: Cal fer un pla acotat i no un pla infinit. Les dimensions del pla acotat seran les dimensions de l'escena en x i z
         o = ObjectFactory::getInstance()->createObject(fields[2].toDouble(), fields[3].toDouble(), fields[4].toDouble(),
                                                        fields[5].toDouble(), fields[6].toDouble(), fields[7].toDouble(),
                                                        0, 0, 0, fields[8].toDouble(),
                                                        1.0f, ObjectFactory::OBJECT_TYPES::PLANE);
-        // TODO Fase 4: llegir textura i afegir-la a l'objecte. Veure la classe Texture
+        // TO-DO Fase 4: llegir textura i afegir-la a l'objecte. Veure la classe Texture
     } else if (QString::compare("fittedplane", fields[1], Qt::CaseInsensitive) == 0) {
-        // TODO Fase 1: Cal fer un pla acotat i no un pla infinit. Les dimensions del pla acotat seran les dimensions de l'escena en x i z
+        // TO-DO Fase 1: Cal fer un pla acotat i no un pla infinit. Les dimensions del pla acotat seran les dimensions de l'escena en x i z
         o = ObjectFactory::getInstance()->createObject(fields[2].toDouble(), fields[3].toDouble(), fields[4].toDouble(),
                                                        0, 0, 0, 0, 0, 0, fields[8].toDouble(),
                                                        1.0f, ObjectFactory::OBJECT_TYPES::FITTED_PLANE);
     }
     scene->objects.push_back(o);
-    // TODO: Fase 3: Si cal instanciar una esfera com objecte base i no un pla, cal afegir aqui un switch
+    // TO-DO: Fase 3: Si cal instanciar una esfera com objecte base i no un pla, cal afegir aqui un switch
 }
 
 void SceneReader::triangleFound(QStringList fields) {
@@ -97,15 +97,15 @@ void SceneReader::triangleFound(QStringList fields) {
     }
 
     Object *o;
-    // TODO Fase 1: Cal fer un pla acotat i no un pla infinit. Les dimensions del pla acotat seran les dimensions de l'escena en x i z
+    // TO-DO Fase 1: Cal fer un pla acotat i no un pla infinit. Les dimensions del pla acotat seran les dimensions de l'escena en x i z
     o = ObjectFactory::getInstance()->createObject(fields[1].toDouble(), fields[2].toDouble(), fields[3].toDouble(),
             fields[4].toDouble(), fields[5].toDouble(), fields[6].toDouble(),
             fields[7].toDouble(),fields[8].toDouble(), fields[9].toDouble(),
             fields[10].toDouble(), 1.0f,ObjectFactory::OBJECT_TYPES::TRIANGLE);
     scene->objects.push_back(o);
-        // TODO Fase 4: llegir textura i afegir-la a l'objecte. Veure la classe Texture
+        // TO-DO Fase 4: llegir textura i afegir-la a l'objecte. Veure la classe Texture
 
-    // TODO: Fase 3: Si cal instanciar una esfera com objecte base i no un pla, cal afegir aqui un switch
+    // TO-DO: Fase 3: Si cal instanciar una esfera com objecte base i no un pla, cal afegir aqui un switch
 }
 
 void SceneReader::brObjectFound(QStringList fields) {
@@ -133,14 +133,14 @@ void SceneReader::cylinderFound(QStringList fields) {
     }
 
     Object *o;
-    // TODO Fase 1: Cal fer un pla acotat i no un pla infinit. Les dimensions del pla acotat seran les dimensions de l'escena en x i z
+    // TO-DO Fase 1: Cal fer un pla acotat i no un pla infinit. Les dimensions del pla acotat seran les dimensions de l'escena en x i z
     o = ObjectFactory::getInstance()->createObject(fields[1].toDouble(), fields[2].toDouble(), fields[3].toDouble(),
                                                    0, 0, 0, 0, 0, 0, fields[4].toDouble(),
                                                    1.0f, ObjectFactory::OBJECT_TYPES::CYLINDER);
     scene->objects.push_back(o);
-    // TODO Fase 4: llegir textura i afegir-la a l'objecte. Veure la classe Texture
+    // TO-DO Fase 4: llegir textura i afegir-la a l'objecte. Veure la classe Texture
 
-    // TODO: Fase 3: Si cal instanciar una esfera com objecte base i no un pla, cal afegir aqui un switch
+    // TO-DO: Fase 3: Si cal instanciar una esfera com objecte base i no un pla, cal afegir aqui un switch
 }
 void SceneReader::circleFound(QStringList fields) {
     if (fields.size() != 5 ) {
