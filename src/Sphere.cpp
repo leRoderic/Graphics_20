@@ -37,7 +37,6 @@ void Sphere::aplicaTG(TG *t) {
     vec4 c(center, 1.0);
     c = t->getTG() * c;
     if (dynamic_cast<Translate *>(t)) {
-        // Per ara només es preveuen translacions
         center.x = c.x;
         center.y = c.y;
         center.z = c.z;

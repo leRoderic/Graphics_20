@@ -25,7 +25,6 @@ public:
 
 protected:
     Texture *texture;
-    //Texture* texture = new Texture("://resources/map.png");
 
 private:
 

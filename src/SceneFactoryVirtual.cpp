@@ -19,10 +19,9 @@ Scene *SceneFactoryVirtual::createScene(QString filename) {
     SceneReader *sc = new SceneReader(s);
     sc->readFile(filename);
 
+    //Escena esferas -->data0.txt
     s->objects[0]->setMaterial(new Metall(vec3(0.2f), vec3(0.7, 0.6, 0.5), vec3(0.7f), 10, 0.0f));
     s->ground = s->objects[0];
-    //s->objects[1]->setMaterial(new Mate(vec3(0.2f), vec3(0.5f), vec3(1.0f), 10, 0.0f));
-    //s->objects[3]->setMaterial(new Transparent(vec3(0.2f), vec3(0.7, 0.6, 0.5), vec3(0.7f), 10, 1.0f, 1.5f));
     s->objects[1]->setMaterial(new Metall(vec3(0.2f), vec3(0.7, 0.6, 0.5), vec3(0.7f), 10, 0.0f));
     s->objects[2]->setMaterial(new Metall(vec3(0.2f), vec3(0.7, 0.6, 0.5), vec3(0.7f), 10, 0.0f));
     s->objects[3]->setMaterial(new Metall(vec3(0.2f), vec3(0.7, 0.6, 0.5), vec3(0.7f), 10, 0.0f));
@@ -39,7 +38,6 @@ Scene *SceneFactoryVirtual::createScene(QString filename) {
     s->lights.push_back(new Light(vec3(30, 0, 5), vec3(0.3f), vec3(0.7f), vec3(1.0f), vec3(0.5, 0.0, 0.01)));
     s->lights.push_back(new Light(vec3(0, -30, 5), vec3(0.3f), vec3(0.7f), vec3(1.0f), vec3(0.5, 0.0, 0.01)));
     s->lights.push_back(new Light(vec3(0, 30, 5), vec3(0.3f), vec3(0.7f), vec3(1.0f), vec3(0.5, 0.0, 0.01)));
-    //s->lights.push_back(new Light(vec3(2, 8, -10), vec3(0.3f), vec3(0.7f), vec3(1.0f), vec3(0.5, 0.0, 0.01)));
 
     return s;
 }

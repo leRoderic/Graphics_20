@@ -25,8 +25,8 @@ bool Cylinder::intersect(const Ray &raig, float t_min, float t_max, Intersection
     /*Equacio a resoldre per a trobar la intersecció-> a*t^2 + b*t + c = 0 on:
     *
      * a = dx’^2 + dz’^2
-     * b = 2 * (ox’ * dx’ + oz’ * dz’)
-     * c = ox’^2 + oz’^2 – 1
+     * b = 2 * (ox’ * dx’ + oz’ * dz’) --> (d = d - centre)
+     * c = ox’^2 + oz’^2 – 1 --> (d = d - centre)
     */
     float a = ((raig.dirVector().x * raig.dirVector().x) + (raig.dirVector().z * raig.dirVector().z));
     float b = 2 * (raig.dirVector().x * (raig.initialPoint().x - center.x) +
@@ -59,7 +59,6 @@ bool Cylinder::intersect(const Ray &raig, float t_min, float t_max, Intersection
         vec3 t = raig.pointAtParameter(temp1);
         //Si la intersecció és més petita que l'alçada, voldra dir es troba dins del cilindre.
         if (t.y < center.y + height + EPSILON && t.y > center.y - EPSILON) {
-            //afegim informacio
             info.t = temp1;
             info.p = raig.pointAtParameter(info.t);
             info.normal = (info.p - center)/radius;
@@ -76,33 +75,32 @@ bool Cylinder::intersection(const Ray& raig, float t_min, float t_max, Intersect
     float intersect_top1(std::numeric_limits<float>::infinity());
     float intersect_top2(std::numeric_limits<float>::infinity());
 
-    //calcul de la intersecció amb el cilindre
-    if(intersect(raig,t_min,t_max,info)){
+    //calcul de'interseccions
+
+    if (intersect(raig, t_min, t_max, info)) {
         intersect_top1 = info.t;
         intersecta = true;
     }
-    //calcul de la intersecció amb circle top1
-    if(top1->intersection(raig,t_min,t_max,info)){
+    if (top1->intersection(raig, t_min, t_max, info)) {
         intersect_top1 = info.t;
         intersecta = true;
     }
-    //calcul de la intersecció amb circle top2
-    if(top2->intersection(raig,t_min,t_max,info)){
+    if (top2->intersection(raig, t_min, t_max, info)) {
         intersect_top2 = info.t;
         intersecta = true;
     }
-    if(intersecta){
+    if(intersecta) {
         float temp(std::numeric_limits<float>::infinity());
-        if(intersect_cilindre < temp){//Busquem la intersecció mes petita
+        //Busquem la intersecció mes petita
+        if (intersect_cilindre < temp) {
             temp = intersect_cilindre;
         }
-        if(intersect_top1 < temp){
+        if (intersect_top1 < temp) {
             temp = intersect_top1;
         }
-        if(intersect_top2 < temp){
+        if (intersect_top2 < temp) {
             temp = intersect_top2;
         }
-        //agefim informacio
         info.t = temp;
         info.p = raig.pointAtParameter(info.t);
         info.normal = vec3(info.p.x,0,info.p.z);
@@ -113,14 +111,14 @@ bool Cylinder::intersection(const Ray& raig, float t_min, float t_max, Intersect
 
 void Cylinder::aplicaTG(TG *t) {
     if (dynamic_cast<Translate *>(t)) {
-        // Per ara només es preveuen translacions
         vec4 c(center, 1.0);
         c = t->getTG() * c;
         center.x = c.x;
         center.y = c.y;
         center.z = c.z;
     }
-    if (dynamic_cast<Scale *>(t)) {//augmentem l'altura
+    //Augmentem l'altura
+    if (dynamic_cast<Scale *>(t)) {
         vec4 c(1.0, 1.0, 1.0, 1.0);
         c = t->getTG() * c;
         this->height = c.x * height;

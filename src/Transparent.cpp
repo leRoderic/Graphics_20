@@ -21,7 +21,7 @@ bool Transparent::scatter(const Ray &r_in, const IntersectionInfo &rec, vec3 &co
     vec3 N = normalize(rec.normal);
     vec3 V = normalize(r_in.dirVector());
     float cos = dot(N, V);
-    float snell = 1.0003f / refraccio;// medi2 / medi1
+    float snell = 1.0003f / refraccio;
     vec3 p0 = rec.p;
 
     if (cos > 0.01) {

@@ -41,7 +41,6 @@ void FittedPlane::aplicaTG(TG *t) {
         this->point.z = newp.z;
     }
     if (dynamic_cast<Scale *>(t)) {
-        //consideramos la y del p2 y p1 como la componente z, usamos un vec2 para definir la xmin/max y zmin/max.
         vec4 cmin(p1.x, 1.0, p1.y, 1.0);
         vec4 cmax(p2.x, 1.0, p2.y, 1.0);
         cmin = t->getTG() * cmin;

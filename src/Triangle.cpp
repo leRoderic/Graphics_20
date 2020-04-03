@@ -13,14 +13,14 @@ bool Triangle::intersection(const Ray &raig, float t_min, float t_max, Intersect
 
     if (dot(raig.dirVector(), normal) == 0) return false;
 
-    float d = -normal[0] * p1.x - normal[1] * p1.y - normal[2] * p1.z; //
+    float d = -normal[0] * p1.x - normal[1] * p1.y - normal[2] * p1.z;
 
     vec3 rp = raig.initialPoint();
     vec3 vp = raig.dirVector();
 
-    float temp = -normal[0] * rp[0] - normal[1] * rp[1] - normal[2] * rp[2] - d; //
-    temp /= normal[0] * vp[0] + normal[1] * vp[1] + normal[2] * vp[2]; //
-    vec3 point = raig.pointAtParameter(temp); //
+    float temp = -normal[0] * rp[0] - normal[1] * rp[1] - normal[2] * rp[2] - d;
+    temp /= normal[0] * vp[0] + normal[1] * vp[1] + normal[2] * vp[2];
+    vec3 point = raig.pointAtParameter(temp);
 
     float e1 = dot(cross((p3 - p1), (point - p1)), normal);
     float e2 = dot(cross((p2 - p3), (point - p3)), normal);
