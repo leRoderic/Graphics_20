@@ -29,7 +29,7 @@ Como ejemplo del punto anterior, se han extraído datos reales del Ayuntamiento 
 
 ## Extensions
 
-* <ins>Carga de escena híbridas</ins>: La escena DATA es capaz de cargar diferentes tipos de gizmos a la vez, por ejemplo cilindros y esferas.
+* <ins>Carga de escena híbridas</in>: La escena DATA es capaz de cargar diferentes tipos de gizmos a la vez, por ejemplo cilindros y esferas.
 
 ## Screenshots
 ![](https://i.imgur.com/kM5vTC3.png)
@@ -59,6 +59,25 @@ Como ejemplo del punto anterior, se han extraído datos reales del Ayuntamiento 
 | Materiales:    	| ![](https://i.imgur.com/OgNa6f3.png)                  	|
 | Iluminación:   	| ![](https://i.imgur.com/4A0upjI.png)                  	|
 | Cámara:        	| ![](https://i.imgur.com/hvthcaW.png)                  	|
+
+![](https://i.imgur.com/VNk8oXn.png)
+
+| Fase           	| Data ([Fichero RAW](https://pastebin.com/tXJJyAkb)) 	|
+|----------------	|----------------------------------------------------	|
+| Fichero datos: 	| ![](https://i.imgur.com/ZUnmbFV.png)               	|
+| Materiales:    	| ![](https://i.imgur.com/o7ZD2q2.png)               	|
+| Iluminación:   	| ![](https://i.imgur.com/cd6W6cY.png)               	|
+| Cámara:        	| ![](https://i.imgur.com/ZjNMaqa.png)               	|
+
+![](https://i.imgur.com/aIZxaol.png)
+
+| Fase           	| Data ([Fichero RAW](https://pastebin.com/QyL0DqLL)) 	|
+|----------------	|----------------------------------------------------	|
+| Fichero datos: 	| ![](https://i.imgur.com/nPQCCCN.png)               	|
+| Materiales:    	| ![](https://i.imgur.com/Cde0Mfx.png)               	|
+| Iluminación:   	| ![](https://i.imgur.com/LMXy8pJ.png)               	|
+| Cámara:        	| ![](https://i.imgur.com/J3vgqpe.png)               	|
+
 
 ## Additional 
 <table>
