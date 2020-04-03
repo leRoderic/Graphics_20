@@ -83,34 +83,17 @@ Como ejemplo del punto anterior, se han extraído datos reales del Ayuntamiento 
 <table>
   <tbody>
     <tr>
-      <th>Tables</th>
-      <th align="center">Are</th>
-      <th align="right">Cool</th>
+      <th>Fase</th>
+      <th align="center">Horas</th>
+      <th align="right">Problemas</th>
     </tr>
     <tr>
-      <td>col 3 is</td>
-      <td align="center">right-aligned</td>
-      <td align="right">$1600</td>
-    </tr>
-    <tr>
-      <td>col 2 is</td>
-      <td align="center">centered</td>
-      <td align="right">$12</td>
-    </tr>
-    <tr>
-      <td>zebra stripes</td>
-      <td align="center">are neat</td>
-      <td align="right">$1</td>
-    </tr>
-    <tr>
-      <td>
-        <ul>
+      <td>0</td>
+      <td align="center">9999</td>
+      <td align="right">
           <li>item1</li>
           <li>item2</li>
-        </ul>
-      </td>
-      <td align="center">See the list</td>
-      <td align="right">from the first column</td>
+     </td>
     </tr>
   </tbody>
 </table>
