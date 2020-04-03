@@ -10,8 +10,8 @@ SceneFactoryData::SceneFactoryData()
 Camera *SceneFactoryData::createCamera() {
     // creacio de la camera
 
-    vec3 lookfrom(0, 15, 30);//vec3 lookfrom(0, 10, 10);
-    vec3 lookat(0, 0, 0);//    vec3 lookat(1, 0, 0);
+    vec3 lookfrom(0, 15, 30);
+    vec3 lookat(0, 0, 0);
 
     float dist_to_focus = distance(lookfrom, lookat);
 
@@ -19,7 +19,7 @@ Camera *SceneFactoryData::createCamera() {
     int pixelsX = 600;
     int pixelsY = 400;
 
-    return (new Camera(lookfrom, lookat, vec3(0, 1, 0), 90, pixelsX, pixelsY, aperture, dist_to_focus));
+    return (new Camera(lookfrom, lookat, vec3(0, 1, 0), 25, pixelsX, pixelsY, aperture, dist_to_focus));
 }
 
 Scene *SceneFactoryData::createScene(QString filename) {
@@ -33,12 +33,12 @@ Scene *SceneFactoryData::createScene(QString filename) {
     s->lights.push_back(new Light(vec3(2, 15, 10), vec3(0.1f), vec3(0.7f), vec3(0.7f), vec3(3.0,2.0,1.0)));
     s->ambientGlobal = vec3(0.3f);
 
-    for(Object *o: s->objects){
+    /*for(Object *o: s->objects){
         if(dynamic_cast<Sphere *>(o)) {
 
             o->setMaterial(new Metall(vec3(0.1f), vec3(0.2, 0.2, 1.0), vec3(1.0f), 500, 0));
         }
-    }
+    }*/
 
     return s;
 }
