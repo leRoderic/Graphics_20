@@ -33,13 +33,6 @@ Scene *SceneFactoryData::createScene(QString filename) {
     s->lights.push_back(new Light(vec3(2, 15, 10), vec3(0.1f), vec3(0.7f), vec3(0.7f), vec3(3.0,2.0,1.0)));
     s->ambientGlobal = vec3(0.3f);
 
-    /*for(Object *o: s->objects){
-        if(dynamic_cast<Sphere *>(o)) {
-
-            o->setMaterial(new Metall(vec3(0.1f), vec3(0.2, 0.2, 1.0), vec3(1.0f), 500, 0));
-        }
-    }*/
-
     return s;
 }
 

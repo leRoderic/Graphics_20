@@ -11,7 +11,7 @@ Material::Material(vec3 a, vec3 d, vec3 s, float alpha, float beta) {
     diffuse = d;
     ambient = a;
     specular = s;
-    this->alpha = alpha; // Transparencia
+    this->alpha = alpha; // Transparencia 1.0f
     this->beta = beta; // Shineness
 }
 

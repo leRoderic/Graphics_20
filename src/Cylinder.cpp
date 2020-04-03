@@ -2,6 +2,7 @@
 // Created by abdel on 06/03/2020.
 //
 
+#include <iostream>
 #include "Cylinder.h"
 
 Cylinder::Cylinder(vec3 center, float height, float d) : Object(d) {
@@ -78,7 +79,7 @@ bool Cylinder::intersection(const Ray& raig, float t_min, float t_max, Intersect
     //calcul de'interseccions
 
     if (intersect(raig, t_min, t_max, info)) {
-        intersect_top1 = info.t;
+        intersect_cilindre = info.t;
         intersecta = true;
     }
     if (top1->intersection(raig, t_min, t_max, info)) {
@@ -116,12 +117,15 @@ void Cylinder::aplicaTG(TG *t) {
         center.x = c.x;
         center.y = c.y;
         center.z = c.z;
+
+        std::cerr << "Cylinder translated to " << center.x << ", " << center.y << ", " << center.z << std::endl;
     }
     //Augmentem l'altura
     if (dynamic_cast<Scale *>(t)) {
         vec4 c(1.0, 1.0, 1.0, 1.0);
         c = t->getTG() * c;
-        this->height = c.x * height;
+        this->height *= c.x;
+        std::cerr << "Sphere scaled by " << t->matTG[0][0] << std::endl;
     }
     //reconstruim tapes
     if (top1 != NULL) {

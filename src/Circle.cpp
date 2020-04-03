@@ -17,9 +17,7 @@ bool Circle::intersection(const Ray& raig, float t_min, float t_max, Intersectio
         float z2 = (info.p.z - center.z) * (info.p.z - center.z);
         //Equacio d'un cercle (x - cx)²+ (z - cz)² = r
         //Comprovar que el punt d'interseccio es troba dins del cercle.
-        if ((x2 + z2) - radius <= EPSILON && (x2 + z2) >= EPSILON) {
-            return true;
-        }
+        if ((x2 + z2) - radius <= EPSILON && (x2 + z2) >= EPSILON) return true;
     }
     return false;
 }
@@ -33,6 +31,6 @@ void Circle::aplicaTG(TG *t) {
         center.z = c.z;
     }
     if (dynamic_cast<Scale *>(t)) {
-        this->radius *= t->matTG[0][0];
+        this->radius *= t->matTG[0][0]; // Multipliquem per l'escala
     }
 }

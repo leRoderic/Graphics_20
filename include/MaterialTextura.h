@@ -16,8 +16,8 @@ public:
 
     MaterialTextura(const vec3 &ambient, const vec3 &diffuse, const vec3 &specular, const int &beta, const float &alpha, const QString &textureFile);
 
-
-    virtual bool scatter(const Ray &r_in, const IntersectionInfo &rec, vec3 &color, std::vector<Ray> &r_out) const;
+    virtual bool
+    scatter(const Ray &r_in, const IntersectionInfo &rec, vec3 &color, std::vector<Ray> &r_out) const override;
 
     vec3 getDiffuse(vec2 point) const override;
 

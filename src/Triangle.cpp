@@ -22,6 +22,7 @@ bool Triangle::intersection(const Ray &raig, float t_min, float t_max, Intersect
     temp /= normal[0] * vp[0] + normal[1] * vp[1] + normal[2] * vp[2];
     vec3 point = raig.pointAtParameter(temp);
 
+    // Intersect area calculations
     float e1 = dot(cross((p3 - p1), (point - p1)), normal);
     float e2 = dot(cross((p2 - p3), (point - p3)), normal);
     float e3 = dot(cross((p1 - p2), (point - p2)), normal);
@@ -46,7 +47,6 @@ bool Triangle::intersection(const Ray &raig, float t_min, float t_max, Intersect
 
 void Triangle::aplicaTG(TG *t) {
     if (dynamic_cast<Translate *>(t)) {
-
         vec4 newp(p1, 1.0);
         newp = t->getTG() * newp;
         p1.x = newp.x;

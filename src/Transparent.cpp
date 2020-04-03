@@ -20,20 +20,20 @@ bool Transparent::scatter(const Ray &r_in, const IntersectionInfo &rec, vec3 &co
 
     vec3 N = normalize(rec.normal);
     vec3 V = normalize(r_in.dirVector());
-    float cos = dot(N, V);
-    float snell = 1.0003f / refraccio;
+    float cos = dot(N, V); // angle incident
+    float snell = 1.0003f / refraccio; // medi aire / propi material
     vec3 p0 = rec.p;
 
-    if (cos > 0.01) {
+    if (cos > 0.001) { // En cas que existeix refracció
         N = -N;
         snell = 1.f / snell;
     }
 
-    vec3 v_refract = refract(V, N, snell);
+    vec3 v_refract = refract(V, N, snell); // Vector refractant
     r_out.push_back(Ray(p0, v_refract));
     color = vec3(alpha);
 
-    if (dot(v_refract, v_refract) < 0.01) {
+    if (dot(v_refract, v_refract) < 0.01) { // En cas que existeix reflexió
         vec3 v_reflect = reflect(V, N);
         r_out.push_back(Ray(p0, v_reflect));
         color = specular;

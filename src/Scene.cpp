@@ -27,7 +27,7 @@ Scene::~Scene() {
                 delete (FittedPlane *) (objects[i]);
         }
     }
-    //delete this->ground;
+    if (ground) delete this->ground;
     delete (cam);
 }
 
@@ -44,10 +44,10 @@ bool Scene::intersection(const Ray &raig, float t_min, float t_max, Intersection
     IntersectionInfo min_inter = info; //local copy to maintain the minimum
     bool intersects = false;
 
-    if (ground->intersection(raig, t_min, t_max, info)) {//comprovem si es el terra
-        intersects = true;
-        if (info.t < min_inter.t) {
-            min_inter = info;
+    if (ground) {
+        if (ground->intersection(raig, t_min, t_max, info)) { // Intersecció amb la terra
+            intersects = true;
+            if (info.t < min_inter.t) min_inter = info;
         }
     }
 
@@ -86,7 +86,6 @@ vec3 Scene::ComputeColorRay(Ray &ray, int depth) {
     vec3 ray2;
     IntersectionInfo info = IntersectionInfo();
 
-
     if (this->intersection(ray, 0.01f, 10, info)) {
 
         color += (1.0f - info.mat_ptr->alpha) * BlinnPhong(info.p, info.normal, info.mat_ptr);
@@ -115,11 +114,11 @@ vec3 Scene::BlinnPhong(vec3 point, vec3 normal, const Material *material) {
 
     for (Light *light:lights) {
 
-        vec3 L = normalize(light->pos - point); // entre punt i llum
-        vec3 V = normalize(cam->origin - point); // entre punt i observador
-        vec3 H = normalize(L + V);
+        vec3 L = normalize(light->pos - point); // Vector llum
+        vec3 V = normalize(cam->origin - point); // Vector observador
+        vec3 H = normalize(L + V); // Vector mig
 
-        float d = distance(light->pos, point);
+        float d = distance(light->pos, point); // Per atenuació sobre llum
 
         vec3 p2 = this->pmax;
         vec3 p1 = this->pmin;
@@ -137,11 +136,10 @@ vec3 Scene::BlinnPhong(vec3 point, vec3 normal, const Material *material) {
 
         float shadowFactor = 1.0f;
 
+        // Raytracing avançat: shadow de multiples objects transparents i opacs
         for (Object *o: objects) {
-
             if (o->intersection(Ray(point, L), 0.01f, d, *info)) {
-                if (info->mat_ptr->alpha != 1.0f)
-                    shadowFactor = 0.0f;
+                if (info->mat_ptr->alpha != 1.0f) shadowFactor = 0.0f;
             }
         }
 
@@ -187,7 +185,6 @@ void Scene::setMaterials(ColorMap *cm) {
     }*/
     //Para DATA
     for (auto it = this->objects.begin(); it != this->objects.end(); ++it) {
-        std::cerr << "Color..." << endl;
         if ((*it)->getMaterial() != nullptr) {
 
             if ((*it)->getData() != -1.0) {

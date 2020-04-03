@@ -29,7 +29,7 @@ void Render::rendering() {
                  col += scene->ComputeColorRay(r, 0);
              }
              col /= vec3(numSamples);
-             //col = vec3(sqrt(col.x), sqrt(col.y), sqrt(col.z));
+             col = vec3(sqrt(col.x), sqrt(col.y), sqrt(col.z)); // Gamma correction
              setPixelColor(col, x, y);
          }
     }

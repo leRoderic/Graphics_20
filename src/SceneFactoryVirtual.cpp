@@ -21,7 +21,6 @@ Scene *SceneFactoryVirtual::createScene(QString filename) {
 
     //Escena esferas -->data0.txt
     s->objects[0]->setMaterial(new Metall(vec3(0.2f), vec3(0.7, 0.6, 0.5), vec3(0.7f), 10, 0.0f));
-    s->ground = s->objects[0];
     s->objects[1]->setMaterial(new Metall(vec3(0.2f), vec3(0.7, 0.6, 0.5), vec3(0.7f), 10, 0.0f));
     s->objects[2]->setMaterial(new Metall(vec3(0.2f), vec3(0.7, 0.6, 0.5), vec3(0.7f), 10, 0.0f));
     s->objects[3]->setMaterial(new Metall(vec3(0.2f), vec3(0.7, 0.6, 0.5), vec3(0.7f), 10, 0.0f));
@@ -31,7 +30,6 @@ Scene *SceneFactoryVirtual::createScene(QString filename) {
     s->objects[7]->setMaterial(new Metall(vec3(0.2f), vec3(0.7, 0.6, 0.5), vec3(0.7f), 10, 0.0f));
     s->objects[8]->setMaterial(new Metall(vec3(0.2f), vec3(0.7, 0.6, 0.5), vec3(0.7f), 10, 0.0f));
     s->objects[9]->setMaterial(new Mate(vec3(0.2f), vec3(0.5f), vec3(1.0f), 10, 1.0f));
-
 
     s->ambientGlobal = vec3(0.1f);
     s->lights.push_back(new Light(vec3(-30, 0, 5), vec3(0.3f), vec3(0.7f), vec3(1.0f), vec3(0.5, 0.0, 0.01)));

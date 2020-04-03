@@ -1,6 +1,7 @@
+#include <iostream>
 #include "Sphere.h"
 
-Sphere::Sphere(vec3 cen, float r, float d) :Object(d) {
+Sphere::Sphere(vec3 cen, float r, float d) : Object(d) {
     center = cen;
     radius = r;
     factor = d;
@@ -40,9 +41,11 @@ void Sphere::aplicaTG(TG *t) {
         center.x = c.x;
         center.y = c.y;
         center.z = c.z;
+        std::cerr << "Sphere translated to " << center.x << ", " << center.y << ", " << center.z << std::endl;
     }
     if (dynamic_cast<Scale *>(t)) {
         this->radius *= t->matTG[0][0];
+        std::cerr << "Sphere scaled by " << t->matTG[0][0] << std::endl;
     }
 }
 

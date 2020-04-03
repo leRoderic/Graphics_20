@@ -21,19 +21,17 @@ BoundaryObject::~BoundaryObject() {
 
 bool BoundaryObject::intersection(const Ray &raig, float t_min, float t_max, IntersectionInfo &info) const {
 
-    float t_menor(std::numeric_limits<float>::infinity());
+    float temp(std::numeric_limits<float>::infinity());
     bool h = false;
 
     for (Triangle *t : triangles) {
         if (t->intersection(raig, t_min, t_max, info)) {
-            if (info.t < t_menor) {
-                t_menor = info.t;
-            }
+            if (info.t < temp) temp = info.t;
             h = true;
         }
     }
 
-    info.t = t_menor;
+    info.t = temp;
     info.p = raig.pointAtParameter(info.t);
     info.normal = vec3(info.p.x, 0, info.p.z);
     info.mat_ptr = material;
