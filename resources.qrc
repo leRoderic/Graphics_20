@@ -14,5 +14,6 @@
         <file>resources/dataBCNZoom.txt</file>
         <file>resources/dadesEuropa.txt</file>
         <file>resources/data0_1.txt</file>
+        <file>resources/data0_1_v2.txt</file>
     </qresource>
 </RCC>
