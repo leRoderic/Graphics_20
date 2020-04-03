@@ -13,5 +13,6 @@
         <file>resources/dataBCNPuntosVerdes.txt</file>
         <file>resources/dataBCNZoom.txt</file>
         <file>resources/dadesEuropa.txt</file>
+        <file>resources/data0_1.txt</file>
     </qresource>
 </RCC>
