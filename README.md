@@ -2,7 +2,10 @@ GiV — Práctica 1 :::: Grupo F01
 --------
 ## Abstract
 
-*(NOTA: Un pequeño resumen de lo que habéis hecho, no mas de 200 palabras)*
+En este proyecto se ha implementado el algoritmo de RayTracing y se ha usado para la visualización de datos de forma realista. Para ello se han empleado diferentes objetos paramétricos como cilindros o  esferas y mallas, algunos como el cilindro se han desarrollado desde cero mientras que otros como las mallas de triángulos se ha complementado el código inicial.
+Para poder crear escenas más realistas también se han creado varios materiales para los objetos. A la vez también se ha modificado el código del cálculo del color para incorporar las características de los nuevos materiales o las sombras.
+Finalmente se ha diseñado un tipo de escena que permite generar visualizaciones a partir de datos localizados. Esta escena, carga los datos de un fichero y los mapea en un mundo virtual aplicando materiales y colores distintos en función del valor asociado a los datos.
+Como ejemplo del punto anterior, se han extraído datos reales del Ayuntamiento de Barcelona sobre los puntos verdes de la ciudad y sus localizaciones para representarlos en un mapa de la ciudad.
 
 ## Features
 
@@ -42,7 +45,7 @@ GiV — Práctica 1 :::: Grupo F01
 
 | Escena:        	| Data ([Fichero RAW](https://pastebin.com/6LxqsarW)) 	|
 |----------------	|-----------------------------------------------------	|
-| Fichero datos: 	| dataBCNPuntosVerdes.txt                             	|
+| Fichero datos: 	| [dataBCNPuntosVerdes.txt](https://github.com/GiVD2019/dataray-f01/blob/master/resources/dataBCNPuntosVerdes.txt)                             	|
 | Materiales:    	| ![](https://i.imgur.com/CFfRjly.png)                	|
 | Iluminación:   	| ![](https://i.imgur.com/EiAarzO.png)                	|
 | Cámara:        	| ![](https://i.imgur.com/ZjNMaqa.png)                	|
