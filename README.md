@@ -29,7 +29,7 @@ Como ejemplo del punto anterior, se han extraído datos reales del Ayuntamiento 
 
 ## Extensions
 
-*(NOTA: Las extensiones de la práctica que hayáis implementado y que no estén listadas en el apartado anterior)*
+* <ins>Carga de escenas</in>:
 
 ## Screenshots
 ![](https://i.imgur.com/kM5vTC3.png)
