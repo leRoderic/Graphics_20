@@ -19,6 +19,13 @@ Material::Material(vec3 a, vec3 d, vec3 s, float alpha, float beta) {
  * @param program
  */
 void Material::toGPU(QGLShaderProgram *program){
+    struct {
+        GLuint difuse_id;
+    } qwe;
+
+    qwe.difuse_id = program->uniformLocation("material.difuse");
+
+    glUniform3fv(qwe.difuse_id, 1, this->diffuse);
 }
 
 vec3 Material::getDiffuse(vec2 point) const{
