@@ -57,6 +57,7 @@ void Light::setLightPosition(vec4 v) {
 vec3 Light::getIa() const
 {
     // TO DO: A canviar a la fase 1 de la practica 2
+    // getter
        return this->ambient;
 }
 
