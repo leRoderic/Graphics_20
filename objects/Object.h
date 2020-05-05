@@ -42,7 +42,7 @@ protected:
     point4 *normals;
 
     // Els colors s'usen en la primera execució però després son prescindibles
-    //point4 *colors;
+    point4 *colors;
 
     int Index; // index de control del numero de vertexs a passar a la GPU
 
@@ -59,6 +59,7 @@ public:
 
     void parseObjFile(const QString &fileName);
 
+    void setMaterial(Material* material);
     void setTexture(QOpenGLTexture *t);
 
     virtual void make();

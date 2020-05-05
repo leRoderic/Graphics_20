@@ -10,9 +10,9 @@ Object::Object(int npoints, QObject *parent, Material* material) : QObject(paren
     numPoints = npoints;
     points = new point4[numPoints];
     normals= new point4[numPoints];
-    //colors = new point4[numPoints];
+    colors = new point4[numPoints];
 
-    this->material = material;
+    this->setMaterial(material);
  }
 
 /**
@@ -23,9 +23,9 @@ Object::Object(int npoints, QObject *parent, Material* material) : QObject(paren
 Object::Object(int npoints, QString n, Material* material) : numPoints(npoints){
     points = new point4[numPoints];
     normals= new point4[numPoints];
-    //colors = new point4[numPoints];
+    colors = new point4[numPoints];
 
-    this->material = material;
+    this->setMaterial(material);
 
     parseObjFile(n);
     make();
@@ -38,7 +38,7 @@ Object::Object(int npoints, QString n, Material* material) : numPoints(npoints){
 Object::~Object(){
     delete points;
     delete normals;
-    //delete colors;
+    delete colors;
 
     if(this->material != nullptr)
         delete this->material;
@@ -106,18 +106,18 @@ void Object::make(){
     // TO  DO: A modificar a la fase 1 de la practica 2
     // Cal calcular la normal a cada vertex a la CPU
 
-    /*static vec3  base_colors[] = {
+    static vec3  base_colors[] = {
         vec3( 1.0, 0.0, 0.0 ),
         vec3( 0.0, 1.0, 0.0 ),
         vec3( 0.0, 0.0, 1.0 ),
         vec3( 1.0, 1.0, 0.0 )
-    };*/
+    };
 
     Index = 0;
     for(unsigned int i=0; i<cares.size(); i++){
         for(unsigned int j=0; j<cares[i].idxVertices.size(); j++){
             points[Index] = vertexs[cares[i].idxVertices[j]];
-            //colors[Index] = vec4(base_colors[j%4], 1.0);
+            colors[Index] = vec4(base_colors[j%4], 1.0);
             Index++;
         }
     }
@@ -128,8 +128,17 @@ void Object::make(){
  * @param p
  */
 void Object::toGPUMaterial(QGLShaderProgram* p) {
-    if(this->material != nullptr)
+    if(this->material != nullptr){
+        qDebug() << "Material to GPU";
         this->material->toGPU(p);
+    }
+}
+
+void Object::setMaterial(Material* material){
+    if(material == nullptr)
+        this->material = new Material(vec3(1,0,0), vec3(1,0,0), vec3(1,0,0), 0, 1);
+    else
+        this->material = material;
 }
 
 
