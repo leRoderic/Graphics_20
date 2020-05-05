@@ -15,6 +15,8 @@
 #include <Light.h>
 #include <Camera.h>
 
+
+
 using namespace std;
 
 // Scene: contains all objects, lights to visualize the scene
