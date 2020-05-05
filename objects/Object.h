@@ -16,6 +16,8 @@
 #include "./TG/TG.h"
 #include "./animations/Animation.h"
 
+#include "./Material.h"
+
 using namespace std;
 
 typedef Common::vec4  point4;
@@ -40,18 +42,19 @@ protected:
     point4 *normals;
 
     // Els colors s'usen en la primera execució però després son prescindibles
-    point4 *colors;
+    //point4 *colors;
 
     int Index; // index de control del numero de vertexs a passar a la GPU
 
     QGLShaderProgram *program;
 
+    Material* material;
     QOpenGLTexture *texture;
 
 public:
 
-    Object(const int npoints, QObject *parent = 0);
-    Object(const int npoints, QString n);
+    Object(const int npoints, QObject *parent = 0, Material* material = nullptr);
+    Object(const int npoints, QString n, Material* material = nullptr);
     ~Object();
 
     void parseObjFile(const QString &fileName);
@@ -60,6 +63,7 @@ public:
 
     virtual void make();
     virtual void toGPU(QGLShaderProgram *p);
+    virtual void toGPUMaterial(QGLShaderProgram* p);
     virtual void toGPUTexture(QGLShaderProgram *pr);
 
     virtual void draw();
