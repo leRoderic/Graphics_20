@@ -1,9 +1,8 @@
 #ifndef MATERIAL_H
 #define MATERIAL_H
 
-#include <QGLShaderProgram>
-
 #include "library/Common.h"
+#include <QGLShaderProgram>
 
 
 // TO DO: A canviar a la fase 1 de la practica 2
