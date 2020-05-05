@@ -3,6 +3,8 @@
 
 #include "./library/Common.h"
 
+
+
 // Tipus de Lights
 enum LightType {Puntual, Direccional, Spot};
 
@@ -32,7 +34,7 @@ class Light {
         void setTipusLight(const LightType &value);
 
         vec3 ambient, diffuse, specular;
-        vec3 atencuacio;
+        vec3 atenuacio;
         vec4 position, direction;
 };
 

@@ -6,7 +6,12 @@
  */
 Light::Light(LightType t) {
     // TO DO: A canviar a la fase 1 de la practica 2
-
+    ambient = vec3(0.0, 0.0, 0.0);
+    diffuse = vec3(0.0, 0.0, 0.0);
+    specular = vec3(0.0, 0.0, 0.0);
+    position = vec3(0.0, 0.0, 0.0);
+    direction = vec3(0.0, 0.0, 0.0);
+    atenuacio = vec3(0.0, 0.0, 0.0);
 }
 
 /**
@@ -25,7 +30,6 @@ vec3 Light::getId() {
 void Light::setId(vec3 i) {
     // TO DO: A canviar a la fase 1 de la practica 2
     this->diffuse = i;
-
 }
 
 /**
@@ -42,7 +46,7 @@ vec4 Light::getLightPosition() {
  */
 void Light::setLightPosition(vec4 v) {
     // TO DO: A canviar a la fase 1 de la practica 2
-    this->position = position;
+    this->position = v;
 }
 
 
@@ -64,7 +68,6 @@ void Light::setIa(const vec3 &value)
 {
     // TO DO: A canviar a la fase 1 de la practica 2
     this->ambient *= value;
-
 }
 
 /**
@@ -94,7 +97,7 @@ void Light::setIs(const vec3 &value)
 vec3 Light::getCoeficients() const
 {
     // TO DO: A canviar a la fase 1 de la practica 2
-       return this->ambient;
+       return this->atenuacio;
 }
 
 /**
@@ -104,7 +107,7 @@ vec3 Light::getCoeficients() const
 void Light::setCoeficients(const vec3 &value)
 {
     // TO DO: A canviar a la fase 1 de la practica 2
-    this->atencuacio *= value;
+    this->atenuacio *= value;
 }
 
 
@@ -115,7 +118,8 @@ void Light::setCoeficients(const vec3 &value)
 LightType Light::getTipusLight() const
 {
     // TO DO: A canviar a la fase 1 de la practica 2
-    return Puntual;
+    //return (!this->direction)? Puntual: Direccional;
+    return (this->direction == vec4(0.0))? Puntual: Direccional;
 }
 
 /**
@@ -125,4 +129,11 @@ LightType Light::getTipusLight() const
 void Light::setTipusLight(const LightType &value)
 {
     // TO DO: A canviar a la fase 1 de la practica 2
+    switch(value) {
+        case Puntual:
+            this->direction = vec4(0.0);
+            break;
+        case Direccional:
+            break;
+    }
 }
