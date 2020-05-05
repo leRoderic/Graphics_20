@@ -11,6 +11,7 @@ Object::Object(int npoints, QObject *parent) : QObject(parent){
     points = new point4[numPoints];
     normals= new point4[numPoints];
     colors = new point4[numPoints];
+    material = new Material();
  }
 
 /**

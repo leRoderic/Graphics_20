@@ -7,7 +7,7 @@
 #include "./cara.h"
 #include <QGLShaderProgram>
 #include <QOpenGLTexture>
-
+#include "Material.h"
 #include <QFile>
 #include <QRegularExpression>
 #include <QDebug>
@@ -50,6 +50,7 @@ protected:
 
 public:
 
+    Material *material;
     Object(const int npoints, QObject *parent = 0);
     Object(const int npoints, QString n);
     ~Object();

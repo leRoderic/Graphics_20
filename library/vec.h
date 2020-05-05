@@ -7,7 +7,7 @@
 #ifndef __ANGEL_VEC_H__
 #define __ANGEL_VEC_H__
 
-#include <GLUT/glut.h>
+#include <GL/gl.h>
 #include <math.h>
 #include <iostream>
 

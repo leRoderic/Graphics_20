@@ -30,6 +30,8 @@ protected:
         GLuint a;
         GLuint d;
         GLuint s;
+        GLfloat alpha;
+        GLfloat beta;
     } GL_Material;
 
 };
