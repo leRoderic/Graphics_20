@@ -5,7 +5,7 @@
 #include <QString>
 #include <QStringList>
 #include <vector>
-#include "glm/glm.hpp"
+#include "library/mat.h"
 #include "Scene.h"
 
 /*
@@ -47,17 +47,7 @@ protected:
 
     Scene *scene;
 
-    void sphereFound(QStringList list);
-
-    void baseFound(QStringList list);
-
-    void triangleFound(QStringList list);
-
     void brObjectFound(QStringList list);
-
-    void cylinderFound(QStringList fields);
-
-    void circleFound(QStringList fields);
 };
 
 #endif // SCENEREADER_H
