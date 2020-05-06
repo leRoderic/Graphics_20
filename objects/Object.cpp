@@ -19,12 +19,10 @@ Object::Object(int npoints, QObject *parent, Material* material) : QObject(paren
  * @param npoints
  * @param n
  */
-Object::Object(int npoints, QString n, Material* material) : numPoints(npoints){
+Object::Object(int npoints, QString n) : numPoints(npoints){
     points = new point4[numPoints];
     normals= new point4[numPoints];
     colors = new point4[numPoints];
-
-    this->setMaterial(material);
 
     parseObjFile(n);
     make();
