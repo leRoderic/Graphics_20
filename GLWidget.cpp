@@ -124,8 +124,6 @@ void GLWidget::initShader(const char* vShaderFile, const char* fShaderFile, int 
     programs[index] = new QGLShaderProgram(this);
     programs[index]->addShader(vshader);
     programs[index]->addShader(fshader);
-    programs[index]->link();
-    programs[index]->bind();
 }
 
 /** Gestio de les animacions i la gravació d'imatges ***/
