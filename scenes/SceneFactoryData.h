@@ -2,7 +2,7 @@
 #define SCENEFACTORYSTATIC_H
 
 #include "SceneFactory.h"
-#include "ColorMapStatic.h"
+#include "colormaps/ColorMapStatic.h"
 #include "DataReader.h"
 
 class SceneFactoryData : public SceneFactory
