@@ -12,6 +12,7 @@ void Builder::newObjFromFile()
     QString fileName = QFileDialog::getOpenFileName();
     if (!fileName.isNull()) {
             Object * obj = new Object(100000, fileName);
+            obj->setMaterial(new Material());
             scene->addObject(obj);
             scene->camera->actualitzaCamera(scene->capsaMinima);
             emit newObj(obj);

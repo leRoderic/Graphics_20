@@ -5,9 +5,8 @@
 #include <QString>
 #include <QStringList>
 #include <vector>
-#include "glm/glm.hpp"
+#include "library/mat.h"
 #include "Scene.h"
-#include "ObjectFactory.h"
 
 
 class DataReader {
@@ -39,7 +38,6 @@ private:
     float cyMin, cyMax; // Cylinder value range
     float brMin, brMax; // BoundaryObject value range
     QString objFile;
-    vector<ObjectFactory::OBJECT_TYPES> props;
 };
 
 #endif // DataReader_H

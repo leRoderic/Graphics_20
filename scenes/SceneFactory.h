@@ -6,8 +6,7 @@
 #include "Scene.h"
 #include "Camera.h"
 #include "colormaps/ColorMap.h"
-#include "ReadFile.h"
-#include "ObjectFactory.h"
+
 #include "colormaps/ColorMapStatic.h"
 #include <QString>
 

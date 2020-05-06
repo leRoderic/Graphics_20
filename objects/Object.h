@@ -54,7 +54,7 @@ protected:
 public:
 
 
-    Object(const int npoints, QObject *parent = 0, Material* material = nullptr);
+    Object(const int npoints, QObject *parent = 0);
     Object(const int npoints, QString n);
     ~Object();
 

@@ -6,12 +6,11 @@
  * @param npoints
  * @param parent
  */
-Object::Object(int npoints, QObject *parent, Material* material) : QObject(parent){
+Object::Object(int npoints, QObject *parent) : QObject(parent){
     numPoints = npoints;
     points = new point4[numPoints];
     normals= new point4[numPoints];
     colors = new point4[numPoints];
-    this->setMaterial(material);
  }
 
 /**

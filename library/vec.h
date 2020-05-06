@@ -7,7 +7,13 @@
 #ifndef __ANGEL_VEC_H__
 #define __ANGEL_VEC_H__
 
-#include <GL/glut.h>
+
+#ifdef __APPLE__
+    #include <GL/glut.h>
+#else
+  #include <GL/gl.h>
+#endif
+
 #include <math.h>
 #include <iostream>
 
