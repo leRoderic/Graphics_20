@@ -15,7 +15,6 @@ public:
 
     virtual Scene    *createScene(QString nomFitxer);
     virtual Scene    *createScene();
-    virtual Camera   *createCamera();
 
 private:
     void OneSphere(Scene *s);
