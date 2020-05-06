@@ -14,6 +14,16 @@ Light::Light(LightType t) {
     atenuacio = vec3(0.0, 0.0, 0.0);
 }
 
+
+Light::Light(vec4 p, vec4 dir, vec3 a, vec3 d, vec3 s,vec3 ate){
+    this->position = p;
+    this->direction = dir;
+    this->ambient = a;
+    this->diffuse = d;
+    this->specular = s;
+    this->atenuacio = ate;
+}
+
 /**
  * @brief Light::getDiffuseIntensity
  * @return

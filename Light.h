@@ -15,6 +15,8 @@ class Light {
     public:
         Light(LightType l);
 
+        Light(vec4,vec4,vec3,vec3,vec3,vec3);
+
         vec4 getLightPosition();
         void setLightPosition(vec4 v);
 
