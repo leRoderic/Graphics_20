@@ -16,6 +16,8 @@
 #include "./TG/TG.h"
 #include "./animations/Animation.h"
 
+#include "./Material.h"
+
 using namespace std;
 
 typedef Common::vec4  point4;
@@ -46,21 +48,24 @@ protected:
 
     QGLShaderProgram *program;
 
+    Material* material;
     QOpenGLTexture *texture;
 
 public:
 
-    Material *material;
-    Object(const int npoints, QObject *parent = 0);
-    Object(const int npoints, QString n);
+
+    Object(const int npoints, QObject *parent = 0, Material* material = nullptr);
+    Object(const int npoints, QString n, Material* material = nullptr);
     ~Object();
 
     void parseObjFile(const QString &fileName);
 
+    void setMaterial(Material* material);
     void setTexture(QOpenGLTexture *t);
 
     virtual void make();
     virtual void toGPU(QGLShaderProgram *p);
+    virtual void toGPUMaterial(QGLShaderProgram* p);
     virtual void toGPUTexture(QGLShaderProgram *pr);
 
     virtual void draw();
