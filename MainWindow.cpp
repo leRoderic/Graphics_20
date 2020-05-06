@@ -33,7 +33,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
     // connexio dels menus amb els mètodes corresponents
-
+    connect(this->ui->actionLoad_sphere, SIGNAL(triggered()), builder, SLOT(loadSphere()));
     connect(this->ui->action_obre_fitxer, SIGNAL(triggered()), builder, SLOT(newObjFromFile()));
     connect(this->ui->action_obre_escena, SIGNAL(triggered()), builder, SLOT(newVirtualScene()));
     connect(this->ui->action_obre_dades, SIGNAL(triggered()), this, SLOT(newDialogDades()));

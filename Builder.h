@@ -14,6 +14,7 @@ public:
     Builder(GLWidget *glWid);
 
 public slots:
+    void loadSphere();
     void newObjFromFile();
     void newVirtualScene();
     void newDataScene(QString data, QString obj, QString colormap, float xmin, float xmax, float ymin, float ymax, float zmin, float zmax);

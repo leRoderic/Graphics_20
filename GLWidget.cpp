@@ -87,7 +87,17 @@ void GLWidget::resizeGL(int width, int height) {
  * @brief GLWidget::initShadersGPU
  */
 void GLWidget::initShadersGPU(){
-    initShader("://resources/vshader1.glsl", "://resources/fshader1.glsl");
+    /* Shaders Index:
+     *      0. Default shaders
+     *      1. Gouraud shaders
+     *      2. Phong shaders
+     *      3. Toon shaders
+     *
+    */
+    initShader("://resources/vshader1.glsl", "://resources/fshader1.glsl", 0);
+    initShader("://resources/vGoraudShader.glsl", "://resources/fGoraudShader.glsl", 1);
+
+    program = programs[0];
 }
 
 QSize GLWidget::minimumSizeHint() const {
@@ -102,18 +112,18 @@ QSize GLWidget::sizeHint() const {
  * @brief GLWidget::initShader()
  * Compila i linka el vertex i el fragment shader
  */
-void GLWidget::initShader(const char* vShaderFile, const char* fShaderFile){
+void GLWidget::initShader(const char* vShaderFile, const char* fShaderFile, int index){
     QGLShader *vshader = new QGLShader(QGLShader::Vertex, this);
     QGLShader *fshader = new QGLShader(QGLShader::Fragment, this);
 
     vshader->compileSourceFile(vShaderFile);
     fshader->compileSourceFile(fShaderFile);
 
-    program = new QGLShaderProgram(this);
-    program->addShader(vshader);
-    program->addShader(fshader);
-    program->link();
-    program->bind();
+    programs[index] = new QGLShaderProgram(this);
+    programs[index]->addShader(vshader);
+    programs[index]->addShader(fshader);
+    programs[index]->link();
+    programs[index]->bind();
 }
 
 /** Gestio de les animacions i la gravació d'imatges ***/
@@ -183,22 +193,29 @@ void GLWidget::saveAnimation() {
     timer->start(1000);
 
 }
-
+/* Shaders Index:
+ *      0. Default shaders
+ *      1. Gouraud shaders
+ *      2. Phong shaders
+ *      3. Toon shaders
+ *
+*/
 void GLWidget::activaToonShader() {
     //A implementar a la fase 1 de la practica 2
     qDebug()<<"Estic a Toon";
+    program = programs[3];
 }
 
 void GLWidget::activaPhongShader() {
     //Opcional: A implementar a la fase 1 de la practica 2
     qDebug()<<"Estic a Phong";
-
+    program = programs[2];
 }
 
 void GLWidget::activaGouraudShader() {
     //A implementar a la fase 1 de la practica 2
     qDebug()<<"Estic a Gouraud";
-
+    program = programs[1];
 }
 
 void GLWidget::activaPhongTex() {

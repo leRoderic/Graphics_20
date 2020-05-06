@@ -4,5 +4,6 @@
         <file>resources/vshader1.glsl</file>
         <file>resources/fGoraudShader.glsl</file>
         <file>resources/vGoraudShader.glsl</file>
+        <file>resources/models/bigSphere.obj</file>
     </qresource>
 </RCC>

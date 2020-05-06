@@ -86,13 +86,12 @@ private:
     QTimer *timer;
     unsigned int currentFrame;
     unsigned int currentImage;
-
     QPoint lastPos;   // per interactuar amb la camera
-
-    QGLShaderProgram *program; // Per ara nomes es té un parell vertex-fragment
+    QGLShaderProgram *program;
+    QGLShaderProgram *programs[8]; // Per ara nomes es té un parell vertex-fragment
                                // Cal guardar-ne més d'un en la primera fase.
 
-    void initShader(const char* vertexShaderFile, const char* fragmentShaderFile);
+    void initShader(const char* vertexShaderFile, const char* fragmentShaderFile, int index);
     void initShadersGPU();
     void updateShader();
     void updateShaderTexture();

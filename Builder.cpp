@@ -7,6 +7,15 @@ Builder::Builder(GLWidget *glWid)
 
 }
 
+void Builder::loadSphere(){
+    QString fileName (":/resources/models/bigSphere.obj");
+    Object * obj = new Object(100000, fileName);
+    obj->setMaterial(new Material());
+    scene->addObject(obj);
+    scene->camera->actualitzaCamera(scene->capsaMinima);
+    emit newObj(obj);
+}
+
 void Builder::newObjFromFile()
 {
     QString fileName = QFileDialog::getOpenFileName();

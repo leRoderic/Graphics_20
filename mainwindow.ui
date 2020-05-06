@@ -924,6 +924,7 @@
     <property name="title">
      <string>File</string>
     </property>
+    <addaction name="actionLoad_sphere"/>
     <addaction name="action_obre_fitxer"/>
     <addaction name="action_obre_escena"/>
     <addaction name="action_obre_dades"/>
@@ -1092,6 +1093,11 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="actionLoad_sphere">
+   <property name="text">
+    <string>Load sphere</string>
    </property>
   </action>
  </widget>
