@@ -5,10 +5,10 @@
 
 #include "Scene.h"
 #include "Camera.h"
-#include "ColorMap.h"
+#include "colormaps/ColorMap.h"
 #include "ReadFile.h"
 #include "ObjectFactory.h"
-#include "ColorMapStatic.h"
+#include "colormaps/ColorMapStatic.h"
 #include <QString>
 
 class SceneFactory

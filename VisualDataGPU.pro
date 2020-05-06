@@ -24,6 +24,8 @@ SOURCES +=\
     scenes/SceneFactory.cpp \
     scenes/SceneFactoryVirtual.cpp \
     scenes/SceneFactoryData.cpp \
+    scenes/DataReader.cpp \
+    scenes/SceneReader.cpp \
     TG/TG.cpp \
     TG/Translate.cpp \
     animations/Animation.cpp \
@@ -44,6 +46,8 @@ HEADERS  += \
     scenes/SceneFactory.h \
     scenes/SceneFactoryVirtual.h \
     scenes/SceneFactoryData.h \
+    scenes/DataReader.h \
+    scenes/SceneReader.h \
     GLWidget.h \
     TG/TG.h \
     TG/Translate.h \
