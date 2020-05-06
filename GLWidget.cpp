@@ -98,6 +98,8 @@ void GLWidget::initShadersGPU(){
     initShader("://resources/vGoraudShader.glsl", "://resources/fGoraudShader.glsl", 1);
 
     program = programs[0];
+    program->link();
+    program->bind();
 }
 
 QSize GLWidget::minimumSizeHint() const {
@@ -204,18 +206,24 @@ void GLWidget::activaToonShader() {
     //A implementar a la fase 1 de la practica 2
     qDebug()<<"Estic a Toon";
     program = programs[3];
+    program->link();
+    program->bind();
 }
 
 void GLWidget::activaPhongShader() {
     //Opcional: A implementar a la fase 1 de la practica 2
     qDebug()<<"Estic a Phong";
     program = programs[2];
+    program->link();
+    program->bind();
 }
 
 void GLWidget::activaGouraudShader() {
     //A implementar a la fase 1 de la practica 2
     qDebug()<<"Estic a Gouraud";
     program = programs[1];
+    program->link();
+    program->bind();
 }
 
 void GLWidget::activaPhongTex() {

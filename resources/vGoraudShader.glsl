@@ -19,7 +19,7 @@ void main()
     gl_Position = gl_Position/gl_Position.w;
 
     //color = vColor;
-    color = vec4(1,0,0,1);
+    color = vec4(0,1,0,1);
 }
 
 
