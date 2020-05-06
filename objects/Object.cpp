@@ -11,7 +11,6 @@ Object::Object(int npoints, QObject *parent, Material* material) : QObject(paren
     points = new point4[numPoints];
     normals= new point4[numPoints];
     colors = new point4[numPoints];
-
     this->setMaterial(material);
  }
 

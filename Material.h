@@ -16,16 +16,23 @@ public:
 
     void toGPU(QGLShaderProgram *program);
 
-    vec3 getDiffuse(vec2 point) const;
+    vec3 getDiffuse() const;
 
     vec3 diffuse;
     vec3 ambient;
     vec3 specular;
     float alpha;
-    int beta;
+    float beta;
 
 protected:
     GLuint buffer;
+    struct{
+        GLuint a;
+        GLuint d;
+        GLuint s;
+        GLfloat alpha;
+        GLfloat beta;
+    } GL_Material;
 
 };
 
