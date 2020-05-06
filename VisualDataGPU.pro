@@ -21,6 +21,9 @@ SOURCES +=\
     objects/cara.cpp \
     objects/Object.cpp \
     scenes/Scene.cpp \
+    scenes/SceneFactory.cpp \
+    scenes/SceneFactoryVirtual.cpp \
+    scenes/SceneFactoryData.cpp \
     TG/TG.cpp \
     TG/Translate.cpp \
     animations/Animation.cpp \
@@ -38,6 +41,9 @@ HEADERS  += \
     objects/cara.h \
     objects/Object.h \
     scenes/Scene.h \
+    scenes/SceneFactory.h \
+    scenes/SceneFactoryVirtual.h \
+    scenes/SceneFactoryData.h \
     GLWidget.h \
     TG/TG.h \
     TG/Translate.h \

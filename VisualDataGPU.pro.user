@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<<<<<<< Updated upstream
-<!-- Written by QtCreator 4.3.1, 2020-05-06T11:21:52. -->
-=======
-<!-- Written by QtCreator 4.11.2, 2020-05-06T11:25:43. -->
->>>>>>> Stashed changes
+<!-- Written by QtCreator 4.3.1, 2020-05-06T11:37:23. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -314,7 +310,7 @@
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.ProFile">VisualDataGPU.pro</value>
     <value type="bool" key="Qt4ProjectManager.Qt4RunConfiguration.UseDyldImageSuffix">false</value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.UserWorkingDirectory"></value>
-    <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.UserWorkingDirectory.default">/home/abdelazzou14/EnginyeriaInformaticaUB/3CARRERA/GRAFICS/build-VisualDataGPU-Desktop_Qt_5_9_1_GCC_64bit-Debug</value>
+    <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.UserWorkingDirectory.default"></value>
     <value type="uint" key="RunConfiguration.QmlDebugServerPort">3768</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
