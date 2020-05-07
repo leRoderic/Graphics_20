@@ -37,7 +37,7 @@ void main()
 {
     vec3 resultat = vec3(0.0f);
     vec4 L, H, V;
-    vec4 N = vec4(normalize(normal),0.0f); // vector normal
+    vec4 N = normalize(normal); // vector normal
 
     vec3 kd = material.diffuse;
     vec3 ka = material.ambient;
@@ -56,7 +56,7 @@ void main()
         if (llums[i].tipus == 0){ // llum puntual
             L = vec4(normalize(llums[i].position.xyz - pos.xyz),0.0f);
         }
-        else if (llums[i] == 1){ // llum direccional
+        else if (llums[i].tipus == 1){ // llum direccional
             L = normalize(-llums[i].direction);
         }
         else { // llum spot
@@ -70,7 +70,7 @@ void main()
 
         vec3 ambient = ka * ia;
         vec3 diffuse = kd * id * max(dot(L,N), 0.0f);
-        vec3 specular = ks * is * (float) pow(max(dot(N, H), 0.0f), material->beta);
+        vec3 specular = ks * is * pow(max(dot(N, H), 0.0f), material.beta);
 
         resultat += atenuacio * (diffuse + specular) + ambient;
     }
