@@ -50,8 +50,6 @@ void main(){
 
     for(int i = 0; i < lights[0].length; i++){
 
-
-
         if(lights[i].type == PUNTUAL){
             L = vec4(normalize(lights[i].position.xyz - vPosition.xyz, 0.0f));
         }else if (lights[i].type == DIRECCIONAL){
