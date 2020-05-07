@@ -88,7 +88,7 @@ void Scene::lightsToGPU(QGLShaderProgram *program){
         GLuint atenuacio;
         GLuint position, direction;
         GLuint length;
-    } gl_Lights[20];
+    } gl_Lights[7];
 
     for (int i = 0; i < lights.size(); i++) {
         gl_Lights[i].ambient = program->uniformLocation(QString("conjunt[%1].ambient").arg(i));

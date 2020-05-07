@@ -114,9 +114,13 @@ void Object::make(){
         for(unsigned int j=0; j<cares[i].idxVertices.size(); j++){
             points[Index] = vertexs[cares[i].idxVertices[j]];
             colors[Index] = vec4(base_colors[j%4], 1.0);
+            normals[Index] = normalsVertexs[cares[i].idxNormals[j]];
             Index++;
         }
     }
+
+
+
 }
 
 /**
@@ -243,7 +247,7 @@ void Object::parseObjFile(const QString &fileName)
                         cara->idxNormals.push_back( lineParts.at(3).split("/").at(2).toInt() - 1);
 
 
-                        // cara->calculaNormal();
+                        //cara->calculaNormal(cara->normal);
                         cares.push_back(*cara);
                     }
 
