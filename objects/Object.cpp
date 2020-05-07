@@ -11,6 +11,7 @@ Object::Object(int npoints, QObject *parent) : QObject(parent){
     points = new point4[numPoints];
     normals= new point4[numPoints];
     colors = new point4[numPoints];
+    texture = nullptr;
  }
 
 /**
@@ -22,6 +23,7 @@ Object::Object(int npoints, QString n) : numPoints(npoints){
     points = new point4[numPoints];
     normals= new point4[numPoints];
     colors = new point4[numPoints];
+    texture = nullptr;
 
     parseObjFile(n);
     make();
@@ -36,8 +38,7 @@ Object::~Object(){
     delete normals;
     delete colors;
 
-    if(this->material != nullptr)
-        delete this->material;
+    if(this->material != nullptr) delete this->material;
 }
 
 /**
@@ -59,6 +60,9 @@ void Object::toGPU(QGLShaderProgram *pr) {
 
     // Send material information to the GPU
     this->toGPUMaterial(this->program);
+
+    if(this->texture) this->toGPUTexture(this->program);
+
 }
 
 
@@ -70,27 +74,35 @@ void Object::draw(){
     // TO  DO: A modificar a la fase 1 de la practica 2
     // Cal passar les normals a la GPU
 
+    if(this->texture) drawTexture();
+
     // Aqui s'ha de fer el pas de dades a la GPU per si hi ha més d'un objecte
     // Activació a GL del Vertex Buffer Object
     glBindBuffer( GL_ARRAY_BUFFER, buffer );
 
-    glBufferData( GL_ARRAY_BUFFER, sizeof(point4)*Index + sizeof(point4)*Index, NULL, GL_STATIC_DRAW );
+    glBufferData( GL_ARRAY_BUFFER, (sizeof(point4)*Index)*3, NULL, GL_STATIC_DRAW );
     glBufferSubData( GL_ARRAY_BUFFER, 0, sizeof(point4)*Index, points );
-    //glBufferSubData( GL_ARRAY_BUFFER, sizeof(point4)*Index, sizeof(point4)*Index, colors );
+    glBufferSubData( GL_ARRAY_BUFFER, sizeof(point4)*Index, sizeof(point4)*Index, normals);
+    glBufferSubData( GL_ARRAY_BUFFER, (sizeof(point4)*Index)*2, sizeof(vec2)*Index, texCoord);
 
     // set up vertex arrays
     glBindVertexArray( vao );
+
     glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 0,  0);
     glEnableVertexAttribArray(0);
 
     glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, 0,  (void*)(sizeof(point4)*Index));
     glEnableVertexAttribArray(1);
 
+    glVertexAttribPointer(2, 4, GL_FLOAT, GL_FALSE, 0,  (void*)((sizeof(point4)*Index)*2));
+    glEnableVertexAttribArray(2);
+
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
     glDrawArrays( GL_TRIANGLES, 0, Index );
 
     glDisableVertexAttribArray(0);
     glDisableVertexAttribArray(1);
+    glDisableVertexAttribArray(2);
 
 }
 
@@ -115,11 +127,12 @@ void Object::make(){
             points[Index] = vertexs[cares[i].idxVertices[j]];
             colors[Index] = vec4(base_colors[j%4], 1.0);
             normals[Index] = normalsVertexs[cares[i].idxNormals[j]];
+
             Index++;
         }
     }
 
-
+    initTexture();
 
 }
 
@@ -152,6 +165,9 @@ void Object::toGPUTexture(QGLShaderProgram *pr) {
 // TO DO: Cal implementar en la fase 1 de la practica 2
 // S'ha d'activar la textura i es passa a la GPU
 
+    glEnable( GL_DEPTH_TEST );
+    glEnable(GL_TEXTURE_2D);
+
 }
 
 
@@ -164,10 +180,12 @@ void Object::drawTexture(){
     // TO DO: Cal implementar en la fase 1 de la practica 2
     // S'ha d'activar la textura i es passa a la GPU
 
+    program->setUniformValue("texMap", 0);
+
 }
 
 void Object::setTexture(QOpenGLTexture *t){
-   texture = t;
+   this->texture = t;
 }
 
 /**
@@ -177,8 +195,16 @@ void Object::initTexture()
  {
     // TO DO: A implementar a la fase 1 de la practica 2
     // Cal inicialitzar la textura de l'objecte: veure l'exemple del CubGPUTextura
+
     qDebug() << "Initializing textures...";
 
+    glActiveTexture(GL_TEXTURE0);
+
+    texture = new QOpenGLTexture(QImage("://resources/mosaic.png"));
+    texture->setMinificationFilter(QOpenGLTexture::LinearMipMapLinear);
+    texture->setMagnificationFilter(QOpenGLTexture::Linear);
+
+    texture->bind(0);
  }
 
 
