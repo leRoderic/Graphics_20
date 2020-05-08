@@ -25,16 +25,14 @@ public:
     float beta;
 
 protected:
+
     struct{
-        GLuint d;
-    } GL_Material;
-    /*struct{
         GLuint a;
         GLuint d;
         GLuint s;
         GLfloat alpha;
         GLfloat beta;
-    } GL_Material;*/
+    } GL_Material;
 
 };
 

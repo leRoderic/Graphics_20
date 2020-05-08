@@ -20,5 +20,5 @@ void main()
     gl_Position = gl_Position/gl_Position.w;
 
     //color = vColor;
-    color = vec4(material.diffuse, 1.0f);
+    color = vec4(1,0,0, 1.0f);
 }

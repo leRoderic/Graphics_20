@@ -7,7 +7,7 @@
 Light::Light(LightType t) {
     // TO DO: A canviar a la fase 1 de la practica 2
     ambient = vec3(0.0, 0.0, 0.0);
-    diffuse = vec3(0.0, 0.0, 0.0);
+    diffuse = vec3(1.0, 0.0, 1.0);
     specular = vec3(0.0, 0.0, 0.0);
     position = vec3(0.0, 0.0, 0.0);
     direction = vec3(0.0, 0.0, 0.0);
