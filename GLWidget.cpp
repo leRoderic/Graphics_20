@@ -96,7 +96,8 @@ void GLWidget::initShadersGPU(){
     */
     initShader("://resources/vshader1.glsl", "://resources/fshader1.glsl", 0);
     initShader("://resources/vGoraudShader.glsl", "://resources/fGoraudShader.glsl", 1);
-
+    //initShader(":/resources/vPhongShader.glsl", ":/resources/fPhongShader.glsl", 2);
+    //initShader(":/resources/vPhongShader.glsl", ":/resources/fPhongShader.glsl", 3); // Toon shaders
     program = programs[0];
     program->link();
     program->bind();
@@ -122,6 +123,8 @@ void GLWidget::initShader(const char* vShaderFile, const char* fShaderFile, int 
     fshader->compileSourceFile(fShaderFile);
 
     programs[index] = new QGLShaderProgram(this);
+    programs[index] = new QGLShaderProgram(this);
+
     programs[index]->addShader(vshader);
     programs[index]->addShader(fshader);
 }
@@ -314,13 +317,13 @@ void GLWidget::setLighting(const QVector3D &lightPos, const QVector3D &Ia, const
 
 void GLWidget::setTextureFile(const QString &file)
 {
-    QOpenGLTexture *texture;
+    /*QOpenGLTexture *texture;
 
     texture = new QOpenGLTexture(QImage(file).mirrored());
 
     // TO DO: A modificar en la fase 1 de la practica 2
     // Per ara es posa la textura al primer objecte de l'escena
-    scene->elements[0]->setTexture(texture);
+    scene->elements[0]->setTexture(texture);*/
 
 
 }

@@ -1,17 +1,18 @@
 #version 330
 
 layout (location = 0) in vec4 vPosition;
-//layout (location = 1) in vec4 vColor;
-
-struct Material {
-    vec3 difuse;
-};
-uniform Material material;
+layout (location = 1) in vec4 vColor;
 
 uniform mat4 model_view;
 uniform mat4 projection;
 
 out vec4 color;
+
+struct GL_Material {
+    vec3 diffuse;
+};
+
+uniform GL_Material material;
 
 void main()
 {
@@ -19,5 +20,5 @@ void main()
     gl_Position = gl_Position/gl_Position.w;
 
     //color = vColor;
-    color = vec4(1,0,0,1);
+    color = vec4(material.diffuse, 1.0f);
 }

@@ -84,6 +84,7 @@ int lightTypeNumber(Light *l){
     }else if (l->getTipusLight() == Spot){
         return 2;
     }
+    return -1;
 }
 
 /**
