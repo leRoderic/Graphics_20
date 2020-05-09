@@ -9,25 +9,25 @@ struct Material {
     vec3 diffuse;
     vec3 ambient;
     vec3 specular;
+    float alpha;
     float beta;
-    float alfa;
 };
 
 uniform Material material;
 
 //0->puntual 1->direcciona 2->spot
-struct Lights {
+struct Light{
+    vec3 ambient;
+    vec3 diffuse;
+    vec3 specular;
+    vec3 atenuacio;
     vec4 position;
     vec4 direction;
-    vec3 diffuse;
-    vec3 ambient;
-    vec3 specular;
-    vec3 attenuacio;
-    int len;
-    int tipus;
+    int type;
+    int length;
 };
 
-uniform Lights llums[20];
+uniform Light lights[20];
 
 uniform vec3 ambientGlobal;
 
@@ -43,21 +43,21 @@ void main()
     vec3 ka = material.ambient;
     vec3 ks = material.specular;
 
-    for ( int i = 0; i < llums[0].len; i++) {
+    for ( int i = 0; i < lights[0].length; i++) {
 
-        vec3 id = llums[i].diffuse;
-        vec3 ia = llums[i].ambient;
-        vec3 is = llums[i].specular;
+        vec3 id = lights[i].diffuse;
+        vec3 ia = lights[i].ambient;
+        vec3 is = lights[i].specular;
 
-        float d = length(llums[i].position - pos);
+        float d = length(lights[i].position - pos);
 
-        float atenuacio = 1.0/dot(llums[i].attenuacio, vec3(1.0f, d, pow(d, 2)));
+        float atenuacio = 1.0/dot(lights[i].atenuacio, vec3(1.0f, d, pow(d, 2)));
 
-        if (llums[i].tipus == 0){ // llum puntual
-            L = vec4(normalize(llums[i].position.xyz - pos.xyz),0.0f);
+        if (lights[i].type == 0){ // llum puntual
+            L = vec4(normalize(lights[i].position.xyz - pos.xyz),0.0f);
         }
-        else if (llums[i].tipus == 1){ // llum direccional
-            L = normalize(-llums[i].direction);
+        else if (lights[i].type == 1){ // llum direccional
+            L = normalize(-lights[i].direction);
         }
         else { // llum spot
             //NO IMPLEMENTAT

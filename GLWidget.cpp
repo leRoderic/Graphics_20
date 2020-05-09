@@ -96,7 +96,7 @@ void GLWidget::initShadersGPU(){
     */
     initShader("://resources/vshader1.glsl", "://resources/fshader1.glsl", 0);
     initShader("://resources/vGoraudShader.glsl", "://resources/fGoraudShader.glsl", 1);
-    //initShader(":/resources/vPhongShader.glsl", ":/resources/fPhongShader.glsl", 2);
+    initShader(":/resources/vPhongShader.glsl", ":/resources/fPhongShader.glsl", 2);
     //initShader(":/resources/vPhongShader.glsl", ":/resources/fPhongShader.glsl", 3); // Toon shaders
     program = programs[0];
     program->link();
