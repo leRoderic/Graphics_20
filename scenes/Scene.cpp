@@ -9,7 +9,7 @@ Scene::Scene() {
     capsaMinima.a = 2;
     capsaMinima.h = 2;
     capsaMinima.p = 2;
-    lightAmbientGlobal = vec3(0.2, 0.2, 0.2);
+    lightAmbientGlobal = vec3(0.3f);
 }
 
 /**
@@ -35,10 +35,11 @@ void Scene::addObject(Object *obj) {
  */
 void Scene::toGPU(QGLShaderProgram *p) {
     qDebug()<<"scene to gpu";
+    lightsToGPU(p);
+    setAmbientToGPU(p);
     for(unsigned int i=0; i < elements.size(); i++){
         elements.at(i)->toGPU(p);
     }
-    lightsToGPU(p);
 }
 
 /**

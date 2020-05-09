@@ -80,7 +80,7 @@ void Object::draw(){
     // Activació a GL del Vertex Buffer Object
     glBindBuffer( GL_ARRAY_BUFFER, buffer );
 
-    glBufferData( GL_ARRAY_BUFFER, (sizeof(point4)*Index)*3, NULL, GL_STATIC_DRAW );
+    glBufferData( GL_ARRAY_BUFFER, sizeof(point4)*Index + sizeof(point4)*Index, NULL, GL_STATIC_DRAW );
     glBufferSubData( GL_ARRAY_BUFFER, 0, sizeof(point4)*Index, points );
     glBufferSubData( GL_ARRAY_BUFFER, sizeof(point4)*Index, sizeof(point4)*Index, normals);
     glBufferSubData( GL_ARRAY_BUFFER, (sizeof(point4)*Index)*2, sizeof(vec2)*Index, texCoord);
@@ -94,7 +94,7 @@ void Object::draw(){
     glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, 0,  (void*)(sizeof(point4)*Index));
     glEnableVertexAttribArray(1);
 
-    glVertexAttribPointer(2, 4, GL_FLOAT, GL_FALSE, 0,  (void*)((sizeof(point4)*Index)*2));
+    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 0,  (void*)((sizeof(point4)*Index)*2));
     glEnableVertexAttribArray(2);
 
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
@@ -149,7 +149,7 @@ void Object::toGPUMaterial(QGLShaderProgram* p) {
 
 void Object::setMaterial(Material* material){
     if(material == nullptr)
-        this->material = new Material(vec3(1,0,0), vec3(1,0,0), vec3(1,0,0), 0, 1);
+        this->material = new Material(vec3(0.2f), vec3(0.8,0.5,0.5), vec3(1.0f), 0, 20);
     else
         this->material = material;
 }

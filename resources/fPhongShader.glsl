@@ -51,7 +51,7 @@ void main()
 
         float d = length(lights[i].position - pos);
 
-        float atenuacio = 1.0/dot(lights[i].atenuacio, vec3(1.0f, d, pow(d, 2)));
+        float atenuacio = dot(lights[i].atenuacio, vec3(1.0f, d, pow(d, 2)));
 
         if (lights[i].type == 0){ // llum puntual
             L = vec4(normalize(lights[i].position.xyz - pos.xyz),0.0f);
@@ -72,7 +72,7 @@ void main()
         vec3 diffuse = kd * id * max(dot(L,N), 0.0f);
         vec3 specular = ks * is * pow(max(dot(N, H), 0.0f), material.beta);
 
-        resultat += atenuacio * (diffuse + specular) + ambient;
+        resultat += ambient + atenuacio/(diffuse + specular);
     }
      resultat = ambientGlobal * material.ambient + resultat;
 
