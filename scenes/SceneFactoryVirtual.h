@@ -14,10 +14,8 @@ public:
     SceneFactoryVirtual();
 
     virtual Scene    *createScene(QString nomFitxer);
-    virtual Scene    *createScene();
-
-private:
-    void OneSphere(Scene *s);
+    //virtual Scene    *createScene();
+    virtual Camera   *createCamera();
 };
 
 

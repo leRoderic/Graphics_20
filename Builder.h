@@ -3,6 +3,8 @@
 
 #include <QtWidgets>
 #include <GLWidget.h>
+#include <scenes/SceneFactoryVirtual.h>
+#include <scenes/SceneFactoryData.h>
 
 class Builder : public QObject {
         Q_OBJECT

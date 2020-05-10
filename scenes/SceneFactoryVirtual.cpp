@@ -9,7 +9,7 @@ SceneFactoryVirtual::SceneFactoryVirtual()
 {
 
 }
-
+/*
 Scene *SceneFactoryVirtual::createScene(QString filename) {
 
     Scene *s = new Scene();
@@ -20,17 +20,24 @@ Scene *SceneFactoryVirtual::createScene(QString filename) {
     s->lights.push_back(new Light(vec4(-30, 0, 5,0), vec4(0.0f),vec3(0.3f), vec3(0.7f), vec3(1.0f), vec3(0.5, 0.0, 0.01)));
 
     return s;
-}
+}*/
 
 
 
-Scene *SceneFactoryVirtual::createScene() {
+Scene *SceneFactoryVirtual::createScene(QString nomFitxer) {
     Scene *s = new Scene();
-    this->OneSphere(s);
+    s->lightAmbientGlobal = vec3(0.3f);
+    Light *light = new Light(vec4(10, 20, 20,0), vec4(0.0f),vec3(0.2f), vec3(0.8f), vec3(1.0f), vec3(0.0f));
+    light->setTipusLight(Puntual);
+    s->addLight(light);
+    Object * obj = new Object(100000, nomFitxer);
+    obj->setMaterial(new Material());
+    s->addObject(obj);
+
     return s;
 }
 
-void SceneFactoryVirtual::OneSphere(Scene *s) {
-
+Camera *SceneFactoryVirtual::createCamera() {
+    return nullptr;
 
 }

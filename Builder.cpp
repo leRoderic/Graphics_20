@@ -31,6 +31,9 @@ void Builder::newObjFromFile()
 void Builder::newVirtualScene() {
     // TO DO Fase 1: creació de la nova escena Virtual a partir d'un fitxer VIRTUAL
 
+    SceneFactory *s = new SceneFactoryVirtual();
+    scene = s->createScene("://resources/models/sphere0.obj");
+
      emit newScene(scene);
 }
 

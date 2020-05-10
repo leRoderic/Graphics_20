@@ -208,6 +208,8 @@ void GLWidget::activaToonShader() {
     program = programs[3];
     program->link();
     program->bind();
+    scene->toGPU(program);//actualitzar l'escena amb el Shader actual
+    updateShader();
 }
 
 void GLWidget::activaPhongShader() {
@@ -216,6 +218,8 @@ void GLWidget::activaPhongShader() {
     program = programs[2];
     program->link();
     program->bind();
+    scene->toGPU(program);//actualitzar l'escena amb el Shader actual
+    updateShader();
 }
 
 void GLWidget::activaGouraudShader() {
@@ -224,6 +228,8 @@ void GLWidget::activaGouraudShader() {
     program = programs[1];
     program->link();
     program->bind();
+    scene->toGPU(program);//actualitzar l'escena amb el Shader actual
+    updateShader();
 }
 
 void GLWidget::activaPhongTex() {
@@ -254,7 +260,7 @@ void GLWidget::activaTransparency() {
 //Metode  per canviar de shaders.
 void GLWidget::updateShader(){
     //A implementar a la fase 1 de la practica 2
-
+    updateGL();
 }
 
 //Metode per canviar de shaders de textures
