@@ -43,7 +43,7 @@ void main(){
 
     N = vec4(normalize(normals.xyz), 0.0f);
 
-    color = vec4(colorPart, 1.0f);
+    //color = vec4(colorPart, 1.0f);
 
     for(int i = 0; i < lights[0].length; i++){
 
@@ -55,7 +55,7 @@ void main(){
             break; // not implemented yet
         }
 
-        V = vec4(normalize(vPosition.xyz - obs.xyz), 0.0f);
+        V = vec4(normalize(obs.xyz - vPosition.xyz), 0.0f);
         H = vec4(normalize(L.xyz + V.xyz), 0.0f);
 
         ambient = material.ambient* lights[i].ambient;
@@ -64,8 +64,14 @@ void main(){
 
         d = length(lights[i].position.xyz - vPosition.xyz);
         atenuacio = dot(lights[i].atenuacio, vec3(1.0f, d, pow(d, 2)));
-        colorPart += (ambient + atenuacio*(diffuse + specular) + material.ambient * ambientGlobal);
+
+        if(atenuacio == 0.0f){
+            colorPart += ambient + (diffuse + specular);
+        }else{
+            colorPart += ambient + atenuacio/(diffuse + specular);
+        }
     }
+    colorPart+= material.ambient * ambientGlobal;
     color = vec4(colorPart, 1.0f);
     //color = vec4(material.diffuse.xzx, 1.0f);
 }
