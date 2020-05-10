@@ -54,7 +54,7 @@ void main()
         float atenuacio = dot(lights[i].atenuacio, vec3(1.0f, d, pow(d, 2)));
 
         if (lights[i].type == 0){ // llum puntual
-            L = vec4(normalize(lights[i].position.xyz - pos.xyz),0.0f);
+            L = normalize(lights[i].position - pos);
         }
         else if (lights[i].type == 1){ // llum direccional
             L = normalize(-lights[i].direction);
@@ -66,15 +66,20 @@ void main()
 
         // H vector mig -> L + V
         V = normalize(obs - pos);
-        H = vec4(normalize(L.xyz + V.xyz),0.0f);
+        H = normalize(L + V);
 
         vec3 ambient = ka * ia;
         vec3 diffuse = kd * id * max(dot(L,N), 0.0f);
         vec3 specular = ks * is * pow(max(dot(N, H), 0.0f), material.beta);
 
-        resultat += ambient + atenuacio/(diffuse + specular);
+        if(atenuacio == 0.0f){
+            resultat += ambient + (diffuse + specular);
+        }else{
+            resultat += ambient + atenuacio/(diffuse + specular);
+        }
+
     }
-     resultat = ambientGlobal * material.ambient + resultat;
+     resultat += ambientGlobal * material.ambient;
 
      color = vec4(resultat, 1.0f);
 

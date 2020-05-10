@@ -11,7 +11,7 @@ Light::Light(LightType t) {
     specular = vec3(1.0f);
     position = vec4(10,10,20,0.0f);
     direction = vec4(0.0f);
-    //atenuacio = vec3(0.0, 0.0, 0.0);
+    atenuacio = vec3(0.0, 0.0, 0.0);
 }
 
 

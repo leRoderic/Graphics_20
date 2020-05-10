@@ -123,7 +123,6 @@ void GLWidget::initShader(const char* vShaderFile, const char* fShaderFile, int 
     fshader->compileSourceFile(fShaderFile);
 
     programs[index] = new QGLShaderProgram(this);
-    programs[index] = new QGLShaderProgram(this);
 
     programs[index]->addShader(vshader);
     programs[index]->addShader(fshader);
