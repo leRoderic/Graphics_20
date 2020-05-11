@@ -22,11 +22,11 @@ uniform vec4 obs;
 
 void main()
 {
-    vec3 color = vec3(1);
+    vec3 color = vec3(1.);
 
     for(int i = 0; i < 20; ++i)
     {
-        if(lights[i].type == 1) // 1==DIRECTIONAL
+        //if(lights[i].type == 1) // 1==DIRECTIONAL
         {
             float r = dot(normalize(lights[i].direction), normal);
 
@@ -43,9 +43,11 @@ void main()
             else
                 color *= v1;
 
+            color = vec3(0.);
+
             break;  // compute with the first directional light found and exit
         }
     }
 
-    colorOut = vec4(color, 1);
+    colorOut = vec4(color, 1.0f);
 }

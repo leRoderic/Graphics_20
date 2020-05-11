@@ -12,16 +12,18 @@ Light::Light(LightType t) {
     position = vec4(10,10,20,0.0f);
     direction = vec4(0.0f);
     atenuacio = vec3(0.0, 0.0, 0.0);
+    this->type = t;
 }
 
 
-Light::Light(vec4 p, vec4 dir, vec3 a, vec3 d, vec3 s,vec3 ate){
+Light::Light(vec4 p, vec4 dir, vec3 a, vec3 d, vec3 s,vec3 ate, LightType t){
     this->position = p;
     this->direction = dir;
     this->ambient = a;
     this->diffuse = d;
     this->specular = s;
     this->atenuacio = ate;
+    this->type = t;
 }
 
 /**
@@ -129,7 +131,10 @@ LightType Light::getTipusLight() const
 {
     // TO DO: A canviar a la fase 1 de la practica 2
     //return (!this->direction)? Puntual: Direccional;
-    return (this->direction == vec4(0.0))? Puntual: Direccional;
+    /*if(this->direction.x == 0.0 && this->direction.y == 0.0 && this->direction.z == 0.0 && this->direction.w == 0.0 )
+        return Puntual;
+    return Direccional;*/
+    return this->type;
 }
 
 /**
@@ -148,4 +153,5 @@ void Light::setTipusLight(const LightType &value)
         case Spot:
             break;
     }
+    this->type = value;
 }
