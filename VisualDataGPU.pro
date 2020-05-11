@@ -64,3 +64,6 @@ OTHER_FILES += \
 
 RESOURCES += resources.qrc
 
+DISTFILES += \
+    resources/models/vFlatShading.vert
+
