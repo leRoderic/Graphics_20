@@ -43,6 +43,7 @@ protected:
 
     // Els colors s'usen en la primera execució però després son prescindibles
     point4 *colors;
+    vec2 *texCoord;
 
     int Index; // index de control del numero de vertexs a passar a la GPU
 

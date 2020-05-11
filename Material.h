@@ -25,7 +25,7 @@ public:
     float beta;
 
 protected:
-    GLuint buffer;
+
     struct{
         GLuint a;
         GLuint d;

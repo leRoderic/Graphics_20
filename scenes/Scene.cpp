@@ -9,7 +9,7 @@ Scene::Scene() {
     capsaMinima.a = 2;
     capsaMinima.h = 2;
     capsaMinima.p = 2;
-    lightAmbientGlobal = vec3(0.2, 0.2, 0.2);
+    lightAmbientGlobal = vec3(0.3f);
 }
 
 /**
@@ -34,6 +34,9 @@ void Scene::addObject(Object *obj) {
  * @brief Scene::toGPU
  */
 void Scene::toGPU(QGLShaderProgram *p) {
+    qDebug()<<"scene to gpu";
+    lightsToGPU(p);
+    setAmbientToGPU(p);
     for(unsigned int i=0; i < elements.size(); i++){
         elements.at(i)->toGPU(p);
     }
@@ -75,7 +78,17 @@ void Scene::setLightActual(Light* l){
     lights[lights.size()-1]=l;
 }
 
+int lightTypeNumber(Light *l){
 
+    if(l->getTipusLight() == Puntual){
+        return 0;
+    }else if (l->getTipusLight() == Direccional){
+        return 1;
+    }else if (l->getTipusLight() == Spot){
+        return 2;
+    }
+    return -1;
+}
 
 /**
  * @brief Scene::lightsToGPU
@@ -83,38 +96,49 @@ void Scene::setLightActual(Light* l){
  */
 void Scene::lightsToGPU(QGLShaderProgram *program){
 // TO DO: A implementar a la fase 1 de la practica 2
+
     struct gl_Lights{
-        GLuint ambient, diffuse, specular;
+        GLuint ambient;
+        GLuint diffuse;
+        GLuint specular;
         GLuint atenuacio;
-        GLuint position, direction;
+        GLuint position;
+        GLuint direction;
+        GLuint type;
         GLuint length;
     } gl_Lights[20];
 
     for (int i = 0; i < lights.size(); i++) {
-        gl_Lights[i].ambient = program->uniformLocation(QString("conjunt[%1].ambient").arg(i));
-        gl_Lights[i].diffuse = program->uniformLocation(QString("conjunt[%1].diffuse").arg(i));
-        gl_Lights[i].specular = program->uniformLocation(QString("conjunt[%1].specular").arg(i));
-        gl_Lights[i].atenuacio = program->uniformLocation(QString("conjunt[%1].atenuacio").arg(i));
-        gl_Lights[i].position = program->uniformLocation(QString("conjunt[%1].position").arg(i));
-        gl_Lights[i].direction = program->uniformLocation(QString("conjunt[%1].direction").arg(i));
 
-        gl_Lights[i].length = program->uniformLocation(QString("conjunt[%1].length").arg(i));
+        gl_Lights[i].ambient = program->uniformLocation(QString("lights[%1].ambient").arg(i));
+        gl_Lights[i].diffuse = program->uniformLocation(QString("lights[%1].diffuse").arg(i));
+        gl_Lights[i].specular = program->uniformLocation(QString("lights[%1].specular").arg(i));
+        gl_Lights[i].atenuacio = program->uniformLocation(QString("lights[%1].atenuacio").arg(i));
+
+        gl_Lights[i].position = program->uniformLocation(QString("lights[%1].position").arg(i));
+        gl_Lights[i].direction = program->uniformLocation(QString("lights[%1].direction").arg(i));
+
+        gl_Lights[i].type = program->uniformLocation(QString("lights[%1].type").arg(i));
+
+        gl_Lights[i].length = program->uniformLocation(QString("lights[%1].length").arg(i));
+
 
         glUniform3fv(gl_Lights[i].ambient, 1, lights[i]->ambient);
         glUniform3fv(gl_Lights[i].diffuse, 1, lights[i]->diffuse);
         glUniform3fv(gl_Lights[i].specular, 1, lights[i]->specular);
         glUniform3fv(gl_Lights[i].atenuacio, 1, lights[i]->atenuacio);
+
         glUniform4fv(gl_Lights[i].position, 1, lights[i]->position);
         glUniform4fv(gl_Lights[i].direction, 1, lights[i]->direction);
+
+        glUniform1i(gl_Lights[i].type, 0);//lightTypeNumber(lights[i]));
+
         glUniform1i(gl_Lights[i].length, lights.size());
-
     }
-
 }
 
 void Scene::addLight(Light *l) {
     lights.push_back(l);
-
 }
 
 /**
@@ -123,7 +147,7 @@ void Scene::addLight(Light *l) {
  */
 void Scene::setAmbientToGPU(QGLShaderProgram *program){
     // TO DO: A implementar a la fase 1 de la practica 2
-    GLuint ambient = program->uniformLocation(QString("ambient"));
+    GLuint ambient = program->uniformLocation(QString("ambientGlobal"));
     glUniform3fv(ambient, 1, this->lightAmbientGlobal);
 }
 

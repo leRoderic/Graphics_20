@@ -2,7 +2,10 @@
 
 
 Material::Material() {
-    this->diffuse = vec3(1.0f);
+    this->diffuse = vec3(0.8f, 0.5f, 0.5f);
+    this->ambient = vec3(0.2f);
+    this->specular = vec3(1.0f, 1.0f, 1.0f);
+    this->beta = 20.0f;
 
 }
 
