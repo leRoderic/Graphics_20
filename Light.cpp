@@ -128,8 +128,9 @@ void Light::setCoeficients(const vec3 &value)
 LightType Light::getTipusLight() const
 {
     // TO DO: A canviar a la fase 1 de la practica 2
-    //return (!this->direction)? Puntual: Direccional;
-    return (this->direction == vec4(0.0))? Puntual: Direccional;
+    if(this->direction.x == 0.0 && this->direction.y == 0.0 && this->direction.z == 0.0 && this->direction.w == 0.0 )
+        return Puntual;
+    return Direccional;
 }
 
 /**
