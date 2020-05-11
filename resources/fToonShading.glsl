@@ -5,14 +5,20 @@ in vec4 normal;
 
 out vec4 colorOut;
 
-struct light {
-    vec3 ambient, diffuse, specular;
+struct Light{
+    vec3 ambient;
+    vec3 diffuse;
+    vec3 specular;
     vec3 atenuacio;
-    vec4 position, direction;
+    vec4 position;
+    vec4 direction;
     int type;
+    int length;
 };
 
-uniform light lights[20];
+uniform Light lights[20];
+uniform vec3 ambientGlobal;
+uniform vec4 obs;
 
 void main()
 {
