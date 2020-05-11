@@ -26,11 +26,13 @@ void main()
 
     for(int i = 0; i < 20; ++i)
     {
-        //if(lights[i].type == 1) // 1==DIRECTIONAL
+        if(lights[i].type == 1) // 1==DIRECTIONAL
         {
             float r = dot(normalize(lights[i].direction), normal);
 
-            float v1 = 3/4;
+            color *= r;
+
+            /*float v1 = 3/4;
             float v2 = 2/4;
             float v3 = 1/4;
 
@@ -41,9 +43,7 @@ void main()
             else if(r >= v1)
                 color *= v2;
             else
-                color *= v1;
-
-            color = vec3(0.);
+                color *= v1;*/
 
             break;  // compute with the first directional light found and exit
         }
