@@ -11,6 +11,7 @@ Object::Object(int npoints, QObject *parent) : QObject(parent){
     points = new point4[numPoints];
     normals= new point4[numPoints];
     colors = new point4[numPoints];
+    texCoord = new vec2[numPoints];
     texture = nullptr;
  }
 
@@ -23,6 +24,7 @@ Object::Object(int npoints, QString n) : numPoints(npoints){
     points = new point4[numPoints];
     normals= new point4[numPoints];
     colors = new point4[numPoints];
+    texCoord = new vec2[numPoints];
     texture = nullptr;
 
     parseObjFile(n);
@@ -61,7 +63,7 @@ void Object::toGPU(QGLShaderProgram *pr) {
     // Send material information to the GPU
     this->toGPUMaterial(this->program);
 
-    if(this->texture) this->toGPUTexture(this->program);
+    this->toGPUTexture(this->program);
 
 }
 
@@ -74,13 +76,13 @@ void Object::draw(){
     // TO  DO: A modificar a la fase 1 de la practica 2
     // Cal passar les normals a la GPU
 
-    if(this->texture) drawTexture();
+    drawTexture();
 
     // Aqui s'ha de fer el pas de dades a la GPU per si hi ha més d'un objecte
     // Activació a GL del Vertex Buffer Object
     glBindBuffer( GL_ARRAY_BUFFER, buffer );
 
-    glBufferData( GL_ARRAY_BUFFER, sizeof(point4)*Index + sizeof(point4)*Index, NULL, GL_STATIC_DRAW );
+    glBufferData( GL_ARRAY_BUFFER, sizeof(point4)*Index + sizeof(point4)*Index + sizeof(vec2)*Index, NULL, GL_STATIC_DRAW );
     glBufferSubData( GL_ARRAY_BUFFER, 0, sizeof(point4)*Index, points );
     glBufferSubData( GL_ARRAY_BUFFER, sizeof(point4)*Index, sizeof(point4)*Index, normals);
     glBufferSubData( GL_ARRAY_BUFFER, (sizeof(point4)*Index)*2, sizeof(vec2)*Index, texCoord);
@@ -127,6 +129,8 @@ void Object::make(){
             points[Index] = vertexs[cares[i].idxVertices[j]];
             colors[Index] = vec4(base_colors[j%4], 1.0);
             normals[Index] = normalsVertexs[cares[i].idxNormals[j]];
+            if(!textVertexs.empty())
+                texCoord[Index] = textVertexs[cares[i].idxTextures[j]];
 
             Index++;
         }
@@ -196,15 +200,15 @@ void Object::initTexture()
     // TO DO: A implementar a la fase 1 de la practica 2
     // Cal inicialitzar la textura de l'objecte: veure l'exemple del CubGPUTextura
 
-    qDebug() << "Initializing textures... --- IS COMMENTED";
+    qDebug() << "Initializing textures...";
 
-    /*glActiveTexture(GL_TEXTURE0);
+    glActiveTexture(GL_TEXTURE0);
 
-    texture = new QOpenGLTexture(QImage("://resources/mosaic.png"));
+    texture = new QOpenGLTexture(QImage("://resources/textures/capsule0.jpg"));
     texture->setMinificationFilter(QOpenGLTexture::LinearMipMapLinear);
     texture->setMagnificationFilter(QOpenGLTexture::Linear);
 
-    texture->bind(0);*/
+    texture->bind(0);
  }
 
 

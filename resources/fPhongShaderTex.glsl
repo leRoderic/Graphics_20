@@ -2,6 +2,7 @@
 
 in vec4 pos;
 in vec4 normal;
+in vec2 coord;
 
 out vec4 color;
 
@@ -33,6 +34,8 @@ uniform vec3 ambientGlobal;
 
 uniform vec4 obs;
 
+uniform sampler2D texMap;
+
 void main()
 {
     vec3 resultat = vec3(0.0f);
@@ -42,6 +45,8 @@ void main()
     vec3 kd = material.diffuse;
     vec3 ka = material.ambient;
     vec3 ks = material.specular;
+
+    vec4 tex = texture2D(texMap, coord);
 
     for ( int i = 0; i < lights[0].length; i++) {
 
@@ -69,7 +74,7 @@ void main()
         H = normalize(L + V);
 
         vec3 ambient = ka * ia;
-        vec3 diffuse = kd * id * max(dot(L,N), 0.0f);
+        vec3 diffuse = (tex.xyz * 0.75 + kd * 0.25) * id * max(dot(L,N), 0.0f);// (tex.xyz * 0.75 + kd * 0.25) * id * max(dot(L,N), 0.0f);
         vec3 specular = ks * is * pow(max(dot(N, H), 0.0f), material.beta);
 
         if(atenuacio == 0.0f){

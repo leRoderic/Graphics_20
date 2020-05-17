@@ -11,5 +11,9 @@
         <file>resources/fPhongShader.glsl</file>
         <file>resources/models/Monkey.obj</file>
         <file>resources/models/sphere0.obj</file>
+        <file>resources/vPhongShaderTex.glsl</file>
+        <file>resources/fPhongShaderTex.glsl</file>
+        <file>resources/textures/capsule0.jpg</file>
+        <file>resources/models/capsule.obj</file>
     </qresource>
 </RCC>

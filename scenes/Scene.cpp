@@ -131,7 +131,7 @@ void Scene::lightsToGPU(QGLShaderProgram *program){
         glUniform4fv(gl_Lights[i].position, 1, lights[i]->position);
         glUniform4fv(gl_Lights[i].direction, 1, lights[i]->direction);
 
-        glUniform1i(gl_Lights[i].type, lightTypeNumber(lights[i]));//lightTypeNumber(lights[i]));
+        glUniform1i(gl_Lights[i].type, lightTypeNumber(lights[i]));
         qDebug() << "light type: " << lightTypeNumber(lights[i]);
 
         glUniform1i(gl_Lights[i].length, lights.size());
