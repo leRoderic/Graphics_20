@@ -650,3 +650,8 @@ void MainWindow::setFrustumCamera(Camera *cam)
     changes = true;
 
 }
+
+void MainWindow::on_browseTextureBtn_clicked()
+{
+
+}
