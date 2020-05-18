@@ -19,7 +19,7 @@ class Light {
     public:
         Light(LightType l);
 
-        Light(vec4,vec4,vec3,vec3,vec3,vec3,LightType,float);
+        Light(vec4,vec4,vec3,vec3,vec3,vec3,LightType,float=0.0f);
 
         vec4 getLightPosition();
         void setLightPosition(vec4 v);

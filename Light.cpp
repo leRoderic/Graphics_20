@@ -17,7 +17,7 @@ Light::Light(LightType t) {
 }
 
 
-Light::Light(vec4 p, vec4 dir, vec3 a, vec3 d, vec3 s,vec3 ate, LightType t, float radius=0.0f){
+Light::Light(vec4 p, vec4 dir, vec3 a, vec3 d, vec3 s,vec3 ate, LightType t, float radius){
     this->position = p;
     this->direction = dir;
     this->ambient = a;
