@@ -25,6 +25,7 @@ struct Light{
     vec4 position;
     vec4 direction;
     int type;
+    float radius;
     int length;
 };
 
