@@ -1,5 +1,6 @@
 
 #include "MainWindow.h"
+#include "datadialog.h"
 #include "ui_mainwindow.h"
 
 
@@ -45,6 +46,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(this->ui->action_toon, SIGNAL(triggered()), glWidget, SLOT(activaToonShader()));
     connect(this->ui->action_activa_background, SIGNAL(triggered()), glWidget, SLOT(activaBackground()));
     connect(this->ui->action_phong_tex, SIGNAL(triggered()), glWidget, SLOT(activaPhongTex()));
+    connect(this->ui->actionGouraudTex, SIGNAL(triggered()), glWidget, SLOT(activaGouraudTex()));
     connect(this->ui->action_bump_mapping, SIGNAL(triggered()), glWidget, SLOT(activaBumpMapping()));
     connect(this->ui->action_environmental_mapping, SIGNAL(triggered()), glWidget, SLOT(activaEnvMapping()));
     connect(this->ui->action_transparencies, SIGNAL(triggered()), glWidget, SLOT(activaTransparency()));
@@ -69,7 +71,10 @@ void MainWindow::newDialogDades() {
     // TODO Fase 1 mostrar la finestra de dialeg del visualization mapping del fitxer de dades:
     // En ella es demana el fitxer de dades geolocalitzades, les dimensions del mon virtual, l'escala minima i màxima, el colormap a usar,
     // i la textura a posar.
-
+    DataDialog *d = new DataDialog(this);
+    d->setWindowTitle("GiVD 2 :: Data settings and selection");
+    d->show();
+    //this->hide();
 }
 void MainWindow::keyPressEvent(QKeyEvent *e)
 {
@@ -643,5 +648,10 @@ void MainWindow::setFrustumCamera(Camera *cam)
     ui->persFarSlider->setValue(cam->dpost*100);
     ui->persNearSlider->setValue(cam->dant*100);
     changes = true;
+
+}
+
+void MainWindow::on_browseTextureBtn_clicked()
+{
 
 }

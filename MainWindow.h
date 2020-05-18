@@ -121,6 +121,7 @@ private slots:
     void setFrustumCamera(Camera *cam);
 
 
+    void on_browseTextureBtn_clicked();
 };
 
 #endif // MAINWINDOW_H

@@ -17,6 +17,7 @@ SOURCES +=\
     MainWindow.cpp \
     Main.cpp \
     GLWidget.cpp \
+    datadialog.cpp \
     library/Common.cpp \
     objects/cara.cpp \
     objects/Object.cpp \
@@ -33,6 +34,7 @@ SOURCES +=\
     colormaps/ColorMapStatic.cpp
 
 HEADERS  += \
+    datadialog.h \
     library/vec.h \
     library/mat.h \
     library/Common.h \
@@ -56,7 +58,8 @@ HEADERS  += \
     colormaps/ColorMap.h \
     colormaps/ColorMapStatic.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    datadialog.ui
 
 OTHER_FILES += \
     vshader1.glsl \

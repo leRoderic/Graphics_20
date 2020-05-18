@@ -245,6 +245,16 @@ void GLWidget::activaPhongTex() {
     updateShader();
 }
 
+void GLWidget::activaGouraudTex() {
+    //A implementar a la fase 1 de la practica 2
+    qDebug()<<"Estic a Gouraud Tex";
+    /*program = programs[4];
+    program->link();
+    program->bind();
+    scene->toGPU(program);//actualitzar l'escena amb el Shader actual
+    updateShader();*/
+}
+
 void GLWidget::activaBackground() {
     //A implementar a la fase 2 de la practica 2
     qDebug()<<"Estic a Background";
