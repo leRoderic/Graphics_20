@@ -13,17 +13,21 @@ Light::Light(LightType t) {
     direction = vec4(0.0f);
     atenuacio = vec3(0.0, 0.0, 0.0);
     this->type = t;
+    this->radius = 0.0f;
 }
 
 
-Light::Light(vec4 p, vec4 dir, vec3 a, vec3 d, vec3 s,vec3 ate, LightType t){
+Light::Light(vec4 p, vec4 dir, vec3 a, vec3 d, vec3 s,vec3 ate, LightType t, float radius){
     this->position = p;
     this->direction = dir;
     this->ambient = a;
     this->diffuse = d;
     this->specular = s;
     this->atenuacio = ate;
+    this->radius = radius;
     this->type = t;
+    if(this->type != LightType::Spot)
+        this->radius = 0.0f;
 }
 
 /**
@@ -148,8 +152,10 @@ void Light::setTipusLight(const LightType &value)
     switch(value) {
         case Puntual:
             this->direction = vec4(0.0);
+        this->radius = 0.0f;
             break;
         case Direccional:
+            this->radius = 0.0f;
             break;
         case Spot:
             break;

@@ -105,6 +105,7 @@ void Scene::lightsToGPU(QGLShaderProgram *program){
         GLuint position;
         GLuint direction;
         GLuint type;
+        GLuint radius;
         GLuint length;
     } gl_Lights[20];
 
@@ -119,6 +120,7 @@ void Scene::lightsToGPU(QGLShaderProgram *program){
         gl_Lights[i].direction = program->uniformLocation(QString("lights[%1].direction").arg(i));
 
         gl_Lights[i].type = program->uniformLocation(QString("lights[%1].type").arg(i));
+        gl_Lights[i].type = program->uniformLocation(QString("lights[%1].radius").arg(i));
 
         gl_Lights[i].length = program->uniformLocation(QString("lights[%1].length").arg(i));
 
@@ -132,6 +134,7 @@ void Scene::lightsToGPU(QGLShaderProgram *program){
         glUniform4fv(gl_Lights[i].direction, 1, lights[i]->direction);
 
         glUniform1i(gl_Lights[i].type, lightTypeNumber(lights[i]));
+        glUniform1f(gl_Lights[i].radius, lights[i]->radius);
         qDebug() << "light type: " << lightTypeNumber(lights[i]);
 
         glUniform1i(gl_Lights[i].length, lights.size());

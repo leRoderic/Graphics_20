@@ -24,6 +24,7 @@ struct Light{
     vec4 position;
     vec4 direction;
     int type;
+    float radius;
     int length;
 };
 
@@ -60,8 +61,15 @@ void main()
             L = normalize(-lights[i].direction);
         }
         else { // llum spot
-            //NO IMPLEMENTAT
-            L = vec4(0.0f);
+            vec4 direccion_rayo = normalize(pos - lights[i].position);
+            vec4 direccion_spotlight = normalize(lights[i].direction);
+
+            float distancia_inter_spot = cos(dot(direccion_rayo, direccion_spotlight));
+
+            if(distancia_inter_spot > lights[i].radius)
+                L = vec4(0.0f);
+            else
+                L = -direccion_rayo;
         }
 
         // H vector mig -> L + V
