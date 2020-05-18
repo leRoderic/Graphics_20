@@ -100,6 +100,7 @@ void GLWidget::initShadersGPU(){
     initShader(":/resources/vPhongShader.glsl", ":/resources/fPhongShader.glsl", 2);
     initShader("://resources/vToonShading.glsl", "://resources/fToonShading.glsl", 3);
     initShader(":/resources/vPhongShaderTex.glsl", ":/resources/fPhongShaderTex.glsl", 4);
+    initShader(":/resources/vGoraudShaderTex.glsl", ":/resources/fGoraudShaderTex.glsl", 5);
 
     program = programs[0];
     program->link();
@@ -248,11 +249,11 @@ void GLWidget::activaPhongTex() {
 void GLWidget::activaGouraudTex() {
     //A implementar a la fase 1 de la practica 2
     qDebug()<<"Estic a Gouraud Tex";
-    /*program = programs[4];
+    program = programs[5];
     program->link();
     program->bind();
     scene->toGPU(program);//actualitzar l'escena amb el Shader actual
-    updateShader();*/
+    updateShader();
 }
 
 void GLWidget::activaBackground() {

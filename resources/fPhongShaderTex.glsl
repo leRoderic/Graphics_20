@@ -46,7 +46,7 @@ void main()
     vec3 ka = material.ambient;
     vec3 ks = material.specular;
 
-    vec4 tex = texture2D(texMap, coord);
+    vec4 tex = texture(texMap, coord);
 
     for ( int i = 0; i < lights[0].length; i++) {
 

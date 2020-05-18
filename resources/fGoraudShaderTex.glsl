@@ -1,0 +1,15 @@
+#version 330
+
+in vec4 color;
+in vec2 coords;
+out vec4 colorOut;
+
+uniform sampler2D texture;
+
+void main()
+{
+    
+    vec4 tex = texture(texture, coords);
+    colorOut = color*0.75+tex.xyzw*0.25;
+}
+
