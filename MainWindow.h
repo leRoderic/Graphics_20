@@ -4,6 +4,7 @@
 #include <QtWidgets>
 #include "GLWidget.h"
 #include "Builder.h"
+#include "datadialog.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -22,6 +23,7 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     bool changes; // Variable de control d
+    DataDialog *d;
 protected:
     void keyPressEvent(QKeyEvent *event);
 

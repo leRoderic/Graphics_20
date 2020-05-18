@@ -6,7 +6,8 @@
 
 
 // Tipus de Lights
-enum LightType: uint {Puntual, // == 0
+enum LightType: uint {
+                      Puntual, // == 0
                       Direccional,  // == 1
                       Spot,     // == 2
                      };
@@ -18,7 +19,7 @@ class Light {
     public:
         Light(LightType l);
 
-        Light(vec4,vec4,vec3,vec3,vec3,vec3,LightType);
+        Light(vec4,vec4,vec3,vec3,vec3,vec3,LightType,float=0.0f);
 
         vec4 getLightPosition();
         void setLightPosition(vec4 v);
@@ -41,6 +42,7 @@ class Light {
         vec3 ambient, diffuse, specular;
         vec3 atenuacio;
         vec4 position, direction;
+        float radius;
 
         LightType type;
 };

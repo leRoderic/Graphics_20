@@ -37,6 +37,9 @@ Scene *SceneFactoryVirtual::createScene(QString nomFitxer) {
     //dir_light->setTipusLight(Direccional);
     //s->addLight(dir_light);
 
+    Light* spotlight = new Light(vec4(10, 20, 20, 0), vec4(1.0f), vec3(0.2f), vec3(0.8f), vec3(1.0f), vec3(0.0f), Spot, 0.25);
+    s->addLight(spotlight);
+
     Object * obj = new Object(100000, nomFitxer);
     obj->setMaterial(new Material());
     s->addObject(obj);
