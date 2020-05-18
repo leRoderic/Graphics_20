@@ -19,7 +19,7 @@ void main()
     pos = vPosition;
     normal = normals;
 
-    float u = 0.5 - atan(vPosition.z,vPosition.x) / 2 * 3.141592;
+    float u = 0.5 - atan(vPosition.z,vPosition.x) / (2 * 3.141592);
     float v = 0.5 - asin(vPosition.y) / 3.141592;
     coord = vec2(u,v);
 }

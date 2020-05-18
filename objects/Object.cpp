@@ -39,6 +39,8 @@ Object::~Object(){
     delete points;
     delete normals;
     delete colors;
+    delete texCoord;
+    textVertexs.clear();
 
     if(this->material != nullptr) delete this->material;
 }
@@ -124,20 +126,34 @@ void Object::make(){
     };
 
     Index = 0;
+    vector<vec2> coordenades = calculaCordenades(normalsVertexs);
     for(unsigned int i=0; i<cares.size(); i++){
         for(unsigned int j=0; j<cares[i].idxVertices.size(); j++){
             points[Index] = vertexs[cares[i].idxVertices[j]];
             colors[Index] = vec4(base_colors[j%4], 1.0);
             normals[Index] = normalsVertexs[cares[i].idxNormals[j]];
-            if(!textVertexs.empty())
+            if(!textVertexs.empty()){
                 texCoord[Index] = textVertexs[cares[i].idxTextures[j]];
-
+            }/*else{
+                texCoord[Index] = coordenades[cares[i].idxTextures[j]];
+            }*/
             Index++;
         }
     }
 
     initTexture();
 
+}
+
+vector<vec2> Object::calculaCordenades(vector<vec4> normals){
+    float u,v;
+    vector<vec2> c(numPoints);
+    for(int i = 0 ; i < vertexs.size() ; i++){
+        u = 0.5 - atan2(normals[i].z,normals[i].x) / (2 * M_PI);
+        v = 0.5 - asin(normals[i].y) / M_PI;
+        c[i] = vec2(u,v);
+    }
+    return c;
 }
 
 /**

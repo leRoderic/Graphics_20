@@ -32,6 +32,7 @@ protected:
     vector<point4> vertexs;
     vector<point4> normalsVertexs;
     vector<vec2>   textVertexs;
+    vector<vec2> calculaCordenades(vector<vec4> normals);
 
     // Estructures per passar a la GPU
     GLuint buffer;
