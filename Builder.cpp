@@ -44,7 +44,7 @@ void Builder::newDataScene(QString data, QString obj, QString colormap,
 {
     // TO DO Fase 1: Crear la nova escena a partir de les dades
     // de la finestra de visualization mapping corresponent
-
+    qDebug() << xmin;
     emit newScene(scene);
 }
 

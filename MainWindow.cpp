@@ -23,7 +23,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // Construcció del Builder
     builder = new Builder(glWidget);
-
+    d = new DataDialog(this);
     setCentralWidget(ui->centralWidget);
 
     ui->gridLayout_2->addWidget(glWidget, 0, 0);
@@ -40,7 +40,12 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(this->ui->action_obre_dades, SIGNAL(triggered()), this, SLOT(newDialogDades()));
     connect(this->ui->action_save_frame_as_image, SIGNAL(triggered()), glWidget, SLOT(saveImage()));
     connect(this->ui->action_start_and_save_animation, SIGNAL(triggered()), glWidget, SLOT(saveAnimation()));
-
+    connect(this->d, SIGNAL(dialogFinished(QString, QString, QString,
+                                           float, float, float, float,
+                                           float, float)), builder,
+            SLOT(newDataScene(QString, QString, QString,
+                              float, float, float, float,
+                              float, float)));
     connect(this->ui->action_gouraud, SIGNAL(triggered()), glWidget, SLOT(activaGouraudShader()));
     connect(this->ui->action_phong, SIGNAL(triggered()), glWidget, SLOT(activaPhongShader()));
     connect(this->ui->action_toon, SIGNAL(triggered()), glWidget, SLOT(activaToonShader()));
@@ -71,9 +76,9 @@ void MainWindow::newDialogDades() {
     // TODO Fase 1 mostrar la finestra de dialeg del visualization mapping del fitxer de dades:
     // En ella es demana el fitxer de dades geolocalitzades, les dimensions del mon virtual, l'escala minima i màxima, el colormap a usar,
     // i la textura a posar.
-    DataDialog *d = new DataDialog(this);
-    d->setWindowTitle("GiVD 2 :: Data settings and selection");
-    d->show();
+    //DataDialog *d = new DataDialog(this);
+    this->d->setWindowTitle("GiVD 2 :: Data settings and selection");
+    this->d->show();
     //this->hide();
 }
 void MainWindow::keyPressEvent(QKeyEvent *e)

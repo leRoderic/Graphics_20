@@ -38,8 +38,10 @@ void DataDialog::on_browseCMBtn_2_pressed()
 
 void DataDialog::on_doItBt_pressed()
 {
-
-
+    emit dialogFinished(ui->dataFileEdit->text(), ui->objFileEdit_4->text(), ui->cmFileEdit->text(),
+                        ui->minXSpin_2->value(), ui->minYSpin_2->value(), ui->minZSpin_2->value(),
+                        ui->maxXSpin_3->value(), ui->maxYSpin_3->value(), ui->maxZSpin_3->value());
+    this->close();
 }
 
 void DataDialog::on_browseObjBtn_4_pressed()

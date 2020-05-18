@@ -24,6 +24,10 @@ private slots:
 
     void on_browseObjBtn_4_pressed();
 
+signals:
+    void dialogFinished (QString data, QString obj, QString colormap,
+                         float xmin, float xmax, float ymin, float ymax,
+                         float zmin, float zmax);
 private:
     Ui::DataDialog *ui;
 };
