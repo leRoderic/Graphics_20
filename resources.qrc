@@ -15,5 +15,8 @@
         <file>resources/fPhongShaderTex.glsl</file>
         <file>resources/textures/capsule0.jpg</file>
         <file>resources/models/capsule.obj</file>
+        <file>resources/fGoraudShaderTex.glsl</file>
+        <file>resources/vGoraudShaderTex.glsl</file>
+        <file>resources/textures/2k_venus_surface.jpg</file>
     </qresource>
 </RCC>
