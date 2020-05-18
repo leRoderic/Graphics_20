@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>360</height>
+    <height>287</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -191,7 +191,7 @@
   <widget class="QPushButton" name="doItBt">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>10</x>
      <y>240</y>
      <width>381</width>
      <height>25</height>
@@ -199,24 +199,6 @@
    </property>
    <property name="text">
     <string>DO IT!</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>280</y>
-     <width>241</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>21</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>(╯°□°)╯︵ ┻━┻</string>
    </property>
   </widget>
   <widget class="QWidget" name="layoutWidget_4">

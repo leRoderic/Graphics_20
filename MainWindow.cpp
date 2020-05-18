@@ -1,6 +1,6 @@
 
-#include "DataDialog.h"
 #include "MainWindow.h"
+#include "datadialog.h"
 #include "ui_mainwindow.h"
 
 
