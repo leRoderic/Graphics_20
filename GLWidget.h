@@ -43,6 +43,7 @@ public slots:
     void activaGouraudShader();
 
     void activaPhongTex();
+    void activaGouraudTex();
     void activaBackground();
     void activaBumpMapping();
     void activaEnvMapping();
