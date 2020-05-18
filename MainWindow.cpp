@@ -71,7 +71,7 @@ void MainWindow::newDialogDades() {
     // TODO Fase 1 mostrar la finestra de dialeg del visualization mapping del fitxer de dades:
     // En ella es demana el fitxer de dades geolocalitzades, les dimensions del mon virtual, l'escala minima i màxima, el colormap a usar,
     // i la textura a posar.
-    DataDialog *d = new DataDialog();
+    DataDialog *d = new DataDialog(this);
     d->setWindowTitle("GiVD 2 :: Data settings and selection");
     d->show();
     //this->hide();

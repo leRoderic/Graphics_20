@@ -32,12 +32,13 @@ void DataDialog::on_browseCMBtn_2_pressed()
                                                 "Open color map file",
                                                 QStandardPaths::standardLocations(QStandardPaths::DesktopLocation).at(0),
                                                 "*.gpl");
-    ui->cmFileEdit_2->setText(file);
+    ui->cmFileEdit->setText(file);
     //on_cmFileEdit_2_returnPressed();
 }
 
 void DataDialog::on_doItBt_pressed()
 {
+
 
 }
 
@@ -47,6 +48,6 @@ void DataDialog::on_browseObjBtn_4_pressed()
                                                 "Open color map file",
                                                 QStandardPaths::standardLocations(QStandardPaths::DesktopLocation).at(0),
                                                 "*.obj");
-    //ui->->setText(file);
+    ui->objFileEdit_4->setText(file);
     //on_cmFileEdit_2_returnPressed();
 }
