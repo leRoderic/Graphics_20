@@ -943,6 +943,7 @@
     <addaction name="action_gouraud"/>
     <addaction name="action_phong"/>
     <addaction name="action_toon"/>
+    <addaction name="separator"/>
    </widget>
    <widget class="QMenu" name="menuTextures">
     <property name="title">
@@ -951,6 +952,7 @@
     <addaction name="action_activa_background"/>
     <addaction name="action_phong_tex"/>
     <addaction name="actionGouraudTex"/>
+    <addaction name="actionPhong_Textura_Indirecta"/>
     <addaction name="action_bump_mapping"/>
     <addaction name="action_environmental_mapping"/>
     <addaction name="action_transparencies"/>
@@ -1104,6 +1106,11 @@
   <action name="actionGouraudTex">
    <property name="text">
     <string>GouraudTex</string>
+   </property>
+  </action>
+  <action name="actionPhong_Textura_Indirecta">
+   <property name="text">
+    <string>Phong Textura Indirecta</string>
    </property>
   </action>
  </widget>

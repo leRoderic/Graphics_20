@@ -93,14 +93,17 @@ void GLWidget::initShadersGPU(){
      *      2. Phong shaders
      *      3. Toon shaders
      *      4. Phong Textura
+     *      5. Gouraud Textura [PLUS]
+     *      6. Phong Textura Indirecta [OPCIONAL]
      *
     */
     initShader("://resources/vshader1.glsl", "://resources/fshader1.glsl", 0);
     initShader("://resources/vGoraudShader.glsl", "://resources/fGoraudShader.glsl", 1);
     initShader(":/resources/vPhongShader.glsl", ":/resources/fPhongShader.glsl", 2);
     initShader("://resources/vToonShading.glsl", "://resources/fToonShading.glsl", 3);
-    initShader(":/resources/vPhongShaderTex.glsl", ":/resources/fPhongShaderTex.glsl", 4);
-    initShader(":/resources/vGoraudShaderTex.glsl", ":/resources/fGoraudShaderTex.glsl", 5);
+    initShader("://resources/vPhongShaderTex.glsl", "://resources/fPhongShaderTex.glsl", 4);
+    initShader("://resources/vGoraudShaderTex.glsl", "://resources/fGoraudShaderTex.glsl", 5);
+    initShader("://resources/vPhongShaderIndirectTex.glsl", "://resources/fPhongShaderIndirectTex.glsl", 6);
 
     program = programs[0];
     program->link();
@@ -243,7 +246,7 @@ void GLWidget::activaPhongTex() {
     program->link();
     program->bind();
     scene->toGPU(program);//actualitzar l'escena amb el Shader actual
-    updateShader();
+    updateShaderTexture();
 }
 
 void GLWidget::activaGouraudTex() {
@@ -253,7 +256,17 @@ void GLWidget::activaGouraudTex() {
     program->link();
     program->bind();
     scene->toGPU(program);//actualitzar l'escena amb el Shader actual
-    updateShader();
+    updateShaderTexture();
+}
+
+void GLWidget::activaPhongIndirectTex() {
+    //A implementar a la fase 1 de la practica 2
+    qDebug()<<"Estic a Phong Indirect Tex";
+    program = programs[6];
+    program->link();
+    program->bind();
+    scene->toGPU(program);//actualitzar l'escena amb el Shader actual
+    updateShaderTexture();
 }
 
 void GLWidget::activaBackground() {
@@ -285,7 +298,7 @@ void GLWidget::updateShader(){
 //Metode per canviar de shaders de textures
 void GLWidget::updateShaderTexture(){
     //A implementar a la fase 1 de la practica 2
-
+    updateGL();
 }
 
 /** Mètodes que es criden des de les finestres de dialeg */

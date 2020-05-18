@@ -44,6 +44,7 @@ public slots:
 
     void activaPhongTex();
     void activaGouraudTex();
+    void activaPhongIndirectTex();
     void activaBackground();
     void activaBumpMapping();
     void activaEnvMapping();

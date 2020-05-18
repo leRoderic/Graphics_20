@@ -18,5 +18,7 @@
         <file>resources/fGoraudShaderTex.glsl</file>
         <file>resources/vGoraudShaderTex.glsl</file>
         <file>resources/textures/2k_venus_surface.jpg</file>
+        <file>resources/fPhongShaderIndirectTex.glsl</file>
+        <file>resources/vPhongShaderIndirectTex.glsl</file>
     </qresource>
 </RCC>
