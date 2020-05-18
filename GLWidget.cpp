@@ -330,13 +330,13 @@ void GLWidget::setLighting(const QVector3D &lightPos, const QVector3D &Ia, const
 
 void GLWidget::setTextureFile(const QString &file)
 {
-    /*QOpenGLTexture *texture;
+    QOpenGLTexture *texture;
 
     texture = new QOpenGLTexture(QImage(file).mirrored());
 
     // TO DO: A modificar en la fase 1 de la practica 2
     // Per ara es posa la textura al primer objecte de l'escena
-    scene->elements[0]->setTexture(texture);*/
+    scene->elements[0]->setTexture(texture);
 
 
 }

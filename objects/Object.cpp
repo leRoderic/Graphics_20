@@ -190,6 +190,7 @@ void Object::drawTexture(){
 
 void Object::setTexture(QOpenGLTexture *t){
    this->texture = t;
+   initTexture();
 }
 
 /**
@@ -202,9 +203,13 @@ void Object::initTexture()
 
     qDebug() << "Initializing textures...";
 
+    if(!texture){//Comprovar que hi ha una textura carregada.
+        return;
+    }
+
     glActiveTexture(GL_TEXTURE0);
 
-    texture = new QOpenGLTexture(QImage("://resources/textures/capsule0.jpg"));
+    //texture = new QOpenGLTexture(QImage("://resources/textures/capsule0.jpg"));
     texture->setMinificationFilter(QOpenGLTexture::LinearMipMapLinear);
     texture->setMagnificationFilter(QOpenGLTexture::Linear);
 
