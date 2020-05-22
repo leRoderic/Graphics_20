@@ -83,6 +83,9 @@
     </item>
     <item>
      <widget class="QDoubleSpinBox" name="minYSpin_2">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
       <property name="minimum">
        <double>-99999.000000000000000</double>
       </property>
@@ -156,6 +159,9 @@
     </item>
     <item>
      <widget class="QDoubleSpinBox" name="maxYSpin_3">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
       <property name="minimum">
        <double>-99999.000000000000000</double>
       </property>
