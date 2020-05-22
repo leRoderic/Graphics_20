@@ -21,6 +21,7 @@ SOURCES +=\
     library/Common.cpp \
     objects/cara.cpp \
     objects/Object.cpp \
+    objects/plane.cpp \
     scenes/Scene.cpp \
     scenes/SceneFactory.cpp \
     scenes/SceneFactoryVirtual.cpp \
@@ -44,6 +45,7 @@ HEADERS  += \
     MainWindow.h \
     objects/cara.h \
     objects/Object.h \
+    objects/plane.h \
     scenes/Scene.h \
     scenes/SceneFactory.h \
     scenes/SceneFactoryVirtual.h \
