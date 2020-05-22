@@ -32,7 +32,6 @@ protected:
     vector<point4> vertexs;
     vector<point4> normalsVertexs;
     vector<vec2>   textVertexs;
-    vector<vec2> calculaCordenades(vector<vec4> normals);
 
     // Estructures per passar a la GPU
     GLuint buffer;
@@ -45,6 +44,7 @@ protected:
     // Els colors s'usen en la primera execució però després son prescindibles
     point4 *colors;
     vec2 *texCoord;
+    vec4 center; // centre de la capsa minima contenidora
 
     int Index; // index de control del numero de vertexs a passar a la GPU
 

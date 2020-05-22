@@ -266,6 +266,8 @@ void GLWidget::activaPhongIndirectTex() {
     program->link();
     program->bind();
     scene->toGPU(program);//actualitzar l'escena amb el Shader actual
+    // Comentar o modificar aquesta linia per a cambiar la textura a aplicar.
+    this->setTextureFile(":/resources/textures/2k_earth_daymap.jpg");
     updateShaderTexture();
 }
 

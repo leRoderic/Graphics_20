@@ -82,7 +82,7 @@ void main()
         H = normalize(L + V);
 
         vec3 ambient = ka * ia;
-        vec3 diffuse = (tex.xyz * 0.75 + kd * 0.25) * id * max(dot(L,N), 0.0f);// (tex.xyz * 0.75 + kd * 0.25) * id * max(dot(L,N), 0.0f);
+        vec3 diffuse = tex.xyz * 0.75 + kd * 0.25 * id * max(dot(L,N), 0.0f);// (tex.xyz * 0.75 + kd * 0.25) * id * max(dot(L,N), 0.0f);
         vec3 specular = ks * is * pow(max(dot(N, H), 0.0f), material.beta);
 
         if(atenuacio == 0.0f){

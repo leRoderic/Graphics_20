@@ -14,6 +14,8 @@ Object::Object(int npoints, QObject *parent) : QObject(parent){
     colors = new point4[numPoints];
     texCoord = new vec2[numPoints];
     texture = nullptr;
+    center = vec4(0.0,0.0,0.0,0.0);
+
  }
 
 /**
@@ -28,6 +30,7 @@ Object::Object(int npoints, QString n) : numPoints(npoints){
     colors = new point4[numPoints];
     texCoord = new vec2[numPoints];
     texture = nullptr;
+    center = vec4(0.0,0.0,0.0,0.0);
 
     parseObjFile(n);
     make();
@@ -110,6 +113,9 @@ void Object::draw(){
     glDisableVertexAttribArray(1);
     glDisableVertexAttribArray(2);
 
+    GLuint objCenter = program->uniformLocation("center");
+    glUniform4fv(objCenter,1,this->center);
+
 }
 
 /**
@@ -120,42 +126,31 @@ void Object::make(){
     // TO  DO: A modificar a la fase 1 de la practica 2
     // Cal calcular la normal a cada vertex a la CPU
 
-    static vec3  base_colors[] = {
+    /*static vec3  base_colors[] = {
         vec3( 1.0, 0.0, 0.0 ),
         vec3( 0.0, 1.0, 0.0 ),
         vec3( 0.0, 0.0, 1.0 ),
         vec3( 1.0, 1.0, 0.0 )
-    };
+    };*/
 
     Index = 0;
-    vector<vec2> coordenades = calculaCordenades(normalsVertexs);
     for(unsigned int i=0; i<cares.size(); i++){
         for(unsigned int j=0; j<cares[i].idxVertices.size(); j++){
             points[Index] = vertexs[cares[i].idxVertices[j]];
-            colors[Index] = vec4(base_colors[j%4], 1.0);
+            //colors[Index] = vec4(base_colors[j%4], 1.0);
             normals[Index] = normalsVertexs[cares[i].idxNormals[j]];
             if(!textVertexs.empty()){
                 texCoord[Index] = textVertexs[cares[i].idxTextures[j]];
-            }/*else{
-                texCoord[Index] = coordenades[cares[i].idxTextures[j]];
-            }*/
+            }else{
+                //Inicializtem a (-1,-1) per a despres modificar-los mitjançant la formula
+                texCoord[Index] = vec2(-1.0,-1.0);
+            }
             Index++;
         }
     }
 
     initTexture();
 
-}
-
-vector<vec2> Object::calculaCordenades(vector<vec4> normals){
-    float u,v;
-    vector<vec2> c(numPoints);
-    for(int i = 0 ; i < vertexs.size() ; i++){
-        u = 0.5 - atan2(normals[i].z,normals[i].x) / (2 * M_PI);
-        v = 0.5 - asin(normals[i].y) / M_PI;
-        c[i] = vec2(u,v);
-    }
-    return c;
 }
 
 /**
@@ -341,6 +336,8 @@ Capsa3D Object::calculCapsa3D()
     capsa.a = pmax[0]-pmin[0];
     capsa.h = pmax[1]-pmin[1];
     capsa.p = pmax[2]-pmin[2];
+
+    this->center = vec4(capsa.a/2.0 + capsa.pmin.x, capsa.a/2.0 + capsa.pmin.y,capsa.a/2.0 + capsa.pmin.z,1.0);
     return capsa;
 }
 
