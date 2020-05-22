@@ -1,32 +1,27 @@
-#ifndef _CARA_H_
-#define _CARA_H_
+#ifndef PLANE_H
+#define PLANE_H
 
+#include "library/Common.h"
+#include "cara.h"
+#include <QObject>
 #include <vector>
-#include "./library/Common.h"
+#include <QGLShaderProgram>
+#include <QOpenGLTexture>
+#include <QFile>
+#include <QRegularExpression>
+#include <QDebug>
+#include <QString>
+#include <QStringList>
+#include "./TG/TG.h"
+#include "Material.h"
+#include "Object.h"
 
-using namespace std;
+class Plane: public Object {
+public:
 
-// Classe que representa una cara: cada cara pot tenir un color i
-// i la llista d'indexs als vertexs que la formen. Llista ordenada en sentit antihorari
+    Plane(vec4 v1, vec4 v2, vec4 v3, vec4 v4);
+    ~Plane();
 
-typedef vec4 Vertices;
-
-class Cara
-{
- public:
-    Cara();
-
-    Cara(int i1, int i2, int i3, int i4=-1);
-
-    vec4 color;
-    vector<int> idxVertices;
-    vector<int> idxNormals;
-    vector<int> idxTextures;
-
-    vec3 normal;
-    void calculaNormal(vector<Vertices> &);
 };
 
-
-
-#endif
+#endif // PLANE_H

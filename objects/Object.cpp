@@ -7,6 +7,7 @@
  * @param parent
  */
 Object::Object(int npoints, QObject *parent) : QObject(parent){
+
     numPoints = npoints;
     points = new point4[numPoints];
     normals= new point4[numPoints];
@@ -21,6 +22,7 @@ Object::Object(int npoints, QObject *parent) : QObject(parent){
  * @param n
  */
 Object::Object(int npoints, QString n) : numPoints(npoints){
+
     points = new point4[numPoints];
     normals= new point4[numPoints];
     colors = new point4[numPoints];
