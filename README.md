@@ -14,7 +14,7 @@ Como ejemplo del punto anterior, se han extraído datos reales del Ayuntamiento 
     - [X] Light - Abdel, Jin, Rodrigo, Oriol
     - [X] Material - Oriol, Rodrigo, Jin
     - [X] Blinn-Phong shader - Abdel
-    - [X] Goroud Shader - Rodrigo
+    - [X] Gouraud Shader - Rodrigo
     - [X] Toon Shader - Oriol, Abdel
     - [X] Modificaciones UI - Rodrigo
     - [X] Texturas - Jin, Abdel
@@ -26,7 +26,7 @@ Como ejemplo del punto anterior, se han extraído datos reales del Ayuntamiento 
 ## Extensiones
 
 * <ins>Luz spotlight<ins> - Oriol
-* <ins>Goroud Textura<ins> - Jin
+* <ins>Gouraud Textura<ins> - Jin
 * <ins>Indirect texture mapping<ins> - Abdel
 * <ins>Read colormap<ins> - Rodrigo
 * <ins>Autocarga de ficheros y escenas<ins> - Rodrigo
