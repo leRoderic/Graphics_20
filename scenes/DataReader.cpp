@@ -13,6 +13,13 @@ DataReader::DataReader(Scene *s) {
 
 }
 
+void DataReader::setParameters(vec4 pMin, vec4 pMax, QString objFile, QString cmfile) {
+    this->pMin = pMin;
+    this->pMax = pMax;
+    this->objFile = objFile;
+    this->cmFile = cmfile;
+}
+
 void DataReader::readFile(QString fileName) {
     QFile file(fileName);
 
@@ -42,27 +49,17 @@ void DataReader::fileLineRead(QString lineReaded) {
         std::cerr << "Element unknown" << std::endl;
 }
 
-
-
-
-void DataReader::limitsFound(QStringList fields) {
-    // limits xmin xmax zmin zmax
+void DataReader::propFound(QStringList fields) {
+    //prop numProp vmin vmax tipusGizmo
     if (fields.size() != 5) {
-        std::cerr << "Wrong limits format" << std::endl;
+        std::cerr << "Wrong property format" << std::endl;
         return;
     }
-    xMin = fields[1].toDouble();
-    xMax = fields[2].toDouble();
-    zMin = fields[3].toDouble();
-    zMax = fields[4].toDouble();
-
-    // TO-DO Fase 1: Cal guardar el limits del mapa per saber on mapejar les posicions dels objectes
+    numProp++;
+    dMin = fields[2].toDouble();
+    dMax = fields[3].toDouble();
+    // TO-DO Fase 2: Aquesta valors minim i maxim tambe serviran per mapejar el material des de la paleta
 }
-
-void DataReader::propFound(QStringList fields) {
-
-}
-
 
 void DataReader::dataFound(QStringList fields) {
     //data x z valor1 valor2...
@@ -71,7 +68,27 @@ void DataReader::dataFound(QStringList fields) {
         return;
     }*/
 
+    Object *o;
+    vec3 translation = vec3(0.0f);
+    float scaledData;
 
+    for (int i = 0; i < numProp; i++) {
+        // TO-DO Fase 1: Cal colocar els objectes al seu lloc del mon virtual, escalats segons el valor i
+        //  amb el seu color corresponent segons el seu ColorMap
+
+        translation.x = (fields[1].toDouble() - xMin) / (xMax - xMin) * (pMax.x - pMin.x) + pMin.x;
+        translation.z = pMax.z - (fields[2].toDouble() - zMin) / (zMax - zMin) * (pMax.z - pMin.z);
+
+        scaledData = (fields[3].toDouble() - dMin) / (dMax - dMin); // Scaling data according to range
+
+        o = new Object(10000, objFile);
+        // Object(const int npoints, QString n);
+        //o->aplicaTG(new Scale(scaledData));
+        //o->aplicaTG(new Translate(translation));
+
+
+        this->scene->elements.push_back(o);
+    }
 }
 
 float toColorMapUnderstandable(float d){

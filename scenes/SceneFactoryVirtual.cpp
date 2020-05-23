@@ -9,18 +9,10 @@ SceneFactoryVirtual::SceneFactoryVirtual()
 {
 
 }
-/*
-Scene *SceneFactoryVirtual::createScene(QString filename) {
-
-    Scene *s = new Scene();
-    SceneReader *sc = new SceneReader(s);
-    sc->readFile(filename);
-
-    s->lightAmbientGlobal = vec3(0.1f);
-    s->lights.push_back(new Light(vec4(-30, 0, 5,0), vec4(0.0f),vec3(0.3f), vec3(0.7f), vec3(1.0f), vec3(0.5, 0.0, 0.01)));
-
-    return s;
-}*/
+Scene *SceneFactoryVirtual::makeScene(QString filename, QString gObj, QString cmFile, float xmin, float y, float zmin,
+                                     float xmax, float zmax) {
+    return nullptr;
+}
 
 
 
@@ -45,9 +37,4 @@ Scene *SceneFactoryVirtual::createScene(QString nomFitxer) {
     s->addObject(obj);
 
     return s;
-}
-
-Camera *SceneFactoryVirtual::createCamera() {
-    return nullptr;
-
 }

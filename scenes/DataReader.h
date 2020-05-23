@@ -17,14 +17,12 @@ public:
 
     void readFile (QString fileName);
 
+    void setParameters (vec4 pMin, vec4 pMax, QString objFile, QString cmfile);
+
 protected:
     virtual void fileLineRead (QString lineReaded);
 
     Scene *scene;
-
-    void baseFound(QStringList list);
-
-    void limitsFound(QStringList list);
 
     void propFound(QStringList list);
 
@@ -32,12 +30,10 @@ protected:
 
 private:
     int numProp, tmp;
-    vec3 pMin, pMax;
+    vec4 pMin, pMax;
     float xMin, xMax, zMin, zMax;
-    float spMin, spMax; // Sphere value range
-    float cyMin, cyMax; // Cylinder value range
-    float brMin, brMax; // BoundaryObject value range
-    QString objFile;
+    float dMin, dMax; // data range
+    QString objFile, cmFile;
 };
 
 #endif // DataReader_H

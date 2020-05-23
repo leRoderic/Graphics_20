@@ -24,8 +24,8 @@ public:
 
     virtual Scene    *createScene(QString nomFitxer) = 0;
     virtual ColorMap *createColorMap(ColorMapStatic::ColorMapType t) {return nullptr;};
-    virtual Camera   *createCamera() = 0;
-
+    virtual Scene *makeScene(QString filename, QString gObj, QString cmFile, float xmin, float y, float zmin,
+                                  float xmax, float zmax) = 0;
 };
 
 #endif // SCENEFACTORY_H

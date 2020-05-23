@@ -9,7 +9,9 @@ class SceneFactoryData : public SceneFactory
 {
 public:
     SceneFactoryData();
-    virtual Scene    *createScene(QString nomFitxer);
+    virtual Scene *createScene(QString filename);
+    virtual Scene *makeScene(QString filename, QString gObj, QString cmFile, float xmin, float y, float zmin,
+                                  float xmax, float zmax);
     virtual ColorMap *createColorMap(ColorMapStatic::ColorMapType t);
 };
 

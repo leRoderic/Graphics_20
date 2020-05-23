@@ -12,10 +12,9 @@ class SceneFactoryVirtual : public SceneFactory
 {
 public:
     SceneFactoryVirtual();
-
     virtual Scene    *createScene(QString nomFitxer);
-    //virtual Scene    *createScene();
-    virtual Camera   *createCamera();
+    virtual Scene *makeScene(QString filename, QString gObj, QString cmFile, float xmin, float y, float zmin,
+                                  float xmax, float zmax);
 };
 
 
