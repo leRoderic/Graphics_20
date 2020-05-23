@@ -16,6 +16,7 @@ Object::Object(int npoints, QObject *parent) : QObject(parent){
     colors = new point4[numPoints];
     texCoord = new vec2[numPoints];
     texture = nullptr;
+    program = nullptr;
     center = vec4(0.0,0.0,0.0,0.0);
 
  }
@@ -32,6 +33,7 @@ Object::Object(int npoints, QString n) : numPoints(npoints){
     colors = new point4[numPoints];
     texCoord = new vec2[numPoints];
     texture = nullptr;
+    program = nullptr;
     center = vec4(0.0,0.0,0.0,0.0);
 
     parseObjFile(n);
@@ -114,10 +116,10 @@ void Object::draw(){
     glDisableVertexAttribArray(0);
     glDisableVertexAttribArray(1);
     glDisableVertexAttribArray(2);
-
-    GLuint objCenter = program->uniformLocation("center");
-    glUniform4fv(objCenter,1,this->center);
-
+    if (program){
+        GLuint objCenter = program->uniformLocation("center");
+        glUniform4fv(objCenter,1,this->center);
+    }
 }
 
 /**
@@ -199,7 +201,8 @@ void Object::drawTexture(){
     // TO DO: Cal implementar en la fase 1 de la practica 2
     // S'ha d'activar la textura i es passa a la GPU
 
-    program->setUniformValue("texMap", 0);
+    if(program)
+        program->setUniformValue("texMap", 0);
 
 }
 

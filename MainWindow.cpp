@@ -65,6 +65,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(builder, SIGNAL(newScene(Scene*)), glWidget, SLOT(updateScene(Scene *)));
     connect(builder, SIGNAL(newSceneData(Scene*)), glWidget, SLOT(updateData(Scene *)));
     connect(builder, SIGNAL(newSceneVirtual(Scene*)), glWidget, SLOT(updateVirtual(Scene *)));
+    connect(glWidget, SIGNAL(updateDataSignal()), this, SLOT(updateCameraData()));
 
     // TODO Fase 1: Cal connectar el diàleg de visualization mapping per enviar les seves dades cap a builder
     // al slot newDataScene
@@ -73,6 +74,24 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::updateCameraData(){
+
+    ui->persVerticalAngleSpin->setValue(126.44);
+    ui->lookEyeXSpin->setValue(-9.18);
+    ui->lookEyeYSpin->setValue(-3.19);
+    ui->lookEyeZSpin->setValue(8.25);
+
+    ui->lookCenterXSpin->setValue(-5.50);
+    ui->lookCenterYSpin->setValue(-10);
+    ui->lookCenterZSpin->setValue(-4.50);
+
+    ui->lookUpXSpin->setValue(0);
+    ui->lookUpYSpin->setValue(0.91);
+    ui->lookUpZSpin->setValue(-0.42);
+    //qDebug() << "Signal triggered";
+
 }
 
 void MainWindow::newDialogDades() {

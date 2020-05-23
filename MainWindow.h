@@ -38,6 +38,8 @@ private slots:
 
     void newDialogDades();
 
+    void updateCameraData();
+
     void on_persVerticalAngleSpin_valueChanged(double arg1);
 
     void on_persNearSpin_valueChanged(double arg1);

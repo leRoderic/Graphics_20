@@ -66,6 +66,7 @@ public slots:
 
 
 signals:
+    void updateDataSignal();
     void ObsCameraChanged(Camera *cam);
     void FrustumCameraChanged(Camera *cam);
 

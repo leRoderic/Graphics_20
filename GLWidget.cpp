@@ -181,8 +181,10 @@ void GLWidget::updateVirtual(Scene *sc) {
 
 void GLWidget::updateData(Scene *sc) {
 
+
     this->activaPhongTex();
     this->updateScene(sc);
+    emit updateDataSignal();
 }
 
 void GLWidget::updateScene(Scene *sc) {

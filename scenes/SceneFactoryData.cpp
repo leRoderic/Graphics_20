@@ -61,7 +61,8 @@ vector<vec3> SceneFactoryData::createColorMap(QString f) {
             qDebug() << "Reading color palette file: " + fields[1];
         }
         else if (re.exactMatch(fields[0])){
-            colors.push_back(vec3(fields[0].toInt()/255, fields[1].toInt()/255, fields[2].toInt()/255));
+
+            colors.push_back(vec3(fields[0].toDouble()/255, fields[1].toDouble()/255, fields[2].toDouble()/255));
         }
     }
     qDebug() << QString::number(colors.size()) + " colors read";

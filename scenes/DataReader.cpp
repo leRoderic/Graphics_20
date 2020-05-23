@@ -65,7 +65,7 @@ void DataReader::propFound(QStringList fields) {
 
 vec3 DataReader::getColorFromPalette (float data) {
 
-    return this->colormap[(int)(data/3)];
+    return this->colormap[(int)(data*this->colormap.size())];
 }
 
 void DataReader::dataFound(QStringList fields) {
@@ -80,25 +80,22 @@ void DataReader::dataFound(QStringList fields) {
     float scaledData;
 
     for (int i = 0; i < numProp; i++) {
-        // TO-DO Fase 1: Cal colocar els objectes al seu lloc del mon virtual, escalats segons el valor i
-        //  amb el seu color corresponent segons el seu ColorMap
 
-        translation.x = (fields[1].toDouble() - xMin) / (xMax - xMin) * (pMax.x - pMin.x) + pMin.x;
-        translation.z = pMax.z - (fields[2].toDouble() - zMin) / (zMax - zMin) * (pMax.z - pMin.z);
+        /*translation.x = (fields[1].toDouble() - xMin) / (xMax - xMin) * (pMax.x - pMin.x) + pMin.x;
+        translation.z = -(pMax.z - (fields[2].toDouble() - zMin) / (zMax - zMin) * (pMax.z - pMin.z));*/
 
         scaledData = (fields[3].toDouble() - dMin) / (dMax - dMin); // Scaling data according to range
 
         o = new Object(100000, objFile);
-        o->setMaterial(new Material(vec3(0.2f), getColorFromPalette(scaledData), vec3(1.0f), 1.0, 20.0f));
 
-        // Object(const int npoints, QString n);
-        //o->aplicaTG(new Scale(scaledData));
-        //o->aplicaTGG(new TranslateTG(translation));
+        o->setMaterial(new Material(vec3(0.2f), getColorFromPalette(scaledData), vec3(1.0f), 1.0, 20.0f));
+        // Una pequeña ñapa no puede faltar en todo código.
+        o->aplicaTGG(new TranslateTG(vec3(fields[1].toDouble()+this->pMin.x, this->pMin.x, -fields[2].toDouble())));
 
         /* ANIMACIONES DE LA FASE 2 */
         /* En lugar de crear una nueva Scene factory sobreescribimos SceneFactoryData para simplificar */
-        /* Aplicar animacion a un objeto segun los datos leidos del fichero -> los datos de las animaciones se leen del fichero */
-        qDebug() << fields.size();
+        /* Aplicar animación a un objeto segun los datos leidos del fichero -> los datos de las animaciones se leen del fichero */
+        //qDebug() << fields.size();
         if(fields.size() >= 7){
             Animation* orbit = new Animation();
             orbit->transf = new TranslateTG(vec3(fields[4].toDouble(), fields[5].toDouble(), fields[6].toDouble()));

@@ -23,5 +23,7 @@
         <file>resources/textures/2k_earth_daymap.jpg</file>
         <file>resources/colormaps/colorMap3.gpl</file>
         <file>resources/data/data0.txt</file>
+        <file>resources/colormaps/hept32.gpl</file>
+        <file>resources/colormaps/colorMap2.gpl</file>
     </qresource>
 </RCC>
