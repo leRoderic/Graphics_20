@@ -5,7 +5,8 @@ VisualDataGPU (2019-20): Visualitzación usando la GPU
 
 Este proyecto usa la visualización proyectiva con Z-Buffer para la visualización y representación de datos mediante la GPU.  
 Implementa una interfaz, desarrollada en QtCreator, que permite visualizar los modelos en tiempo real así como cambiar los parámetros de la cámara sin terminar la ejecución.  
-Además
+También permite la selección de distintos shaders (Gouraud, Toon y Phong entre otros)  así como la inclusión de texturas en los objetos o la carga de escenas predeterminadas, ya sean basadas en datos y con paletas de colores personalizadas o simplemente en unos pocos objetos.  
+Se han adaptado y reutilizado clases de la entrega anterior, las relacionadas con el procesamiento de ficheros virtuales y creación de distintos tipos de escenas. A otras como Material o Light, se les ha incorporado las funciones necesarias para enviar los datos a la GPU.  
 
 
 ## Features
