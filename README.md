@@ -70,7 +70,7 @@ Como ejemplo del punto anterior, se han extraído datos reales del Ayuntamiento 
       <td>1</td>
       <td align="center">25</td>
       <td align="left">
-          <li>Depurar en los shaders. Los errores que da al compilar los ficheros .glsl son muy vastos, y encontrar un pequño error                 se hace bastante complicado. A esto se le suma que no hemos encontrado ninguna herramienta para validar/compilar los shaders            de forma externa.</li>
+          <li>Depurar en los shaders. Los errores que da al compilar los ficheros .glsl son muy vastos, y encontrar un pequeño error                 se hace bastante complicado. A esto se le suma que no hemos encontrado ninguna herramienta para validar/compilar los shaders            de forma externa.</li>
      </td>
     </tr>
       <tr>
