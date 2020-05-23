@@ -3,6 +3,7 @@
 #include <QTextStream>
 #include <iostream>
 #include <sstream>
+#include <TG/Translate.h>
 
 
 float toColorMapUnderstandable(float d);
@@ -58,6 +59,7 @@ void DataReader::propFound(QStringList fields) {
     numProp++;
     dMin = fields[2].toDouble();
     dMax = fields[3].toDouble();
+
     // TO-DO Fase 2: Aquesta valors minim i maxim tambe serviran per mapejar el material des de la paleta
 }
 
@@ -91,8 +93,7 @@ void DataReader::dataFound(QStringList fields) {
 
         // Object(const int npoints, QString n);
         //o->aplicaTG(new Scale(scaledData));
-        //o->aplicaTG(new Translate(translation));
-
+        //o->aplicaTGG(new TranslateTG(translation));
 
         this->scene->addObject(o);
     }

@@ -17,6 +17,7 @@
 #include "./animations/Animation.h"
 
 #include "./Material.h"
+#include <TG/Translate.h>
 
 using namespace std;
 
@@ -76,6 +77,7 @@ public:
     Capsa3D calculCapsa3D();
 
     virtual void aplicaTG(TG *tg);
+    virtual void aplicaTGG(TranslateTG *tg);
 
 
 

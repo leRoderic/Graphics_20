@@ -247,7 +247,7 @@ void Object::parseObjFile(const QString &fileName)
                     // if it’s a comment
                     if(lineParts.at(0).compare("#", Qt::CaseInsensitive) == 0)
                     {
-                        qDebug() << line.remove(0, 1).trimmed();
+                        //qDebug() << line.remove(0, 1).trimmed();
                     }
 
                     // if it’s a vertex position (v)
@@ -346,7 +346,25 @@ Capsa3D Object::calculCapsa3D()
 void Object::aplicaTG(TG *tg){
 
 
-    if (dynamic_cast<::Translate*>(tg)) {
+    if (dynamic_cast<TranslateTG*>(tg)) {
+        mat4 matriu = tg->getTG();
+
+        for(int i = 0; i < vertexs.size(); i++) {
+            vertexs[i] = matriu * vertexs[i];
+        }
+
+        for (int i = 0; i < normalsVertexs.size(); i++) {
+            normalsVertexs[i] = matriu * normalsVertexs[i];
+        }
+    }
+    make();
+    draw();
+}
+
+void Object::aplicaTGG(TranslateTG *tg){
+
+
+    if (dynamic_cast<TranslateTG*>(tg)) {
         mat4 matriu = tg->getTG();
 
         for(int i = 0; i < vertexs.size(); i++) {

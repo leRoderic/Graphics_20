@@ -3,12 +3,12 @@
 
 #include "TG.h"
 
-class Translate : public TG
+class TranslateTG : public TG
 {
 public:
     vec3 traslation;
-    Translate(vec3 trasl);
-    ~Translate();
+    TranslateTG(vec3 trasl);
+    ~TranslateTG();
 };
 
 #endif // TRANSLATE_H
