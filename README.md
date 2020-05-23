@@ -35,12 +35,12 @@ Como ejemplo del punto anterior, se han extraído datos reales del Ayuntamiento 
 
 ## Extensiones
 
-* <ins>Gouraud Textura<ins> - Jin
-* <ins>Read colormap<ins> - Rodrigo
-* <ins>Autocarga de ficheros y escenas:<ins> - Rodrigo
-    - <ins>Autocarga de datos:<ins> Carga automática de ficheros en el formulario de datos. Para una depuración y correción más sencilla.
+* <ins>Gouraud Textura</ins> - Jin
+* <ins>Read colormap</ins> - Rodrigo
+* <ins>Autocarga de ficheros y escenas:</ins> - Rodrigo
+    - <ins>Autocarga de datos:</ins> Carga automática de ficheros en el formulario de datos. Para una depuración y correción más sencilla.
         ![](https://i.imgur.com/7P5v6Kl.jpg)
-    - <ins>Autocarga de objeto:<ins> Carga automáticamente una esfera. Nos ha sido muy útil durante el desarrollo de los shaders.
+    - <ins>Autocarga de objeto:</ins> Carga automáticamente una esfera. Nos ha sido muy útil durante el desarrollo de los shaders.
         ![](https://i.imgur.com/MdvgSeU.jpg)
     
     
