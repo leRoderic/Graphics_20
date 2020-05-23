@@ -1,0 +1,5 @@
+limits, -50, 50, -50, 50
+base, plane, 0, 1, 0, -0.5, ://resources/europa.png
+prop, 2, 1, 2, sphere
+data, 0,  -1,  1.5
+data, -10,  10,  3
