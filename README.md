@@ -13,8 +13,8 @@ Como ejemplo del punto anterior, se han extraído datos reales del Ayuntamiento 
 * Fase 1:
     - Material - Rodrigo, Jin, Oriol
     - Light
-        - [X] Puntual - Rodrigo, Jin, Abdel
-        - [X] Direccional - Rodrigo, Jin, Abdel
+        - [X] Puntual - Rodrigo, Jin, Abdel, Oriol
+        - [X] Direccional - Rodrigo, Jin, Abdel, Oriol
         - [X] Spotlight - Oriol
         - [X] Ambient Global - Rodrigo, Jin, Abdel
     - Shading
