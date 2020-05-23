@@ -98,9 +98,12 @@ void DataReader::dataFound(QStringList fields) {
         /* ANIMACIONES DE LA FASE 2 */
         /* En lugar de crear una nueva Scene factory sobreescribimos SceneFactoryData para simplificar */
         /* Aplicar animacion a un objeto segun los datos leidos del fichero -> los datos de las animaciones se leen del fichero */
-        Animation* orbit = new Animation();
-        orbit->transf = new TranslateTG(vec3(1.0f));
-        o->addAnimation(orbit);
+        qDebug() << fields.size();
+        if(fields.size() >= 7){
+            Animation* orbit = new Animation();
+            orbit->transf = new TranslateTG(vec3(fields[4].toDouble(), fields[5].toDouble(), fields[6].toDouble()));
+            o->addAnimation(orbit);
+        }
 
         this->scene->addObject(o);
     }
