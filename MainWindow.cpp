@@ -63,6 +63,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     connect(builder, SIGNAL(newObj(Object*)), glWidget, SLOT(updateObject(Object *)));
     connect(builder, SIGNAL(newScene(Scene*)), glWidget, SLOT(updateScene(Scene *)));
+    connect(builder, SIGNAL(newSceneData(Scene*)), glWidget, SLOT(updateData(Scene *)));
+    connect(builder, SIGNAL(newSceneVirtual(Scene*)), glWidget, SLOT(updateVirtual(Scene *)));
 
     // TODO Fase 1: Cal connectar el diàleg de visualization mapping per enviar les seves dades cap a builder
     // al slot newDataScene

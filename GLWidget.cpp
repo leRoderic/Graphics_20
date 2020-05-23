@@ -173,6 +173,18 @@ void GLWidget::updateObject(Object *obj) {
     updateGL();
 }
 
+void GLWidget::updateVirtual(Scene *sc) {
+
+    this->activaPhongShader();
+    this->updateScene(sc);
+}
+
+void GLWidget::updateData(Scene *sc) {
+
+    this->activaPhongTex();
+    this->updateScene(sc);
+}
+
 void GLWidget::updateScene(Scene *sc) {
     // Control de la nova escena a la GPU
 

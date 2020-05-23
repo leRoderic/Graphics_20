@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>287</height>
+    <height>346</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -61,31 +61,12 @@
        </sizepolicy>
       </property>
       <property name="text">
-       <string>MIN (X,Y,Z) :</string>
+       <string>MIN (X,Z) :</string>
       </property>
      </widget>
     </item>
     <item>
      <widget class="QDoubleSpinBox" name="minXSpin_2">
-      <property name="minimum">
-       <double>-99999.000000000000000</double>
-      </property>
-      <property name="maximum">
-       <double>99999.000000000000000</double>
-      </property>
-      <property name="singleStep">
-       <double>0.100000000000000</double>
-      </property>
-      <property name="value">
-       <double>-1.000000000000000</double>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QDoubleSpinBox" name="minYSpin_2">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
       <property name="minimum">
        <double>-99999.000000000000000</double>
       </property>
@@ -122,8 +103,8 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>180</y>
-     <width>385</width>
+     <y>220</y>
+     <width>381</width>
      <height>28</height>
     </rect>
    </property>
@@ -137,31 +118,12 @@
        </sizepolicy>
       </property>
       <property name="text">
-       <string>MAX (X,Y,Z) :</string>
+       <string>MAX (X,Z) :</string>
       </property>
      </widget>
     </item>
     <item>
      <widget class="QDoubleSpinBox" name="maxXSpin_3">
-      <property name="minimum">
-       <double>-99999.000000000000000</double>
-      </property>
-      <property name="maximum">
-       <double>99999.000000000000000</double>
-      </property>
-      <property name="singleStep">
-       <double>0.100000000000000</double>
-      </property>
-      <property name="value">
-       <double>1.000000000000000</double>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QDoubleSpinBox" name="maxYSpin_3">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
       <property name="minimum">
        <double>-99999.000000000000000</double>
       </property>
@@ -198,7 +160,7 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>240</y>
+     <y>310</y>
      <width>381</width>
      <height>25</height>
     </rect>
@@ -260,6 +222,63 @@
      <widget class="QPushButton" name="browseObjBtn_4">
       <property name="text">
        <string>Browse</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="btLoad">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>270</y>
+     <width>151</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Auto load</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_6">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>180</y>
+     <width>381</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_10">
+    <item>
+     <widget class="QLabel" name="label_9">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Y :</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QDoubleSpinBox" name="minYSpin_2">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="minimum">
+       <double>-99999.000000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>99999.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.100000000000000</double>
+      </property>
+      <property name="value">
+       <double>-1.000000000000000</double>
       </property>
      </widget>
     </item>

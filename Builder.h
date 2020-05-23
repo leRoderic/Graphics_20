@@ -24,6 +24,8 @@ public slots:
 signals:
     void newObj(Object *o);
     void newScene(Scene *sc);
+    void newSceneVirtual(Scene *sc);
+    void newSceneData(Scene *sc);
 };
 
 #endif // BUILDER_H

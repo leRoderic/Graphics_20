@@ -13,11 +13,11 @@ DataReader::DataReader(Scene *s) {
 
 }
 
-void DataReader::setParameters(vec4 pMin, vec4 pMax, QString objFile, QString cmfile) {
+void DataReader::setParameters(vec4 pMin, vec4 pMax, QString objFile, vector<vec3> cm) {
     this->pMin = pMin;
     this->pMax = pMax;
     this->objFile = objFile;
-    this->cmFile = cmfile;
+    this->colormap = cm;
 }
 
 void DataReader::readFile(QString fileName) {
@@ -51,7 +51,7 @@ void DataReader::fileLineRead(QString lineReaded) {
 
 void DataReader::propFound(QStringList fields) {
     //prop numProp vmin vmax tipusGizmo
-    if (fields.size() != 5) {
+    if (fields.size() != 4) {
         std::cerr << "Wrong property format" << std::endl;
         return;
     }
@@ -59,6 +59,11 @@ void DataReader::propFound(QStringList fields) {
     dMin = fields[2].toDouble();
     dMax = fields[3].toDouble();
     // TO-DO Fase 2: Aquesta valors minim i maxim tambe serviran per mapejar el material des de la paleta
+}
+
+vec3 DataReader::getColorFromPalette (float data) {
+
+    return this->colormap[(int)(data/3)];
 }
 
 void DataReader::dataFound(QStringList fields) {
@@ -81,13 +86,15 @@ void DataReader::dataFound(QStringList fields) {
 
         scaledData = (fields[3].toDouble() - dMin) / (dMax - dMin); // Scaling data according to range
 
-        o = new Object(10000, objFile);
+        o = new Object(100000, objFile);
+        o->setMaterial(new Material(vec3(0.2f), getColorFromPalette(scaledData), vec3(1.0f), 1.0, 20.0f));
+
         // Object(const int npoints, QString n);
         //o->aplicaTG(new Scale(scaledData));
         //o->aplicaTG(new Translate(translation));
 
 
-        this->scene->elements.push_back(o);
+        this->scene->addObject(o);
     }
 }
 

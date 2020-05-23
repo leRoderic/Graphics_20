@@ -24,6 +24,8 @@ private slots:
 
     void on_browseObjBtn_4_pressed();
 
+    void on_btLoad_pressed();
+
 signals:
     void dialogFinished (QString data, QString obj, QString colormap,
                          float xmin, float xmax, float ymin, float ymax,

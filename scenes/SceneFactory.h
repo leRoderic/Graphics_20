@@ -23,7 +23,7 @@ public:
     } SCENE_FACTORIES;
 
     virtual Scene    *createScene(QString nomFitxer) = 0;
-    virtual ColorMap *createColorMap(ColorMapStatic::ColorMapType t) {return nullptr;};
+    virtual vector<vec3> createColorMap(QString f) {};
     virtual Scene *makeScene(QString filename, QString gObj, QString cmFile, float xmin, float y, float zmin,
                                   float xmax, float zmax) = 0;
 };

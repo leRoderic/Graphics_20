@@ -36,7 +36,7 @@ void Builder::newVirtualScene() {
     SceneFactory *s = new SceneFactoryVirtual();
     scene = s->createScene("://resources/models/sphere0.obj");
 
-     emit newScene(scene);
+     emit newSceneVirtual(scene);
 }
 
 
@@ -45,8 +45,9 @@ void Builder::newDataScene(QString data, QString obj, QString colormap,
                       float zmin, float zmax)
 {
     SceneFactory *sfd = new SceneFactoryData();
+
     scene = sfd->makeScene(data, obj, colormap, xmin, ymin, zmin, xmax, zmax);
 
-   emit newScene(scene);
+    emit newSceneData(scene);
 }
 

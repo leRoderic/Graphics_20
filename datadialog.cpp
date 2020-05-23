@@ -40,7 +40,7 @@ void DataDialog::on_doItBt_pressed()
 {
     emit dialogFinished(ui->dataFileEdit->text(), ui->objFileEdit_4->text(), ui->cmFileEdit->text(),
                         ui->minXSpin_2->value(), ui->minYSpin_2->value(), ui->minZSpin_2->value(),
-                        ui->maxXSpin_3->value(), ui->maxYSpin_3->value(), ui->maxZSpin_3->value());
+                        ui->maxXSpin_3->value(), ui->minYSpin_2->value(), ui->maxZSpin_3->value());
     this->close();
 }
 
@@ -52,4 +52,18 @@ void DataDialog::on_browseObjBtn_4_pressed()
                                                 "*.obj");
     ui->objFileEdit_4->setText(file);
     //on_cmFileEdit_2_returnPressed();
+}
+
+void DataDialog::on_btLoad_pressed()
+{
+    ui->objFileEdit_4->setText("://resources/models/sphere0.obj");
+    ui->cmFileEdit->setText("://resources/colormaps/colorMap3.gpl");
+    ui->dataFileEdit->setText("://resources/data/data0.txt");
+
+    ui->minXSpin_2->setValue(-10);
+    ui->minYSpin_2->setValue(-1);
+    ui->minZSpin_2->setValue(-10);
+
+    ui->maxXSpin_3->setValue(10);
+    ui->maxZSpin_3->setValue(10);
 }

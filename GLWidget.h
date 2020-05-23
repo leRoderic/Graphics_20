@@ -34,6 +34,8 @@ public slots:
 
     void updateObject(Object *obj);
     void updateScene(Scene *sc);
+    void updateData(Scene *sc);
+    void updateVirtual(Scene *sc);
 
     void saveImage();
     void saveAnimation();
