@@ -1,5 +1,7 @@
 #include "./objects/Object.h"
 
+#include <TG/Translate.h>
+
 
 /**
  * @brief Object::Object
@@ -343,4 +345,18 @@ Capsa3D Object::calculCapsa3D()
 
 void Object::aplicaTG(TG *tg){
 
+
+    if (dynamic_cast<::Translate*>(tg)) {
+        mat4 matriu = tg->getTG();
+
+        for(int i = 0; i < vertexs.size(); i++) {
+            vertexs[i] = matriu * vertexs[i];
+        }
+
+        for (int i = 0; i < normalsVertexs.size(); i++) {
+            normalsVertexs[i] = matriu * normalsVertexs[i];
+        }
+    }
+    make();
+    draw();
 }

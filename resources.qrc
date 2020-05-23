@@ -21,5 +21,6 @@
         <file>resources/fPhongShaderIndirectTex.glsl</file>
         <file>resources/vPhongShaderIndirectTex.glsl</file>
         <file>resources/textures/2k_earth_daymap.jpg</file>
+        <file>resources/colormaps/colorMap3.gpl</file>
     </qresource>
 </RCC>
