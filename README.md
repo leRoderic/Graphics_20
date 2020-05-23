@@ -45,6 +45,11 @@ Como ejemplo del punto anterior, se han extraído datos reales del Ayuntamiento 
     
     
 ## Screenshots
+![](https://i.imgur.com/HlKrSc6.png)
+![](https://i.imgur.com/8GZrs4D.png)
+![](https://i.imgur.com/X17DW3d.png)
+![](https://i.imgur.com/nhzNVDE.png)
+![](https://i.imgur.com/ZCZZzJb.png)
 ![](https://i.imgur.com/ilWE1gr.png)
 ![](https://i.imgur.com/YPnpzvq.png)
 ![](https://i.imgur.com/fmDUMzs.png)
