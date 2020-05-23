@@ -44,16 +44,14 @@ Como ejemplo del punto anterior, se han extraído datos reales del Ayuntamiento 
         ![](https://i.imgur.com/MdvgSeU.jpg)
     
     
-Screenshots
-^^^^^^^^^^^
+## Screenshots
 ![](https://i.imgur.com/ilWE1gr.png)
 ![](https://i.imgur.com/YPnpzvq.png)
 ![](https://i.imgur.com/fmDUMzs.png)
 ![](https://i.imgur.com/JwDMUkN.png)
 ![](https://i.imgur.com/2IlawOx.png)
 
-Additional Information
-^^^^^^^^^^^^^^^^^^^^^^
+## Additional Information
 <table>
   <tbody>
     <tr>
@@ -63,33 +61,23 @@ Additional Information
     </tr>
     <tr>
       <td>0</td>
-      <td align="center">2</td>
+      <td align="center">15</td>
       <td align="right">
+          <li>Incompatibilidad del proyecto con Windows. Mucho tiempo perdido intentado instalar las librerías necesarias.</li>
      </td>
     </tr>
       <tr>
       <td>1</td>
       <td align="center">25</td>
       <td align="left">
-          <li>Fórmula teoría cálculo intersección de un triángulo no nos iba, hemos cambiado la fórmula.</li>
-          <li>Problemas al cargar los triángulos de las mallas.</li>
-          <li>La explicación de caja mínima contenedora y los límites del .txt no es muy precisa.</li>
+          <li>Depurar en los shaders. Los errores que da al compilar los ficheros .glsl son muy vastos, y encontrar un pequño error                 se hace bastante complicado. A esto se le suma que no hemos encontrado ninguna herramienta para validar/compilar los shaders            de forma externa.</li>
      </td>
     </tr>
       <tr>
       <td>2</td>
-      <td align="center">81</td>
+      <td align="center">18</td>
       <td align="left">
-          <li>Sombras con múltiples objetos.</li>
-          <li>Sombras de los objetos transparentes.</li>
-     </td>
-    </tr>
-      <tr>
-      <td>3</td>
-      <td align="center">10</td>
-      <td align="left">
-          <li>Los parámetros de las visualizaciones son incorrectos e incompletos.</li>
-          <li>El fichero de datos de Europa estaba sin etiquetas y con un campo erróneo.</li>
+          <li>Asd.</li>
      </td>
     </tr>
   </tbody>
