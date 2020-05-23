@@ -62,7 +62,7 @@ Como ejemplo del punto anterior, se han extraído datos reales del Ayuntamiento 
     <tr>
       <td>0</td>
       <td align="center">15</td>
-      <td align="right">
+      <td align="left">
           <li>Incompatibilidad del proyecto con Windows. Mucho tiempo perdido intentado instalar las librerías necesarias.</li>
      </td>
     </tr>
