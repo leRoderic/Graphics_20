@@ -50,6 +50,7 @@ Como ejemplo del punto anterior, se han extraído datos reales del Ayuntamiento 
 ![](https://i.imgur.com/fmDUMzs.png)
 ![](https://i.imgur.com/JwDMUkN.png)
 ![](https://i.imgur.com/2IlawOx.png)
+![](https://i.imgur.com/r9sZTWl.jpg)
 
 ## Additional Information
 <table>
