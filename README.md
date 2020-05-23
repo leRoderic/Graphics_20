@@ -11,22 +11,39 @@ Como ejemplo del punto anterior, se han extraído datos reales del Ayuntamiento 
 ## Features
 
 * Fase 1:
-    - [X] Light - Abdel, Jin, Rodrigo, Oriol
-    - [X] Material - Oriol, Rodrigo, Jin
-    - [X] Blinn-Phong shader - Abdel
-    - [X] Gouraud Shader - Rodrigo
-    - [X] Toon Shader - Oriol, Abdel
-    - [X] Modificaciones UI - Rodrigo
-    - [X] Texturas - Jin, Abdel
-    - [X] Data visualization - Rodrigo
-* Fase 2:
-    - [X] Animaciones - Oriol
+    - Material - Rodrigo, Jin, Oriol
+    - Light
+        - [X] Puntual
+        - [X] Direccional
+        - [X] Spotlight - Oriol
+        - [X] Ambient Global
+    - Shading
+        - [X] Phong - Abdel
+        - [X] Gouroud - Rodrigo
+        - [X] Toon - Oriol, Abdel
+    - Textures
+        - [X] Textura com material - Jin, Abdel
+        - [X] Mapping indirecte - Abdel
+- Fase 2 
+    - [X] Animacions amb dades temporals - Oriol
+    - [ ] Normal mapping
+    - [ ] Entorn amb textures
+    - [ ] Reflexions
+    - [ ] Transparencias via objectes.
+    - [ ] Transparencias via environmental mapping.
 
 
 ## Extensiones
 
-* <ins>Luz spotlight<ins> - Oriol
 * <ins>Gouraud Textura<ins> - Jin
-* <ins>Indirect texture mapping<ins> - Abdel
 * <ins>Read colormap<ins> - Rodrigo
 * <ins>Autocarga de ficheros y escenas<ins> - Rodrigo
+    
+    
+Screenshots
+^^^^^^^^^^^
+*(NOTA: Capturas de pantalla de las pruebas que hayáis realizado)*
+
+Additional Information
+^^^^^^^^^^^^^^^^^^^^^^
+*(NOTA: Horas de dedicación y problemas principales que hayáis tenido durante la realización de las prácticas)*
