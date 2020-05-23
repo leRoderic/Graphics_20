@@ -1,0 +1,29 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/fshader1.glsl</file>
+        <file>resources/vshader1.glsl</file>
+        <file>resources/fGoraudShader.glsl</file>
+        <file>resources/vGoraudShader.glsl</file>
+        <file>resources/models/bigSphere.obj</file>
+        <file>resources/vToonShading.glsl</file>
+        <file>resources/fToonShading.glsl</file>
+        <file>resources/vPhongShader.glsl</file>
+        <file>resources/fPhongShader.glsl</file>
+        <file>resources/models/Monkey.obj</file>
+        <file>resources/models/sphere0.obj</file>
+        <file>resources/vPhongShaderTex.glsl</file>
+        <file>resources/fPhongShaderTex.glsl</file>
+        <file>resources/textures/capsule0.jpg</file>
+        <file>resources/models/capsule.obj</file>
+        <file>resources/fGoraudShaderTex.glsl</file>
+        <file>resources/vGoraudShaderTex.glsl</file>
+        <file>resources/textures/2k_venus_surface.jpg</file>
+        <file>resources/fPhongShaderIndirectTex.glsl</file>
+        <file>resources/vPhongShaderIndirectTex.glsl</file>
+        <file>resources/textures/2k_earth_daymap.jpg</file>
+        <file>resources/colormaps/colorMap3.gpl</file>
+        <file>resources/data/data0.txt</file>
+        <file>resources/colormaps/hept32.gpl</file>
+        <file>resources/colormaps/colorMap2.gpl</file>
+    </qresource>
+</RCC>
